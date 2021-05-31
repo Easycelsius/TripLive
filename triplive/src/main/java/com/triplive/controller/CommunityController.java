@@ -12,7 +12,7 @@ public class CommunityController {
     @RequestMapping("/community.do")
     public String insertBoard() {
         log.info("community.do 요청");
-        return "community/main";
+        return "community/commu_main";
     }
 
     
