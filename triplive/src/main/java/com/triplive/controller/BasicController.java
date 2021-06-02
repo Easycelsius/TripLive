@@ -8,13 +8,10 @@ import lombok.extern.log4j.Log4j2;
 @Controller
 @Log4j2
 public class BasicController {
-
-    @RequestMapping("/")
-    public String insertBoard() {
+    @RequestMapping(value= {"/", "index.do"})
+    public String index() {
         log.info("main page 요청");
         return "index";
     }
-
-    
 }
 
