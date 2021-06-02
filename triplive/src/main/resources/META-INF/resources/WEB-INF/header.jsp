@@ -6,59 +6,6 @@ pageEncoding="utf-8"%>
 <body>
 		<header class="header">
 
-      <div class="top_bar">
-        <div class="container">
-          <div class="row">
-            <div class="col d-flex flex-row">
-              <div class="phone">+45 345 3324 56789</div>
-              <div class="social">
-                <ul class="social_list">
-                  <li class="social_list_item">
-                    <a href="#"
-                      ><i class="fa fa-pinterest" aria-hidden="true"></i
-                    ></a>
-                  </li>
-                  <li class="social_list_item">
-                    <a href="#"
-                      ><i class="fa fa-facebook" aria-hidden="true"></i
-                    ></a>
-                  </li>
-                  <li class="social_list_item">
-                    <a href="#"
-                      ><i class="fa fa-twitter" aria-hidden="true"></i
-                    ></a>
-                  </li>
-                  <li class="social_list_item">
-                    <a href="#"
-                      ><i class="fa fa-dribbble" aria-hidden="true"></i
-                    ></a>
-                  </li>
-                  <li class="social_list_item">
-                    <a href="#"
-                      ><i class="fa fa-behance" aria-hidden="true"></i
-                    ></a>
-                  </li>
-                  <li class="social_list_item">
-                    <a href="#"
-                      ><i class="fa fa-linkedin" aria-hidden="true"></i
-                    ></a>
-                  </li>
-                </ul>
-              </div>
-              <div class="user_box ml-auto">
-                <div class="user_box_login user_box_link">
-                  <a href="login_resist_form.html">로그인</a>
-                </div>
-                <div class="user_box_register user_box_link">
-                  <a href="login_resist_form.html">회원가입</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-<<<<<<< HEAD
 		<div class="top_bar">
 			<div class="container">
 				<div class="row">
@@ -82,9 +29,6 @@ pageEncoding="utf-8"%>
 				</div>
 			</div>		
 		</div>
-=======
-      <!-- Main Navigation -->
->>>>>>> triplive/main
 
 		<!-- Main Navigation -->
 
@@ -101,7 +45,7 @@ pageEncoding="utf-8"%>
 								<li class="main_nav_item"><a href="">커뮤니티</a></li>
 								<li class="main_nav_item"><a href="">여행지정보</a></li>
 								<li class="main_nav_item"><a href="">긴급속보</a></li>
-								<li class="main_nav_item"><a href="../WorldWeather/weather.do">세계날씨</a></li>
+								<li class="main_nav_item"><a href="../worldweather/weather.do">세계날씨</a></li>
 							</ul>
 						</div>
 						<div class="content_search ml-lg-0 ml-auto">
@@ -137,6 +81,14 @@ pageEncoding="utf-8"%>
                 <input type="search" class="search_content_input bez_1" />
               </form>
 
+              <div class="hamburger">
+                <i class="fa fa-bars trans_200"></i>
+              </div>
+            </div>
+          </div>
+        </div>	
+      </nav>
+
 		<div class="menu trans_500">
 			<div class="menu_content d-flex flex-column align-items-center justify-content-center text-center">
 				<div class="menu_close_container"><div class="menu_close"></div></div>
@@ -146,12 +98,12 @@ pageEncoding="utf-8"%>
 					<li class="main_nav_item"><a href="">커뮤니티</a></li>
 					<li class="main_nav_item"><a href="">여행지정보</a></li>
 					<li class="main_nav_item"><a href="">긴급속보</a></li>
-					<li class="main_nav_item"><a href="../WorldWeather/weather.do">세계날씨</a></li>
+					<li class="main_nav_item"><a href="../worldweather/weather.do">세계날씨</a></li>
 				</ul>
 			</div>
 		</div>
 
-      <div class="menu trans_500">
+      <!-- <div class="menu trans_500">
         <div
           class="
             menu_content
@@ -165,7 +117,7 @@ pageEncoding="utf-8"%>
           <div class="menu_close_container"><div class="menu_close"></div></div>
           <div class="logo menu_logo">
             <a href="#"
-              ><img src="images/KakaoTalk_20210526_234628144.png" alt=""
+              ><img src="../logo/triplive_logo_white_r.png" alt=""
             /></a>
           </div>
           <ul>
@@ -176,7 +128,7 @@ pageEncoding="utf-8"%>
             <li class="menu_item"><a href="contact.html">Community</a></li>
           </ul>
         </div>
-      </div>
+      </div> -->
     </header>
   </body>
 </html>

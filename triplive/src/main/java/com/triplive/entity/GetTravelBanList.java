@@ -23,6 +23,7 @@ public class GetTravelBanList {
     @Column(length = 1000, nullable = true)
     private String imgUrl2; // 여행위험지도경로
 
+    @Id
     @Column(length = 10*3, nullable = true)
     private String isoCode; // iso국가코드
 

@@ -23,6 +23,7 @@ public class GetTravelAlarmList2 {
     @Column(length = 10*3, nullable = true)
     private String region_ty; // 지역유형
 
+    @Id
     @Column(length = 10*3, nullable = true)
     private String coutnry_iso_alp2; // iso 두자리코드
 

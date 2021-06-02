@@ -8,11 +8,11 @@ import lombok.extern.log4j.Log4j2;
 
 @Controller
 @Log4j2
-@RequestMapping("WorldWeather")
+@RequestMapping("worldweather")
 public class WorldWeatherController {
     @RequestMapping("/{step}.do")
     public String insertBoard(@PathVariable String step) {
         log.info("WorldWeather page 요청");
-        return "WorldWeather/"+step;
+        return "worldweather/"+step;
     }
 }

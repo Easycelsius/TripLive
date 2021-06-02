@@ -12,7 +12,7 @@ public class CalamityController {
     @RequestMapping("/calamity.do")
     public String calamity() {
         log.info("calamity 요청");
-        return "views/Calamity";
+        return "views/calamity";
     }
 }
 

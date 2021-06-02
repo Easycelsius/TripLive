@@ -17,6 +17,7 @@ public class CountryAccidentService2 {
     @Column(length = 50, nullable = true)
     private String country_nm; // 한글 국가명
     
+    @Id
     @Column(length = 10*3, nullable = true)
     private String country_iso_alp2; // ios두자리코드
 
