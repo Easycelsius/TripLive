@@ -7,12 +7,12 @@ import lombok.extern.log4j.Log4j2;
 
 @Controller
 @Log4j2
-public class BasicController {
+public class CalamityController {
 
-    @RequestMapping("/")
-    public String insertBoard() {
-        log.info("main page 요청");
-        return "index";
+    @RequestMapping("/calamity.do")
+    public String calamity() {
+        log.info("calamity 요청");
+        return "views/Calamity";
     }
 
     
