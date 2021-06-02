@@ -379,13 +379,13 @@
 		<div class="container">
 			<div class="row">
 				<div class="col">
-					<h2 class="intro_title text-center">코로나19</h2>
+					<h2 class="intro_title text-center">국가∙지역별 안전공지</h2>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-lg-10 offset-lg-1">
 					<div class="intro_text text-center">
-						<p>해외 운항, 입국, 코로나19 관련 등의 국가·지역별 최신안전소식</p>
+						<p>각 공관에서 실시간 업데이트 되는 국가별 최신 안전공지를 제공</p>
 					</div>
 				</div>
 			</div>
@@ -399,11 +399,11 @@
 						<!-- Image by https://unsplash.com/@dnevozhai -->
 						<div class="intro_item_background" style="background-image:url(images/intro_1.jpg)"></div>
 						<div class="intro_item_content d-flex flex-column align-items-center justify-content-center">
-							<div class="intro_date">May 25th - June 01st</div>
-							<div class="button intro_button"><div class="button_bcg"></div><a href="#">see more<span></span><span></span><span></span></a></div>
+							<div class="intro_date">2021년 03월 23일</div>
+							<div class="button intro_button"><div class="button_bcg"></div><a href="#">자세히 보기<span></span><span></span><span></span></a></div>
 							<div class="intro_center text-center">
-								<h1>Mauritius</h1>
-								<div class="intro_price">From $1450</div>
+								<h1>일본</h1>
+								<div class="intro_price">일본의 긴급사태선언 관련 안전 공지(1.8.)</div>
 								<div class="rating rating_4">
 									<i class="fa fa-star"></i>
 									<i class="fa fa-star"></i>
@@ -424,11 +424,11 @@
 						<!-- Image by https://unsplash.com/@hellolightbulb -->
 						<div class="intro_item_background" style="background-image:url(images/intro_2.jpg)"></div>
 						<div class="intro_item_content d-flex flex-column align-items-center justify-content-center">
-							<div class="intro_date">May 25th - June 01st</div>
-							<div class="button intro_button"><div class="button_bcg"></div><a href="#">see more<span></span><span></span><span></span></a></div>
+							<div class="intro_date">2021년 01월 30일</div>
+							<div class="button intro_button"><div class="button_bcg"></div><a href="#">자세히 보기<span></span><span></span><span></span></a></div>
 							<div class="intro_center text-center">
-								<h1>Greece</h1>
-								<div class="intro_price">From $1450</div>
+								<h1>독일</h1>
+								<div class="intro_price">코로나19 관련 독일 공항 이용 안내(마스크 착용 의무)</div>
 								<div class="rating rating_4">
 									<i class="fa fa-star"></i>
 									<i class="fa fa-star"></i>
@@ -449,11 +449,11 @@
 						<!-- Image by https://unsplash.com/@willianjusten -->
 						<div class="intro_item_background" style="background-image:url(images/intro_3.jpg)"></div>
 						<div class="intro_item_content d-flex flex-column align-items-center justify-content-center">
-							<div class="intro_date">May 25th - June 01st</div>
-							<div class="button intro_button"><div class="button_bcg"></div><a href="#">see more<span></span><span></span><span></span></a></div>
+							<div class="intro_date">2020년 08월 19일</div>
+							<div class="button intro_button"><div class="button_bcg"></div><a href="#">자세히 보기<span></span><span></span><span></span></a></div>
 							<div class="intro_center text-center">
-								<h1>Scotland</h1>
-								<div class="intro_price">From $1450</div>
+								<h1>중국</h1>
+								<div class="intro_price">중국 간쑤성 브루셀라병 관련 안전 공지</div>
 								<div class="rating rating_4">
 									<i class="fa fa-star"></i>
 									<i class="fa fa-star"></i>
@@ -594,8 +594,8 @@
 							<div class="col-lg-6">
 								<div class="offers_image_container">
 									<!-- Image by https://unsplash.com/@kensuarez -->
-									<div class="offers_image_background" style="background-image:url(images/offer_1.jpg)"></div>
-									<div class="offer_name"><a href="#">grand castle</a></div>
+									<div class="offers_image_background" style="background-image:url(img/JP.jpg)"></div>
+									<!-- <div class="offer_name"><a href="#">grand castle</a></div> -->
 								</div>
 							</div>
 							<div class="col-lg-6">
@@ -632,8 +632,8 @@
 							<div class="col-lg-6">
 								<div class="offers_image_container">
 									<!-- Image by Egzon Bytyqi -->
-									<div class="offers_image_background" style="background-image:url(images/offer_2.jpg)"></div>
-									<div class="offer_name"><a href="#">turkey hills</a></div>
+									<div class="offers_image_background" style="background-image:url(img/CN.png)"></div>
+									<!-- <div class="offer_name"><a href="#">turkey hills</a></div> -->
 								</div>
 							</div>
 							<div class="col-lg-6">
@@ -747,7 +747,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col text-center">
-					<h2 class="section_title">what our clients say about us</h2>
+					<h2 class="section_title">국가·지역별 최신 코로나19 소식</h2>
 				</div>
 			</div>
 			<div class="row">
@@ -766,11 +766,11 @@
 									<div class="test_content_container">
 										<div class="test_content">
 											<div class="test_item_info">
-												<div class="test_name">carla smith</div>
-												<div class="test_date">May 24, 2017</div>
+												<div class="test_name">일본</div>
+												<div class="test_date">2020년 12월 27일</div>
 											</div>
-											<div class="test_quote_title">" Best holliday ever "</div>
-											<p class="test_quote_text">Nullam eu convallis tortor. Suspendisse potenti. In faucibus massa arcu, vitae cursus mi hendrerit nec.</p>
+											<div class="test_quote_title">일본 정부의 모든 국가의 신규 입국 일시정지 발표 관련 안내</div>
+											<p class="test_quote_text">○ 일본 정부는 모든 국가 및 지역으로부터 외국인의 신규 입국을 오는 12.28.(월) 0시부터 내년 1월 말까지 일시 정지한다는 조치를 발표하였습니다.○ 다만, 이번 조치는 한일 양자 간 합의한 비즈니스 및 레지던트 트랙에 대해서는 적용이 제외되며, 이미 발급된 사증을 소지한 경우 원칙적으로 입국이 인정되는바, 우리 국민의 경우 아래 사항에 해당하지 않을 시 기존과 동일하게 일본 입국이 가능합니다.※ 일본 입국 신청일 전 14일 이내 영국 또는 남아프리카공화국 체제 이력이 있는 경우 및 2021년 1.4.(월) 이후의 입국자로서 일본 입국 신청일 전 14일 이내에 감염증 위험 정보레벨3(도항중지 권고) 대상국과 지역에 체제 이력이 있는 경우는 일본 입국 불가○ 상기 관련, 일본에 입국하는 우리 국민들께서는 착오 없으시길 바라며 기타 도움이 필요하시거나 긴급상황 발생 시 아래 연락처로 연락해 주시기 바랍니다.☞ 주일본대한민국대사관&nbsp; &nbsp;- 대표번호(근무시간 중) : +81 3 3452 7611/9&nbsp; &nbsp;- 긴급연락처(사건사고 등 긴급상황 발생 시, 24시간) : +81 70 2153 5454☞ 영사콜센터(서울, 24시간) : +82-2-3210-0404</p>
 										</div>
 									</div>
 								</div>
@@ -784,11 +784,11 @@
 									<div class="test_content_container">
 										<div class="test_content">
 											<div class="test_item_info">
-												<div class="test_name">carla smith</div>
-												<div class="test_date">May 24, 2017</div>
+												<div class="test_name">미국</div>
+												<div class="test_date">2020년 06월 09일</div>
 											</div>
-											<div class="test_quote_title">" Best holliday ever "</div>
-											<p class="test_quote_text">Nullam eu convallis tortor. Suspendisse potenti. In faucibus massa arcu, vitae cursus mi hendrerit nec.</p>
+											<div class="test_quote_title">미국 하와이주 14일 의무격리 규정 위반 주의</div>
+											<p class="test_quote_text">미국 하와이주 14일 의무격리 규정 위반 주의&nbsp;○ 최근 하와이주를 방문한 우리국민이 하와이주의 14일 의무격리 규정을 위반하여 체포되는 사건이 발생하였습니다.○ 하와이주는 14일 의무격리 규정 위반하는 방문객에 대해 상당히 엄격히 법을 집행하고 있습니다.- 하와이에 도착하는 모든 승객(내/외국인 및 하와이 거주자 불문)은 자택 혹은 호텔에서 14일간 자비로 의무격리 실시- 의무격리 위반시 체포되며, 이후 최대 5천불 벌금 또는 1년 이하의 징역 부과, 또는 해당 벌금과 징역이 함께 부과 되는 등 비교적 무거운 형사벌 부과○ 하와이 방문 예정 우리국민께서는 14일 의무격리 관련 규정을 숙지하시고,&nbsp; 방문시 동 규정을 철저히 준수하여 주시기 바랍니다.○ 이와 관련, 긴급상황 발생시 아래 연락처로 연락해 주시기 바랍니다.☞ 호놀룰루긴급(경찰서, 소방서) 신고 : 국번 없이 911☞ 주호놀룰루총영사관&nbsp; &nbsp;- 대표번호(근무시간 중) : +1-808-595-6109&nbsp; &nbsp;- 긴급연락처(사건사고 등 긴급상황 발생 시, 24시간) : +1-808-265-3949☞ 영사콜센터(서울, 24시간) : +82-2-3210-0404</p>
 										</div>
 									</div>
 								</div>
@@ -802,11 +802,11 @@
 									<div class="test_content_container">
 										<div class="test_content">
 											<div class="test_item_info">
-												<div class="test_name">carla smith</div>
-												<div class="test_date">May 24, 2017</div>
+												<div class="test_name">필리핀</div>
+												<div class="test_date">2020년 03월 20일</div>
 											</div>
-											<div class="test_quote_title">" Best holliday ever "</div>
-											<p class="test_quote_text">Nullam eu convallis tortor. Suspendisse potenti. In faucibus massa arcu, vitae cursus mi hendrerit nec.</p>
+											<div class="test_quote_title">필리핀 비자 면제 및 무비자 입국 혜택 중단 발표</div>
+											<p class="test_quote_text">필리핀 비자 면제 및 무비자 입국 혜택 중단 발표&nbsp;○ 필리핀 정부는 3.22.(일) 0시부터 외국인에 대한 비자 면제 및 무비자 입국 혜택을 중단하며, 이미 발급된 비자도 취소된 것으로 간주한다고 발표하였습니다. 단, 다음 대상자는 예외가 적용됩니다.- 필리핀 국민의 배우자 및 자녀(한국인의 경우, 필리핀 국민과 동반 여부 불필요)- 외국 정부와 국제기구 직원에게 발급된 비자 소지자○ 비자 취소와 관련된 내용은 현재 외국에 있는 비자 소지자에게 한정되는 것으로 판단되나, 사실 관계 확인 후에 필리핀 내 비자 소지자에게도 영향을 미치는 경우 추가 공지하도록 하겠습니다.○ 필리핀 정부의 출입국 정책이 수시로 변하고 긴급하게 시행되고 있습니다. 자세한 내용은 주필리핀대사관 홈페이지 및 SNS(카카오톡, 페이스북)을 확인해 주시기 바랍니다.</p>
 										</div>
 									</div>
 								</div>
@@ -916,7 +916,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col text-center">
-					<h2 class="section_title">trending now</h2>
+					<h2 class="section_title">국가·지역별 입국허가요건</h2>
 				</div>
 			</div>
 			<div class="row trending_container">
@@ -924,11 +924,11 @@
 				<!-- Trending Item -->
 				<div class="col-lg-3 col-sm-6">
 					<div class="trending_item clearfix">
-						<div class="trending_image"><img src="images/trend_1.png" alt="https://unsplash.com/@fransaraco"></div>
+						<div class="trending_image"><img src="img/countryflag/IE.gif"></div>
 						<div class="trending_content">
-							<div class="trending_title"><a href="#">grand hotel</a></div>
-							<div class="trending_price">From $182</div>
-							<div class="trending_location">madrid, spain</div>
+							<div class="trending_title"><a href="#">아일랜드</a></div>
+							<div class="trending_price">체류기간 : 90일</div>
+							<div class="trending_location">Ireland</div>
 						</div>
 					</div>
 				</div>
@@ -936,11 +936,11 @@
 				<!-- Trending Item -->
 				<div class="col-lg-3 col-sm-6">
 					<div class="trending_item clearfix">
-						<div class="trending_image"><img src="images/trend_2.png" alt="https://unsplash.com/@grovemade"></div>
+						<div class="trending_image"><img src="img/countryflag/US.gif" alt="https://unsplash.com/@grovemade"></div>
 						<div class="trending_content">
-							<div class="trending_title"><a href="#">mars hotel</a></div>
-							<div class="trending_price">From $182</div>
-							<div class="trending_location">madrid, spain</div>
+							<div class="trending_title"><a href="#">미국</a></div>
+							<div class="trending_price">체류기간 : 90일</div>
+							<div class="trending_location">전자여행허가(ESTA) 사전 신청 필요</div>
 						</div>
 					</div>
 				</div>
@@ -948,11 +948,11 @@
 				<!-- Trending Item -->
 				<div class="col-lg-3 col-sm-6">
 					<div class="trending_item clearfix">
-						<div class="trending_image"><img src="images/trend_3.png" alt="https://unsplash.com/@jbriscoe"></div>
+						<div class="trending_image"><img src="img/countryflag/RU.gif" alt="https://unsplash.com/@jbriscoe"></div>
 						<div class="trending_content">
-							<div class="trending_title"><a href="#">queen hotel</a></div>
-							<div class="trending_price">From $182</div>
-							<div class="trending_location">madrid, spain</div>
+							<div class="trending_title"><a href="#">러시아</a></div>
+							<div class="trending_price">1회 최대 연속 체류 60일, 180일 중 누적 90일</div>
+							<div class="trending_location">Russia</div>
 						</div>
 					</div>
 				</div>
@@ -960,11 +960,11 @@
 				<!-- Trending Item -->
 				<div class="col-lg-3 col-sm-6">
 					<div class="trending_item clearfix">
-						<div class="trending_image"><img src="images/trend_4.png" alt="https://unsplash.com/@oowgnuj"></div>
+						<div class="trending_image"><img src="img/countryflag/TW.gif" alt="https://unsplash.com/@oowgnuj"></div>
 						<div class="trending_content">
-							<div class="trending_title"><a href="#">mars hotel</a></div>
-							<div class="trending_price">From $182</div>
-							<div class="trending_location">madrid, spain</div>
+							<div class="trending_title"><a href="#">타이완</a></div>
+							<div class="trending_price">체류기간 : 90일</div>
+							<div class="trending_location">여권 유효기간 6개월 이상 필수</div>
 						</div>
 					</div>
 				</div>
@@ -972,11 +972,11 @@
 				<!-- Trending Item -->
 				<div class="col-lg-3 col-sm-6">
 					<div class="trending_item clearfix">
-						<div class="trending_image"><img src="images/trend_5.png" alt="https://unsplash.com/@mindaugas"></div>
+						<div class="trending_image"><img src="img/countryflag/VN.gif" alt="https://unsplash.com/@mindaugas"></div>
 						<div class="trending_content">
-							<div class="trending_title"><a href="#">grand hotel</a></div>
-							<div class="trending_price">From $182</div>
-							<div class="trending_location">madrid, spain</div>
+							<div class="trending_title"><a href="#">베트남</a></div>
+							<div class="trending_price">체류기간 : 15일 (2020.2.29.0시 부터 잠정중단)</div>
+							<div class="trending_location">Vietnam</div>
 						</div>
 					</div>
 				</div>
@@ -984,11 +984,11 @@
 				<!-- Trending Item -->
 				<div class="col-lg-3 col-sm-6">
 					<div class="trending_item clearfix">
-						<div class="trending_image"><img src="images/trend_6.png" alt="https://unsplash.com/@itsnwa"></div>
+						<div class="trending_image"><img src="img/countryflag/JP.gif" alt="https://unsplash.com/@itsnwa"></div>
 						<div class="trending_content">
-							<div class="trending_title"><a href="#">mars hotel</a></div>
-							<div class="trending_price">From $182</div>
-							<div class="trending_location">madrid, spain</div>
+							<div class="trending_title"><a href="#">일본</a></div>
+							<div class="trending_price">체류기간 : 90일</div>
+							<div class="trending_location">Japan</div>
 						</div>
 					</div>
 				</div>
@@ -996,11 +996,11 @@
 				<!-- Trending Item -->
 				<div class="col-lg-3 col-sm-6">
 					<div class="trending_item clearfix">
-						<div class="trending_image"><img src="images/trend_7.png" alt="https://unsplash.com/@rktkn"></div>
+						<div class="trending_image"><img src="img/countryflag/HK.gif" alt="https://unsplash.com/@rktkn"></div>
 						<div class="trending_content">
-							<div class="trending_title"><a href="#">queen hotel</a></div>
-							<div class="trending_price">From $182</div>
-							<div class="trending_location">madrid, spain</div>
+							<div class="trending_title"><a href="#">홍콩</a></div>
+							<div class="trending_price">체류기간 : 90일</div>
+							<div class="trending_location">Hongkong</div>
 						</div>
 					</div>
 				</div>
@@ -1008,11 +1008,11 @@
 				<!-- Trending Item -->
 				<div class="col-lg-3 col-sm-6">
 					<div class="trending_item clearfix">
-						<div class="trending_image"><img src="images/trend_8.png" alt="https://unsplash.com/@thoughtcatalog"></div>
+						<div class="trending_image"><img src="img/countryflag/PH.gif" alt="https://unsplash.com/@thoughtcatalog"></div>
 						<div class="trending_content">
-							<div class="trending_title"><a href="#">mars hotel</a></div>
-							<div class="trending_price">From $182</div>
-							<div class="trending_location">madrid, spain</div>
+							<div class="trending_title"><a href="#">필리핀</a></div>
+							<div class="trending_price">체류기간 : 30일</div>
+							<div class="trending_location">Philippines</div>
 						</div>
 					</div>
 				</div>
@@ -1020,7 +1020,7 @@
 			</div>
 		</div>
 	</div>
-
+<!--
 	<div class="contact">
 		<div class="contact_background" style="background-image:url(images/contact.png)"></div>
 
@@ -1046,7 +1046,7 @@
 			</div>
 		</div>
 	</div>
-
+-->
 	<!-- Footer -->
 	<%@include file ="footer.jsp" %>
 
