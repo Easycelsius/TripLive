@@ -1064,11 +1064,11 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 					<div class="footer_nav_container d-flex flex-row align-items-center justify-content-lg-end">
 						<div class="footer_nav">
 							<ul class="footer_nav_list">
-								<li class="footer_nav_item"><a href="#">home</a></li>
-								<li class="footer_nav_item"><a href="about.html">about us</a></li>
-								<li class="footer_nav_item"><a href="offers.html">offers</a></li>
-								<li class="footer_nav_item"><a href="blog.html">news</a></li>
-								<li class="footer_nav_item"><a href="contact.html">contact</a></li>
+								<li class="main_nav_item"><a href="../index.do">홈</a></li>
+								<li class="main_nav_item"><a href="">커뮤니티</a></li>
+								<li class="main_nav_item"><a href="">여행지정보</a></li>
+								<li class="main_nav_item"><a href="">긴급속보</a></li>
+								<li class="main_nav_item"><a href="../WorldWeather/weather.do">세계날씨</a></li>
 							</ul>
 						</div>
 					</div>

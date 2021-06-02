@@ -14,7 +14,5 @@ public class CalamityController {
         log.info("calamity 요청");
         return "views/Calamity";
     }
-
-    
 }
 
