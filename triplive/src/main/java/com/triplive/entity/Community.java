@@ -11,19 +11,19 @@ import lombok.*;
 public class Community {
     @Id // Primary Key에 해당하는 특정 필드를 id로 지정
     @GeneratedValue(strategy = GenerationType.IDENTITY) // ID값 자동으로 지정
-    private Long board_no;
+    private Long bd_no;
 
     // Column으로 사용하지 않는 필드의 경우 @Transient 어노테이션을 적용
     @Column(length = 30*3, nullable = false)
     private String id; // 작성자
 
-    @Column(length = 30*3, nullable = false)
-    private String board_title; // 글제목
+    @Column(length = 50*3, nullable = false)
+    private String bd_title; // 글제목
 
-    @Column(length = 200*3, nullable = false)
-    private String board_content; // 글내용
+    @Column(columnDefinition = "TEXT", nullable = false)
+    private String bd_content; // 글내용
 
-    @Column(length = 30, nullable = false)
+    @Column(length = 30, nullable = true)
     private int iso_num; // 국가코드
     
     @Column
