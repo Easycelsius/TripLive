@@ -764,7 +764,7 @@ section
 	width: 100%;
 	height: 100%;
 	z-index: 10;
-	background: #31124b;
+	/* background: #31124b; */
 }
 .home_slider
 {

@@ -26,7 +26,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col d-flex flex-row">
-						<div class="phone">+45 345 3324 56789</div>
+						<div class="phone">+82 031 728 7001</div>
 						<div class="social">
 							<ul class="social_list">
 								<li class="social_list_item"><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>

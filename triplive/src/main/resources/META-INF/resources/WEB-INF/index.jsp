@@ -21,13 +21,10 @@
 <body>
 
 <div class="super_container">
-	
 
 	<!-- 헤더 -->
 	<%@include file ="header.jsp" %>
 	<!-- 헤더 종료 -->
-
-	
 
 	<!-- Home -->
 
@@ -42,39 +39,40 @@
 				<!-- Slider Item -->
 				<div class="owl-item home_slider_item">
 					<!-- Image by https://unsplash.com/@anikindimitry -->
-					<div class="home_slider_background" style="background-image:url(images/home_slider.jpg)"></div>
+					<div class="home_slider_background" style="background-image:url(images/ben-selway.jpg)"></div>
 
 					<div class="home_slider_content text-center">
 						<div class="home_slider_content_inner" data-animation-in="flipInX" data-animation-out="animate-out fadeOut">
 							<h1>Yours</h1>
-							<h1>TripLive</h1>
-							<div class="button home_slider_button"><div class="button_bcg"></div><a href="#">explore now<span></span><span></span><span></span></a></div>
+							<h1>travelAlarm</h1>
+							<div class="button home_slider_button"><div class="button_bcg"></div><a href="#">바로가기<span></span><span></span><span></span></a></div>
 						</div>
 					</div>
 				</div>
 
 				<!-- Slider Item -->
 				<div class="owl-item home_slider_item">
-					<div class="home_slider_background" style="background-image:url(images/lilac.jpg)"></div>
+					<!-- Image by https://unsplash.com/photos/Gg93cEspT_8 -->
+					<div class="home_slider_background" style="background-image:url(images/stefano.jpg)"></div>
 
 					<div class="home_slider_content text-center">
 						<div class="home_slider_content_inner" data-animation-in="flipInX" data-animation-out="animate-out fadeOut">
-							<h1>discover</h1>
-							<h1>the world</h1>
-							<div class="button home_slider_button"><div class="button_bcg"></div><a href="#">explore now<span></span><span></span><span></span></a></div>
+							<h1>COUNTRY</h1>
+							<h1>historyas</h1>
+							<div class="button home_slider_button"><div class="button_bcg"></div><a href="#">바로가기<span></span><span></span><span></span></a></div>
 						</div>
 					</div>
 				</div>
 
 				<!-- Slider Item -->
 				<div class="owl-item home_slider_item">
-					<div class="home_slider_background" style="background-image:url(images/home_slider.jpg)"></div>
+					<div class="home_slider_background" style="background-image:url(images/alice-davies.jpg)"></div>
 
 					<div class="home_slider_content text-center">
 						<div class="home_slider_content_inner" data-animation-in="flipInX" data-animation-out="animate-out fadeOut">
-							<h1>discover</h1>
+							<h1>TRIPLIVE</h1>
 							<h1>the world</h1>
-							<div class="button home_slider_button"><div class="button_bcg"></div><a href="#">explore now<span></span><span></span><span></span></a></div>
+							<div class="button home_slider_button"><div class="button_bcg"></div><a href="#">바로가기<span></span><span></span><span></span></a></div>
 						</div>
 					</div>
 				</div>
@@ -147,9 +145,9 @@
 					<div class="search_tabs_container">
 						<div class="search_tabs d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
 							<div class="search_tab active d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="images/suitcase.png" alt=""><span>환율</span></div>
-							<div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="images/bus.png" alt="">해외 날씨</div>
-							<div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="images/departure.png" alt="">해당나라 정보</div>
-							<div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="images/island.png" alt="">외교부</div>
+							<div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="images/bus.png" alt="">외교부</div>
+							<div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="images/departure.png" alt="">국가 정보</div>
+							<div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="images/island.png" alt="">날씨</div>
 							<div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="images/cruise.png" alt="">재난및긴급</div>
 							<div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="images/diving.png" alt="">여행지 정보</div>
 						</div>		
@@ -158,12 +156,12 @@
 					<!-- Search Panel -->
 
 					<div class="search_panel active">
-						<form action="#" id="search_form_1" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
+						<form action="#" id="search_form_1" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-center justify-content-start">
 							<div class="search_item">
-								<div>destination</div>
+								<div>찾으시는 환율 국가를 검색하세요</div>
 								<input type="text" class="destination search_input" required="required">
 							</div>
-							<div class="search_item">
+							<!-- <div class="search_item">
 								<div>check in</div>
 								<input type="text" class="check_in search_input" placeholder="YYYY-MM-DD">
 							</div>
@@ -186,20 +184,20 @@
 									<option>02</option>
 									<option>03</option>
 								</select>
-							</div>
-							<button class="button search_button">search<span></span><span></span><span></span></button>
+							</div> -->
+							<button class="button search_button">검색<span></span><span></span><span></span></button>
 						</form>
 					</div>
 
 					<!-- Search Panel -->
 
 					<div class="search_panel">
-						<form action="#" id="search_form_2" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
+						<form action="#" id="search_form_2" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-center justify-content-start">
 							<div class="search_item">
-								<div>destination</div>
+								<div>찾으시는 외교부를 검색하세요</div>
 								<input type="text" class="destination search_input" required="required">
 							</div>
-							<div class="search_item">
+							<!-- <div class="search_item">
 								<div>check in</div>
 								<input type="text" class="check_in search_input" placeholder="YYYY-MM-DD">
 							</div>
@@ -222,20 +220,20 @@
 									<option>02</option>
 									<option>03</option>
 								</select>
-							</div>
-							<button class="button search_button">search<span></span><span></span><span></span></button>
+							</div> -->
+							<button class="button search_button">검색<span></span><span></span><span></span></button>
 						</form>
 					</div>
 
 					<!-- Search Panel -->
 
 					<div class="search_panel">
-						<form action="#" id="search_form_3" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
+						<form action="#" id="search_form_3" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-center justify-content-start">
 							<div class="search_item">
-								<div>destination</div>
+								<div>찾으시는 국가 정보를 검색하세요</div>
 								<input type="text" class="destination search_input" required="required">
 							</div>
-							<div class="search_item">
+							<!-- <div class="search_item">
 								<div>check in</div>
 								<input type="text" class="check_in search_input" placeholder="YYYY-MM-DD">
 							</div>
@@ -258,20 +256,20 @@
 									<option>02</option>
 									<option>03</option>
 								</select>
-							</div>
-							<button class="button search_button">search<span></span><span></span><span></span></button>
+							</div> -->
+							<button class="button search_button">검색<span></span><span></span><span></span></button>
 						</form>
 					</div>
 
 					<!-- Search Panel -->
 
 					<div class="search_panel">
-						<form action="#" id="search_form_4" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
+						<form action="#" id="search_form_4" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-center justify-content-start">
 							<div class="search_item">
-								<div>destination</div>
+								<div>찾으시는 날씨 국가를 검색하세요</div>
 								<input type="text" class="destination search_input" required="required">
 							</div>
-							<div class="search_item">
+							<!-- <div class="search_item">
 								<div>check in</div>
 								<input type="text" class="check_in search_input" placeholder="YYYY-MM-DD">
 							</div>
@@ -294,20 +292,20 @@
 									<option>02</option>
 									<option>03</option>
 								</select>
-							</div>
-							<button class="button search_button">search<span></span><span></span><span></span></button>
+							</div> -->
+							<button class="button search_button">검색<span></span><span></span><span></span></button>
 						</form>
 					</div>
 
 					<!-- Search Panel -->
 
 					<div class="search_panel">
-						<form action="#" id="search_form_5" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
+						<form action="#" id="search_form_5" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-center justify-content-start">
 							<div class="search_item">
-								<div>destination</div>
+								<div>찾으시는 재난 및 긴급 국가를 검색하세요</div>
 								<input type="text" class="destination search_input" required="required">
 							</div>
-							<div class="search_item">
+							<!-- <div class="search_item">
 								<div>check in</div>
 								<input type="text" class="check_in search_input" placeholder="YYYY-MM-DD">
 							</div>
@@ -330,20 +328,20 @@
 									<option>02</option>
 									<option>03</option>
 								</select>
-							</div>
-							<button class="button search_button">search<span></span><span></span><span></span></button>
+							</div> -->
+							<button class="button search_button">검색<span></span><span></span><span></span></button>
 						</form>
 					</div>
 
 					<!-- Search Panel -->
 
 					<div class="search_panel">
-						<form action="#" id="search_form_6" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
+						<form action="#" id="search_form_6" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-center justify-content-start">
 							<div class="search_item">
-								<div>destination</div>
+								<div>찾으시는 여행지 정보를 검색하세요</div>
 								<input type="text" class="destination search_input" required="required">
 							</div>
-							<div class="search_item">
+							<!-- <div class="search_item">
 								<div>check in</div>
 								<input type="text" class="check_in search_input" placeholder="YYYY-MM-DD">
 							</div>
@@ -366,8 +364,8 @@
 									<option>02</option>
 									<option>03</option>
 								</select>
-							</div>
-							<button class="button search_button">search<span></span><span></span><span></span></button>
+							</div> -->
+							<button class="button search_button">검색<span></span><span></span><span></span></button>
 						</form>
 					</div>
 				</div>
@@ -381,13 +379,13 @@
 		<div class="container">
 			<div class="row">
 				<div class="col">
-					<h2 class="intro_title text-center">We have the best tours</h2>
+					<h2 class="intro_title text-center">코로나19</h2>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-lg-10 offset-lg-1">
 					<div class="intro_text text-center">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu convallis tortor. Suspendisse potenti. In faucibus massa arcu, vitae cursus mi hendrerit nec. </p>
+						<p>해외 운항, 입국, 코로나19 관련 등의 국가·지역별 최신안전소식</p>
 					</div>
 				</div>
 			</div>
@@ -489,7 +487,7 @@
 
 							<!-- CTA Slider Item -->
 							<div class="owl-item cta_item text-center">
-								<div class="cta_title">maldives deluxe package</div>
+								<div class="cta_title">국가∙지역별 사건사고 유형</div>
 								<div class="rating_r rating_r_4">
 									<i></i>
 									<i></i>
@@ -497,13 +495,15 @@
 									<i></i>
 									<i></i>
 								</div>
-								<p class="cta_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu convallis tortor. Suspendisse potenti. In faucibus massa arcu, vitae cursus mi hendrerit nec. Proin bibendum, augue faucibus tincidunt ultrices, tortor augue gravida lectus, et efficitur enim justo vel ligula.</p>
-								<div class="button cta_button"><div class="button_bcg"></div><a href="#">book now<span></span><span></span><span></span></a></div>
+								<p class="cta_text">ㅇ 그리스 치안은 비교적 안전한 편에 속하나, 관광객을 노리는 다양한 형태의 소매치기, 도난 사건 등으로 피해를 입는 경우가 많이 발생하고 있음<br>
+
+									ㅇ 최근 아크로폴리스 및 아레이오파고스 언덕, 필로파푸스 언덕 등에서 가방을 발 밑에 두고 아크로폴리스를 배경으로 사진을 찍다가 가방을 통째로 도난 당하는 사건이 급증하고 있음. 짐을 내려놓는 등의 행동은 도난의 위험이 매우 높음...</p>
+								<div class="button cta_button"><div class="button_bcg"></div><a href="#">바로가기<span></span><span></span><span></span></a></div>
 							</div>
 
 							<!-- CTA Slider Item -->
 							<div class="owl-item cta_item text-center">
-								<div class="cta_title">maldives deluxe package</div>
+								<div class="cta_title">국가∙지역별 사건사고 유형</div>
 								<div class="rating_r rating_r_4">
 									<i></i>
 									<i></i>
@@ -511,13 +511,14 @@
 									<i></i>
 									<i></i>
 								</div>
-								<p class="cta_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu convallis tortor. Suspendisse potenti. In faucibus massa arcu, vitae cursus mi hendrerit nec. Proin bibendum, augue faucibus tincidunt ultrices, tortor augue gravida lectus, et efficitur enim justo vel ligula.</p>
-								<div class="button cta_button"><div class="button_bcg"></div><a href="#">book now<span></span><span></span><span></span></a></div>
+								<p class="cta_text">[치안상황]
+									ㅇ 동유럽과 북아프리카 지역에서 온 유랑자들이 짝을 이루어 관광객들에게 접근하여 소매치기를(절도) 하거나, 식당(호텔)과 기차역 주변 등에서 가방을 훔치는 유형의 경범죄 발생</p>
+								<div class="button cta_button"><div class="button_bcg"></div><a href="#">바로가기<span></span><span></span><span></span></a></div>
 							</div>
 
 							<!-- CTA Slider Item -->
 							<div class="owl-item cta_item text-center">
-								<div class="cta_title">maldives deluxe package</div>
+								<div class="cta_title">국가∙지역별 사건사고 유형</div>
 								<div class="rating_r rating_r_4">
 									<i></i>
 									<i></i>
@@ -525,8 +526,8 @@
 									<i></i>
 									<i></i>
 								</div>
-								<p class="cta_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu convallis tortor. Suspendisse potenti. In faucibus massa arcu, vitae cursus mi hendrerit nec. Proin bibendum, augue faucibus tincidunt ultrices, tortor augue gravida lectus, et efficitur enim justo vel ligula.</p>
-								<div class="button cta_button"><div class="button_bcg"></div><a href="#">book now<span></span><span></span><span></span></a></div>
+								<p class="cta_text">[내전, 테러(피랍) 사건 등 동향]	ㅇ 2019.12월 시행된 대선 결선투표에서 우마로 시소코 엠발로 후보 당선 결과 발표후 상대 후보인 기니비사우 카보베르데 독립아프리카당(PAIGC) 당수가 대법원에 이의를 제기한 상황에서 취임식을 일방 강행(2020.2.27.)함.</p>
+								<div class="button cta_button"><div class="button_bcg"></div><a href="#">바로가기<span></span><span></span><span></span></a></div>
 							</div>
 							
 						</div>
@@ -581,7 +582,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col text-center">
-					<h2 class="section_title">the best offers with rooms</h2>
+					<h2 class="section_title">국가별 재외공관 정보</h2>
 				</div>
 			</div>
 			<div class="row offers_items">
@@ -599,7 +600,7 @@
 							</div>
 							<div class="col-lg-6">
 								<div class="offers_content">
-									<div class="offers_price">$70<span>per night</span></div>
+									<div class="offers_price">일본<br><span>주 일본 대한민국 대사관</span></div>
 									<div class="rating_r rating_r_4 offers_rating">
 										<i></i>
 										<i></i>
@@ -607,7 +608,8 @@
 										<i></i>
 										<i></i>
 									</div>
-									<p class="offers_text">Suspendisse potenti. In faucibus massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu convallis tortor.</p>
+									<p class="offers_text">ㅇ 전화번호 : (81) 3-3455-2601<br>ㅇ 재외공관 주소 : 1-7-32 Minamiazabu Minato-ku, Tokyo, Japan,
+									</p>
 									<div class="offers_icons">
 										<ul class="offers_icons_list">
 											<li class="offers_icons_item"><img src="images/post.png" alt=""></li>
@@ -616,7 +618,7 @@
 											<li class="offers_icons_item"><img src="images/sailboat.png" alt=""></li>
 										</ul>
 									</div>
-									<div class="offers_link"><a href="offers.html">read more</a></div>
+									<div class="offers_link"><a href="http://overseas.mofa.go.kr/jp-ko/index.do">홈페이지 바로가기</a></div>
 								</div>
 							</div>
 						</div>
@@ -636,7 +638,7 @@
 							</div>
 							<div class="col-lg-6">
 								<div class="offers_content">
-									<div class="offers_price">$50<span>per night</span></div>
+									<div class="offers_price">중국<br><span>주 중국 대한민국 대사관</span></div>
 									<div class="rating_r rating_r_4 offers_rating">
 										<i></i>
 										<i></i>
@@ -644,7 +646,7 @@
 										<i></i>
 										<i></i>
 									</div>
-									<p class="offers_text">Suspendisse potenti. In faucibus massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu convallis tortor.</p>
+									<p class="offers_text">ㅇ 전화번호 : (86) 10-8531-0700<br>ㅇ 재외공관 주소 : No.20, DongfangdongLu Chaoyang District, Beijing, China 100600,</p>
 									<div class="offers_icons">
 										<ul class="offers_icons_list">
 											<li class="offers_icons_item"><img src="images/post.png" alt=""></li>
@@ -653,7 +655,7 @@
 											<li class="offers_icons_item"><img src="images/sailboat.png" alt=""></li>
 										</ul>
 									</div>
-									<div class="offers_link"><a href="offers.html">read more</a></div>
+									<div class="offers_link"><a href="http://overseas.mofa.go.kr/cn-ko/index.do">홈페이지 바로가기</a></div>
 								</div>
 							</div>
 						</div>
