@@ -20,6 +20,7 @@ public class GetEnbraceVisaList2 {
     @Column(length = 50, nullable = false)
     private String country_nm; // 국가명
     
+    @Id
     @Column(length = 10*3, nullable = false)
     private String iso_num; // iso 숫자코드 
 

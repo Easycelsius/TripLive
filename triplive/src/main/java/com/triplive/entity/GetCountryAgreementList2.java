@@ -18,6 +18,7 @@ public class GetCountryAgreementList2 {
     @Column(length = 50, nullable = true)
     private String country_nm; // 국가명
     
+    @Id
     @Column(length = 10*3, nullable = true)
     private String country_iso_alp2; // iso 2자리 숫자코드 
 
