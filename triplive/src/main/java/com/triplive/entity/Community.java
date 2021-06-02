@@ -1,20 +1,7 @@
 package com.triplive.entity;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
-
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+// 커뮤니티
+import javax.persistence.*;
+import lombok.*;
 
 @Entity //JPA로 관리되는 어노테이션 : 테이블이나 컬럼 생성
 @Table(name="community") // 테이블명 지정 + 인덱스도 설정
