@@ -117,6 +117,35 @@
 		</div>
 </footer>
 
+		<!-- Copyright -->
+
+		<div class="copyright">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 order-lg-1 order-2  ">
+						<div class="copyright_content d-flex flex-row align-items-center">
+							<div><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
+						</div>
+					</div>
+					<div class="col-lg-9 order-lg-2 order-1">
+						<div class="footer_nav_container d-flex flex-row align-items-center justify-content-lg-end">
+							<div class="footer_nav">
+								<ul class="footer_nav_list">
+									<li class="main_nav_item"><a href="../index.do">홈</a></li>
+									<li class="main_nav_item"><a href="../community/commu.do">커뮤니티</a></li>
+									<li class="main_nav_item"><a href="">여행지정보</a></li>
+									<li class="main_nav_item"><a href="">긴급속보</a></li>
+									<li class="main_nav_item"><a href="../worldweather/weather.do">세계날씨</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
 <script src="../js/jquery-3.2.1.min.js"></script>
 <script src="../styles/bootstrap4/popper.js"></script>
 <script src="../styles/bootstrap4/bootstrap.min.js"></script>
