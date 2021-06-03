@@ -2,7 +2,7 @@
     pageEncoding="utf-8"%>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
 <title>트립라이브 글 남기기</title>
 <meta charset="utf-8">
@@ -13,6 +13,8 @@
 <link href="../plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../styles/contact_styles.css">
 <link rel="stylesheet" type="text/css" href="../styles/contact_responsive.css">
+<link rel="stylesheet" type="text/css" href="../styles/offers_styles.css">
+<link rel="stylesheet" type="text/css" href="../styles/offers_responsive.css">
 </head>
 
 <body>
@@ -42,12 +44,26 @@
 					<!-- Contact Form -->
 					<div class="contact_form_container">
 						<div class="contact_title text-center">글 남기기</div>
-						<form action="#" id="contact_form" class="contact_form text-center" method="POST">
-							<input type="text" id="contact_form_name" class="contact_form_name input_field" placeholder="ID" required="required" data-error="Name is required.">
-							<input type="text" id="contact_form_email" class="contact_form_email input_field" placeholder="E-mail" required="required" data-error="Email is required.">
-							<input type="text" id="contact_form_subject" class="contact_form_subject input_field" placeholder="Subject" required="required" data-error="Subject is required.">
-							<textarea id="contact_form_message" class="text_field contact_form_message" name="message" rows="4" placeholder="Message" required="required" data-error="Please, write us a message."></textarea>
-							<button type="submit" id="form_submit_button" class="form_submit_button button trans_200">send message<span></span><span></span><span></span></button>
+						<form action="posting.do" id="contact_form" class="contact_form text-center" method="POST">
+							<!-- <input type="text" id="contact_form_name" class="contact_form_name input_field" placeholder="ID" required="required" data-error="Name is required.">
+							<input type="text" id="contact_form_email" class="contact_form_email input_field" placeholder="E-mail" required="required" data-error="Email is required."> -->
+							<select name="iso_num" id="country" class="dropdown_item_select search_input" required="required">
+								<option value="392">일본</option>
+								<option value="156">중국</option>
+								<option value="704">베트남</option>
+								<option value="840">미국</option>
+								<option value="764">태국</option>
+								<option value="608">필리핀</option>
+								<option value="702">싱가포르</option>
+								<option value="250">프랑스</option>
+								<option value="826">영국</option>
+								<option value="36">호주</option>
+								<option value="372">아일랜드</option>
+								<option value="0">기타</option>
+							</select>
+							<input name="bd_title" type="text" id="contact_form_subject" class="contact_form_subject input_field" placeholder="제목" required="required" data-error="Subject is required.">
+							<textarea name="bd_content" id="contact_form_message" class="text_field contact_form_message" rows="4" placeholder="내용" required="required" data-error="Please, write us a message."></textarea>
+							<button type="submit" id="form_submit_button" class="form_submit_button button trans_200">작성 완료</button>
 						</form>
 					</div>
 
@@ -64,9 +80,9 @@
 					
 					<!-- About - Image -->
 
-					<div class="about_image">
+					<!-- <div class="about_image">
 						<img src="../images/man.png" alt="">
-					</div>
+					</div> -->
 
 				</div>
 
@@ -74,7 +90,7 @@
 					
 					<!-- About - Content -->
 
-					<div class="about_content">
+					<!-- <div class="about_content">
 						<div class="logo_container about_logo">
 							<div class="logo"><a href="#"><img src="../images/logo.png" alt="">travelix</a></div>
 						</div>
@@ -86,7 +102,7 @@
 							<li class="about_social_item"><a href="#"><i class="fa fa-dribbble"></i></a></li>
 							<li class="about_social_item"><a href="#"><i class="fa fa-behance"></i></a></li>
 						</ul>
-					</div>
+					</div> -->
 
 				</div>
 
@@ -94,7 +110,7 @@
 					
 					<!-- About Info -->
 
-					<div class="about_info">
+					<!-- <div class="about_info">
 						<ul class="contact_info_list">
 							<li class="contact_info_item d-flex flex-row">
 								<div><div class="contact_info_icon"><img src="../images/placeholder.svg" alt=""></div></div>
@@ -113,7 +129,7 @@
 								<div class="contact_info_text"><a href="https://colorlib.com">www.colorlib.com</a></div>
 							</li>
 						</ul>
-					</div>
+					</div> -->
 
 				</div>
 
@@ -137,12 +153,12 @@
 
 </div>
 
-<script src="js/jquery-3.2.1.min.js"></script>
+<script src="../js/jquery-3.2.1.min.js"></script>
 <script src="../styles/bootstrap4/popper.js"></script>
 <script src="../styles/bootstrap4/bootstrap.min.js"></script>
 <script src="../plugins/parallax-js-master/parallax.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCIwF204lFZg1y4kPSIhKaHEXMLYxxuMhA"></script>
-<script src="js/contact_custom.js"></script>
+<script src="../js/contact_custom.js"></script>
 
 </body>
 

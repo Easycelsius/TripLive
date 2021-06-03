@@ -52,18 +52,18 @@
 									<div class="search_item">
 										<div>국가</div>
 										<select name="country" id="country" class="dropdown_item_select search_input" required="required">
-											<option>전체</option>
-											<option>일본</option>
-											<option>중국</option>
-											<option>베트남</option>
-											<option>미국</option>
-											<option>태국</option>
-											<option>필리핀</option>
-											<option>싱가포르</option>
-											<option>프랑스</option>
-											<option>영국</option>
-											<option>호주</option>
-											<option>아일랜드</option>
+											<option value="">전체</option>
+											<option value="392">일본</option>
+											<option value="156">중국</option>
+											<option value="704">베트남</option>
+											<option value="840">미국</option>
+											<option value="764">태국</option>
+											<option value="608">필리핀</option>
+											<option value="702">싱가포르</option>
+											<option value="250">프랑스</option>
+											<option value="826">영국</option>
+											<option value="36">호주</option>
+											<option value="372">아일랜드</option>
 										</select>
 										<!-- <input type="text" class="destination search_input" required="required"> -->
 									</div>
