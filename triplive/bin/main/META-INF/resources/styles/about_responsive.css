@@ -1,5 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
+/* resource - about_reponsive */
 
 /******************************
 
@@ -321,11 +322,11 @@
 	}
 	.logo a
 	{
-		font-size: 16px;
+		font-size: 160px;
 	}
 	.logo a img
 	{
-		width: 16px;
+		width: 160px;
 		margin-right: 7px;
 	}
 	.hamburger i

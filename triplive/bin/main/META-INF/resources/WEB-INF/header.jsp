@@ -3,6 +3,9 @@ pageEncoding="utf-8"%>
 
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <link rel="stylesheet" type="text/css" href="styles/responsive.css" />
+  </head>
   <body>
     <header class="header">
       <div class="top_bar">
@@ -85,11 +88,11 @@ pageEncoding="utf-8"%>
               <div class="main_nav_container ml-auto">
                 <ul class="main_nav_list">
                   <li class="main_nav_item"><a href="../index.do">홈</a></li>
-                  <li class="main_nav_item"><a href="">커뮤니티</a></li>
-                  <li class="main_nav_item"><a href="">여행지정보</a></li>
                   <li class="main_nav_item">
-                    <a href="../calamity/calamity.do">긴급속보</a>
+                    <a href="../community/commu.do">커뮤니티</a>
                   </li>
+                  <li class="main_nav_item"><a href="">여행지정보</a></li>
+                  <li class="main_nav_item"><a href="">긴급속보</a></li>
                   <li class="main_nav_item">
                     <a href="../worldweather/weather.do">세계날씨</a>
                   </li>
