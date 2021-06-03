@@ -26,33 +26,6 @@
 	<%@include file ="../header.jsp" %>
 	<!-- 헤더 종료 -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	<!-- Home -->
 
 	<div class="home">
@@ -173,7 +146,7 @@
 		<div>
 			<div>
 				<div>
-					<h2>안녕</h2>
+					<h2>안녕</h2>	
 				</div>
 			</div>
 		</div>
@@ -221,7 +194,6 @@
 	<%@include file ="../footer.jsp" %>
 
 	<!-- Copyright -->
-
 	<div class="copyright">
 		<div class="container">
 			<div class="row">
@@ -251,14 +223,12 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
 </div>
 
-
 <script src="../../js/jquery-3.2.1.min.js"></script>
 <script src="../../styles/bootstrap4/popper.js"></script>
 <script src="../../styles/bootstrap4/bootstrap.min.js"></script>
 <script src="../../plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
 <script src="../../plugins/easing/easing.js"></script>
 <script src="../../js/custom.js"></script
-
 </body>
 
 </html>
