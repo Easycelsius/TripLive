@@ -1,6 +1,7 @@
 package com.triplive.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import com.triplive.entity.Community;
 
@@ -15,8 +16,8 @@ public interface CommunityService {
         void deletePosting(Community community);
     
         // 글 상세 조회
-        void getPosting(Community community);
+        Optional<Community> getPosting(Community community);
     
         // 글 목록 조회
-        List<Community> getPostingList(Community community);
+        List<Community> getPostingList(Integer Page);
 }
