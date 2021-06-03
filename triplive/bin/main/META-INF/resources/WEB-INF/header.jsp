@@ -98,7 +98,7 @@ pageEncoding="utf-8"%>
 				<div class="logo menu_logo"><a href="../index.do"><img src="../logo/triplive_logo_white_r.png" width="200px" alt=""></a></div>
 				<ul>
 					<li class="main_nav_item"><a href="../index.do">홈</a></li>
-					<li class="main_nav_item"><a href="">커뮤니티</a></li>
+					<li class="main_nav_item"><a href="../community/commu.do">커뮤니티</a></li>
 					<li class="main_nav_item"><a href="">여행지정보</a></li>
 					<li class="main_nav_item"><a href="">긴급속보</a></li>
 					<li class="main_nav_item"><a href="../worldweather/weather.do">세계날씨</a></li>
