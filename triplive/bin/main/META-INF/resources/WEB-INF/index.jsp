@@ -21,13 +21,10 @@
 <body>
 
 <div class="super_container">
-	
 
 	<!-- 헤더 -->
 	<%@include file ="header.jsp" %>
 	<!-- 헤더 종료 -->
-
-	
 
 	<!-- Home -->
 
@@ -42,39 +39,40 @@
 				<!-- Slider Item -->
 				<div class="owl-item home_slider_item">
 					<!-- Image by https://unsplash.com/@anikindimitry -->
-					<div class="home_slider_background" style="background-image:url(images/home_slider.jpg)"></div>
+					<div class="home_slider_background" style="background-image:url(images/ben-selway.jpg)"></div>
 
 					<div class="home_slider_content text-center">
 						<div class="home_slider_content_inner" data-animation-in="flipInX" data-animation-out="animate-out fadeOut">
 							<h1>Yours</h1>
-							<h1>TripLive</h1>
-							<div class="button home_slider_button"><div class="button_bcg"></div><a href="#">explore now<span></span><span></span><span></span></a></div>
+							<h1>travelAlarm</h1>
+							<div class="button home_slider_button"><div class="button_bcg"></div><a href="#">바로가기<span></span><span></span><span></span></a></div>
 						</div>
 					</div>
 				</div>
 
 				<!-- Slider Item -->
 				<div class="owl-item home_slider_item">
-					<div class="home_slider_background" style="background-image:url(images/lilac.jpg)"></div>
+					<!-- Image by https://unsplash.com/photos/Gg93cEspT_8 -->
+					<div class="home_slider_background" style="background-image:url(images/stefano.jpg)"></div>
 
 					<div class="home_slider_content text-center">
 						<div class="home_slider_content_inner" data-animation-in="flipInX" data-animation-out="animate-out fadeOut">
-							<h1>discover</h1>
-							<h1>the world</h1>
-							<div class="button home_slider_button"><div class="button_bcg"></div><a href="#">explore now<span></span><span></span><span></span></a></div>
+							<h1>COUNTRY</h1>
+							<h1>historyas</h1>
+							<div class="button home_slider_button"><div class="button_bcg"></div><a href="#">바로가기<span></span><span></span><span></span></a></div>
 						</div>
 					</div>
 				</div>
 
 				<!-- Slider Item -->
 				<div class="owl-item home_slider_item">
-					<div class="home_slider_background" style="background-image:url(images/home_slider.jpg)"></div>
+					<div class="home_slider_background" style="background-image:url(images/alice-davies.jpg)"></div>
 
 					<div class="home_slider_content text-center">
 						<div class="home_slider_content_inner" data-animation-in="flipInX" data-animation-out="animate-out fadeOut">
-							<h1>discover</h1>
+							<h1>TRIPLIVE</h1>
 							<h1>the world</h1>
-							<div class="button home_slider_button"><div class="button_bcg"></div><a href="#">explore now<span></span><span></span><span></span></a></div>
+							<div class="button home_slider_button"><div class="button_bcg"></div><a href="#">바로가기<span></span><span></span><span></span></a></div>
 						</div>
 					</div>
 				</div>
@@ -147,9 +145,9 @@
 					<div class="search_tabs_container">
 						<div class="search_tabs d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
 							<div class="search_tab active d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="images/suitcase.png" alt=""><span>환율</span></div>
-							<div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="images/bus.png" alt="">해외 날씨</div>
-							<div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="images/departure.png" alt="">해당나라 정보</div>
-							<div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="images/island.png" alt="">외교부</div>
+							<div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="images/bus.png" alt="">외교부</div>
+							<div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="images/departure.png" alt="">국가 정보</div>
+							<div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="images/island.png" alt="">날씨</div>
 							<div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="images/cruise.png" alt="">재난및긴급</div>
 							<div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="images/diving.png" alt="">여행지 정보</div>
 						</div>		
@@ -158,12 +156,12 @@
 					<!-- Search Panel -->
 
 					<div class="search_panel active">
-						<form action="#" id="search_form_1" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
+						<form action="#" id="search_form_1" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-center justify-content-start">
 							<div class="search_item">
-								<div>destination</div>
+								<div>찾으시는 환율 국가를 검색하세요</div>
 								<input type="text" class="destination search_input" required="required">
 							</div>
-							<div class="search_item">
+							<!-- <div class="search_item">
 								<div>check in</div>
 								<input type="text" class="check_in search_input" placeholder="YYYY-MM-DD">
 							</div>
@@ -186,20 +184,20 @@
 									<option>02</option>
 									<option>03</option>
 								</select>
-							</div>
-							<button class="button search_button">search<span></span><span></span><span></span></button>
+							</div> -->
+							<button class="button search_button">검색<span></span><span></span><span></span></button>
 						</form>
 					</div>
 
 					<!-- Search Panel -->
 
 					<div class="search_panel">
-						<form action="#" id="search_form_2" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
+						<form action="#" id="search_form_2" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-center justify-content-start">
 							<div class="search_item">
-								<div>destination</div>
+								<div>찾으시는 외교부를 검색하세요</div>
 								<input type="text" class="destination search_input" required="required">
 							</div>
-							<div class="search_item">
+							<!-- <div class="search_item">
 								<div>check in</div>
 								<input type="text" class="check_in search_input" placeholder="YYYY-MM-DD">
 							</div>
@@ -222,20 +220,20 @@
 									<option>02</option>
 									<option>03</option>
 								</select>
-							</div>
-							<button class="button search_button">search<span></span><span></span><span></span></button>
+							</div> -->
+							<button class="button search_button">검색<span></span><span></span><span></span></button>
 						</form>
 					</div>
 
 					<!-- Search Panel -->
 
 					<div class="search_panel">
-						<form action="#" id="search_form_3" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
+						<form action="#" id="search_form_3" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-center justify-content-start">
 							<div class="search_item">
-								<div>destination</div>
+								<div>찾으시는 국가 정보를 검색하세요</div>
 								<input type="text" class="destination search_input" required="required">
 							</div>
-							<div class="search_item">
+							<!-- <div class="search_item">
 								<div>check in</div>
 								<input type="text" class="check_in search_input" placeholder="YYYY-MM-DD">
 							</div>
@@ -258,20 +256,20 @@
 									<option>02</option>
 									<option>03</option>
 								</select>
-							</div>
-							<button class="button search_button">search<span></span><span></span><span></span></button>
+							</div> -->
+							<button class="button search_button">검색<span></span><span></span><span></span></button>
 						</form>
 					</div>
 
 					<!-- Search Panel -->
 
 					<div class="search_panel">
-						<form action="#" id="search_form_4" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
+						<form action="#" id="search_form_4" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-center justify-content-start">
 							<div class="search_item">
-								<div>destination</div>
+								<div>찾으시는 날씨 국가를 검색하세요</div>
 								<input type="text" class="destination search_input" required="required">
 							</div>
-							<div class="search_item">
+							<!-- <div class="search_item">
 								<div>check in</div>
 								<input type="text" class="check_in search_input" placeholder="YYYY-MM-DD">
 							</div>
@@ -294,20 +292,20 @@
 									<option>02</option>
 									<option>03</option>
 								</select>
-							</div>
-							<button class="button search_button">search<span></span><span></span><span></span></button>
+							</div> -->
+							<button class="button search_button">검색<span></span><span></span><span></span></button>
 						</form>
 					</div>
 
 					<!-- Search Panel -->
 
 					<div class="search_panel">
-						<form action="#" id="search_form_5" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
+						<form action="#" id="search_form_5" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-center justify-content-start">
 							<div class="search_item">
-								<div>destination</div>
+								<div>찾으시는 재난 및 긴급 국가를 검색하세요</div>
 								<input type="text" class="destination search_input" required="required">
 							</div>
-							<div class="search_item">
+							<!-- <div class="search_item">
 								<div>check in</div>
 								<input type="text" class="check_in search_input" placeholder="YYYY-MM-DD">
 							</div>
@@ -330,20 +328,20 @@
 									<option>02</option>
 									<option>03</option>
 								</select>
-							</div>
-							<button class="button search_button">search<span></span><span></span><span></span></button>
+							</div> -->
+							<button class="button search_button">검색<span></span><span></span><span></span></button>
 						</form>
 					</div>
 
 					<!-- Search Panel -->
 
 					<div class="search_panel">
-						<form action="#" id="search_form_6" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
+						<form action="#" id="search_form_6" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-center justify-content-start">
 							<div class="search_item">
-								<div>destination</div>
+								<div>찾으시는 여행지 정보를 검색하세요</div>
 								<input type="text" class="destination search_input" required="required">
 							</div>
-							<div class="search_item">
+							<!-- <div class="search_item">
 								<div>check in</div>
 								<input type="text" class="check_in search_input" placeholder="YYYY-MM-DD">
 							</div>
@@ -366,8 +364,8 @@
 									<option>02</option>
 									<option>03</option>
 								</select>
-							</div>
-							<button class="button search_button">search<span></span><span></span><span></span></button>
+							</div> -->
+							<button class="button search_button">검색<span></span><span></span><span></span></button>
 						</form>
 					</div>
 				</div>
@@ -381,13 +379,13 @@
 		<div class="container">
 			<div class="row">
 				<div class="col">
-					<h2 class="intro_title text-center">We have the best tours</h2>
+					<h2 class="intro_title text-center">국가∙지역별 안전공지</h2>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-lg-10 offset-lg-1">
 					<div class="intro_text text-center">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu convallis tortor. Suspendisse potenti. In faucibus massa arcu, vitae cursus mi hendrerit nec. </p>
+						<p>각 공관에서 실시간 업데이트 되는 국가별 최신 안전공지를 제공</p>
 					</div>
 				</div>
 			</div>
@@ -401,11 +399,11 @@
 						<!-- Image by https://unsplash.com/@dnevozhai -->
 						<div class="intro_item_background" style="background-image:url(images/intro_1.jpg)"></div>
 						<div class="intro_item_content d-flex flex-column align-items-center justify-content-center">
-							<div class="intro_date">May 25th - June 01st</div>
-							<div class="button intro_button"><div class="button_bcg"></div><a href="#">see more<span></span><span></span><span></span></a></div>
+							<div class="intro_date">2021년 03월 23일</div>
+							<div class="button intro_button"><div class="button_bcg"></div><a href="#">자세히 보기<span></span><span></span><span></span></a></div>
 							<div class="intro_center text-center">
-								<h1>Mauritius</h1>
-								<div class="intro_price">From $1450</div>
+								<h1>일본</h1>
+								<div class="intro_price">일본의 긴급사태선언 관련 안전 공지(1.8.)</div>
 								<div class="rating rating_4">
 									<i class="fa fa-star"></i>
 									<i class="fa fa-star"></i>
@@ -426,11 +424,11 @@
 						<!-- Image by https://unsplash.com/@hellolightbulb -->
 						<div class="intro_item_background" style="background-image:url(images/intro_2.jpg)"></div>
 						<div class="intro_item_content d-flex flex-column align-items-center justify-content-center">
-							<div class="intro_date">May 25th - June 01st</div>
-							<div class="button intro_button"><div class="button_bcg"></div><a href="#">see more<span></span><span></span><span></span></a></div>
+							<div class="intro_date">2021년 01월 30일</div>
+							<div class="button intro_button"><div class="button_bcg"></div><a href="#">자세히 보기<span></span><span></span><span></span></a></div>
 							<div class="intro_center text-center">
-								<h1>Greece</h1>
-								<div class="intro_price">From $1450</div>
+								<h1>독일</h1>
+								<div class="intro_price">코로나19 관련 독일 공항 이용 안내(마스크 착용 의무)</div>
 								<div class="rating rating_4">
 									<i class="fa fa-star"></i>
 									<i class="fa fa-star"></i>
@@ -451,11 +449,11 @@
 						<!-- Image by https://unsplash.com/@willianjusten -->
 						<div class="intro_item_background" style="background-image:url(images/intro_3.jpg)"></div>
 						<div class="intro_item_content d-flex flex-column align-items-center justify-content-center">
-							<div class="intro_date">May 25th - June 01st</div>
-							<div class="button intro_button"><div class="button_bcg"></div><a href="#">see more<span></span><span></span><span></span></a></div>
+							<div class="intro_date">2020년 08월 19일</div>
+							<div class="button intro_button"><div class="button_bcg"></div><a href="#">자세히 보기<span></span><span></span><span></span></a></div>
 							<div class="intro_center text-center">
-								<h1>Scotland</h1>
-								<div class="intro_price">From $1450</div>
+								<h1>중국</h1>
+								<div class="intro_price">중국 간쑤성 브루셀라병 관련 안전 공지</div>
 								<div class="rating rating_4">
 									<i class="fa fa-star"></i>
 									<i class="fa fa-star"></i>
@@ -489,7 +487,7 @@
 
 							<!-- CTA Slider Item -->
 							<div class="owl-item cta_item text-center">
-								<div class="cta_title">maldives deluxe package</div>
+								<div class="cta_title">국가∙지역별 사건사고 유형</div>
 								<div class="rating_r rating_r_4">
 									<i></i>
 									<i></i>
@@ -497,13 +495,15 @@
 									<i></i>
 									<i></i>
 								</div>
-								<p class="cta_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu convallis tortor. Suspendisse potenti. In faucibus massa arcu, vitae cursus mi hendrerit nec. Proin bibendum, augue faucibus tincidunt ultrices, tortor augue gravida lectus, et efficitur enim justo vel ligula.</p>
-								<div class="button cta_button"><div class="button_bcg"></div><a href="#">book now<span></span><span></span><span></span></a></div>
+								<p class="cta_text">ㅇ 그리스 치안은 비교적 안전한 편에 속하나, 관광객을 노리는 다양한 형태의 소매치기, 도난 사건 등으로 피해를 입는 경우가 많이 발생하고 있음<br>
+
+									ㅇ 최근 아크로폴리스 및 아레이오파고스 언덕, 필로파푸스 언덕 등에서 가방을 발 밑에 두고 아크로폴리스를 배경으로 사진을 찍다가 가방을 통째로 도난 당하는 사건이 급증하고 있음. 짐을 내려놓는 등의 행동은 도난의 위험이 매우 높음...</p>
+								<div class="button cta_button"><div class="button_bcg"></div><a href="#">바로가기<span></span><span></span><span></span></a></div>
 							</div>
 
 							<!-- CTA Slider Item -->
 							<div class="owl-item cta_item text-center">
-								<div class="cta_title">maldives deluxe package</div>
+								<div class="cta_title">국가∙지역별 사건사고 유형</div>
 								<div class="rating_r rating_r_4">
 									<i></i>
 									<i></i>
@@ -511,13 +511,14 @@
 									<i></i>
 									<i></i>
 								</div>
-								<p class="cta_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu convallis tortor. Suspendisse potenti. In faucibus massa arcu, vitae cursus mi hendrerit nec. Proin bibendum, augue faucibus tincidunt ultrices, tortor augue gravida lectus, et efficitur enim justo vel ligula.</p>
-								<div class="button cta_button"><div class="button_bcg"></div><a href="#">book now<span></span><span></span><span></span></a></div>
+								<p class="cta_text">[치안상황]
+									ㅇ 동유럽과 북아프리카 지역에서 온 유랑자들이 짝을 이루어 관광객들에게 접근하여 소매치기를(절도) 하거나, 식당(호텔)과 기차역 주변 등에서 가방을 훔치는 유형의 경범죄 발생</p>
+								<div class="button cta_button"><div class="button_bcg"></div><a href="#">바로가기<span></span><span></span><span></span></a></div>
 							</div>
 
 							<!-- CTA Slider Item -->
 							<div class="owl-item cta_item text-center">
-								<div class="cta_title">maldives deluxe package</div>
+								<div class="cta_title">국가∙지역별 사건사고 유형</div>
 								<div class="rating_r rating_r_4">
 									<i></i>
 									<i></i>
@@ -525,8 +526,8 @@
 									<i></i>
 									<i></i>
 								</div>
-								<p class="cta_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu convallis tortor. Suspendisse potenti. In faucibus massa arcu, vitae cursus mi hendrerit nec. Proin bibendum, augue faucibus tincidunt ultrices, tortor augue gravida lectus, et efficitur enim justo vel ligula.</p>
-								<div class="button cta_button"><div class="button_bcg"></div><a href="#">book now<span></span><span></span><span></span></a></div>
+								<p class="cta_text">[내전, 테러(피랍) 사건 등 동향]	ㅇ 2019.12월 시행된 대선 결선투표에서 우마로 시소코 엠발로 후보 당선 결과 발표후 상대 후보인 기니비사우 카보베르데 독립아프리카당(PAIGC) 당수가 대법원에 이의를 제기한 상황에서 취임식을 일방 강행(2020.2.27.)함.</p>
+								<div class="button cta_button"><div class="button_bcg"></div><a href="#">바로가기<span></span><span></span><span></span></a></div>
 							</div>
 							
 						</div>
@@ -581,7 +582,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col text-center">
-					<h2 class="section_title">the best offers with rooms</h2>
+					<h2 class="section_title">국가별 재외공관 정보</h2>
 				</div>
 			</div>
 			<div class="row offers_items">
@@ -593,13 +594,13 @@
 							<div class="col-lg-6">
 								<div class="offers_image_container">
 									<!-- Image by https://unsplash.com/@kensuarez -->
-									<div class="offers_image_background" style="background-image:url(images/offer_1.jpg)"></div>
-									<div class="offer_name"><a href="#">grand castle</a></div>
+									<div class="offers_image_background" style="background-image:url(img/JP.jpg)"></div>
+									<!-- <div class="offer_name"><a href="#">grand castle</a></div> -->
 								</div>
 							</div>
 							<div class="col-lg-6">
 								<div class="offers_content">
-									<div class="offers_price">$70<span>per night</span></div>
+									<div class="offers_price">일본<br><span>주 일본 대한민국 대사관</span></div>
 									<div class="rating_r rating_r_4 offers_rating">
 										<i></i>
 										<i></i>
@@ -607,7 +608,8 @@
 										<i></i>
 										<i></i>
 									</div>
-									<p class="offers_text">Suspendisse potenti. In faucibus massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu convallis tortor.</p>
+									<p class="offers_text">ㅇ 전화번호 : (81) 3-3455-2601<br>ㅇ 재외공관 주소 : 1-7-32 Minamiazabu Minato-ku, Tokyo, Japan,
+									</p>
 									<div class="offers_icons">
 										<ul class="offers_icons_list">
 											<li class="offers_icons_item"><img src="images/post.png" alt=""></li>
@@ -616,7 +618,7 @@
 											<li class="offers_icons_item"><img src="images/sailboat.png" alt=""></li>
 										</ul>
 									</div>
-									<div class="offers_link"><a href="offers.html">read more</a></div>
+									<div class="offers_link"><a href="http://overseas.mofa.go.kr/jp-ko/index.do">홈페이지 바로가기</a></div>
 								</div>
 							</div>
 						</div>
@@ -630,13 +632,13 @@
 							<div class="col-lg-6">
 								<div class="offers_image_container">
 									<!-- Image by Egzon Bytyqi -->
-									<div class="offers_image_background" style="background-image:url(images/offer_2.jpg)"></div>
-									<div class="offer_name"><a href="#">turkey hills</a></div>
+									<div class="offers_image_background" style="background-image:url(img/CN.png)"></div>
+									<!-- <div class="offer_name"><a href="#">turkey hills</a></div> -->
 								</div>
 							</div>
 							<div class="col-lg-6">
 								<div class="offers_content">
-									<div class="offers_price">$50<span>per night</span></div>
+									<div class="offers_price">중국<br><span>주 중국 대한민국 대사관</span></div>
 									<div class="rating_r rating_r_4 offers_rating">
 										<i></i>
 										<i></i>
@@ -644,7 +646,7 @@
 										<i></i>
 										<i></i>
 									</div>
-									<p class="offers_text">Suspendisse potenti. In faucibus massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu convallis tortor.</p>
+									<p class="offers_text">ㅇ 전화번호 : (86) 10-8531-0700<br>ㅇ 재외공관 주소 : No.20, DongfangdongLu Chaoyang District, Beijing, China 100600,</p>
 									<div class="offers_icons">
 										<ul class="offers_icons_list">
 											<li class="offers_icons_item"><img src="images/post.png" alt=""></li>
@@ -653,7 +655,7 @@
 											<li class="offers_icons_item"><img src="images/sailboat.png" alt=""></li>
 										</ul>
 									</div>
-									<div class="offers_link"><a href="offers.html">read more</a></div>
+									<div class="offers_link"><a href="http://overseas.mofa.go.kr/cn-ko/index.do">홈페이지 바로가기</a></div>
 								</div>
 							</div>
 						</div>
@@ -745,7 +747,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col text-center">
-					<h2 class="section_title">what our clients say about us</h2>
+					<h2 class="section_title">국가·지역별 최신 코로나19 소식</h2>
 				</div>
 			</div>
 			<div class="row">
@@ -764,11 +766,11 @@
 									<div class="test_content_container">
 										<div class="test_content">
 											<div class="test_item_info">
-												<div class="test_name">carla smith</div>
-												<div class="test_date">May 24, 2017</div>
+												<div class="test_name">일본</div>
+												<div class="test_date">2020년 12월 27일</div>
 											</div>
-											<div class="test_quote_title">" Best holliday ever "</div>
-											<p class="test_quote_text">Nullam eu convallis tortor. Suspendisse potenti. In faucibus massa arcu, vitae cursus mi hendrerit nec.</p>
+											<div class="test_quote_title">일본 정부의 모든 국가의 신규 입국 일시정지 발표 관련 안내</div>
+											<p class="test_quote_text">○ 일본 정부는 모든 국가 및 지역으로부터 외국인의 신규 입국을 오는 12.28.(월) 0시부터 내년 1월 말까지 일시 정지한다는 조치를 발표하였습니다.○ 다만, 이번 조치는 한일 양자 간 합의한 비즈니스 및 레지던트 트랙에 대해서는 적용이 제외되며, 이미 발급된 사증을 소지한 경우 원칙적으로 입국이 인정되는바, 우리 국민의 경우 아래 사항에 해당하지 않을 시 기존과 동일하게 일본 입국이 가능합니다.※ 일본 입국 신청일 전 14일 이내 영국 또는 남아프리카공화국 체제 이력이 있는 경우 및 2021년 1.4.(월) 이후의 입국자로서 일본 입국 신청일 전 14일 이내에 감염증 위험 정보레벨3(도항중지 권고) 대상국과 지역에 체제 이력이 있는 경우는 일본 입국 불가○ 상기 관련, 일본에 입국하는 우리 국민들께서는 착오 없으시길 바라며 기타 도움이 필요하시거나 긴급상황 발생 시 아래 연락처로 연락해 주시기 바랍니다.☞ 주일본대한민국대사관&nbsp; &nbsp;- 대표번호(근무시간 중) : +81 3 3452 7611/9&nbsp; &nbsp;- 긴급연락처(사건사고 등 긴급상황 발생 시, 24시간) : +81 70 2153 5454☞ 영사콜센터(서울, 24시간) : +82-2-3210-0404</p>
 										</div>
 									</div>
 								</div>
@@ -782,11 +784,11 @@
 									<div class="test_content_container">
 										<div class="test_content">
 											<div class="test_item_info">
-												<div class="test_name">carla smith</div>
-												<div class="test_date">May 24, 2017</div>
+												<div class="test_name">미국</div>
+												<div class="test_date">2020년 06월 09일</div>
 											</div>
-											<div class="test_quote_title">" Best holliday ever "</div>
-											<p class="test_quote_text">Nullam eu convallis tortor. Suspendisse potenti. In faucibus massa arcu, vitae cursus mi hendrerit nec.</p>
+											<div class="test_quote_title">미국 하와이주 14일 의무격리 규정 위반 주의</div>
+											<p class="test_quote_text">미국 하와이주 14일 의무격리 규정 위반 주의&nbsp;○ 최근 하와이주를 방문한 우리국민이 하와이주의 14일 의무격리 규정을 위반하여 체포되는 사건이 발생하였습니다.○ 하와이주는 14일 의무격리 규정 위반하는 방문객에 대해 상당히 엄격히 법을 집행하고 있습니다.- 하와이에 도착하는 모든 승객(내/외국인 및 하와이 거주자 불문)은 자택 혹은 호텔에서 14일간 자비로 의무격리 실시- 의무격리 위반시 체포되며, 이후 최대 5천불 벌금 또는 1년 이하의 징역 부과, 또는 해당 벌금과 징역이 함께 부과 되는 등 비교적 무거운 형사벌 부과○ 하와이 방문 예정 우리국민께서는 14일 의무격리 관련 규정을 숙지하시고,&nbsp; 방문시 동 규정을 철저히 준수하여 주시기 바랍니다.○ 이와 관련, 긴급상황 발생시 아래 연락처로 연락해 주시기 바랍니다.☞ 호놀룰루긴급(경찰서, 소방서) 신고 : 국번 없이 911☞ 주호놀룰루총영사관&nbsp; &nbsp;- 대표번호(근무시간 중) : +1-808-595-6109&nbsp; &nbsp;- 긴급연락처(사건사고 등 긴급상황 발생 시, 24시간) : +1-808-265-3949☞ 영사콜센터(서울, 24시간) : +82-2-3210-0404</p>
 										</div>
 									</div>
 								</div>
@@ -800,11 +802,11 @@
 									<div class="test_content_container">
 										<div class="test_content">
 											<div class="test_item_info">
-												<div class="test_name">carla smith</div>
-												<div class="test_date">May 24, 2017</div>
+												<div class="test_name">필리핀</div>
+												<div class="test_date">2020년 03월 20일</div>
 											</div>
-											<div class="test_quote_title">" Best holliday ever "</div>
-											<p class="test_quote_text">Nullam eu convallis tortor. Suspendisse potenti. In faucibus massa arcu, vitae cursus mi hendrerit nec.</p>
+											<div class="test_quote_title">필리핀 비자 면제 및 무비자 입국 혜택 중단 발표</div>
+											<p class="test_quote_text">필리핀 비자 면제 및 무비자 입국 혜택 중단 발표&nbsp;○ 필리핀 정부는 3.22.(일) 0시부터 외국인에 대한 비자 면제 및 무비자 입국 혜택을 중단하며, 이미 발급된 비자도 취소된 것으로 간주한다고 발표하였습니다. 단, 다음 대상자는 예외가 적용됩니다.- 필리핀 국민의 배우자 및 자녀(한국인의 경우, 필리핀 국민과 동반 여부 불필요)- 외국 정부와 국제기구 직원에게 발급된 비자 소지자○ 비자 취소와 관련된 내용은 현재 외국에 있는 비자 소지자에게 한정되는 것으로 판단되나, 사실 관계 확인 후에 필리핀 내 비자 소지자에게도 영향을 미치는 경우 추가 공지하도록 하겠습니다.○ 필리핀 정부의 출입국 정책이 수시로 변하고 긴급하게 시행되고 있습니다. 자세한 내용은 주필리핀대사관 홈페이지 및 SNS(카카오톡, 페이스북)을 확인해 주시기 바랍니다.</p>
 										</div>
 									</div>
 								</div>
@@ -914,7 +916,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col text-center">
-					<h2 class="section_title">trending now</h2>
+					<h2 class="section_title">국가·지역별 입국허가요건</h2>
 				</div>
 			</div>
 			<div class="row trending_container">
@@ -922,11 +924,11 @@
 				<!-- Trending Item -->
 				<div class="col-lg-3 col-sm-6">
 					<div class="trending_item clearfix">
-						<div class="trending_image"><img src="images/trend_1.png" alt="https://unsplash.com/@fransaraco"></div>
+						<div class="trending_image"><img src="img/countryflag/IE.gif"></div>
 						<div class="trending_content">
-							<div class="trending_title"><a href="#">grand hotel</a></div>
-							<div class="trending_price">From $182</div>
-							<div class="trending_location">madrid, spain</div>
+							<div class="trending_title"><a href="#">아일랜드</a></div>
+							<div class="trending_price">체류기간 : 90일</div>
+							<div class="trending_location">Ireland</div>
 						</div>
 					</div>
 				</div>
@@ -934,11 +936,11 @@
 				<!-- Trending Item -->
 				<div class="col-lg-3 col-sm-6">
 					<div class="trending_item clearfix">
-						<div class="trending_image"><img src="images/trend_2.png" alt="https://unsplash.com/@grovemade"></div>
+						<div class="trending_image"><img src="img/countryflag/US.gif" alt="https://unsplash.com/@grovemade"></div>
 						<div class="trending_content">
-							<div class="trending_title"><a href="#">mars hotel</a></div>
-							<div class="trending_price">From $182</div>
-							<div class="trending_location">madrid, spain</div>
+							<div class="trending_title"><a href="#">미국</a></div>
+							<div class="trending_price">체류기간 : 90일</div>
+							<div class="trending_location">전자여행허가(ESTA) 사전 신청 필요</div>
 						</div>
 					</div>
 				</div>
@@ -946,11 +948,11 @@
 				<!-- Trending Item -->
 				<div class="col-lg-3 col-sm-6">
 					<div class="trending_item clearfix">
-						<div class="trending_image"><img src="images/trend_3.png" alt="https://unsplash.com/@jbriscoe"></div>
+						<div class="trending_image"><img src="img/countryflag/RU.gif" alt="https://unsplash.com/@jbriscoe"></div>
 						<div class="trending_content">
-							<div class="trending_title"><a href="#">queen hotel</a></div>
-							<div class="trending_price">From $182</div>
-							<div class="trending_location">madrid, spain</div>
+							<div class="trending_title"><a href="#">러시아</a></div>
+							<div class="trending_price">1회 최대 연속 체류 60일, 180일 중 누적 90일</div>
+							<div class="trending_location">Russia</div>
 						</div>
 					</div>
 				</div>
@@ -958,11 +960,11 @@
 				<!-- Trending Item -->
 				<div class="col-lg-3 col-sm-6">
 					<div class="trending_item clearfix">
-						<div class="trending_image"><img src="images/trend_4.png" alt="https://unsplash.com/@oowgnuj"></div>
+						<div class="trending_image"><img src="img/countryflag/TW.gif" alt="https://unsplash.com/@oowgnuj"></div>
 						<div class="trending_content">
-							<div class="trending_title"><a href="#">mars hotel</a></div>
-							<div class="trending_price">From $182</div>
-							<div class="trending_location">madrid, spain</div>
+							<div class="trending_title"><a href="#">타이완</a></div>
+							<div class="trending_price">체류기간 : 90일</div>
+							<div class="trending_location">여권 유효기간 6개월 이상 필수</div>
 						</div>
 					</div>
 				</div>
@@ -970,11 +972,11 @@
 				<!-- Trending Item -->
 				<div class="col-lg-3 col-sm-6">
 					<div class="trending_item clearfix">
-						<div class="trending_image"><img src="images/trend_5.png" alt="https://unsplash.com/@mindaugas"></div>
+						<div class="trending_image"><img src="img/countryflag/VN.gif" alt="https://unsplash.com/@mindaugas"></div>
 						<div class="trending_content">
-							<div class="trending_title"><a href="#">grand hotel</a></div>
-							<div class="trending_price">From $182</div>
-							<div class="trending_location">madrid, spain</div>
+							<div class="trending_title"><a href="#">베트남</a></div>
+							<div class="trending_price">체류기간 : 15일 (2020.2.29.0시 부터 잠정중단)</div>
+							<div class="trending_location">Vietnam</div>
 						</div>
 					</div>
 				</div>
@@ -982,11 +984,11 @@
 				<!-- Trending Item -->
 				<div class="col-lg-3 col-sm-6">
 					<div class="trending_item clearfix">
-						<div class="trending_image"><img src="images/trend_6.png" alt="https://unsplash.com/@itsnwa"></div>
+						<div class="trending_image"><img src="img/countryflag/JP.gif" alt="https://unsplash.com/@itsnwa"></div>
 						<div class="trending_content">
-							<div class="trending_title"><a href="#">mars hotel</a></div>
-							<div class="trending_price">From $182</div>
-							<div class="trending_location">madrid, spain</div>
+							<div class="trending_title"><a href="#">일본</a></div>
+							<div class="trending_price">체류기간 : 90일</div>
+							<div class="trending_location">Japan</div>
 						</div>
 					</div>
 				</div>
@@ -994,11 +996,11 @@
 				<!-- Trending Item -->
 				<div class="col-lg-3 col-sm-6">
 					<div class="trending_item clearfix">
-						<div class="trending_image"><img src="images/trend_7.png" alt="https://unsplash.com/@rktkn"></div>
+						<div class="trending_image"><img src="img/countryflag/HK.gif" alt="https://unsplash.com/@rktkn"></div>
 						<div class="trending_content">
-							<div class="trending_title"><a href="#">queen hotel</a></div>
-							<div class="trending_price">From $182</div>
-							<div class="trending_location">madrid, spain</div>
+							<div class="trending_title"><a href="#">홍콩</a></div>
+							<div class="trending_price">체류기간 : 90일</div>
+							<div class="trending_location">Hongkong</div>
 						</div>
 					</div>
 				</div>
@@ -1006,11 +1008,11 @@
 				<!-- Trending Item -->
 				<div class="col-lg-3 col-sm-6">
 					<div class="trending_item clearfix">
-						<div class="trending_image"><img src="images/trend_8.png" alt="https://unsplash.com/@thoughtcatalog"></div>
+						<div class="trending_image"><img src="img/countryflag/PH.gif" alt="https://unsplash.com/@thoughtcatalog"></div>
 						<div class="trending_content">
-							<div class="trending_title"><a href="#">mars hotel</a></div>
-							<div class="trending_price">From $182</div>
-							<div class="trending_location">madrid, spain</div>
+							<div class="trending_title"><a href="#">필리핀</a></div>
+							<div class="trending_price">체류기간 : 30일</div>
+							<div class="trending_location">Philippines</div>
 						</div>
 					</div>
 				</div>
@@ -1018,7 +1020,7 @@
 			</div>
 		</div>
 	</div>
-
+<!--
 	<div class="contact">
 		<div class="contact_background" style="background-image:url(images/contact.png)"></div>
 
@@ -1044,7 +1046,7 @@
 			</div>
 		</div>
 	</div>
-
+-->
 	<!-- Footer -->
 	<%@include file ="footer.jsp" %>
 
@@ -1064,11 +1066,11 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 					<div class="footer_nav_container d-flex flex-row align-items-center justify-content-lg-end">
 						<div class="footer_nav">
 							<ul class="footer_nav_list">
-								<li class="footer_nav_item"><a href="#">home</a></li>
-								<li class="footer_nav_item"><a href="about.html">about us</a></li>
-								<li class="footer_nav_item"><a href="offers.html">offers</a></li>
-								<li class="footer_nav_item"><a href="blog.html">news</a></li>
-								<li class="footer_nav_item"><a href="contact.html">contact</a></li>
+								<li class="main_nav_item"><a href="../index.do">홈</a></li>
+								<li class="main_nav_item"><a href="">커뮤니티</a></li>
+								<li class="main_nav_item"><a href="">여행지정보</a></li>
+								<li class="main_nav_item"><a href="">긴급속보</a></li>
+								<li class="main_nav_item"><a href="../WorldWeather/weather.do">세계날씨</a></li>
 							</ul>
 						</div>
 					</div>
