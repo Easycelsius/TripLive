@@ -11,7 +11,7 @@ import lombok.*;
 
 public class GetTravelBanList {
     // Column으로 사용하지 않는 필드의 경우 @Transient 어노테이션을 적용
-    @Column(length = 50, nullable = true)
+    @Id
     private String id; // 고유값
 
     @Column(length = 50, nullable = true)
@@ -23,7 +23,7 @@ public class GetTravelBanList {
     @Column(length = 1000, nullable = true)
     private String imgUrl2; // 여행위험지도경로
 
-    @Id
+    
     @Column(length = 10*3, nullable = true)
     private String isoCode; // iso국가코드
 
