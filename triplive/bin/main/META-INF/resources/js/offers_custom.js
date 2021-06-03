@@ -164,11 +164,6 @@ $(document).ready(function()
 	            		var starsEle = $(itemElement).find('.offers_rating');
 	            		var stars = starsEle.attr("data-rating");
 	            		return stars;
-	            	},
-					reviews: function(itemElement)
-	            	{
-	            		var priceEle = $(itemElement).find('.offer_reviews_subtitle').text().replace( ',', '' );
-						return parseFloat(priceEle);
 	            	}
 	            },
 	            animationOptions: {
@@ -183,12 +178,11 @@ $(document).ready(function()
 	        {
 	        	$(this).on('click', function()
 	        	{
-	        		var parent = $(this).parent().parent().parent().parent().parent().find('.sorting_text');
+	        		var parent = $(this).parent().parent().find('.sorting_text');
 	        		parent.text($(this).text());
 	        		var option = $(this).attr('data-isotope-option');
 	        		option = JSON.parse( option );
     				grid.isotope( option );
-					console.log(this)
 	        	});
 	        });
 
