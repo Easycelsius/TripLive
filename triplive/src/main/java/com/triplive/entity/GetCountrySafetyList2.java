@@ -1,5 +1,6 @@
 package com.triplive.entity;
 // 외교부 국가별 안전공지
+//완료
 import javax.persistence.*;
 import lombok.*;
 
@@ -17,9 +18,8 @@ public class GetCountrySafetyList2 {
     @Column(length = 50, nullable = true)
     private String country_nm; // 한글 국가명
 
-    @Id
     @Column(length = 10*3, nullable = true)
-    private String coutnry_iso_alp2; // iso 두자리코드
+    private String country_iso_alp2; // iso 두자리코드
 
     @Column(length = 30, nullable = true)
     private String continent_cd; // 대륙코드
@@ -33,13 +33,13 @@ public class GetCountrySafetyList2 {
     @Column(length = 1000, nullable = true)
     private String file_download_url; // 파일 다운로드  url
 
-    @Column(length = 50, nullable = true)
+    @Id
     private String sfty_notice_id; // 안전정보id
     
     @Column(columnDefinition = "TEXT", nullable = true)
     private String title; // 제목
 
-    @Column(columnDefinition = "TEXT", nullable = true)
+    @Column(columnDefinition = "LONGTEXT", nullable = true)
     private String txt_origin_cn; // 원본택스트내용
 
     @Column(length = 1000, nullable = true)
