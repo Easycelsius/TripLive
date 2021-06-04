@@ -177,7 +177,9 @@ pageEncoding="utf-8"%>
           </div>
           <ul>
             <li class="main_nav_item"><a href="../index.do">홈</a></li>
-            <li class="main_nav_item"><a href="">커뮤니티</a></li>
+            <li class="main_nav_item">
+              <a href="../community/commu.do">커뮤니티</a>
+            </li>
             <li class="main_nav_item"><a href="">여행지정보</a></li>
             <li class="main_nav_item">
               <a href="../calamity/calamity.do">긴급속보</a>

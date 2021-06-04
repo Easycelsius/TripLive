@@ -16,6 +16,35 @@
 <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
 <link rel="stylesheet" type="text/css" href="styles/main_styles.css">
 <link rel="stylesheet" type="text/css" href="styles/responsive.css">
+<link rel="stylesheet" type="text/css" href="styles/about_styles.css">
+<link rel="stylesheet" type="text/css" href="styles/about_responsive.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" type="text/javascript"></script>
+
+<script>
+	$(function() {
+		var apiURI = 'https://earthquake.kr:23490/query/AUDKRW,BRLKRW,CADKRW,CHFKRW,CNYKRW,EURKRW,GBPKRW,HKDKRW,INRKRW,JPYKRW,MXNKRW,RUBKRW,THBKRW,TWDKRW,USDKRW,VNDKRW'
+
+		$.ajax({
+            url: apiURI,
+            dataType: "json",
+            type: "GET",
+            async: "false",
+            success: function(resp) {
+                console.log(resp);
+				console.log(resp.USDKRW[0])
+				// $("#US").attr("data-end-value", resp.USDKRW[0])
+				$("#US").attr("data-end-value", resp.USDKRW[0])
+				$("#JP").attr("data-end-value", resp.JPYKRW[0])
+				$("#CN").attr("data-end-value", resp.CNYKRW[0])
+				$("#VN").attr("data-end-value", resp.VNDKRW[0])
+				// $("#US").text(resp.USDKRW[0])
+            }
+        })
+	})
+
+</script>
+
 </head>
 
 <body>
@@ -372,6 +401,7 @@
 			</div>
 		</div>		
 	</div>
+
 
 	<!-- Intro -->
 	
@@ -1020,33 +1050,60 @@
 			</div>
 		</div>
 	</div>
-<!--
-	<div class="contact">
-		<div class="contact_background" style="background-image:url(images/contact.png)"></div>
 
+
+	
+
+
+	<!-- Milestones -->
+
+	<div class="milestones">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-5">
-					<div class="contact_image">
-						
+				
+				<!-- Milestone -->
+				<div class="col-lg-3 milestone_col">
+					<div class="milestone text-center">
+						<div class="milestone_icon"><img src="img/countryflag/US_2.jpg" alt=""></div>
+						<div class="milestone_counter" id='US' data-end-value="1000">0</div>
+						<div class="milestone_text">미국 USD / 달러</div>
 					</div>
 				</div>
-				<div class="col-lg-7">
-					<div class="contact_form_container">
-						<div class="contact_title">get in touch</div>
-						<form action="#" id="contact_form" class="contact_form">
-							<input type="text" id="contact_form_name" class="contact_form_name input_field" placeholder="Name" required="required" data-error="Name is required.">
-							<input type="text" id="contact_form_email" class="contact_form_email input_field" placeholder="E-mail" required="required" data-error="Email is required.">
-							<input type="text" id="contact_form_subject" class="contact_form_subject input_field" placeholder="Subject" required="required" data-error="Subject is required.">
-							<textarea id="contact_form_message" class="text_field contact_form_message" name="message" rows="4" placeholder="Message" required="required" data-error="Please, write us a message."></textarea>
-							<button type="submit" id="form_submit_button" class="form_submit_button button">send message<span></span><span></span><span></span></button>
-						</form>
+
+				<!-- Milestone -->
+				<div class="col-lg-3 milestone_col">
+					<div class="milestone text-center">
+						<div class="milestone_icon"><img src="img/countryflag/JP_2.gif" alt=""></div>
+						<div class="milestone_counter" id='JP' data-end-value="">0</div>
+						<div class="milestone_text">일본 JPY / 엔화</div>
 					</div>
 				</div>
+
+				<!-- Milestone -->
+				<div class="col-lg-3 milestone_col">
+					<div class="milestone text-center">
+						<div class="milestone_icon"><img src="img/countryflag/CN_1.gif" alt=""></div>
+						<div class="milestone_counter" id='CN' data-end-value="">0</div>
+						<div class="milestone_text">중국 CNY / 위안화</div>
+					</div>
+				</div>
+
+				<!-- Milestone -->
+				<div class="col-lg-3 milestone_col">
+					<div class="milestone text-center">
+						<div class="milestone_icon"><img src="img/countryflag/VN_1.gif" alt=""></div>
+						<div class="milestone_counter" id='VN' data-end-value="">0</div>
+						<div class="milestone_text">베트남 VND / 동</div>
+					</div>
+				</div>
+
+				
+
 			</div>
 		</div>
 	</div>
--->
+
+
 	<!-- Footer -->
 	<%@include file ="footer.jsp" %>
 
@@ -1085,9 +1142,18 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="styles/bootstrap4/popper.js"></script>
 <script src="styles/bootstrap4/bootstrap.min.js"></script>
+<script src="plugins/greensock/TweenMax.min.js"></script>
+<script src="plugins/greensock/TimelineMax.min.js"></script>
+<script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
+<script src="plugins/greensock/animation.gsap.min.js"></script>
+<script src="plugins/greensock/ScrollToPlugin.min.js"></script>
 <script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
 <script src="plugins/easing/easing.js"></script>
-<script src="js/custom.js"></script
+<script src="plugins/parallax-js-master/parallax.min.js"></script>
+<script src="js/custom.js"></script>
+<script src="js/about_custom.js"></script>
+
+	
 
 </body>
 
