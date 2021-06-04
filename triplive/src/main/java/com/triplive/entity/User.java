@@ -15,7 +15,7 @@ public class User {
 
     // Column으로 사용하지 않는 필드의 경우 @Transient 어노테이션을 적용
     @Column(length = 30*3, nullable = false)
-    private String passowrd; // password
+    private String password; // password
 
     @Column(length = 30*3, nullable = false)
     private String gender; // 성별

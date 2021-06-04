@@ -173,12 +173,12 @@
 
 					<div class="search_tabs_container">
 						<div class="search_tabs d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
-							<div class="search_tab active d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="images/suitcase.png" alt=""><span>환율</span></div>
-							<div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="images/bus.png" alt="">외교부</div>
-							<div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="images/departure.png" alt="">국가 정보</div>
-							<div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="images/island.png" alt="">날씨</div>
-							<div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="images/cruise.png" alt="">재난및긴급</div>
-							<div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="images/diving.png" alt="">여행지 정보</div>
+							<div class="search_tab active d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="images/suitcase.png" alt=""><span>안전공지</span></div>
+							<div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="images/cruise.png" alt="">사건사고 유형</div>
+							<div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="images/bus.png" alt="">재외공관 정보</div>
+							<div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="images/departure.png" alt="">최신 코로나19 소식</div>
+							<div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="images/island.png" alt="">입국허가요건</div>
+							<div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="images/diving.png" alt="">환율</div>
 						</div>		
 					</div>
 
@@ -427,7 +427,7 @@
 					<div class="intro_item">
 						<div class="intro_item_overlay"></div>
 						<!-- Image by https://unsplash.com/@dnevozhai -->
-						<div class="intro_item_background" style="background-image:url(images/intro_1.jpg)"></div>
+						<div class="intro_item_background" style="background-image:url(img/background/destinations-18.jpg)"></div>
 						<div class="intro_item_content d-flex flex-column align-items-center justify-content-center">
 							<div class="intro_date">2021년 03월 23일</div>
 							<div class="button intro_button"><div class="button_bcg"></div><a href="#">자세히 보기<span></span><span></span><span></span></a></div>
@@ -438,8 +438,7 @@
 									<i class="fa fa-star"></i>
 									<i class="fa fa-star"></i>
 									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
+									
 								</div>
 							</div>
 						</div>
@@ -452,7 +451,7 @@
 					<div class="intro_item">
 						<div class="intro_item_overlay"></div>
 						<!-- Image by https://unsplash.com/@hellolightbulb -->
-						<div class="intro_item_background" style="background-image:url(images/intro_2.jpg)"></div>
+						<div class="intro_item_background" style="background-image:url(img/background/The_Golden_Gate_Bridge.jpg)"></div>
 						<div class="intro_item_content d-flex flex-column align-items-center justify-content-center">
 							<div class="intro_date">2021년 01월 30일</div>
 							<div class="button intro_button"><div class="button_bcg"></div><a href="#">자세히 보기<span></span><span></span><span></span></a></div>
@@ -463,8 +462,7 @@
 									<i class="fa fa-star"></i>
 									<i class="fa fa-star"></i>
 									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
+									
 								</div>
 							</div>
 						</div>
@@ -477,7 +475,7 @@
 					<div class="intro_item">
 						<div class="intro_item_overlay"></div>
 						<!-- Image by https://unsplash.com/@willianjusten -->
-						<div class="intro_item_background" style="background-image:url(images/intro_3.jpg)"></div>
+						<div class="intro_item_background" style="background-image:url(img/background/destinations-8.jpg)"></div>
 						<div class="intro_item_content d-flex flex-column align-items-center justify-content-center">
 							<div class="intro_date">2020년 08월 19일</div>
 							<div class="button intro_button"><div class="button_bcg"></div><a href="#">자세히 보기<span></span><span></span><span></span></a></div>
@@ -488,8 +486,7 @@
 									<i class="fa fa-star"></i>
 									<i class="fa fa-star"></i>
 									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
+								
 								</div>
 							</div>
 						</div>
@@ -523,7 +520,7 @@
 									<i></i>
 									<i></i>
 									<i></i>
-									<i></i>
+									<div></div>
 								</div>
 								<p class="cta_text">ㅇ 그리스 치안은 비교적 안전한 편에 속하나, 관광객을 노리는 다양한 형태의 소매치기, 도난 사건 등으로 피해를 입는 경우가 많이 발생하고 있음<br>
 
@@ -539,7 +536,7 @@
 									<i></i>
 									<i></i>
 									<i></i>
-									<i></i>
+									<div></div>
 								</div>
 								<p class="cta_text">[치안상황]
 									ㅇ 동유럽과 북아프리카 지역에서 온 유랑자들이 짝을 이루어 관광객들에게 접근하여 소매치기를(절도) 하거나, 식당(호텔)과 기차역 주변 등에서 가방을 훔치는 유형의 경범죄 발생</p>
@@ -547,6 +544,7 @@
 							</div>
 
 							<!-- CTA Slider Item -->
+							
 							<div class="owl-item cta_item text-center">
 								<div class="cta_title">국가∙지역별 사건사고 유형</div>
 								<div class="rating_r rating_r_4">
@@ -554,7 +552,7 @@
 									<i></i>
 									<i></i>
 									<i></i>
-									<i></i>
+									<div></div>
 								</div>
 								<p class="cta_text">[내전, 테러(피랍) 사건 등 동향]	ㅇ 2019.12월 시행된 대선 결선투표에서 우마로 시소코 엠발로 후보 당선 결과 발표후 상대 후보인 기니비사우 카보베르데 독립아프리카당(PAIGC) 당수가 대법원에 이의를 제기한 상황에서 취임식을 일방 강행(2020.2.27.)함.</p>
 								<div class="button cta_button"><div class="button_bcg"></div><a href="#">바로가기<span></span><span></span><span></span></a></div>
@@ -624,7 +622,7 @@
 							<div class="col-lg-6">
 								<div class="offers_image_container">
 									<!-- Image by https://unsplash.com/@kensuarez -->
-									<div class="offers_image_background" style="background-image:url(img/JP.jpg)"></div>
+									<div class="offers_image_background" style="background-image:url(img/background/JP.jpg)"></div>
 									<!-- <div class="offer_name"><a href="#">grand castle</a></div> -->
 								</div>
 							</div>
@@ -634,11 +632,9 @@
 									<div class="rating_r rating_r_4 offers_rating">
 										<i></i>
 										<i></i>
-										<i></i>
-										<i></i>
-										<i></i>
+										
 									</div>
-									<p class="offers_text">ㅇ 전화번호 : (81) 3-3455-2601<br>ㅇ 재외공관 주소 : 1-7-32 Minamiazabu Minato-ku, Tokyo, Japan,
+									<p class="offers_text">ㅇ 전화번호 : (81) 3-3455-2601<br>ㅇ 재외공관 주소 : 1-7-32 <br>Minamiazabu Minato-ku, Tokyo, Japan,
 									</p>
 									<div class="offers_icons">
 										<ul class="offers_icons_list">
@@ -662,7 +658,7 @@
 							<div class="col-lg-6">
 								<div class="offers_image_container">
 									<!-- Image by Egzon Bytyqi -->
-									<div class="offers_image_background" style="background-image:url(img/CN.png)"></div>
+									<div class="offers_image_background" style="background-image:url(img/background/CN.png)"></div>
 									<!-- <div class="offer_name"><a href="#">turkey hills</a></div> -->
 								</div>
 							</div>
@@ -672,11 +668,9 @@
 									<div class="rating_r rating_r_4 offers_rating">
 										<i></i>
 										<i></i>
-										<i></i>
-										<i></i>
-										<i></i>
+										
 									</div>
-									<p class="offers_text">ㅇ 전화번호 : (86) 10-8531-0700<br>ㅇ 재외공관 주소 : No.20, DongfangdongLu Chaoyang District, Beijing, China 100600,</p>
+									<p class="offers_text">ㅇ 전화번호 : (86) 10-8531-0700<br>ㅇ 재외공관 주소 : DongfangdongLu Chaoyang District, Beijing, China 100600</p>
 									<div class="offers_icons">
 										<ul class="offers_icons_list">
 											<li class="offers_icons_item"><img src="images/post.png" alt=""></li>
@@ -699,21 +693,18 @@
 							<div class="col-lg-6">
 								<div class="offers_image_container">
 									<!-- Image by https://unsplash.com/@nevenkrcmarek -->
-									<div class="offers_image_background" style="background-image:url(images/offer_3.jpg)"></div>
-									<div class="offer_name"><a href="#">island dream</a></div>
+									<div class="offers_image_background" style="background-image:url(img/background/Mount_Rushmore.jpg)"></div>
 								</div>
 							</div>
 							<div class="col-lg-6">
 								<div class="offers_content">
-									<div class="offers_price">$90<span>per night</span></div>
+									<div class="offers_price">미국<br><span>주 미국 대한민국 대사관</span></div>
 									<div class="rating_r rating_r_4 offers_rating">
 										<i></i>
 										<i></i>
-										<i></i>
-										<i></i>
-										<i></i>
+										
 									</div>
-									<p class="offers_text">Suspendisse potenti. In faucibus massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu convallis tortor.</p>
+									<p class="offers_text">ㅇ 전화번호 : (1) 202-939-5600<br>ㅇ 재외공관 주소 : 2320 Massachusetts Avenue, N.W., Washington, D.C. 20008, U.S.A.,</p>
 									<div class="offers_icons">
 										<ul class="offers_icons_list">
 											<li class="offers_icons_item"><img src="images/post.png" alt=""></li>
@@ -722,7 +713,7 @@
 											<li class="offers_icons_item"><img src="images/sailboat.png" alt=""></li>
 										</ul>
 									</div>
-									<div class="offers_link"><a href="offers.html">read more</a></div>
+									<div class="offers_link"><a href="http://overseas.mofa.go.kr/us-ko/index.do">홈페이지 바로가기</a></div>
 								</div>
 							</div>
 						</div>
@@ -736,21 +727,18 @@
 							<div class="col-lg-6">
 								<div class="offers_image_container">
 									<!-- Image by https://unsplash.com/@mantashesthaven -->
-									<div class="offers_image_background" style="background-image:url(images/offer_4.jpg)"></div>
-									<div class="offer_name"><a href="#">travel light</a></div>
+									<div class="offers_image_background" style="background-image:url(img/background/destinations-19.jpg)"></div>
 								</div>
 							</div>
 							<div class="col-lg-6">
 								<div class="offers_content">
-									<div class="offers_price">$30<span>per night</span></div>
+									<div class="offers_price">태국<br><span>주 태국 대한민국 대사관</span></div>
 									<div class="rating_r rating_r_4 offers_rating">
 										<i></i>
 										<i></i>
-										<i></i>
-										<i></i>
-										<i></i>
+										
 									</div>
-									<p class="offers_text">Suspendisse potenti. In faucibus massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu convallis tortor.</p>
+									<p class="offers_text">ㅇ 전화번호 : (66) 2-247-7537<br>ㅇ 재외공관 주소 : 23 Thiam-Ruammit Road, Ratchadapisek, Huay-Kwang, Bangkok 10310, Thailand,</p>
 									<div class="offers_icons">
 										<ul class="offers_icons_list">
 											<li class="offers_icons_item"><img src="images/post.png" alt=""></li>
@@ -759,7 +747,7 @@
 											<li class="offers_icons_item"><img src="images/sailboat.png" alt=""></li>
 										</ul>
 									</div>
-									<div class="offers_link"><a href="offers.html">read more</a></div>
+									<div class="offers_link"><a href="http://overseas.mofa.go.kr/th-ko/index.do">홈페이지 바로가기</a></div>
 								</div>
 							</div>
 						</div>
@@ -791,8 +779,8 @@
 							<!-- Testimonial Item -->
 							<div class="owl-item">
 								<div class="test_item">
-									<div class="test_image"><img src="images/test_1.jpg" alt="https://unsplash.com/@anniegray"></div>
-									<div class="test_icon"><img src="images/backpack.png" alt=""></div>
+									<div class="test_image"><img src="img/background/destinations-141.jpg" alt="https://unsplash.com/@anniegray"></div>
+									<div class="test_icon"><img src="img/countryflag/JP1.gif" alt=""></div>
 									<div class="test_content_container">
 										<div class="test_content">
 											<div class="test_item_info">
@@ -809,8 +797,8 @@
 							<!-- Testimonial Item -->
 							<div class="owl-item">
 								<div class="test_item">
-									<div class="test_image"><img src="images/test_2.jpg" alt="https://unsplash.com/@tschax"></div>
-									<div class="test_icon"><img src="images/island_t.png" alt=""></div>
+									<div class="test_image"><img src="img/background/The_Statue_of_Liberty1.jpg" alt="https://unsplash.com/@tschax"></div>
+									<div class="test_icon"><img src="img/countryflag/US1.gif" alt=""></div>
 									<div class="test_content_container">
 										<div class="test_content">
 											<div class="test_item_info">
@@ -827,8 +815,8 @@
 							<!-- Testimonial Item -->
 							<div class="owl-item">
 								<div class="test_item">
-									<div class="test_image"><img src="images/test_3.jpg" alt="https://unsplash.com/@seefromthesky"></div>
-									<div class="test_icon"><img src="images/kayak.png" alt=""></div>
+									<div class="test_image"><img src="img/background/destinations-131.jpg" alt="https://unsplash.com/@seefromthesky"></div>
+									<div class="test_icon"><img src="img/countryflag/PH1.gif" alt=""></div>
 									<div class="test_content_container">
 										<div class="test_content">
 											<div class="test_item_info">
@@ -1064,7 +1052,7 @@
 				<!-- Milestone -->
 				<div class="col-lg-3 milestone_col">
 					<div class="milestone text-center">
-						<div class="milestone_icon"><img src="img/countryflag/US_2.jpg" alt=""></div>
+						<div class="milestone_icon"><img src="img/countryflag/US_1.jpg" alt=""></div>
 						<div class="milestone_counter" id='US' data-end-value="1000">0</div>
 						<div class="milestone_text">미국 USD / 달러</div>
 					</div>
@@ -1073,7 +1061,7 @@
 				<!-- Milestone -->
 				<div class="col-lg-3 milestone_col">
 					<div class="milestone text-center">
-						<div class="milestone_icon"><img src="img/countryflag/JP_2.gif" alt=""></div>
+						<div class="milestone_icon"><img src="img/countryflag/JP_1.gif" alt=""></div>
 						<div class="milestone_counter" id='JP' data-end-value="">0</div>
 						<div class="milestone_text">일본 JPY / 엔화</div>
 					</div>

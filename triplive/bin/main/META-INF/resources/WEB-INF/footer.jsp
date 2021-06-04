@@ -2,7 +2,7 @@
 pageEncoding="utf-8"%>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <body>
     <footer class="footer">
       <div class="container">
@@ -178,67 +178,9 @@ pageEncoding="utf-8"%>
       </div>
     </footer>
 
-<<<<<<< HEAD
-    <script src="../js/jquery-3.2.1.min.js"></script>
-    <script src="../styles/bootstrap4/popper.js"></script>
-    <script src="../styles/bootstrap4/bootstrap.min.js"></script>
-    <script src="../plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
-    <script src="../plugins/easing/easing.js"></script>
-    <script src="../js/custom.js"></script>
-  </body>
-</html>
-=======
 
 
-				<!-- Footer Column -->
-				<div class="col-lg-3 footer_column">
-					<div class="footer_col">
-						<div class="footer_title">tags</div>
-						<div class="footer_content footer_tags">
-							<ul class="tags_list clearfix">
-								<li class="tag_item"><a href="#">design</a></li>
-								<li class="tag_item"><a href="#">fashion</a></li>
-								<li class="tag_item"><a href="#">music</a></li>
-								<li class="tag_item"><a href="#">video</a></li>
-								<li class="tag_item"><a href="#">party</a></li>
-								<li class="tag_item"><a href="#">photography</a></li>
-								<li class="tag_item"><a href="#">adventure</a></li>
-								<li class="tag_item"><a href="#">travel</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-
-				<!-- Footer Column -->
-				<div class="col-lg-3 footer_column">
-					<div class="footer_col">
-						<div class="footer_title">contact info</div>
-						<div class="footer_content footer_contact">
-							<ul class="contact_info_list">
-								<li class="contact_info_item d-flex flex-row">
-									<div><div class="contact_info_icon"><img src="images/placeholder.svg" alt=""></div></div>
-									<div class="contact_info_text">4127 Raoul Wallenber 45b-c Gibraltar</div>
-								</li>
-								<li class="contact_info_item d-flex flex-row">
-									<div><div class="contact_info_icon"><img src="images/phone-call.svg" alt=""></div></div>
-									<div class="contact_info_text">2556-808-8613</div>
-								</li>
-								<li class="contact_info_item d-flex flex-row">
-									<div><div class="contact_info_icon"><img src="images/message.svg" alt=""></div></div>
-									<div class="contact_info_text"><a href="mailto:contactme@gmail.com?Subject=Hello" target="_top">contactme@gmail.com</a></div>
-								</li>
-								<li class="contact_info_item d-flex flex-row">
-									<div><div class="contact_info_icon"><img src="images/planet-earth.svg" alt=""></div></div>
-									<div class="contact_info_text"><a href="https://colorlib.com">www.colorlib.com</a></div>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-
-			</div>
-		</div>
-</footer>
+			
 
 		<!-- Copyright -->
 
@@ -259,7 +201,7 @@ pageEncoding="utf-8"%>
 									<li class="main_nav_item"><a href="../index.do">홈</a></li>
 									<li class="main_nav_item"><a href="../community/commu.do">커뮤니티</a></li>
 									<li class="main_nav_item"><a href="">여행지정보</a></li>
-									<li class="main_nav_item"><a href="">긴급속보</a></li>
+									<li class="main_nav_item"><a href="../calamity/calamity.do">긴급속보</a></li>
 									<li class="main_nav_item"><a href="../worldweather/weather.do">세계날씨</a></li>
 								</ul>
 							</div>
@@ -279,4 +221,3 @@ pageEncoding="utf-8"%>
 
 </body>
 </html>
->>>>>>> upstream/main
