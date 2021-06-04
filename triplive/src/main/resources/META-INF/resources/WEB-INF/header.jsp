@@ -49,10 +49,10 @@ pageEncoding="utf-8"%>
               </div>
               <div class="user_box ml-auto">
                 <div class="user_box_login user_box_link">
-                  <a href="login_resist_form.html">로그인</a>
+                  <a href="../user/login_resist_form.do">로그인</a>
                 </div>
                 <div class="user_box_register user_box_link">
-                  <a href="login_resist_form.html">회원가입</a>
+                  <a href="../user/login_resist_form.do">회원가입</a>
                 </div>
               </div>
             </div>
@@ -93,7 +93,7 @@ pageEncoding="utf-8"%>
                   </li>
                   <li class="main_nav_item"><a href="">여행지정보</a></li>
                   <li class="main_nav_item">
-                    <a href="/calamity/calamity.do">긴급속보</a>
+                    <a href="../calamity/calamity.do">긴급속보</a>
                   </li>
                   <li class="main_nav_item">
                     <a href="../worldweather/weather.do">세계날씨</a>
