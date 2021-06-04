@@ -17,13 +17,12 @@ import lombok.Setter;
 import lombok.ToString;
 
 @Entity //JPA로 관리되는 어노테이션 : 테이블이나 컬럼 생성
-@Table(name="getCountryCodeList2") // 테이블명 지정 + 인덱스도 설정
+@Table(name="getcountrycodelist2") // 테이블명 지정 + 인덱스도 설정
 @ToString // lombok ToString
 @Getter @Setter @Builder @AllArgsConstructor @NoArgsConstructor // lombok 의 builder를 이용해서 객체 생성 처리, builer <- Allargs... , NoArgs...
 
 public class GetCountryCodeList2 {//국가별_표준코드
     @Id // Primary Key에 해당하는 특정 필드를 id로 지정
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // ID값 자동으로 지정
     private Long ID;//국가코드ID
 
     @Column(length = 50*3, nullable = true)

@@ -16,58 +16,54 @@
 <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
 <link rel="stylesheet" type="text/css" href="styles/main_styles.css">
 <link rel="stylesheet" type="text/css" href="styles/responsive.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
-$(document).ready(function() {
-  $(".tabs2 li").click(function() {
-    var idx = $(this).index();
-    $(".tabs2 li").removeClass("on");
-    $(".tabs2 li").eq(idx).addClass("on");
-    $(".tab_cont > div").hide();
-    $(".tab_cont > div").eq(idx).show();
-  })
-});
+	$(document).ready(function() {
+	  $(".tabs2 li").click(function() {
+		var idx = $(this).index();
+		$(".tabs2 li").removeClass("on");
+		$(".tabs2 li").eq(idx).addClass("on");
+		$(".tab_cont > div").hide();
+		$(".tab_cont > div").eq(idx).show();
+	  })
+	});
 </script>
 <style>
-.container {
-  width: 500px;
-  margin: 20px auto;
-}
-.container2{
-	width: 1000px;
-}
-
-.tabs2 li {
-  list-style: none;
-  float: left;
-  width: 200px;
-  padding: 10px 10px;
-  cursor: pointer;
-  text-align: center;
-  border: 1px solid #bebebe;
-}
-
-.tabs2 li.on {
-  background-color: #ffb715;
-  font-weight: bold;
-}
-
-.tab_cont {
-  clear: both;
-  border: 1px solid #dedede;
-  height: 130px;
-  background-color: #cecece;
-}
-
-.tab_cont div {
-  display: none;
-  text-align: center;
-}
-
-.tab_cont div.on {
-  display: block;
-}
-
+	.container2{
+		width: 1600px;
+		margin: 20px;
+	}
+	
+	.tabs2 li {
+	  list-style: none;
+	  float: left;
+	  width: 200px;
+	  padding: 10px 10px;
+	  cursor: pointer;
+	  text-align: center;
+	  border: 1px solid #bebebe;
+	}
+	
+	.tabs2 li.on {
+	  background-color: #ffb715;
+	  font-weight: bold;
+	}
+	
+	.tab_cont {
+	  clear: both;
+	  border: 1px solid #dedede;
+	  height: 130px;
+	  background-color: #cecece;
+	}
+	
+	.tab_cont div {
+	  display: none;
+	  text-align: center;
+	}
+	
+	.tab_cont div.on {
+	  display: block;
+	}
+	
 </style>
 </head>
 
@@ -427,17 +423,13 @@ $(document).ready(function() {
 			</div>
 		</div>		
 	</div>
+
 	<!-- Intro -->
+	
 	<div class="country_view_wrap" style="padding: 50px 200px;">
 		<form name="frm" method="get">
-		<fieldset class="serach">
-			<legend>국가 안전 통합 검색</legend>
-			<input type="radio" id="country" class="radio" name="chkvalue" value="no1"  /><label for="country">국가/지역명으로 검색</label>
-			<input type="radio" id="continent" class="radio" name="chkvalue" value="no2" checked="checked" /><label for="continent">대륙별로 검색</label>
-			<div class="country" id="countidiv">
-				<input type="text" class="text" style="width:169px;" name="stext" value="" title="검색어 입력" onKeyPress="javascript:enterthis();" />
-				<img src="/images/common/btn/btn_search.gif"  onclick="javascript:sendthis();" alt="검색" style="vertical-align: middle;"/>			
-			</div>
+		<fieldset class="serach" >
+			<legend>국가 선택</legend>
 			<div class="continent" >
 				<select style="width:166px;" name="group_idx" title="국가 선택" onchange="javascript:changethis();">
 					<option value="">전체</option>
@@ -475,7 +467,7 @@ $(document).ready(function() {
 		</fieldset>
 		</form>
 			<div class="country_view_box" style="float: left; width: 50%;">
-				<h5 class="Stit3">안전공지</h5>
+				<div>안전공지</div>
 				<ul class="notice_list">
 					
 							<li>
@@ -518,7 +510,7 @@ $(document).ready(function() {
 			</div>
 			
 			<div class="country_view_box" >
-				<h5 class="Stit3">여행경보 조정</h5>
+				<div>여행경보 조정</div>
 				<a href="/dev/newest_list.mofa?mst_id=MST0000000000040&div_cd=20" class="more"><img src="/images/common/btn/btn_more.gif" alt="더보기" /></a>
 				<ul class="notice_list">
 				
@@ -559,7 +551,7 @@ $(document).ready(function() {
 						</li>
 				</ul>
 	</div>
-	<div class="container">
+	<div class="container" style="padding: 0px; margin : 0px;">
 		<div class="container2">
 			<ul class="tabs2">
 				<li><a href="#tel_number"><span>현지연락처</span></a></li>
@@ -582,7 +574,6 @@ $(document).ready(function() {
 			</div>
 		</div>
 	</div>
-	
 
 	<!-- Footer -->
 	<%@include file ="../footer.jsp" %>

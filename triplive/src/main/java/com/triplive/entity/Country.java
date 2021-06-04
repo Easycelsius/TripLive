@@ -23,8 +23,7 @@ import lombok.ToString;
 
 public class Country {
     @Id // Primary Key에 해당하는 특정 필드를 id로 지정 //DB에 Primary Key가 없더라도 Entity에서 강제로 하나는 지정해줘야함
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // ID값 자동으로 지정
-    private Long iso_num;
+    private Long iso_num;//국가코드
 
     // Column으로 사용하지 않는 필드의 경우 @Transient 어노테이션을 적용
     @Column(length = 30*3, nullable = false)

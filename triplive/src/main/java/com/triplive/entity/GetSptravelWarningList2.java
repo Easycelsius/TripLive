@@ -17,11 +17,16 @@ import lombok.Setter;
 import lombok.ToString;
 
 @Entity //JPA로 관리되는 어노테이션 : 테이블이나 컬럼 생성
-@Table(name="getSptravelWarningList2") // 테이블명 지정 + 인덱스도 설정
+@Table(name="getsptravelwarninglist2") // 테이블명 지정 + 인덱스도 설정
 @ToString // lombok ToString
 @Getter @Setter @Builder @AllArgsConstructor @NoArgsConstructor // lombok 의 builder를 이용해서 객체 생성 처리, builer <- Allargs... , NoArgs...
 
 public class GetSptravelWarningList2 {//국가별_특별여행주의보
+
+    @Id // Primary Key에 해당하는 특정 필드를 id로 지정
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // ID값 자동으로 지정
+    private Long warning_no;//특별여행 ID
+
     @Column(columnDefinition = "TEXT", nullable = true)
     private String evacuate_rcmnd_remark;//철수권고비고
 
@@ -44,8 +49,7 @@ public class GetSptravelWarningList2 {//국가별_특별여행주의보
     @Column(length = 50*3, nullable = true)
     private String country_eng_nm; // 영문국가명
 
-    @Id // Primary Key에 해당하는 특정 필드를 id로 지정
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // ID값 자동으로 지정
+    @Column(length = 50*3, nullable = true)
     private String country_iso_alp2; // ISO 2자리코드
 
     @Column(length = 30, nullable = true)
