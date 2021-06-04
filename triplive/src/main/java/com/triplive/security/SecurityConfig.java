@@ -24,11 +24,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter
 		// 앞에 선언한 것이 먼저 적용됨
         http
 			.authorizeRequests()
-				// .antMatchers("/**").permitAll() // 전부 열어두기
+			//	.antMatchers("/**").permitAll() // 전부 열어두기
 				.antMatchers("/calamity/**").permitAll()
 				.antMatchers("/community/write.do").hasRole("MEMBER") // 글 남기기 페이지는 로그인 요청
 				.antMatchers("/community/**").permitAll()
-				.antMatchers("/tripinfo/**").permitAll()
+				.antMatchers("/safetylist/**").permitAll()
 				.antMatchers("/user/**").permitAll()
 				.antMatchers("/worldweather/**").permitAll()
 				.antMatchers("/admin").hasRole("ADMIN")

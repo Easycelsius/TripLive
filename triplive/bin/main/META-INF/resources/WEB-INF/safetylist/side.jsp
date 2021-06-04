@@ -67,14 +67,14 @@
 										</select>
 										<!-- <input type="text" class="destination search_input" required="required"> -->
 									</div>
-									<div class="search_item">
+									<!-- <div class="search_item">
 										<div>작성일 이전</div>
 										<input type="text" class="check_in search_input" placeholder="YYYY-MM-DD">
 									</div>
 									<div class="search_item">
 										<div>작성일 이후</div>
 										<input type="text" class="check_out search_input" placeholder="YYYY-MM-DD">
-									</div>
+									</div> -->
 									<!-- <div class="search_item">
 										<div>adults</div>
 										<select name="adults" id="adults_1" class="dropdown_item_select search_input">

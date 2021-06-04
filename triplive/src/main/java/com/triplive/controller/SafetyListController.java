@@ -7,12 +7,12 @@ import lombok.extern.log4j.Log4j2;
 
 @Controller
 @Log4j2
-public class TripInfoController {
+public class SafetyListController {
 
-    @RequestMapping("/tripinfo.do")
-    public String infoBoard() {
-        log.info("tripinfo.do 요청");
-        return "tripinfo/tripinfo";
+    @RequestMapping("/safetylist.do")
+    public String safetyBoard() {
+        log.info("safetylist.do 요청");
+        return "safetylist/safetylist";
     }
     
     

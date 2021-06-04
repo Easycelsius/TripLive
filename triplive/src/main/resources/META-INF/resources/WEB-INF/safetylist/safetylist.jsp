@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<title>트립라이브 커뮤니티</title>
+<title>트립라이브 안전공지</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Travelix Project">
@@ -28,7 +28,7 @@
 	<div class="home">
 		<div class="home_background parallax-window" data-parallax="scroll" data-image-src="../../images/comm_background.jpg"></div>
 		<div class="home_content">
-			<div class="home_title">Community</div>
+			<div class="home_title">SafetyList</div>
 		</div>
 	</div>
 
