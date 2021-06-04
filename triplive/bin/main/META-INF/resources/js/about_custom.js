@@ -245,7 +245,7 @@ $(document).ready(function()
 		    	.on('start', function()
 		    	{
 		    		var counter = {value:eleValue};
-		    		var counterTween = TweenMax.to(counter, 4,
+		    		var counterTween = TweenMax.to(counter, 2,
 		    		{
 		    			value: endValue,
 		    			// roundProps:"value", 
