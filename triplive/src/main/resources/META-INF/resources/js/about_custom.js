@@ -248,7 +248,7 @@ $(document).ready(function()
 		    		var counterTween = TweenMax.to(counter, 2,
 		    		{
 		    			value: endValue,
-		    			// roundProps:"value", 
+		    			//roundProps:"value", 
 						ease: Circ.easeOut, 
 						onUpdate:function()
 						{
