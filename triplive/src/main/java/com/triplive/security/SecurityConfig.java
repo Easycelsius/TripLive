@@ -30,7 +30,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter
 	public void configure(WebSecurity web) throws Exception
 	{
 		// 예를들어 이런식으로 인증할것들을 풀어주는겁니다. (주로 리소스)
-		web.ignoring().antMatchers("/css/**", "/script/**", "/index.do", "/", "favicon.ico");
+		web.ignoring().antMatchers("/css/**", "/script/**", "favicon.ico");
 		web.ignoring().antMatchers("/fonts/**", "/images/**", "/img/**", "/js/**", "/plugins/**", "/styles/**", "/logo/**");
 	}
 
@@ -52,9 +52,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter
 				.and()
 			.formLogin() // 로그인 관련 설정 진행
 				.loginPage("/user/login_resist_form.do") // 로그인 페이지 호출
-				.loginProcessingUrl("user/login.do") // 실제 로그인을 진행
+				.loginProcessingUrl("/user/login.do") // 실제 로그인을 진행
 				.defaultSuccessUrl("/index.do") // 로그인 성공시 보여주는 페이지
+				.usernameParameter("id")
+				.passwordParameter("password")
 				.permitAll()
+				.and()
+			.rememberMe().key("securitykey")
+				.tokenValiditySeconds(60 * 60 * 24) //24시간
 				.and()
 			.logout() // 로그아웃 관련 설정을 진행
 				.logoutUrl("/logout.do")

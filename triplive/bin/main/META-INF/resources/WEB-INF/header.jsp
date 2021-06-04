@@ -1,6 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 pageEncoding="utf-8"%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+
 <!DOCTYPE html>
 <html lang="ko">
   <head>
@@ -47,14 +51,25 @@ pageEncoding="utf-8"%>
                   </li>
                 </ul>
               </div>
-              <div class="user_box ml-auto">
-                <div class="user_box_login user_box_link">
-                  <a href="../user/login_resist_form.do">로그인</a>
+              
+              <sec:authorize access="isAuthenticated()">
+                <div class="user_box ml-auto">
+                  <div class="user_box_login user_box_link">
+                    <a href="../user/logout.do">로그아웃</a>
+                  </div>
                 </div>
-                <div class="user_box_register user_box_link">
-                  <a href="../user/login_resist_form.do">회원가입</a>
+              </sec:authorize>
+              <sec:authorize access="!isAuthenticated()">
+                <div class="user_box ml-auto">
+                  <div class="user_box_login user_box_link">
+                    <a href="../user/login_resist_form.do">로그인</a>
+                  </div>
+                  <div class="user_box_register user_box_link">
+                    <a href="../user/login_resist_form.do">회원가입</a>
+                  </div>
                 </div>
-              </div>
+              </sec:authorize>
+              
             </div>
           </div>
         </div>

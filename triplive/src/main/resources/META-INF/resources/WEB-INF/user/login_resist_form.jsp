@@ -26,7 +26,8 @@ pageEncoding="utf-8"%>
                 <form id="login" action="login.do" class="input-group" method="POST">
                     <input name="id" type="text" class="input-field" placeholder="아이디" required>
                     <input name="password" type="password" class="input-field" placeholder="비밀번호" required>
-                    <input name="cache" type="checkbox" class="checkbox"><span>회원 정보 유지</span>
+                    <input name="remember-me" type="checkbox" class="checkbox"><span>회원 정보 유지</span>
+                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
                     <button class="submit">로그인</button>
                 </form>
 
@@ -56,6 +57,7 @@ pageEncoding="utf-8"%>
                         <option value="0">기타</option>
                     </select>
                     <input type="checkbox" class="checkbox" required><span>개인정보동의</span>
+                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
                     <button class="submit">회원가입</button>
                 </form>
             </div>
