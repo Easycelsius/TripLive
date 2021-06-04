@@ -1,6 +1,6 @@
 package com.triplive.entity;
 // 외교부 국가별 주요 협정 정보
-
+// 완료
 import javax.persistence.*;
 import lombok.*;
 
