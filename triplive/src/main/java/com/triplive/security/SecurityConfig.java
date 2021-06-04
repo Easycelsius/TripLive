@@ -14,7 +14,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter
 	public void configure(WebSecurity web) throws Exception
 	{
 		// 예를들어 이런식으로 인증할것들을 풀어주는겁니다. (주로 리소스)
-		web.ignoring().antMatchers("/css/**", "/script/**", "/index.do");
+		web.ignoring().antMatchers("/css/**", "/script/**", "/index.do", "/");
 		web.ignoring().antMatchers("/fonts/**", "/images/**", "/img/**", "/js/**", "/plugins/**", "/styles/**", "/logo/**");
 	}
 
