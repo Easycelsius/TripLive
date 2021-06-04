@@ -20,7 +20,6 @@
 
 <script>
 	$(function() {
-
 		function timeConverter(UNIX_timestamp){
 			var a = new Date(UNIX_timestamp * 1000);
 			var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
@@ -34,49 +33,23 @@
 			return time;
 		}
 
-		var apiURI = 'http://api.openweathermap.org/data/2.5/forecast?id=1835848&appid=1db47184ebbc18af53fd996be840d270'
-
-		$.ajax({
-            url: apiURI,
-            dataType: "json",
-            type: "GET",
-            async: "false",
-            success: function(resp) {
-                console.log(resp);
-                // console.log("현재온도 : "+ (resp.main.temp- 273.15) );
-                // console.log("현재습도 : "+ resp.main.humidity);
-                // console.log("날씨 : "+ resp.weather[0].main );
-                // console.log("상세날씨설명 : "+ resp.weather[0].description );
-                // console.log("날씨 이미지 : "+ resp.weather[0].icon );
-                // console.log("바람   : "+ resp.wind.speed );
-                // console.log("나라   : "+ resp.sys.country );
-                // console.log("도시이름  : "+ resp.name );
-                // console.log("구름  : "+ (resp.clouds.all) +"%" );
-				// var imgURL = "http://openweathermap.org/img/w/" + resp.weather[0].icon + ".png";
-				// console.log(resp.dt)
-				console.log(timeConverter(1622775600 - 32400))
-            }
-        })
-
-		// const NUMBER_CFG = {count: DATA_COUNT, min: -100, max: 100};
-
 		const labels = [
-			'00시',
 			'03시',
 			'06시',
 			'09시',
 			'12시',
 			'15시',
 			'18시',
-			'21시'
+			'21시',
+			'00시'
 		];
 
 		const data = {
 			labels: labels,
 			datasets: [
 				{
-					label: '강수량',
-					data: [-12, 19, 3, 5, 2, 3, 14, 6],
+					label: '비 올 확률',
+					data: [],
 					backgroundColor: [
 						'rgba(54, 162, 235, 0.2)'
 					],
@@ -87,7 +60,7 @@
 				},
 				{
 					label: '기온',
-					data: [0, 1, 7, 1, 12, 5, 9, 13],
+					data: [],
 					backgroundColor: [
 						'rgba(255, 99, 132, 1)'
 					],
@@ -116,18 +89,57 @@
 			},
 		};
 
-		var myChart = new Chart(
-			document.getElementById('myChart'),
-			config
-		);
+		var CurrentApiURI = 'http://api.openweathermap.org/data/2.5/forecast?q=London&appid=1db47184ebbc18af53fd996be840d270'
+
+		// 현재 날씨
+		$.ajax({
+            url: CurrentApiURI,
+            dataType: "json",
+            type: "GET",
+            async: "false",
+            success: function(resp) {
+                console.log(resp);
+
+				for (var i = 0; i < 8; i++) {
+					config.data.datasets[1].data.push(parseFloat((resp.list[i].main.temp - 273.15).toFixed(1)))
+					config.data.datasets[0].data.push(resp.list[i].pop * 100)
+				}
+
+				var myChart = new Chart(
+					document.getElementById('myChart'),
+					config
+				);
+            }
+        })
+
+		
+
+		var DayApiURI = 'http://api.openweathermap.org/data/2.5/forecast?q=Seoul&appid=1db47184ebbc18af53fd996be840d270'
+
+		// 일일 날씨
+		$.ajax({
+            url: DayApiURI,
+            dataType: "json",
+            type: "GET",
+            async: "false",
+            success: function(resp) {
+                console.log(resp);
+
+				for (var i = 0; i < 8; i++) {
+					config.data.datasets[1].data.push(parseFloat((resp.list[i].main.temp - 273.15).toFixed(1)))
+					config.data.datasets[0].data.push(resp.list[i].pop * 100)
+				}
+
+				var myChart = new Chart(
+					document.getElementById('myChart'),
+					config
+				);
+            }
+        })
 	})
-
 </script>
-
 </head>
-
 <body>
-
 <div class="super_container">
 	
 	<!-- 헤더 -->
@@ -147,7 +159,6 @@
 	<div class="offers">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-1 temp_col"></div>
 				<div class="col-lg-11">
 					<!-- Offers Sorting -->
 					<div class="offers_sorting_container">
@@ -204,15 +215,34 @@
 
 			<%-- 본문 --%>
 
-			<div class="row">
+			<div class="row" style="margin-top: 50px">
 			<%-- 지도 --%>
 				<div class="col-lg-6">
-					<img src='../img/CN.png'/>
+					<div style="border: 1px solid black; height: 500px"></div>
 				</div>
 
 				<%-- 날씨 --%>
 				<div class="col-lg-6">
-					<p>날씨</p>
+					<div>06.04(금) 10:30 갱신</div>
+					<div class="row">
+						<div>20.7℃</div>
+						<div>체감</div>
+						<div>(21.8℃)</div>
+					</div>
+					<ul>
+						<li>
+							<span>습도</span>
+							<span>62%</span>
+						</li>
+						<li>
+							<span>바람</span>
+							<span>2.3m/s</span>
+						</li>
+						<li>
+							<span>비 올 확률</span>
+							<span>10%</span>
+						</li>
+					</ul>
 				</div>
 			</div>
 
