@@ -1,7 +1,5 @@
 package com.triplive.repository;
 
-import java.util.Optional;
-
 import com.triplive.entity.User;
 
 import org.springframework.data.jpa.repository.JpaRepository;

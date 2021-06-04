@@ -1,7 +1,5 @@
 package com.triplive.controller;
 
-import javax.servlet.http.HttpSession;
-
 import com.triplive.entity.Community;
 import com.triplive.entity.User;
 import com.triplive.service.CommunityService;

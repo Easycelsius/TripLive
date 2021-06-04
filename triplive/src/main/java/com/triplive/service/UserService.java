@@ -1,8 +1,6 @@
 package com.triplive.service;
 
 import java.util.List;
-import java.util.Optional;
-
 import com.triplive.entity.User;
 
 public interface UserService {
