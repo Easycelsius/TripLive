@@ -23,6 +23,7 @@ import lombok.ToString;
 
 public class GetCountryCodeList2 {//국가별_표준코드
     @Id // Primary Key에 해당하는 특정 필드를 id로 지정
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // ID값 자동으로 지정
     private Long ID;//국가코드ID
 
     @Column(length = 50*3, nullable = true)
@@ -32,12 +33,12 @@ public class GetCountryCodeList2 {//국가별_표준코드
     private String country_eng_nm; // 영문국가명
 
     @Column(length = 30, nullable = true)
-    private String iso_num; // ISO 숫자코드
-
-    @Column(length = 30, nullable = true)
-    private String iso_alp2; // ISO 2자리코드
+    private String country_iso_alp2; // ISO 2자리코드
 
     @Column(length = 30, nullable = true)
     private String iso_alp3; // ISO 3자리코드
 
+    @Column(length = 30, nullable = true)
+    private Long iso_num; // ISO 숫자코드
+    
 }

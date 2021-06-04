@@ -22,20 +22,23 @@ import lombok.ToString;
 @Getter @Setter @Builder @AllArgsConstructor @NoArgsConstructor  // lombok 의 builder를 이용해서 객체 생성 처리, builer <- Allargs... , NoArgs...
 
 public class Country {
-    @Id // Primary Key에 해당하는 특정 필드를 id로 지정 //DB에 Primary Key가 없더라도 Entity에서 강제로 하나는 지정해줘야함
-    private Long iso_num;//국가코드
+    @Id // Primary Key에 해당하는 특정 필드를 id로 지정
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // ID값 자동으로 지정
+    private Long ID;//국가코드ID
 
-    // Column으로 사용하지 않는 필드의 경우 @Transient 어노테이션을 적용
-    @Column(length = 30*3, nullable = false)
-    private String ct_kname; // 국가명
+    @Column(length = 50*3, nullable = true)
+    private String country_nm; // 한글국가명
 
-    @Column(length = 30*3, nullable = false)
-    private String ct_ename; // 국가명(영문)
+    @Column(length = 50*3, nullable = true)
+    private String country_eng_nm; // 영문국가명
 
-    @Column(length = 30*3, nullable = false)
-    private String iso_alp2; // ISO 2자리코드
+    @Column(length = 30, nullable = true)
+    private String country_iso_alp2; // ISO 2자리코드
 
-    @Column(length = 30*3, nullable = false)
+    @Column(length = 30, nullable = true)
     private String iso_alp3; // ISO 3자리코드
+
+    @Column(length = 30, nullable = true)
+    private Long iso_num; // ISO 숫자코드
     
 }

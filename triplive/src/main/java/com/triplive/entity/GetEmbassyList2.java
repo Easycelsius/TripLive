@@ -76,7 +76,7 @@ public class GetEmbassyList2 {//외교부_재외공관정보
     private String country_nm; // 국가명
     
     @Column(columnDefinition = "TEXT", nullable = true)
-    private String embassy_addr; // 재외공관주소
+    private String emblgbd_addr; // 재외공관주소
     
     @Column
     @Temporal(TemporalType.DATE)
