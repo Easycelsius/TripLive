@@ -13,7 +13,7 @@
 
 
 ******************************/
-
+$(()=>{
 $(document).ready(function()
 {
 	"use strict";
@@ -215,9 +215,12 @@ $(document).ready(function()
 
 	    	milestoneItems.each(function(i)
 	    	{
+
 	    		var ele = $(this);
 	    		var endValue = ele.data('end-value');
 	    		var eleValue = ele.text();
+
+				
 
 	    		/* Use data-sign-before and data-sign-after to add signs
 	    		infront or behind the counter number */
@@ -245,7 +248,7 @@ $(document).ready(function()
 		    		var counterTween = TweenMax.to(counter, 4,
 		    		{
 		    			value: endValue,
-		    			roundProps:"value", 
+		    			// roundProps:"value", 
 						ease: Circ.easeOut, 
 						onUpdate:function()
 						{
@@ -303,3 +306,4 @@ $(document).ready(function()
 		}
 	}
 });
+})

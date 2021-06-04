@@ -32,201 +32,9 @@
 		</div>
 	</div>
 
-	<!-- Offers -->
-
-	<div class="offers">
-
-		<!-- Search -->
-
-		<div class="search">
-			<div class="search_inner">
-
-				<!-- Search Contents -->
-				
-				<div class="container fill_height no-padding">
-					<div class="row fill_height no-margin">
-						<div class="col fill_height no-padding">
-
-							<!-- Search Tabs -->
-
-							<div class="search_tabs_container">
-								<div class="search_tabs d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
-									<div class="search_tab active d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="../../images/departure.png" alt=""><span>지역으로 검색</span></div>
-									<div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="../../images/milestone_1.png" alt="">단어로 검색</div>
-									<!-- <div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="../images/departure.png" alt="">flights</div>
-									<div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="../images/island.png" alt="">trips</div>
-									<div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="../images/cruise.png" alt="">cruises</div>
-									<div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="../images/diving.png" alt="">activities</div> -->
-								</div>		
-							</div>
-
-							<!-- Search Panel -->
-							<!-- 지역 검색 -->
-
-							<div class="search_panel active">
-								<form action="#" id="search_form_1" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
-									<div class="search_item">
-										<div>국가</div>
-										<select name="country" id="country" class="dropdown_item_select search_input" required="required">
-											<option>전체</option>
-											<option>일본</option>
-											<option>중국</option>
-											<option>베트남</option>
-											<option>미국</option>
-											<option>태국</option>
-											<option>필리핀</option>
-											<option>싱가포르</option>
-											<option>프랑스</option>
-											<option>영국</option>
-											<option>호주</option>
-											<option>아일랜드</option>
-										</select>
-										<!-- <input type="text" class="destination search_input" required="required"> -->
-									</div>
-									<div class="search_item">
-										<div>작성일 이전</div>
-										<input type="text" class="check_in search_input" placeholder="YYYY-MM-DD">
-									</div>
-									<div class="search_item">
-										<div>작성일 이후</div>
-										<input type="text" class="check_out search_input" placeholder="YYYY-MM-DD">
-									</div>
-									<!-- <div class="search_item">
-										<div>adults</div>
-										<select name="adults" id="adults_1" class="dropdown_item_select search_input">
-											<option>01</option>
-											<option>02</option>
-											<option>03</option>
-										</select>
-									</div>
-									<div class="search_item">
-										<div>children</div>
-										<select name="children" id="children_1" class="dropdown_item_select search_input">
-											<option>0</option>
-											<option>02</option>
-											<option>03</option>
-										</select>
-									</div> -->
-									<!-- <div class="extras">
-										<ul class="search_extras clearfix">
-											<li class="search_extras_item">
-												<div class="clearfix">
-													<input type="checkbox" id="search_extras_1" class="search_extras_cb">
-													<label for="search_extras_1">Pet Friendly</label>
-												</div>	
-											</li>
-											<li class="search_extras_item">
-												<div class="clearfix">
-													<input type="checkbox" id="search_extras_2" class="search_extras_cb">
-													<label for="search_extras_2">Car Parking</label>
-												</div>
-											</li>
-											<li class="search_extras_item">
-												<div class="clearfix">
-													<input type="checkbox" id="search_extras_3" class="search_extras_cb">
-													<label for="search_extras_3">Wireless Internet</label>
-												</div>
-											</li>
-											<li class="search_extras_item">
-												<div class="clearfix">
-													<input type="checkbox" id="search_extras_4" class="search_extras_cb">
-													<label for="search_extras_4">Reservations</label>
-												</div>
-											</li>
-											<li class="search_extras_item">
-												<div class="clearfix">
-													<input type="checkbox" id="search_extras_5" class="search_extras_cb">
-													<label for="search_extras_5">Private Parking</label>
-												</div>
-											</li>
-											<li class="search_extras_item">
-												<div class="clearfix">
-													<input type="checkbox" id="search_extras_6" class="search_extras_cb">
-													<label for="search_extras_6">Smoking Area</label>
-												</div>
-											</li>
-											<li class="search_extras_item">
-												<div class="clearfix">
-													<input type="checkbox" id="search_extras_7" class="search_extras_cb">
-													<label for="search_extras_7">Wheelchair Accessible</label>
-												</div>
-											</li>
-											<li class="search_extras_item">
-												<div class="clearfix">
-													<input type="checkbox" id="search_extras_8" class="search_extras_cb">
-													<label for="search_extras_8">Pool</label>
-												</div>
-											</li>
-										</ul>
-									</div>
-									<div class="more_options">
-										<div class="more_options_trigger">
-											<a href="#">load more options</a>
-										</div>
-										<ul class="more_options_list clearfix">
-											<li class="more_options_item">
-												<div class="clearfix">
-													<input type="checkbox" id="more_options_1" class="search_extras_cb">
-													<label for="more_options_1">Pet Friendly</label>
-												</div>	
-											</li>
-											<li class="more_options_item">
-												<div class="clearfix">
-													<input type="checkbox" id="more_options_2" class="search_extras_cb">
-													<label for="more_options_2">Car Parking</label>
-												</div>
-											</li>
-										</ul>
-									</div> -->
-									<button class="button search_button">이동<span></span><span></span><span></span></button>
-								</form>
-							</div>
-
-							<!-- Search Panel -->
-							<!-- 단어 검색 -->
-
-							<div class="search_panel">
-								<form action="#" id="search_form_2" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
-									<div class="search_item">
-										<div>검색어 입력</div>
-										<input type="text" class="destination search_input" required="required">
-									</div>
-									<!-- <div class="search_item">
-										<div>check in</div>
-										<input type="text" class="check_in search_input" placeholder="YYYY-MM-DD">
-									</div>
-									<div class="search_item">
-										<div>check out</div>
-										<input type="text" class="check_out search_input" placeholder="YYYY-MM-DD">
-									</div>
-									<div class="search_item">
-										<div>adults</div>
-										<select name="adults" id="adults_2" class="dropdown_item_select search_input">
-											<option>01</option>
-											<option>02</option>
-											<option>03</option>
-										</select>
-									</div>
-									<div class="search_item">
-										<div>children</div>
-										<select name="children" id="children_2" class="dropdown_item_select search_input">
-											<option>0</option>
-											<option>02</option>
-											<option>03</option>
-										</select>
-									</div> -->
-									<button class="button search_button">검색<span></span><span></span><span></span></button>
-								</form>
-							</div>
-
-							
-						</div>
-					</div>
-				</div>	
-			</div>	
-		</div>
-
-		<!-- Offers -->
+	<!-- offer -->
+	<%@include file ="offer.jsp" %>
+	<!-- offer 종료 -->
 
 		<div class="container">
 			<div class="row">
@@ -283,7 +91,7 @@
 								</ul>
 							</li>
 							<li> -->
-								<span class="button btn-success"><a href="#">글남기기</a></span>
+								<span class="button btn-success"><a href="write.do">글남기기</a></span>
 								<!-- <span class="button sorting_text"><a href="#">글 남기기</a></span> -->
 							</li>
 						</ul>
@@ -315,7 +123,7 @@
 											<i></i>
 										</div> -->
 										<p class="offers_text">bd_content</p>
-										<div class="button book_button float-right"><a href="#">글 보기<span></span><span></span><span></span></a></div>
+										<div class="button book_button float-right"><a href="board_detail.do">글 보기</a></div>
 										<div class="offers_icons">
 											<ul class="offers_icons_list">
 												<li class="offers_icons_item"><img src="../images/post.png" alt=""></li>
@@ -364,7 +172,7 @@
 											<i></i>
 										</div> -->
 										<p class="offers_text">bd_content</p>
-										<div class="button book_button float-right"><a href="#">글 보기<span></span><span></span><span></span></a></div>
+										<div class="button book_button float-right"><a href="#">글 보기</a></div>
 										<div class="offers_icons">
 											<ul class="offers_icons_list">
 												<li class="offers_icons_item"><img src="../images/post.png" alt=""></li>
@@ -413,7 +221,7 @@
 											
 										</div> -->
 										<p class="offers_text">bd_content</p>
-										<div class="button book_button float-right"><a href="#">글 보기<span></span><span></span><span></span></a></div>
+										<div class="button book_button float-right"><a href="#">글 보기</a></div>
 										<div class="offers_icons">
 											<ul class="offers_icons_list">
 												<li class="offers_icons_item"><img src="../images/post.png" alt=""></li>
@@ -437,8 +245,34 @@
 					</div>
 				</div>
 
+				<!-- 페이징 -->	
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-5 temp_col"></div>
+						<nav aria-label="Page navigation example" class="col-lg-3">
+							<ul class="pagination pagination-sm">
+							<li class="page-item">
+								<a class="page-link" href="#" aria-label="Previous">
+								<span aria-hidden="true">&laquo;</span>
+								<span class="sr-only">이전</span>
+								</a>
+							</li>
+							<li class="page-item"><a class="page-link" href="#">1</a></li>
+							<li class="page-item"><a class="page-link" href="#">2</a></li>
+							<li class="page-item"><a class="page-link" href="#">3</a></li>
+							<li class="page-item">
+								<a class="page-link" href="#" aria-label="Next">
+								<span aria-hidden="true">&raquo;</span>
+								<span class="sr-only">다음</span>
+								</a>
+							</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+
 			</div>
-		</div>		
+		</div>	
 	</div>
 
 	<!-- Footer -->

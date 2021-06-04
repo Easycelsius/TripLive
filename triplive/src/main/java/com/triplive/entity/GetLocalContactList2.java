@@ -1,5 +1,6 @@
 package com.triplive.entity;
 // 외교부 국가별 현지연락처 
+// 완료
 
 import javax.persistence.*;
 import lombok.*;
@@ -12,13 +13,16 @@ import lombok.*;
 
 public class GetLocalContactList2 {
     // Column으로 사용하지 않는 필드의 경우 @Transient 어노테이션을 적용
+    @Id // Primary Key에 해당하는 특정 필드를 id로 지정
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // ID값 자동으로 지정
+    private Long localcontact_no;
+    
     @Column(length = 50, nullable = true)
     private String country_eng_nm; // 영문국가명
 
     @Column(length = 50, nullable = true)
     private String country_nm; // 한글 국가명
     
-    @Id
     @Column(length = 10*3, nullable = true)
     private String country_iso_alp2; // ios두자리코드
 
@@ -31,7 +35,7 @@ public class GetLocalContactList2 {
     @Column(length = 50, nullable = true)
     private String continent_nm; // 한글대륙명
 
-    @Column(length = 50, nullable = true)
+    @Column(columnDefinition = "TEXT", nullable = true)
     private String contact_remark; // 현지연락처정보
 
     @Column(length = 1000, nullable = true)

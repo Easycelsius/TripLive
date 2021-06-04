@@ -14,6 +14,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter
 	{
 		// 예를들어 이런식으로 인증할것들을 풀어주는겁니다. (주로 리소스)
 		web.ignoring().antMatchers("/css/**", "/script/**", "/");
+		web.ignoring().antMatchers("/community/**");
 	}
 	@Override
 	protected void configure(HttpSecurity http) throws Exception
@@ -22,5 +23,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter
 		http.authorizeRequests()
 			// 어드민 권한으로만 접근할 수 있는 경로.
 			.antMatchers("/admin/**").access("ROLE_ADMIN");
+
+		// http.authorizeRequests()
+		// 	// 유저 권한으로만 접근할 수 있는 경로.
+		// 	.antMatchers("/community/write.jsp").access("User");
 	}
 }
