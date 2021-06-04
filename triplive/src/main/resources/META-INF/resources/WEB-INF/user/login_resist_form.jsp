@@ -23,7 +23,7 @@ pageEncoding="utf-8"%>
                     <img src="../img/gl.png" alt="google">
                 </div> -->
                 <!-- 로그인 폼 -->
-                <form id="login" action="login.do" class="input-group">
+                <form id="login" action="login.do" class="input-group" method="POST">
                     <input name="id" type="text" class="input-field" placeholder="아이디" required>
                     <input name="password" type="password" class="input-field" placeholder="비밀번호" required>
                     <input name="cache" type="checkbox" class="checkbox"><span>회원 정보 유지</span>
@@ -31,7 +31,7 @@ pageEncoding="utf-8"%>
                 </form>
 
                 <!-- 회원가입 폼 -->
-                <form id="register" action="register.do" class="input-group">
+                <form id="register" action="register.do" class="input-group" method="POST">
                     <input name="id" type="text" class="input-field" placeholder="아이디" required>
                     <button type="button" id="check" class="button-wrap search_button float-right" style="margin-top: -5px; margin-left: 20px;">아이디 중복확인</button>
                     <input name="email" type="email" class="input-field" placeholder="이메일" required>
@@ -41,7 +41,7 @@ pageEncoding="utf-8"%>
                     <input name="phone" type="tel" class="input-field" placeholder="전화번호">
                     <input name="password" type="password" class="input-field" placeholder="비밀번호" required>
                     <select name="iso_num" id="country" class="dropdown_item_select search_input" required="required">
-                        <option value="None">거주 및 방문 국가를 선택해주세요</option>
+                        <option value="-1">거주 및 방문 국가를 선택해주세요</option>
                         <option value="392">일본</option>
                         <option value="156">중국</option>
                         <option value="704">베트남</option>

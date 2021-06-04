@@ -6,6 +6,7 @@ import com.triplive.entity.User;
 import com.triplive.service.UserService;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,6 +21,13 @@ public class UserController {
     @Autowired
 	private UserService userService;
 
+    @RequestMapping("/register.do")
+    public String register(User user){
+        log.info("회원가입 시도 : " + user);
+        userService.saveUser(user);
+        return "redirect:../index.do";
+    }
+
     @RequestMapping("/login.do")
     public String login(User user, String cache, HttpServletRequest request){
 
@@ -31,8 +39,13 @@ public class UserController {
         User member = userService.getUser(user);
         log.info("아이디 조회 : " + member);
 
+        // 암호화 형태로 변환
+        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+
+        log.info("암호화 비밀번호와 비교 : " + encoder.matches(user.getPassword(), member.getPassword()));
+
         // 패스워드가 동일시에 세션 할당
-        if(member.getPassword().equals(user.getPassword())){
+        if(encoder.matches(user.getPassword(), member.getPassword())){
             member.setPassword(""); // 세션 내 비밀번호 전처리
             request.setAttribute("user", member);
             log.info("로그인 진행 및 세션 할당");

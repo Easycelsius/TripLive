@@ -6,8 +6,11 @@ import java.util.Optional;
 import com.triplive.entity.User;
 
 public interface UserService {
-    // 저장, 수정
-    void saveUpdateUser(User user);
+    // 저장
+    void saveUser(User user);
+
+    // 수정
+    void updateUser(User user);
 
     // 유저 삭제
     void deleteUser(User user);

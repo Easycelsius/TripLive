@@ -9,20 +9,36 @@ import com.triplive.entity.User;
 import com.triplive.repository.UserRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 
 @Service("UserService")
+@RequiredArgsConstructor
 @Transactional
 @Log4j2
-public class UserServiceImpl implements UserService {
+public class UserServiceImpl implements UserService, UserDetailsService {
 
     @Autowired
 	private UserRepository userDAO;
 
+    // 저장
     @Override
-    public void saveUpdateUser(User user) {
+    public void saveUser(User user) {
+        log.info("saveUpdateUser 실행");
+        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+        user.setPassword(encoder.encode(user.getPassword()));
+        user.setAuth("ROLE_MEMBER"); // admin은 ROLE_ADMIN,ROLE_USER로 할당 필요
+        userDAO.save(user);
+    }
+
+    // 수정
+    @Override
+    public void updateUser(User user) {
         log.info("saveUpdateUser 실행");
         userDAO.save(user);
     }
@@ -42,6 +58,13 @@ public class UserServiceImpl implements UserService {
     @Override
     public List<User> getUserList(Integer Page) {
         return null;
+    }
+
+    // security
+    @Override // 기본적인 반환 타입은 UserDetails, UserDetails를 상속받은 UserInfo로 반환 타입 지정 (자동으로 다운 캐스팅됨)
+    public User loadUserByUsername(String id) throws UsernameNotFoundException { // 시큐리티에서 지정한 서비스이기 때문에 이 메소드를 필수로 구현
+        return userDAO.findById(id)
+            .orElseThrow(() -> new UsernameNotFoundException((id)));
     }
     
 }
