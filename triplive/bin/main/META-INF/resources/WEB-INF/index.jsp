@@ -55,14 +55,10 @@ pageEncoding="utf-8"%>
           type: "GET",
           async: "false",
           success: function (resp) {
-            console.log(resp);
-            console.log(resp.USDKRW[0]);
-            // $("#US").attr("data-end-value", resp.USDKRW[0])
-            $("#US").attr("data-end-value", resp.USDKRW[0]);
-            $("#JP").attr("data-end-value", resp.JPYKRW[0]);
-            $("#CN").attr("data-end-value", resp.CNYKRW[0]);
-            $("#VN").attr("data-end-value", resp.VNDKRW[0]);
-            // $("#US").text(resp.USDKRW[0])
+            $("#US").attr("data-end-value", resp.USDKRW[0].toFixed(4)*10000);
+            $("#JP").attr("data-end-value", (resp.JPYKRW[0]*100).toFixed(4)*10000);
+            $("#CN").attr("data-end-value", resp.CNYKRW[0].toFixed(4)*10000);
+            $("#VN").attr("data-end-value", (resp.VNDKRW[0]*100).toFixed(4)*10000);
           },
         });
       });
@@ -1704,7 +1700,7 @@ pageEncoding="utf-8"%>
                 <div class="milestone_counter" id="US" data-end-value="1000">
                   0
                 </div>
-                <div class="milestone_text">미국 USD / 달러</div>
+                <div class="milestone_text">미국 USD</div>
               </div>
             </div>
 
@@ -1715,7 +1711,7 @@ pageEncoding="utf-8"%>
                   <img src="img/countryflag/JP_1.gif" alt="" />
                 </div>
                 <div class="milestone_counter" id="JP" data-end-value="">0</div>
-                <div class="milestone_text">일본 JPY / 엔화</div>
+                <div class="milestone_text">일본 JPY (100엔)</div>
               </div>
             </div>
 
@@ -1726,7 +1722,7 @@ pageEncoding="utf-8"%>
                   <img src="img/countryflag/CN_1.gif" alt="" />
                 </div>
                 <div class="milestone_counter" id="CN" data-end-value="">0</div>
-                <div class="milestone_text">중국 CNY / 위안화</div>
+                <div class="milestone_text">중국 CNY</div>
               </div>
             </div>
 
@@ -1737,7 +1733,7 @@ pageEncoding="utf-8"%>
                   <img src="img/countryflag/VN_1.gif" alt="" />
                 </div>
                 <div class="milestone_counter" id="VN" data-end-value="">0</div>
-                <div class="milestone_text">베트남 VND / 동</div>
+                <div class="milestone_text">베트남 VND (100동)</div>
               </div>
             </div>
           </div>
@@ -1746,54 +1742,6 @@ pageEncoding="utf-8"%>
 
       <!-- Footer -->
       <%@include file ="footer.jsp" %>
-
-      <!-- Copyright -->
-
-      <div class="copyright">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-3 order-lg-1 order-2">
-              <div class="copyright_content d-flex flex-row align-items-center">
-                <div>
-                  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                  Copyright &copy;
-                  <script>
-                    document.write(new Date().getFullYear());
-                  </script>
-                  All rights reserved | This template is made with
-                  <i class="fa fa-heart-o" aria-hidden="true"></i> by
-                  <a href="https://colorlib.com" target="_blank">Colorlib</a>
-                  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-9 order-lg-2 order-1">
-              <div
-                class="
-                  footer_nav_container
-                  d-flex
-                  flex-row
-                  align-items-center
-                  justify-content-lg-end
-                "
-              >
-                <div class="footer_nav">
-                  <ul class="footer_nav_list">
-                    <li class="main_nav_item"><a href="../index.do">홈</a></li>
-                    <li class="main_nav_item"><a href="">커뮤니티</a></li>
-                    <li class="main_nav_item"><a href="">여행지정보</a></li>
-                    <li class="main_nav_item"><a href="">긴급속보</a></li>
-                    <li class="main_nav_item">
-                      <a href="../WorldWeather/weather.do">세계날씨</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="styles/bootstrap4/popper.js"></script>
