@@ -48,10 +48,12 @@ public class CommunityController {
     }
 
     // community page 메인
-    @RequestMapping("/community.do")
-    public String communityBoard(Model model, @RequestParam(value = "page", defaultValue = "1") Integer pageNum) {
-        log.info("community.do 요청");
-        return "community";
+    @RequestMapping("/commu.do")
+    public String communityBoard(Model model, @RequestParam(value = "page", defaultValue = "1") Integer pageNum, Principal principal) {
+        log.info("community.do 요청 : "+pageNum+" 페이지");
+        log.info(communityService.getPostingList(pageNum));
+        model.addAttribute("communities", communityService.getPostingList(pageNum));
+        return "community/commu";
     }
 
     // 일반적인 페이지 이동

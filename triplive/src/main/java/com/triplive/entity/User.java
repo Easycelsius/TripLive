@@ -35,8 +35,9 @@ public class User implements UserDetails {
     @Column(length = 30*3, nullable = true)
     private String phone; // 전화번호
 
-    @Column(length = 30*3, nullable = true)
-    private Long iso_num; // 국가번호
+    @ManyToOne
+    @JoinColumn(name="iso_num")
+    private Country country; // 국가
 
     // 시큐리티 권한 설정
     @Column(name = "auth")
