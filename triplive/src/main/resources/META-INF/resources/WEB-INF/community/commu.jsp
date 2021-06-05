@@ -99,7 +99,7 @@
 						</ul>
 					</div>
 				</div>
-
+				
 				<c:forEach var="community" items="${communities}" varStatus="status">
 					<div class="col-lg-12">
 						<!-- Offers Grid -->
@@ -115,6 +115,7 @@
 											<div class="offer_name"><a href="single_listing.html">grand castle</a></div>
 										</div>
 									</div> -->
+									
 									<div class="col-lg-11">
 										<div class="offers_content">
 											<div class="offers_price">${community.bdTitle}<span>${community.date}</span></div>
@@ -140,12 +141,12 @@
 													<div class="offer_reviews_title">${community.user.id}</div>
 													<div class="offer_reviews_subtitle float-right">${community.count}</div>
 												</div>
-												<img src="../img/countryflag/${community.country.countryIsoAlp2}.gif" alt="" class="offer_reviews_rating text-center" >
+												<img src="../img/countryflag/${community.country.isoAlp2}.gif" alt="" class="offer_reviews_rating text-center" >
 											</div>
 											<hr>
 										</div>
 									</div>
-								
+									
 								</div>
 							</div>
 						</div>

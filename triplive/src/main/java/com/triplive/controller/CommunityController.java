@@ -1,6 +1,7 @@
 package com.triplive.controller;
 
 import com.triplive.entity.Community;
+import com.triplive.entity.Country;
 import com.triplive.entity.User;
 import com.triplive.service.CommunityService;
 
@@ -26,8 +27,13 @@ public class CommunityController {
 
     // 글 남기기시 저장할 부분
     @RequestMapping("/posting.do")
-    public String posting(Community community, Principal principal){
+    public String posting(Community community, Principal principal, Long isoNum){
         log.info("submit 데이터 확인 : " + community);
+
+        // isoNum은 넘어오는데 자동으로 매핑이 안되서 강제로 값을 전달하기 위한 작업
+        Country country = new Country();
+        country.setIsoNum(isoNum);
+        community.setCountry(country);
 
         // 오늘날짜 확인
         Date now = new Date();

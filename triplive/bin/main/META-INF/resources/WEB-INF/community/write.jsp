@@ -47,7 +47,8 @@
 						<form action="posting.do" id="contact_form" class="contact_form text-center" method="POST">
 							<!-- <input type="text" id="contact_form_name" class="contact_form_name input_field" placeholder="ID" required="required" data-error="Name is required.">
 							<input type="text" id="contact_form_email" class="contact_form_email input_field" placeholder="E-mail" required="required" data-error="Email is required."> -->
-							<select name="iso_num" id="country" class="dropdown_item_select search_input" required="required">
+							<select name="isoNum" id="country" class="dropdown_item_select search_input" required="required">
+								<option value="410">한국</option>
 								<option value="392">일본</option>
 								<option value="156">중국</option>
 								<option value="704">베트남</option>
@@ -59,10 +60,9 @@
 								<option value="826">영국</option>
 								<option value="36">호주</option>
 								<option value="372">아일랜드</option>
-								<option value="0">기타</option>
 							</select>
-							<input name="bd_title" type="text" id="contact_form_subject" class="contact_form_subject input_field" placeholder="제목" required="required" data-error="Subject is required.">
-							<textarea name="bd_content" id="contact_form_message" class="text_field contact_form_message" rows="4" placeholder="내용" required="required" data-error="Please, write us a message."></textarea>
+							<input name="bdTitle" type="text" id="contact_form_subject" class="contact_form_subject input_field" placeholder="제목" required="required" data-error="Subject is required.">
+							<textarea name="bdContent" id="contact_form_message" class="text_field contact_form_message" rows="4" placeholder="내용" required="required" data-error="Please, write us a message."></textarea>
 							<button type="submit" id="form_submit_button" class="form_submit_button button trans_200">작성 완료</button>
 						</form>
 					</div>

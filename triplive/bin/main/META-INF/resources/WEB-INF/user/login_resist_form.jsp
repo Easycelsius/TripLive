@@ -42,8 +42,9 @@ pageEncoding="utf-8"%>
                         <option value="female">여자</option>
                     <input name="phone" type="tel" class="input-field" placeholder="전화번호">
                     <input name="password" type="password" class="input-field" placeholder="비밀번호" required>
-                    <select name="iso_num" id="country" class="dropdown_item_select search_input" required="required">
-                        <option value="-1">거주 및 방문 국가를 선택해주세요</option>
+                    <select name="isoNum" id="country" class="dropdown_item_select search_input" required="required">
+                        <option value="410">거주 및 방문 국가를 선택해주세요</option>
+                        <option value="410">한국</option>
                         <option value="392">일본</option>
                         <option value="156">중국</option>
                         <option value="704">베트남</option>
@@ -55,7 +56,6 @@ pageEncoding="utf-8"%>
                         <option value="826">영국</option>
                         <option value="36">호주</option>
                         <option value="372">아일랜드</option>
-                        <option value="0">기타</option>
                     </select>
                     <input type="checkbox" class="checkbox" required><span>개인정보동의</span>
                     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />

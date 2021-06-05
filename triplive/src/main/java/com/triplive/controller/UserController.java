@@ -3,6 +3,7 @@ package com.triplive.controller;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.triplive.entity.Country;
 import com.triplive.entity.User;
 import com.triplive.service.UserService;
 import com.triplive.service.UserServiceImpl;
@@ -27,8 +28,14 @@ public class UserController {
 	private UserServiceImpl userService;
 
     @RequestMapping("/register.do")
-    public String register(User user){
+    public String register(User user, Long isoNum){
         log.info("회원가입 시도 : " + user);
+
+        // isoNum은 넘어오는데 자동으로 매핑이 안되서 강제로 값을 전달하기 위한 작업
+        Country country = new Country();
+        country.setIsoNum(isoNum);
+        user.setCountry(country);
+
         userService.saveUser(user);
         return "redirect:../index.do";
     }
@@ -66,8 +73,9 @@ public class UserController {
 
     @GetMapping(value = "logout.do")
     public String logoutPage(HttpServletRequest request, HttpServletResponse response) {
-      new SecurityContextLogoutHandler().logout(request, response, SecurityContextHolder.getContext().getAuthentication());
-      return "redirect:../index.do";
+        log.info("로그아웃 시도");
+        new SecurityContextLogoutHandler().logout(request, response, SecurityContextHolder.getContext().getAuthentication());
+        return "redirect:../index.do";
     }
 
     // id check를 위한 메서드
