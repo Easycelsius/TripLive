@@ -155,6 +155,7 @@
 
 				<!-- 페이징 -->	
 				<div class="container">
+					
 					<div class="row">
 						<div class="col-lg-5 temp_col"></div>
 						<nav aria-label="Page navigation example" class="col-lg-3">
@@ -165,10 +166,12 @@
 								<span class="sr-only">이전</span>
 								</a>
 							</li>
-							<li class="page-item"><a class="page-link" href="#">1</a></li>
-							<li class="page-item"><a class="page-link" href="#">2</a></li>
-							<li class="page-item"><a class="page-link" href="#">3</a></li>
-							<li class="page-item">
+
+							<c:forEach var="page" items="${pageList}">
+								<c:if test="${page ne null}">
+									<li class="page-item"><a class="page-link" href="?page=${page}">${page}</a></li>
+								</c:if>
+							</c:forEach>
 								<a class="page-link" href="#" aria-label="Next">
 								<span aria-hidden="true">&raquo;</span>
 								<span class="sr-only">다음</span>

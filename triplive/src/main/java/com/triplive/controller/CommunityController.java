@@ -4,6 +4,8 @@ import com.triplive.entity.Community;
 import com.triplive.entity.Country;
 import com.triplive.entity.User;
 import com.triplive.service.CommunityService;
+import com.triplive.service.CommunityServiceImpl;
+import com.triplive.vo.PageRequestDTO;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -23,7 +25,7 @@ import java.util.Date;
 public class CommunityController {
 
     @Autowired
-	private CommunityService communityService;
+	private CommunityServiceImpl communityService;
 
     // 글 남기기시 저장할 부분
     @RequestMapping("/posting.do")
@@ -55,12 +57,25 @@ public class CommunityController {
 
     // community page 메인
     @RequestMapping("/commu.do")
-    public String communityBoard(Model model, @RequestParam(value = "page", defaultValue = "1") Integer pageNum, Principal principal) {
-        log.info("community.do 요청 : "+pageNum+" 페이지");
-        log.info(communityService.getPostingList(pageNum));
-        model.addAttribute("communities", communityService.getPostingList(pageNum));
+    public String communityBoard(Model model, @RequestParam(value = "page", defaultValue = "1") Integer pageNum, String keyword, Principal principal) {
+        log.info("community.do 요청 : "+pageNum+" 페이지 / "+keyword);
+
+        model.addAttribute("communities", communityService.getPostingList(pageNum, keyword));
+        model.addAttribute("pageList", communityService.getPageList(pageNum, keyword));
+
+        for(Integer i : communityService.getPageList(pageNum, keyword)){
+            System.out.println(i);
+        }
+
         return "community/commu";
     }
+
+    // @RequestMapping("/commu.do")
+    // public String list(PageRequestDTO pageRequestDTO, Model model, Principal principal) {
+    //     log.info("community.do 요청 : "+pageRequestDTO+" 페이지");
+    //     model.addAttribute("communities", communityService.getList(pageRequestDTO));
+    //     return "community/commu";
+    // }
 
     // 일반적인 페이지 이동
     @RequestMapping("/{step}.do")
