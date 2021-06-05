@@ -13,7 +13,7 @@ public class Calamity {
     // 속보 번호
     @Id // Primary Key에 해당하는 특정 필드를 id로 지정
     @GeneratedValue(strategy = GenerationType.IDENTITY) // ID값 자동으로 지정
-    private Long cal_no; 
+    private Long calNo; 
 
     
     @ManyToOne
@@ -22,18 +22,18 @@ public class Calamity {
 
     // 재난유형
     @Column(length = 10*3, nullable = false)
-    private String cal_type; 
+    private String calType; 
 
     // 재난발생일
     @Column
     @Temporal(TemporalType.DATE)
-    private java.util.Date cal_date; 
+    private java.util.Date calDate; 
     
     // 재난내용
     @Column(length = 10*3, nullable = false)
-    private String cal_content; 
+    private String calContent; 
 
     // 비상연락처
     @Column(length = 10*3, nullable = true)
-    private String em_contact; 
+    private String emContact; 
 }

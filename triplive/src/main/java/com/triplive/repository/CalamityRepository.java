@@ -2,8 +2,10 @@ package com.triplive.repository;
 
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import com.triplive.entity.GetCountrySafetyList2;
+import org.springframework.stereotype.Repository;
 
+import com.triplive.entity.GetCountrySafetyList2;
+@Repository("CalamityRepository")
 public interface CalamityRepository extends JpaRepository<GetCountrySafetyList2, String> {
     /* 
         insert -> save(엔티티 객체)

@@ -37,7 +37,7 @@
 	<!-- offer 종료 -->
 
 		<div class="container">
-			${list}
+			${list[0]}
 			<div class="row">
 				<div class="col-lg-1 temp_col"></div>
 				<div class="col-lg-11">
