@@ -30,7 +30,7 @@ public class Country {
     private String countryEngNm; // 영문국가명
 
     @Column(length = 30, nullable = true)
-    private String countryIsoAlp2; // ISO 2자리코드
+    private String isoAlp2; // ISO 2자리코드
 
     @Column(length = 30, nullable = true)
     private String isoAlp3; // ISO 3자리코드
