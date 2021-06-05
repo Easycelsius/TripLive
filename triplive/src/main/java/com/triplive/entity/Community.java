@@ -12,7 +12,7 @@ public class Community {
     @Id // Primary Key에 해당하는 특정 필드를 id로 지정
     @Column(name="bd_no")
     @GeneratedValue(strategy = GenerationType.IDENTITY) // ID값 자동으로 지정
-    private Long bd_no;
+    private Long bdNo;
 
     // Column으로 사용하지 않는 필드의 경우 @Transient 어노테이션을 적용
     @ManyToOne
@@ -20,13 +20,14 @@ public class Community {
     private User user; // 작성자
 
     @Column(length = 50*3, nullable = false)
-    private String bd_title; // 글제목
+    private String bdTitle; // 글제목
 
     @Column(columnDefinition = "TEXT", nullable = false)
-    private String bd_content; // 글내용
+    private String bdContent; // 글내용
 
-    @Column(length = 30, nullable = true)
-    private int iso_num; // 국가코드
+    @ManyToOne
+    @JoinColumn(name="iso_num")
+    private Country country; // 국가
     
     @Column
     @Temporal(TemporalType.DATE)

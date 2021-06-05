@@ -9,8 +9,9 @@ import com.triplive.entity.Community;
 import com.triplive.repository.CommunityRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.data.web.SpringDataWebProperties.Pageable;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
@@ -37,14 +38,14 @@ public class CommunityServiceImpl implements CommunityService{
     
         // 글 삭제
         public void deletePosting(Community community){
-                log.info("글 삭제 : " + community.getBd_no());
-                communityDAO.deleteById(community.getBd_no());
+                log.info("글 삭제 : " + community.getBdNo());
+                communityDAO.deleteById(community.getBdNo());
         }
     
         // 글 상세 조회
         public Optional<Community> getPosting(Community community){
                 log.info("글 상세 조회 실행");
-                return communityDAO.findById(community.getBd_no());
+                return communityDAO.findById(community.getBdNo());
         }
 
         // 페이징
@@ -58,7 +59,13 @@ public class CommunityServiceImpl implements CommunityService{
         public List<Community> getPostingList(Integer pageNum) {
                 // Page<Community> page = communityDAO.findAll(PageRequest.of(pageNum-1, PAGE_POST_COUNT, Sort.by(Sort.Direction.ASC, "date")));
                 // List<Community> communities = page.getContent();
-                return null; 
+                log.info("커뮤티니 페이징 처리");
+                Sort sort1 = Sort.by("bdNo").descending();
+                Pageable pageable = PageRequest.of(0,10, sort1);
+                Page<Community> result = communityDAO.findAll(pageable);
+                log.info(result);
+
+                return result.toList(); 
         }
 
 }
