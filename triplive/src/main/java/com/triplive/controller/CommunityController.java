@@ -1,7 +1,5 @@
 package com.triplive.controller;
 
-import javax.servlet.http.HttpSession;
-
 import com.triplive.entity.Community;
 import com.triplive.entity.User;
 import com.triplive.service.CommunityService;
@@ -15,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import lombok.extern.log4j.Log4j2;
 
+import java.security.Principal;
 import java.util.Date;
 
 @Controller
@@ -27,7 +26,7 @@ public class CommunityController {
 
     // 글 남기기시 저장할 부분
     @RequestMapping("/posting.do")
-    public String posting(Community community, HttpSession session) {
+    public String posting(Community community, Principal principal){
         log.info("submit 데이터 확인 : " + community);
 
         // 오늘날짜 확인
@@ -36,7 +35,10 @@ public class CommunityController {
         // community dto 내 유저 정보, 조회수, 날짜, 제목, 내용 담기
         community.setCount(0);
         community.setDate(now);
-        community.setUser((User)session.getAttribute("user"));
+
+        User user = new User();
+        user.setId(principal.getName());
+        community.setUser(user);
         
         // service 단으로 전달
         communityService.savePosting(community);

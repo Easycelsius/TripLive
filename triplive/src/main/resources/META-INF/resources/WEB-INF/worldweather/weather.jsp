@@ -19,7 +19,6 @@
 <script>
 	$(function() {
 		var apiURI = 'http://api.openweathermap.org/data/2.5/weather?q=Seoul,KR&appid=1db47184ebbc18af53fd996be840d270'
-
 		$.ajax({
             url: apiURI,
             dataType: "json",
@@ -41,7 +40,6 @@
             }
         })
 	})
-
 </script>
 
 </head>
@@ -49,7 +47,7 @@
 <body>
 
 <div class="super_container">
-	
+
 	<!-- 헤더 -->
 	<%@include file ="../header.jsp" %>
 	<!-- 헤더 종료 -->
@@ -64,22 +62,16 @@
 	</div>
 
 	<%-- <!-- Offers -->
-
 	<div class="offers">
-
 		<!-- Search -->
-
 		<div class="search">
 			<div class="search_inner">
-
 				<!-- Search Contents -->
 				
 				<div class="container fill_height no-padding">
 					<div class="row fill_height no-margin">
 						<div class="col fill_height no-padding">
-
 							<!-- Search Tabs -->
-
 							<div class="search_tabs_container">
 								<div class="search_tabs d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
 									<div class="search_tab active d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="images/suitcase.png" alt=""><span>hotels</span></div>
@@ -90,9 +82,7 @@
 									<div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="../images/diving.png" alt="">activities</div>
 								</div>		
 							</div>
-
 							<!-- Search Panel -->
-
 							<div class="search_panel active">
 								<form action="#" id="search_form_1" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
 									<div class="search_item">
@@ -197,9 +187,7 @@
 									<button class="button search_button">search<span></span><span></span><span></span></button>
 								</form>
 							</div>
-
 							<!-- Search Panel -->
-
 							<div class="search_panel">
 								<form action="#" id="search_form_2" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
 									<div class="search_item">
@@ -233,9 +221,7 @@
 									<button class="button search_button">search<span></span><span></span><span></span></button>
 								</form>
 							</div>
-
 							<!-- Search Panel -->
-
 							<div class="search_panel">
 								<form action="#" id="search_form_3" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
 									<div class="search_item">
@@ -269,9 +255,7 @@
 									<button class="button search_button">search<span></span><span></span><span></span></button>
 								</form>
 							</div>
-
 							<!-- Search Panel -->
-
 							<div class="search_panel">
 								<form action="#" id="search_form_4" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
 									<div class="search_item">
@@ -305,9 +289,7 @@
 									<button class="button search_button">search<span></span><span></span><span></span></button>
 								</form>
 							</div>
-
 							<!-- Search Panel -->
-
 							<div class="search_panel">
 								<form action="#" id="search_form_5" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
 									<div class="search_item">
@@ -341,9 +323,7 @@
 									<button class="button search_button">search<span></span><span></span><span></span></button>
 								</form>
 							</div>
-
 							<!-- Search Panel -->
-
 							<div class="search_panel">
 								<form action="#" id="search_form_6" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
 									<div class="search_item">
@@ -382,14 +362,13 @@
 				</div>	
 			</div>	
 		</div>
-
 		<!-- Offers --> --%>
 
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-1 temp_col"></div>
 				<div class="col-lg-11">
-					
+
 					<!-- Offers Sorting -->
 					<div class="offers_sorting_container">
 						<ul class="offers_sorting">
@@ -446,9 +425,7 @@
 					<!-- Offers Grid -->
 
 					<%-- <div class="offers_grid">
-
 						<!-- Offers Item -->
-
 						<div class="offers_item rating_4">
 							<div class="row">
 								<div class="col-lg-1 temp_col"></div>
@@ -490,9 +467,7 @@
 								</div>
 							</div>
 						</div>
-
 						<!-- Offers Item -->
-
 						<div class="offers_item rating_3">
 							<div class="row">
 								<div class="col-lg-1 temp_col"></div>
@@ -534,9 +509,7 @@
 								</div>
 							</div>
 						</div>
-
 						<!-- Offers Item -->
-
 						<div class="offers_item rating_5">
 							<div class="row">
 								<div class="col-lg-1 temp_col"></div>
@@ -578,9 +551,7 @@
 								</div>
 							</div>
 						</div>
-
 						<!-- Offers Item -->
-
 						<div class="offers_item rating_4">
 							<div class="row">
 								<div class="col-lg-1 temp_col"></div>
@@ -622,9 +593,7 @@
 								</div>
 							</div>
 						</div>
-
 						<!-- Offers Item -->
-
 						<div class="offers_item rating_3">
 							<div class="row">
 								<div class="col-lg-1 temp_col"></div>
@@ -666,7 +635,6 @@
 								</div>
 							</div>
 						</div>
-
 					</div> --%>
 
 					<p><img id="weather"></img></p>
@@ -678,35 +646,6 @@
 
 	<!-- Footer -->
 	<%@include file ="../footer.jsp" %>
-
-	<!-- Copyright -->
-
-	<div class="copyright">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-3 order-lg-1 order-2  ">
-					<div class="copyright_content d-flex flex-row align-items-center">
-						<div><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
-					</div>
-				</div>
-				<div class="col-lg-9 order-lg-2 order-1">
-					<div class="footer_nav_container d-flex flex-row align-items-center justify-content-lg-end">
-						<div class="footer_nav">
-							<ul class="footer_nav_list">
-								<li class="main_nav_item"><a href="../index.do">홈</a></li>
-								<li class="main_nav_item"><a href="">커뮤니티</a></li>
-								<li class="main_nav_item"><a href="">여행지정보</a></li>
-								<li class="main_nav_item"><a href="">긴급속보</a></li>
-								<li class="main_nav_item"><a href="../WorldWeather/weather.do">세계날씨</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
 
 </div>
 

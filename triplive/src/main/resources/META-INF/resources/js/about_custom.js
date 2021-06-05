@@ -248,11 +248,12 @@ $(document).ready(function()
 		    		var counterTween = TweenMax.to(counter, 2,
 		    		{
 		    			value: endValue,
-		    			//roundProps:"value", 
+		    			roundProps:"value", 
 						ease: Circ.easeOut, 
 						onUpdate:function()
 						{
-							document.getElementsByClassName('milestone_counter')[i].innerHTML = signBefore + counter.value + signAfter;
+							document.getElementsByClassName('milestone_counter')[i].innerHTML = signBefore + counter.value/10000 + signAfter;
+							
 						}
 		    		});
 		    	})
