@@ -42,16 +42,24 @@ public class UserServiceImpl implements UserService, UserDetailsService {
         userDAO.save(user);
     }
 
+    // 유저 정보 삭제
     @Override
     public void deleteUser(User user) {
         log.info("deleteUser 실행");
         userDAO.deleteById(user.getId());
     }
 
+    // ID로 유저 정보 조회
     @Override
     public User getUser(User user) {
         log.info("유저 상세 조회 실행");
         return userDAO.getById(user.getId());
+    }
+
+    // ID 중복 체크
+    public boolean checkId(String id) {
+        log.info("ID 중복 체크 실행");
+        return userDAO.existsById(id);
     }
 
     @Override
@@ -59,7 +67,7 @@ public class UserServiceImpl implements UserService, UserDetailsService {
         return null;
     }
 
-    // security
+    // Spring Security
     @Override // 기본적인 반환 타입은 UserDetails, UserDetails를 상속받은 UserInfo로 반환 타입 지정 (자동으로 다운 캐스팅됨)
     public User loadUserByUsername(String id) throws UsernameNotFoundException { // 시큐리티에서 지정한 서비스이기 때문에 이 메소드를 필수로 구현
         return userDAO.findById(id)

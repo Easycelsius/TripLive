@@ -7,6 +7,7 @@ pageEncoding="utf-8"%>
         <link rel="stylesheet" href="../styles/style.css">
         <link rel="stylesheet" type="text/css" href="../styles/offers_styles.css">
         <link rel="stylesheet" type="text/css" href="../styles/offers_responsive.css">
+        <script type="text/javascript" src="../js/jquery-3.2.1.min.js "></script>
     </head>
     <body>
         <div class="wrap">
@@ -33,7 +34,7 @@ pageEncoding="utf-8"%>
 
                 <!-- 회원가입 폼 -->
                 <form id="register" action="register.do" class="input-group" method="POST">
-                    <input name="id" type="text" class="input-field" placeholder="아이디" required>
+                    <input id="register_id" name="id" type="text" class="input-field" placeholder="아이디" required>
                     <button type="button" id="check" class="button-wrap search_button float-right" style="margin-top: -5px; margin-left: 20px;">아이디 중복확인</button>
                     <input name="email" type="email" class="input-field" placeholder="이메일" required>
                     <select name="gender" id="gender" class="dropdown_item_select search_input" required="required">
@@ -58,7 +59,7 @@ pageEncoding="utf-8"%>
                     </select>
                     <input type="checkbox" class="checkbox" required><span>개인정보동의</span>
                     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
-                    <button class="submit">회원가입</button>
+                    <button id="register_btn" class="submit" disabled="disabled">회원가입</button>
                 </form>
             </div>
         </div>
@@ -80,9 +81,56 @@ pageEncoding="utf-8"%>
                 z.style.left = "110px";
             }
 
-            function check(){
-                alert("클릭");
+            
+            // id 중복 체크 여부
+            let id_confirm = false
+
+            // ID 중복 체크 버튼 클릭시 ajax_id_check 함수 실행
+            $('#check').click(ajax_id_check)
+
+            // ID 중복 체크 함수
+            function ajax_id_check(){
+                // ajax 통신
+                $.ajax({
+                    type:'post',
+                    data: {'id':$('#register_id').val()},
+                    url: 'checkId.do',
+                    contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+         	        success : check_id_succ
+                })
+                
+                // 이메일 체크 성공시 처리 함수, data가 flase 면 사용할 수 없음
+                function check_id_succ(data) {
+                    (data=="true") ? id_confirm = true : id_confirm = false
+
+                    if(id_confirm){
+                        $('#check').text("사용가능한 아이디")
+                        $('#check').attr({disabled:"disabled"})
+                        $('#register_btn').removeAttr("disabled")
+                    } else {
+                        $('#check').text("이미 존재하는 아이디")
+                    }
+                }
             }
+
+            // id input 박스 텍스트 변경 실시간 감지
+            let oldVal
+            $("#register_id").on("propertychange change keyup paste input", function() {
+                var currentVal = $(this).val();
+                if(currentVal == oldVal) {
+                    return
+                }
+            
+                oldVal = currentVal
+
+                id_confirm = false
+                $('#check').text("아이디 중복확인")
+                $('#check').removeAttr("disabled")
+                $('#register_btn').attr({disabled:"disabled"})
+
+            });
+            
+
         </script>
     </body>
 </html>
