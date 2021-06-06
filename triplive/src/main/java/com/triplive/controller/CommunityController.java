@@ -3,6 +3,7 @@ package com.triplive.controller;
 import com.triplive.entity.Community;
 import com.triplive.entity.Country;
 import com.triplive.entity.User;
+import com.triplive.service.CommentServiceImpl;
 import com.triplive.service.CommunityService;
 import com.triplive.service.CommunityServiceImpl;
 import com.triplive.vo.PageRequestDTO;
@@ -11,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -26,6 +28,9 @@ public class CommunityController {
 
     @Autowired
 	private CommunityServiceImpl communityService;
+
+    @Autowired
+    private CommentServiceImpl commentsService;
 
     // 글 남기기시 저장할 부분
     @RequestMapping("/posting.do")
@@ -63,20 +68,25 @@ public class CommunityController {
         model.addAttribute("communities", communityService.getPostingList(pageNum, keyword));
         model.addAttribute("pageList", communityService.getPageList(pageNum, keyword));
 
-        for(Integer i : communityService.getPageList(pageNum, keyword)){
-            System.out.println(i);
-        }
-
         return "community/commu";
     }
 
-    // @RequestMapping("/commu.do")
-    // public String list(PageRequestDTO pageRequestDTO, Model model, Principal principal) {
-    //     log.info("community.do 요청 : "+pageRequestDTO+" 페이지");
-    //     model.addAttribute("communities", communityService.getList(pageRequestDTO));
-    //     return "community/commu";
-    // }
+    // 댓글 저장
 
+
+    // 상세 페이지
+    @RequestMapping("/board_detail.do")
+    public void detail(Model model, Long detail, Principal principal) {
+        log.info("게시글 조회 요청 : " + detail);
+
+        Community community = new Community();
+        community.setBdNo(detail);
+        
+        model.addAttribute("community", communityService.getPosting(community));
+        model.addAttribute("comments", commentsService.getCommentList(detail));
+    }
+
+    
     // 일반적인 페이지 이동
     @RequestMapping("/{step}.do")
     public String insertBoard(@PathVariable String step) {
