@@ -3,6 +3,10 @@
 
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 
+<%
+	String detail = request.getParameter("detail");
+%>	
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -277,38 +281,18 @@
 
 								<!-- Review -->
 								<div class="review">
-									<div class="row">
-										
-										<div class="col-lg-12">
-											<div class="review_content">
-												<div class="review_title_container">
-													<div class="review_title"><h3>id</h3></div>
-													
-												</div>
-												
-													<div class="review_text">
-														<sec:authorize access="hasRole('ROLE_ADMIN')">
-															<div class="review_rating btn align-self-center">삭제</div>
-														</sec:authorize>
-														<p>cmContent</p>
-													</div>
-												
-												<!-- <div class="review_name">Christinne Smith</div> -->
-												<div class="review_date">cmDate</div>
-											</div>
-										</div>
+									<div class="row" id="comment_list">
 										
 										
-
 									</div>
 								</div>
 
 								<!-- 댓글쓰기 -->
 
 								<sec:authorize access="isAuthenticated()">
-									<form action="cmSave.do" method="post">
-										<input name="cmContent" type="text" placeholder="댓글을 남겨주세요" class="search_input btn border col-lg-12" required>
-										<button class="button search_button col-lg-3">댓글</button>
+									<form>
+										<input id="cmt" name="cmContent" type="text" placeholder="댓글을 남겨주세요" class="search_input btn border col-lg-12" required>
+										<button type="button" id="cm_btn" class="button search_button col-lg-3">댓글</button>
 									</form>
 									
 								</sec:authorize>
@@ -344,13 +328,111 @@
 
 	$(document).ready(function(){
 	
-		$("#back_btn").click(function(){
+		// 뒤로가기
+		$("#back_btn").click(function(){	
+			window.history.back()
+		})
+
+		// 댓글 삭제 버튼
+		$(".deleteCmt").click(function(){
+			alert("test_delete");
+		})
+
+		// 댓글 남기기
+		$("#cm_btn").click(function(){
+
+			if($("#cmt").val().trim() != ""){ // 공백이 아니라면 진행
+				console.log("클릭 및 내용 있음을 확인")
+
+				$.ajax({
+					type :'post',
+					data : { "cmContent" : $("#cmt").val(), "detail" : ${param.detail} },
+					url : 'cmSave.do',
+					success : function(){
+
+						console.log("댓글 남기기 에이젝스 발동 성공")
+
+						// 정상적으로 등록시 댓글 갈기
+						commentClear();
+						commentStart();
+						
+					}
+				})
+			}
+
+			// 댓글 창 초기화
+			$("#cmt").val("");
+
+		})
+
+		// 댓글 가져와서 내용을 추가하는 함수
+		function commentStart(){
+			$.ajax({
+				type :'post',
+				data : {"detail" : ${param.detail}},
+				url : 'getCommentList.do',
+				success : function(data){
+
+					console.log(data)
+
+					// $("#cmt_length").text(data.length);
+					
+					if(data.length != 0){
+						// 기존 댓글 없애고 다시 시작
+						commentClear();
+						// 정상적으로 등록시
+
+						let list = $("#comment_list");
+						let tag = "";
+
+						for(var i=0; i<data.length; i++) {
+							tag += '<div class="col-lg-12 mt-5">'
+							tag += '<div class="review_content">'
+							tag += '<div class="review_title_container">'
+							tag += '<div class="review_title"><h3>'+data[i].user.id+'</h3></div>'
+							tag += '</div>'
+							tag += '<div class="review_text">'
+							tag += '<sec:authorize access="hasRole(\'ROLE_ADMIN\')">'
+							tag += '<button class="review_rating btn align-self-center deleteCmt" value="'+data[i].cmNo+'">삭제</button>' 
+							tag += '</sec:authorize>'
+							tag += '<p>'+data[i].cmContent+'</p>'
+							tag += '</div>'
+							tag += '<div class="review_date">'+data[i].cmDate+'</div>'
+							tag += '</div>'+'</div>'
+						}
+
+						list.append(tag);
+						
+						// 위의 리스트 생성 후 삭제 버튼 클릭시 발동
+						$(".deleteCmt").click(function(){
+							let btn = $(this);	
+							
+							$.ajax({
+								type :'post',
+								data : ({"cmNo" : btn.val(), "detail" : ${param.detail}}),
+								url : 'deleteCm.do',
+								success : function(){
+									btn.parent().parent().remove();
+								}   	
+							})
+						})
+					}
+				}
+			})
+		}
+		
+		//댓글 리스트 삭제 함수
+		function commentClear(){
+			list = $("#comment_list");
+			list.empty();
+		}
+		
+		commentStart();
+
+
+
 	
-			window.history.back();
-	
-		});
-	
-	});
+	}); // 실행 종료
 </script>
 
 </body>

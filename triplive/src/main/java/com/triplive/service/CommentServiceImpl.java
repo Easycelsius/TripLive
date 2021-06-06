@@ -26,6 +26,19 @@ public class CommentServiceImpl implements CommentService{
         return commentDAO.findAllByCommunityBdNo(detail);
     }
 
+    @Override
+    public void saveCmt(Comment comment) {
+        log.info("댓글 저장 : "+comment.getCommunity().getBdNo() +"번 글");
+        commentDAO.save(comment);
+    }
+
+    public void deleteCmt(Long cmNo) {
+        log.info("댓글 삭제 : "+cmNo+"번 글");
+        commentDAO.deleteById(cmNo);
+    }
+
+    
+
 
     
 }

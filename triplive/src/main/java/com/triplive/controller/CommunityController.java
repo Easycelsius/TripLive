@@ -1,5 +1,6 @@
 package com.triplive.controller;
 
+import com.triplive.entity.Comment;
 import com.triplive.entity.Community;
 import com.triplive.entity.Country;
 import com.triplive.entity.User;
@@ -15,11 +16,13 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import lombok.extern.log4j.Log4j2;
 
 import java.security.Principal;
 import java.util.Date;
+import java.util.List;
 
 @Controller
 @RequestMapping("community")
@@ -72,7 +75,47 @@ public class CommunityController {
     }
 
     // 댓글 저장
+    @RequestMapping("/cmSave.do")
+    @ResponseBody
+    public void commentSave(Comment comment, Principal principal, Long detail){
 
+        log.info("commentSave 실행");
+
+        Community community = new Community();
+        User user = new User();
+        Date now = new Date();
+
+        community.setBdNo(detail);
+        user.setId(principal.getName());
+
+        comment.setCommunity(community);
+        comment.setUser(user);
+        comment.setCmDate(now);
+
+        log.info("저장할 댓글 내용 : " + comment);
+
+        commentsService.saveCmt(comment);
+    }
+
+    // 댓글 삭제
+    @RequestMapping("/deleteCm.do")
+    @ResponseBody
+    public void deleteCmt(Long cmNo, Long detail){
+        log.info("deleteCmt 실행");
+        log.info(cmNo);
+        commentsService.deleteCmt(cmNo);
+        
+    }
+
+    // 댓글 가져오기
+    @RequestMapping("/getCommentList.do")
+    @ResponseBody
+    public List<Comment> getCommentList(Long detail){
+
+        log.info("commentSave 실행");
+
+        return commentsService.getCommentList(detail);
+    }
 
     // 상세 페이지
     @RequestMapping("/board_detail.do")
@@ -80,10 +123,10 @@ public class CommunityController {
         log.info("게시글 조회 요청 : " + detail);
 
         Community community = new Community();
-        community.setBdNo(detail);
+        community.setBdNo(detail); 
+        community.setCount(communityService.getPosting(community).get().getCount() + 1); // 조회수
         
         model.addAttribute("community", communityService.getPosting(community));
-        model.addAttribute("comments", commentsService.getCommentList(detail));
     }
 
     
