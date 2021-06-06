@@ -70,10 +70,10 @@
 								<option value="36">호주</option>
 								<option value="372">아일랜드</option>
 							</select>
-							<input name="bdTitle" type="text" id="contact_form_subject" class="contact_form_subject input_field" placeholder="제목" required="required" data-error="제목을 적어주세요">
+							<input name="bdTitle" type="text" id="contact_form_subject" class="contact_form_subject input_field" maxlength="25" placeholder="제목" required="required" data-error="제목을 적어주세요">
 							<textarea name="bdContent" id="contact_form_message" class="text_field contact_form_message" rows="4" placeholder="내용" required="required" data-error="내용을 적어주세요"></textarea>
 							<div class="contact_form_subject"></div>
-							<input name='file' type='file' class="search_input" id="input_img">
+							<input name='bdImage' type='file' class="search_input" id="input_img">
 							<div>
 								<div class="img_wrap">
 									<img id="img" />

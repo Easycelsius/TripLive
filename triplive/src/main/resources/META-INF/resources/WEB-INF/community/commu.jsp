@@ -117,8 +117,8 @@
 									</div> -->
 									
 									<div class="col-lg-11">
-										<div class="offers_content">
-											<div class="offers_price">${community.bdTitle}<span>${community.date}</span></div>
+										<div class="offers_content" >
+											<div class="offers_price" style="width: 80%; text-overflow: ellipsis;  white-space: nowrap; overflow: hidden; display: block; padding-top:4px;">${community.bdTitle}<span>${community.date}</span></div>
 											<!-- <div class="rating_r rating_r_4 offers_rating" data-rating="4">
 												<i></i>
 												<i></i>
@@ -126,8 +126,8 @@
 												<i></i>
 												<i></i>
 											</div> -->
-											<p class="offers_text">${community.bdContent}</p>
-											<div class="button book_button float-right"><a href="board_detail.do?detail=${community.bdNo}">글 보기</a></div>
+											<p class="offers_text" style="width: 80%; text-overflow: ellipsis;  white-space: nowrap; overflow: hidden; display: block;">${community.bdContent}</p>
+											<div class="button book_button float-right" ><a href="board_detail.do?detail=${community.bdNo}">글 보기</a></div>
 											<div class="offers_icons">
 												<ul class="offers_icons_list">
 													<li class="offers_icons_item"><img src="../images/post.png" alt=""></li>

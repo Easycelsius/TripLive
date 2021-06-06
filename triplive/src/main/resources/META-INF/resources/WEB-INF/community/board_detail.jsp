@@ -41,7 +41,7 @@
 	<div class="home">
 		<div class="home_background parallax-window" data-parallax="scroll" data-image-src="../images/single_background.jpg"></div>
 		<div class="home_content">
-			<div class="home_title">Community</div>
+			<div class="home_title">트립라이브</div>
 		</div>
 	</div>
 
@@ -78,7 +78,7 @@
 							<!-- Listing Image -->
 
 							<div class="hotel_image">
-								<img src="../images/listing_hotel.jpg" alt="첨부이미지" onerror="this.style.display='none'">
+								<img src="../uploaded/${community.get().bdNo}/0.jpg" alt="첨부이미지" onerror="this.style.display='none'">
 								<!-- <div class="hotel_review_container d-flex flex-column align-items-center justify-content-center">
 									<div class="hotel_review">
 										<div class="hotel_review_content">
@@ -276,9 +276,8 @@
 
 						<!-- 댓글목록 -->
 						<div class="reviews">
-							<div class="reviews_title">댓글</div>
 							<div class="reviews_container">
-
+								<div class="reviews_title">댓글</div>
 								<!-- Review -->
 								<div class="review">
 									<div class="row" id="comment_list">
@@ -428,9 +427,6 @@
 		}
 		
 		commentStart();
-
-
-
 	
 	}); // 실행 종료
 </script>
