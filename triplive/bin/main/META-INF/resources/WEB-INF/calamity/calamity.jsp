@@ -138,7 +138,7 @@
 												<div class="offer_reviews_title">${l.countryNm}</div>
 												<div class="offer_reviews_subtitle float-right"></div>
 											</div>
-											<img src="../../img/countryflag/${l.country.isoAlp2}.gif" alt="" class="offer_reviews_rating text-center" >
+											<img src="../../img/countryflag/${l.isoAlp2}.gif" alt="" class="offer_reviews_rating text-center" >
 										</div>
 										<hr>
 									</div>
