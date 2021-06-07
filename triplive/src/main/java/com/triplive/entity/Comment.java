@@ -12,21 +12,21 @@ import lombok.*;
 public class Comment {
     @Id // Primary Key에 해당하는 특정 필드를 id로 지정
     @GeneratedValue(strategy = GenerationType.IDENTITY) // ID값 자동으로 지정
-    private String cm_no; // 댓글 고유 번호
+    private Long cmNo; // 댓글 고유 번호
 
     // Column으로 사용하지 않는 필드의 경우 @Transient 어노테이션을 적용
     @ManyToOne
-    @JoinColumn(name="bd_no")
+    @JoinColumn(name="bdNo")
     private Community community;
 
     @ManyToOne
     @JoinColumn(name="id")
     private User user; // 작성자 id
 
-    @Column(columnDefinition = "TEXT", nullable = true)
-    private String cm_content; // 댓글 내용
+    @Column(columnDefinition = "LONGTEXT", nullable = true)
+    private String cmContent; // 댓글 내용
 
     @Column
     @Temporal(TemporalType.DATE)
-    private java.util.Date cm_date; // 작성일자
+    private java.util.Date cmDate; // 작성일자
 }

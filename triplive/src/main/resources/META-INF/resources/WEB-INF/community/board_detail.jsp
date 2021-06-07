@@ -1,6 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
 
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+
+<%
+	String detail = request.getParameter("detail");
+%>	
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -17,6 +23,9 @@
 <link rel="stylesheet" type="text/css" href="../plugins/OwlCarousel2-2.2.1/animate.css">
 <link rel="stylesheet" type="text/css" href="../styles/single_listing_styles.css">
 <link rel="stylesheet" type="text/css" href="../styles/single_listing_responsive.css">
+<link rel="stylesheet" type="text/css" href="../styles/offers_styles.css">
+<link rel="stylesheet" type="text/css" href="../styles/offers_responsive.css">
+
 </head>
 
 <body>
@@ -32,7 +41,7 @@
 	<div class="home">
 		<div class="home_background parallax-window" data-parallax="scroll" data-image-src="../images/single_background.jpg"></div>
 		<div class="home_content">
-			<div class="home_title">Community</div>
+			<div class="home_title">트립라이브</div>
 		</div>
 	</div>
 
@@ -42,6 +51,7 @@
 
 		<!-- Single Listing -->
 
+		
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
@@ -53,21 +63,14 @@
 
 							<!-- Title -->
 							<div class="hotel_title_container d-flex flex-lg-row flex-column">
-								<div class="hotel_title_content">
-									<h1 class="hotel_title">Grand Hotel Eurostar</h1>
-									<div class="rating_r rating_r_4 hotel_rating">
-										<i></i>
-										<i></i>
-										<i></i>
-										<i></i>
-										<i></i>
-									</div>
-									<div class="hotel_location">345 677 Gran Via Street, no 34, Madrid, Spain</div>
+								<div class="hotel_title_content align-self-center">
+									<h1 class="hotel_title">${community.get().bdTitle}</h1>
+									<div class="hotel_location">${community.get().country.countryNm} / ${community.get().date} </div>
 								</div>
 								<div class="hotel_title_button ml-lg-auto text-lg-right">
-									<div class="button book_button trans_200"><a href="#">book<span></span><span></span><span></span></a></div>
+									<div id="back_btn" class="button book_button trans_200"><a>뒤로가기<span></span><span></span><span></span></a></div>
 									<div class="hotel_map_link_container">
-										<div class="hotel_map_link">See Location on Map</div>
+										<div class="hotel_map_link">${community.get().user.id}</div>
 									</div>
 								</div>
 							</div>
@@ -75,8 +78,8 @@
 							<!-- Listing Image -->
 
 							<div class="hotel_image">
-								<img src="../images/listing_hotel.jpg" alt="">
-								<div class="hotel_review_container d-flex flex-column align-items-center justify-content-center">
+								<img src="../uploaded/${community.get().bdNo}/0.jpg" alt="첨부이미지" onerror="this.style.display='none'">
+								<!-- <div class="hotel_review_container d-flex flex-column align-items-center justify-content-center">
 									<div class="hotel_review">
 										<div class="hotel_review_content">
 											<div class="hotel_review_title">very good</div>
@@ -84,11 +87,11 @@
 										</div>
 										<div class="hotel_review_rating text-center">8.1</div>
 									</div>
-								</div>
+								</div> -->
 							</div>
 
 							<!-- Hotel Gallery -->
-
+							<%-- 추후 사진 여러개 첨부하면 슬라이드로 넘겨주는 방식을 고려해볼 것
 							<div class="hotel_gallery">
 								<div class="hotel_slider_container">
 									<div class="owl-carousel owl-theme hotel_slider">
@@ -195,11 +198,11 @@
 
 								</div>
 							</div>
-
+							--%>
 							<!-- Hotel Info Text -->
 
 							<div class="hotel_info_text">
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu convallis tortor. Suspendisse potenti. In faucibus massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu convallis tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis vulputate eros, iaculis consequat nisl. Nunc et suscipit urna. Integer elementum orci eu vehicula pretium. Donec bibendum tristique condimentum. Aenean in lacus ligula. Phasellus euismod gravida eros. Aenean nec ipsum aliquet, pharetra magna id, interdum sapien. Etiam id lorem eu nisl pellentesque semper. Nullam tincidunt metus placerat, suscipit leo ut, tempus nulla. Fusce at eleifend tellus. Ut eleifend dui nunc, non fermentum quam placerat non. Etiam venenatis nibh augue, sed eleifend justo tristique eu</p>
+								<p>${community.get().bdContent}</p>
 							</div>
 
 							<!-- Hotel Info Tags -->
@@ -215,6 +218,7 @@
 
 						</div>
 						
+						<%--
 						<!-- Rooms -->
 
 						<div class="rooms">
@@ -268,80 +272,36 @@
 							</div>
 
 						</div>
+						--%>
 
-						<!-- Reviews -->
-
+						<!-- 댓글목록 -->
 						<div class="reviews">
-							<div class="reviews_title">reviews</div>
 							<div class="reviews_container">
-
+								<div class="reviews_title">댓글</div>
 								<!-- Review -->
 								<div class="review">
-									<div class="row">
-										<div class="col-lg-1">
-											<div class="review_image">
-												<img src="../images/review_1.jpg" alt="https://unsplash.com/@saaout">
-											</div>
-										</div>
-										<div class="col-lg-11">
-											<div class="review_content">
-												<div class="review_title_container">
-													<div class="review_title">"We loved the services"</div>
-													<div class="review_rating">9.5</div>
-												</div>
-												<div class="review_text">
-													<p>Tetur adipiscing elit. Nullam eu convallis tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis vulputate eros, iaculis consequat nisl. Nunc et suscipit urna. Integer elementum orci eu vehicula pretium. Donec bibendum tristique condimentum.</p>
-												</div>
-												<div class="review_name">Christinne Smith</div>
-												<div class="review_date">12 November 2017</div>
-											</div>
-										</div>
+									<div class="row" id="comment_list">
+										
+										
 									</div>
 								</div>
 
-								<!-- Review -->
-								<div class="review">
-									<div class="row">
-										<div class="col-lg-1">
-											<div class="review_image">
-												<img src="../images/review_2.jpg" alt="Image by Andrew Robles">
-											</div>
-										</div>
-										<div class="col-lg-11">
-											<div class="review_content">
-												<div class="review_title_container">
-													<div class="review_title">"Nice staff and great location"</div>
-													<div class="review_rating">9.5</div>
-												</div>
-												<div class="review_text">
-													<p>Tetur adipiscing elit. Nullam eu convallis tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis vulputate eros, iaculis consequat nisl. Nunc et suscipit urna. Integer elementum orci eu vehicula pretium. Donec bibendum tristique condimentum.</p>
-												</div>
-												<div class="review_name">Christinne Smith</div>
-												<div class="review_date">12 November 2017</div>
-											</div>
-										</div>
-									</div>
-								</div>
+								<!-- 댓글쓰기 -->
+
+								<sec:authorize access="isAuthenticated()">
+									<form>
+										<input id="cmt" name="cmContent" type="text" placeholder="댓글을 남겨주세요" class="search_input btn border col-lg-12" required>
+										<button type="button" id="cm_btn" class="button search_button col-lg-3">댓글</button>
+									</form>
+									
+								</sec:authorize>
 
 							</div>
 						</div>
 
 						<!-- Location on Map -->
 
-						<div class="location_on_map">
-							<div class="location_on_map_title">location on map</div>
-
-							<!-- Google Map -->
-		
-							<div class="travelix_map">
-								<div id="google_map" class="google_map">
-									<div class="map_container">
-										<div id="map"></div>
-									</div>
-								</div>
-							</div>
-
-						</div>
+						
 					</div>
 				</div>
 			</div>
@@ -354,7 +314,7 @@
 
 </div>
 
-<script src="js/jquery-3.2.1.min.js"></script>
+<script src="../js/jquery-3.2.1.min.js"></script>
 <script src="../styles/bootstrap4/popper.js"></script>
 <script src="../styles/bootstrap4/bootstrap.min.js"></script>
 <script src="../plugins/easing/easing.js"></script>
@@ -362,7 +322,114 @@
 <script src="../plugins/colorbox/jquery.colorbox-min.js"></script>
 <script src="../plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCIwF204lFZg1y4kPSIhKaHEXMLYxxuMhA"></script>
-<script src="js/single_listing_custom.js"></script>
+<script src="../js/single_listing_custom.js"></script>
+<script type="text/javascript">
+
+	$(document).ready(function(){
+	
+		// 뒤로가기
+		$("#back_btn").click(function(){	
+			window.history.back()
+		})
+
+		// 댓글 삭제 버튼
+		$(".deleteCmt").click(function(){
+			alert("test_delete");
+		})
+
+		// 댓글 남기기
+		$("#cm_btn").click(function(){
+
+			if($("#cmt").val().trim() != ""){ // 공백이 아니라면 진행
+				console.log("클릭 및 내용 있음을 확인")
+
+				$.ajax({
+					type :'post',
+					data : { "cmContent" : $("#cmt").val(), "detail" : ${param.detail} },
+					url : 'cmSave.do',
+					success : function(){
+
+						console.log("댓글 남기기 에이젝스 발동 성공")
+
+						// 정상적으로 등록시 댓글 갈기
+						commentClear();
+						commentStart();
+						
+					}
+				})
+			}
+
+			// 댓글 창 초기화
+			$("#cmt").val("");
+
+		})
+
+		// 댓글 가져와서 내용을 추가하는 함수
+		function commentStart(){
+			$.ajax({
+				type :'post',
+				data : {"detail" : ${param.detail}},
+				url : 'getCommentList.do',
+				success : function(data){
+
+					console.log(data)
+
+					// $("#cmt_length").text(data.length);
+					
+					if(data.length != 0){
+						// 기존 댓글 없애고 다시 시작
+						commentClear();
+						// 정상적으로 등록시
+
+						let list = $("#comment_list");
+						let tag = "";
+
+						for(var i=0; i<data.length; i++) {
+							tag += '<div class="col-lg-12 mt-5">'
+							tag += '<div class="review_content">'
+							tag += '<div class="review_title_container">'
+							tag += '<div class="review_title"><h3>'+data[i].user.id+'</h3></div>'
+							tag += '</div>'
+							tag += '<div class="review_text">'
+							tag += '<sec:authorize access="hasRole(\'ROLE_ADMIN\')">'
+							tag += '<button class="review_rating btn align-self-center deleteCmt" value="'+data[i].cmNo+'">삭제</button>' 
+							tag += '</sec:authorize>'
+							tag += '<p>'+data[i].cmContent+'</p>'
+							tag += '</div>'
+							tag += '<div class="review_date">'+data[i].cmDate+'</div>'
+							tag += '</div>'+'</div>'
+						}
+
+						list.append(tag);
+						
+						// 위의 리스트 생성 후 삭제 버튼 클릭시 발동
+						$(".deleteCmt").click(function(){
+							let btn = $(this);	
+							
+							$.ajax({
+								type :'post',
+								data : ({"cmNo" : btn.val(), "detail" : ${param.detail}}),
+								url : 'deleteCm.do',
+								success : function(){
+									btn.parent().parent().remove();
+								}   	
+							})
+						})
+					}
+				}
+			})
+		}
+		
+		//댓글 리스트 삭제 함수
+		function commentClear(){
+			list = $("#comment_list");
+			list.empty();
+		}
+		
+		commentStart();
+	
+	}); // 실행 종료
+</script>
 
 </body>
 
