@@ -9,10 +9,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Travelix Project">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="../styles/bootstrap4/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../../styles/bootstrap4/bootstrap.min.css">
 <link href="../plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="../styles/offers_styles.css">
-<link rel="stylesheet" type="text/css" href="../styles/offers_responsive.css">
+<link rel="stylesheet" type="text/css" href="../../styles/offers_styles.css">
+<link rel="stylesheet" type="text/css" href="../../styles/offers_responsive.css">
 </head>
 
 <body>
@@ -115,7 +115,7 @@
 					
 								<div class="col-lg-11">
 									<div class="offers_content">
-										<div class="offers_price">${l.title}<span>${l.wrtDt}</span></div>
+										<div class="offers_price" style="width: 80%; text-overflow: ellipsis;  white-space: nowrap; overflow: hidden; display: block; padding:6px;">${l.title}</div><span>${l.wrtDt}</span>
 										<!-- <div class="rating_r rating_r_4 offers_rating" data-rating="4">
 											<i></i>
 											<i></i>
@@ -190,14 +190,15 @@
 
 </div>
 
-<script src="../js/jquery-3.2.1.min.js"></script>
-<script src="../styles/bootstrap4/popper.js"></script>
-<script src="../styles/bootstrap4/bootstrap.min.js"></script>
-<script src="../plugins/Isotope/isotope.pkgd.min.js"></script>
-<script src="../plugins/easing/easing.js"></script>
-<script src="../plugins/parallax-js-master/parallax.min.js"></script>
-<script src="../js/offers_custom.js"></script>
+<script src="../../js/jquery-3.2.1.min.js"></script>
+<script src="../../styles/bootstrap4/popper.js"></script>
+<script src="../../styles/bootstrap4/bootstrap.min.js"></script>
+<script src="../../plugins/Isotope/isotope.pkgd.min.js"></script>
+<script src="../../plugins/easing/easing.js"></script>
+<script src="../../plugins/parallax-js-master/parallax.min.js"></script>
+<script src="../../js/offers_custom.js"></script>
 
 </body>
 
 </html>
+
