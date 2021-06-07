@@ -3,6 +3,12 @@
 
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 
+<%
+	String pageNum = request.getParameter("page");
+	String isoNum = request.getParameter("isoNum");
+	String keyword = request.getParameter("keyword");
+%>	
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -24,6 +30,8 @@
 	<!-- 헤더 -->
 	<%@include file ="../header.jsp" %>
 	<!-- 헤더 종료 -->
+
+	
 
 	<!-- Home -->
 
@@ -160,20 +168,21 @@
 						<nav aria-label="Page navigation example" class="col-lg-3">
 							<ul class="pagination pagination-sm">
 							<li class="page-item">
-								<a class="page-link" href="#" aria-label="Previous">
+								<a class="page-link" href="?page=1&isoNum=${param.isoNum}&keyword=${param.keyword}" aria-label="Previous">
 								<span aria-hidden="true">&laquo;</span>
 								<span class="sr-only">이전</span>
 								</a>
 							</li>
 							<c:forEach var="page" items="${pageList}">
 								<c:if test="${page ne null}">
-									<li class="page-item"><a class="page-link" href="?page=${page}">${page}</a></li>
+									<li class="page-item"><a class="page-link" href="?page=${page}&isoNum=${param.isoNum}&keyword=${param.keyword}">${page}</a></li>
 								</c:if>
 							</c:forEach>
 								<a class="page-link" href="#" aria-label="Next">
 								<span aria-hidden="true">&raquo;</span>
 								<span class="sr-only">다음</span>
 								</a>
+								
 							</li>
 							</ul>
 						</nav>

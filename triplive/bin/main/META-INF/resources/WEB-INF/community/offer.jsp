@@ -48,11 +48,12 @@
 							<!-- 지역 검색 -->
 
 							<div class="search_panel active">
-								<form id="search_form_1" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
+								<form action="/community/commu.do?isoNum=" id="search_form_1" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
 									<div class="search_item">
 										<div>국가</div>
 										<select name="isoNum" id="country" class="dropdown_item_select search_input">
 											<option value="">전체</option>
+											<option value="410">한국</option>
 											<option value="392">일본</option>
 											<option value="156">중국</option>
 											<option value="704">베트남</option>
@@ -170,7 +171,7 @@
 							<!-- 단어 검색 -->
 
 							<div class="search_panel">
-								<form action="?" id="search_form_2" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
+								<form action="/community/commu.do?keyword=" id="search_form_2" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
 									<div class="search_item">
 										<div>검색어 입력</div>
 										<input name="keyword" type="text" class="destination search_input" required="required">
