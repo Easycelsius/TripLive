@@ -18,9 +18,12 @@ public class GetCountrySafetyList2 {
     @Column(length = 50, nullable = true)
     private String countryNm; // 한글 국가명
 
-    @ManyToOne
-    @JoinColumn(name="iso_alp2")
-    private Country country; // iso 두자리코드
+    @Column(length = 50, nullable = true)
+    private String isoAlp2; // 한글 국가명
+ 
+    // @ManyToOne
+    // @JoinColumn(name="iso_alp2")
+    // private Country country; // iso 두자리코드
 
     @Column(length = 30, nullable = true)
     private String continentCd; // 대륙코드
@@ -48,7 +51,7 @@ public class GetCountrySafetyList2 {
 
     @Column(nullable = true)
     @Temporal(TemporalType.DATE)
-    private java.util.Date wrtDt; // 작성일
+    private java.util.Date wrtDt; // 작성일 
 
 
 }
