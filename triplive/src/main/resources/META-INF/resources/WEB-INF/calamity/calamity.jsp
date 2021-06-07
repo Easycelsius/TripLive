@@ -37,7 +37,6 @@
 	<!-- offer 종료 -->
 
 		<div class="container">
-			${list[0]}
 			<div class="row">
 				<div class="col-lg-1 temp_col"></div>
 				<div class="col-lg-11">
@@ -98,7 +97,7 @@
 						</ul>
 					</div>
 				</div>
-
+				<c:forEach items="${list}" var="l">
 				<div class="col-lg-12">
 					<!-- Offers Grid -->
 					<div class="offers_grid">
@@ -113,9 +112,10 @@
 										<div class="offer_name"><a href="single_listing.html">grand castle</a></div>
 									</div>
 								</div> -->
+					
 								<div class="col-lg-11">
 									<div class="offers_content">
-										<div class="offers_price">bd_title<span>bd_date</span></div>
+										<div class="offers_price">${l.title}<span>${l.wrtDt}</span></div>
 										<!-- <div class="rating_r rating_r_4 offers_rating" data-rating="4">
 											<i></i>
 											<i></i>
@@ -123,7 +123,7 @@
 											<i></i>
 											<i></i>
 										</div> -->
-										<p class="offers_text">bd_content</p>
+										<p class="offers_text">{l.txtOriginCn}</p>
 										<div class="button book_button float-left"><a href=''>전문 보기</a></div>
 										<!-- <div class="offers_icons">
 											<ul class="offers_icons_list">
@@ -135,10 +135,10 @@
 										</div> -->
 										<div class="offer_reviews">
 											<div class="offer_reviews_content">
-												<div class="offer_reviews_title">국가명</div>
+												<div class="offer_reviews_title">${l.countryNm}</div>
 												<div class="offer_reviews_subtitle float-right"></div>
 											</div>
-											<img src="../img/countryflag/ZA.gif" alt="" class="offer_reviews_rating text-center" >
+											<img src="../../img/countryflag/${l.country.isoAlp2}.gif" alt="" class="offer_reviews_rating text-center" >
 										</div>
 										<hr>
 									</div>
@@ -147,7 +147,7 @@
 						</div>
 					</div>
 				</div>
-
+				</c:forEach>
 
 
 				<!-- 페이징 -->	
