@@ -1,13 +1,12 @@
 package com.triplive.repository;
 
-import com.triplive.entity.User;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-@Repository("UserRepository")
-public interface UserRepository extends JpaRepository<User, String> {
-    // public Optional<User> findById(String uid);
+import com.triplive.entity.GetCountrySafetyList2;
+@Repository("CalamityRepository")
+public interface CalamityRepository extends JpaRepository<GetCountrySafetyList2, String> {
     /* 
         insert -> save(엔티티 객체)
         select -> findById(키 타입), getOne(키 타입)

@@ -1,5 +1,4 @@
-#!/usr/bin/env python
-# coding: utf-8
+
 
 
 # In[2]:
@@ -33,6 +32,8 @@ getCountryCodeList2 = pd.concat([getCountryCodeList2, pd.DataFrame(request.json(
 getCountryCodeList2.drop_duplicates() # 중복제거
 getCountryCodeList2=getCountryCodeList2[getCountryCodeList2['iso_num']!=None]
 getCountryCodeList2=getCountryCodeList2[getCountryCodeList2['iso_num']!='   ']
+getCountryCodeList2=getCountryCodeList2.dropna(axis=0)
+getCountryCodeList2.rename(columns={"country_iso_alp2":"iso_alp2"}, inplace=True)
 
 # 데이터프레임 출력
 # print(getCountryAgreementList2)

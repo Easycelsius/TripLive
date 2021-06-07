@@ -1,19 +1,14 @@
 package com.triplive.vo;
 
 import java.util.List;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
-
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 
 import lombok.Data;
 
 @Data
-public class PageResultDTO<DTO, EN> {
-    // DTO 리스트
-    private List<DTO> dtoList;
+public class PageResultDTO {
+
+    // 값 내용
+    private List<?> list;
 
     // 총 페이지 번호
     private int totalPage;
@@ -33,26 +28,7 @@ public class PageResultDTO<DTO, EN> {
     // 페이지 번호 목록
     private List<Integer> pageList;
 
-    // 엔티티를 DTO로 변환
-    public PageResultDTO(Page<EN> result, Function<EN, DTO> fn){
-        dtoList = result.stream().map(fn).collect(Collectors.toList());
-        totalPage = result.getTotalPages();
-        makePageList(result.getPageable());
-    }
+    
 
-    private void makePageList(Pageable pageable){
-        this.page = pageable.getPageNumber() + 1;
-        this.size = pageable.getPageSize();
-
-        //temp end page
-        int tempEnd = (int)(Math.ceil(page/10.0)) * 10;
-
-        start = tempEnd - 9;
-        prev = start > 1;
-        end = totalPage > tempEnd ? tempEnd : totalPage;
-        next = totalPage > tempEnd;
-
-        // Closed : 끝 인덱스를 포함
-        pageList = IntStream.rangeClosed(start,end).boxed().collect(Collectors.toList());
-    }
 }
+

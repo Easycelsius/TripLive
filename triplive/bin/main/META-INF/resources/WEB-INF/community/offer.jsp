@@ -35,8 +35,8 @@
 
 							<div class="search_tabs_container">
 								<div class="search_tabs d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
-									<div class="search_tab active d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="../../images/departure.png" alt=""><span>지역으로 검색</span></div>
-									<div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="../../images/milestone_1.png" alt="">단어로 검색</div>
+									<div class="search_tab active d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="../../images/departure.png" alt=""><span>국가별 검색</span></div>
+									<div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="../../images/milestone_1.png" alt="">단어 검색</div>
 									<!-- <div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="../images/departure.png" alt="">flights</div>
 									<div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="../images/island.png" alt="">trips</div>
 									<div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="../images/cruise.png" alt="">cruises</div>
@@ -48,10 +48,10 @@
 							<!-- 지역 검색 -->
 
 							<div class="search_panel active">
-								<form action="#" id="search_form_1" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
+								<form id="search_form_1" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
 									<div class="search_item">
 										<div>국가</div>
-										<select name="country" id="country" class="dropdown_item_select search_input" required="required">
+										<select name="isoNum" id="country" class="dropdown_item_select search_input">
 											<option value="">전체</option>
 											<option value="392">일본</option>
 											<option value="156">중국</option>
@@ -67,14 +67,14 @@
 										</select>
 										<!-- <input type="text" class="destination search_input" required="required"> -->
 									</div>
-									<div class="search_item">
+									<!-- <div class="search_item">
 										<div>작성일 이전</div>
 										<input type="text" class="check_in search_input" placeholder="YYYY-MM-DD">
 									</div>
 									<div class="search_item">
 										<div>작성일 이후</div>
 										<input type="text" class="check_out search_input" placeholder="YYYY-MM-DD">
-									</div>
+									</div> -->
 									<!-- <div class="search_item">
 										<div>adults</div>
 										<select name="adults" id="adults_1" class="dropdown_item_select search_input">
@@ -170,10 +170,10 @@
 							<!-- 단어 검색 -->
 
 							<div class="search_panel">
-								<form action="#" id="search_form_2" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
+								<form action="?" id="search_form_2" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
 									<div class="search_item">
 										<div>검색어 입력</div>
-										<input type="text" class="destination search_input" required="required">
+										<input name="keyword" type="text" class="destination search_input" required="required">
 									</div>
 									<!-- <div class="search_item">
 										<div>check in</div>

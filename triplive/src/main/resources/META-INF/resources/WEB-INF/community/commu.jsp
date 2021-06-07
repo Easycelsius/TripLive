@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
 
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -97,156 +99,63 @@
 						</ul>
 					</div>
 				</div>
-
-				<div class="col-lg-12">
-					<!-- Offers Grid -->
-					<div class="offers_grid">
-						<!-- Offers Item -->
-						<div class="offers_item rating_4">
-							<div class="row">
-								<div class="col-lg-1 temp_col"></div>
-								<!-- <div class="col-lg-3 col-1680-4">
-									<div class="offers_image_container">
-										Image by https://unsplash.com/@kensuarez
-										<div class="offers_image_background" style="background-image:url(../images/offer_1.jpg)"></div>
-										<div class="offer_name"><a href="single_listing.html">grand castle</a></div>
-									</div>
-								</div> -->
-								<div class="col-lg-11">
-									<div class="offers_content">
-										<div class="offers_price">bd_title<span>bd_date</span></div>
-										<!-- <div class="rating_r rating_r_4 offers_rating" data-rating="4">
-											<i></i>
-											<i></i>
-											<i></i>
-											<i></i>
-											<i></i>
-										</div> -->
-										<p class="offers_text">bd_content</p>
-										<div class="button book_button float-right"><a href="board_detail.do">글 보기</a></div>
-										<div class="offers_icons">
-											<ul class="offers_icons_list">
-												<li class="offers_icons_item"><img src="../images/post.png" alt=""></li>
-												<li class="offers_icons_item"><img src="../images/compass.png" alt=""></li>
-												<li class="offers_icons_item"><img src="../images/bicycle.png" alt=""></li>
-												<li class="offers_icons_item"><img src="../images/sailboat.png" alt=""></li>
-											</ul>
+				
+				<c:forEach var="community" items="${communities}" varStatus="status">
+					<div class="col-lg-12">
+						<!-- Offers Grid -->
+						<div class="offers_grid">
+							<!-- Offers Item -->
+							<div class="offers_item rating_4">
+								<div class="row">
+									<div class="col-lg-1 temp_col"></div>
+									<!-- <div class="col-lg-3 col-1680-4">
+										<div class="offers_image_container">
+											Image by https://unsplash.com/@kensuarez
+											<div class="offers_image_background" style="background-image:url(../images/offer_1.jpg)"></div>
+											<div class="offer_name"><a href="single_listing.html">grand castle</a></div>
 										</div>
-										<div class="offer_reviews">
-											<div class="offer_reviews_content">
-												<div class="offer_reviews_title">국가명 iso_num</div>
-												<div class="offer_reviews_subtitle float-right">2</div>
+									</div> -->
+									
+									<div class="col-lg-11">
+										<div class="offers_content" >
+											<div class="offers_price" style="width: 80%; text-overflow: ellipsis;  white-space: nowrap; overflow: hidden; display: block; padding-top:4px;">${community.bdTitle}<span>${community.date}</span></div>
+											<!-- <div class="rating_r rating_r_4 offers_rating" data-rating="4">
+												<i></i>
+												<i></i>
+												<i></i>
+												<i></i>
+												<i></i>
+											</div> -->
+											<p class="offers_text" style="width: 80%; text-overflow: ellipsis;  white-space: nowrap; overflow: hidden; display: block;">${community.bdContent}</p>
+											<div class="button book_button float-right" ><a href="board_detail.do?detail=${community.bdNo}">글 보기</a></div>
+											<div class="offers_icons">
+												<ul class="offers_icons_list">
+													<li class="offers_icons_item"><img src="../images/post.png" alt=""></li>
+													<li class="offers_icons_item"><img src="../images/compass.png" alt=""></li>
+													<li class="offers_icons_item"><img src="../images/bicycle.png" alt=""></li>
+													<li class="offers_icons_item"><img src="../images/sailboat.png" alt=""></li>
+												</ul>
 											</div>
-											<img src="../img/countryflag/ZA.gif" alt="" class="offer_reviews_rating text-center" >
+											<div class="offer_reviews">
+												<div class="offer_reviews_content">
+													<div class="offer_reviews_title">${community.user.id}</div>
+													<div class="offer_reviews_subtitle float-right">${community.count}</div>
+												</div>
+												<img src="../img/countryflag/${community.country.isoAlp2}.gif" alt="" class="offer_reviews_rating text-center" >
+											</div>
+											<hr>
 										</div>
-										<hr>
 									</div>
+									
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-
-				<div class="col-lg-12">
-					<!-- Offers Grid -->
-					<div class="offers_grid">
-						<!-- Offers Item -->
-						<div class="offers_item rating_4">
-							<div class="row">
-								<div class="col-lg-1 temp_col"></div>
-								<!-- <div class="col-lg-3 col-1680-4">
-									<div class="offers_image_container">
-										Image by https://unsplash.com/@kensuarez
-										<div class="offers_image_background" style="background-image:url(../images/offer_1.jpg)"></div>
-										<div class="offer_name"><a href="single_listing.html">grand castle</a></div>
-									</div>
-								</div> -->
-								<div class="col-lg-11">
-									<div class="offers_content">
-										<div class="offers_price">bd_title<span>bd_date</span></div>
-										<!-- <div class="rating_r rating_r_4 offers_rating" data-rating="4">
-											<i></i>
-											<i></i>
-											<i></i>
-											<i></i>
-											<i></i>
-										</div> -->
-										<p class="offers_text">bd_content</p>
-										<div class="button book_button float-right"><a href="#">글 보기</a></div>
-										<div class="offers_icons">
-											<ul class="offers_icons_list">
-												<li class="offers_icons_item"><img src="../images/post.png" alt=""></li>
-												<li class="offers_icons_item"><img src="../images/compass.png" alt=""></li>
-												<li class="offers_icons_item"><img src="../images/bicycle.png" alt=""></li>
-												<li class="offers_icons_item"><img src="../images/sailboat.png" alt=""></li>
-											</ul>
-										</div>
-										<div class="offer_reviews">
-											<div class="offer_reviews_content">
-												<div class="offer_reviews_title">국가명 iso_num</div>
-												<div class="offer_reviews_subtitle float-right">1</div>
-											</div>
-											<img src="../img/countryflag/JP.gif" alt="" class="offer_reviews_rating text-center" >
-										</div>
-										<hr>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-12">
-					<!-- Offers Grid -->
-					<div class="offers_grid">
-						<!-- Offers Item -->
-						<div class="offers_item rating_4">
-							<div class="row">
-								<div class="col-lg-1 temp_col"></div>
-								<!-- <div class="col-lg-3 col-1680-4">
-									<div class="offers_image_container">
-										Image by https://unsplash.com/@kensuarez
-										<div class="offers_image_background" style="background-image:url(../images/offer_1.jpg)"></div>
-										<div class="offer_name"><a href="single_listing.html">grand castle</a></div>
-									</div>
-								</div> -->
-								<div class="col-lg-11">
-									<div class="offers_content">
-										<div class="offers_price">bd_title<span>bd_date</span></div>
-										<!-- <div class="rating_r rating_r_4 offers_rating" data-rating="4">
-											<i></i>
-											<i></i>
-											<i></i>
-											<i></i>
-											
-										</div> -->
-										<p class="offers_text">bd_content</p>
-										<div class="button book_button float-right"><a href="#">글 보기</a></div>
-										<div class="offers_icons">
-											<ul class="offers_icons_list">
-												<li class="offers_icons_item"><img src="../images/post.png" alt=""></li>
-												<li class="offers_icons_item"><img src="../images/compass.png" alt=""></li>
-												<li class="offers_icons_item"><img src="../images/bicycle.png" alt=""></li>
-												<li class="offers_icons_item"><img src="../images/sailboat.png" alt=""></li>
-											</ul>
-										</div>
-										<div class="offer_reviews">
-											<div class="offer_reviews_content">
-												<div class="offer_reviews_title">국가명 iso_num</div>
-												<div class="offer_reviews_subtitle float-right">3</div>
-											</div>
-											<img src="../img/countryflag/JP.gif" alt="" class="offer_reviews_rating text-center" >
-										</div>
-										<hr>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+				</c:forEach>
 
 				<!-- 페이징 -->	
 				<div class="container">
+					
 					<div class="row">
 						<div class="col-lg-5 temp_col"></div>
 						<nav aria-label="Page navigation example" class="col-lg-3">
@@ -257,10 +166,12 @@
 								<span class="sr-only">이전</span>
 								</a>
 							</li>
-							<li class="page-item"><a class="page-link" href="#">1</a></li>
-							<li class="page-item"><a class="page-link" href="#">2</a></li>
-							<li class="page-item"><a class="page-link" href="#">3</a></li>
-							<li class="page-item">
+
+							<c:forEach var="page" items="${pageList}">
+								<c:if test="${page ne null}">
+									<li class="page-item"><a class="page-link" href="?page=${page}">${page}</a></li>
+								</c:if>
+							</c:forEach>
 								<a class="page-link" href="#" aria-label="Next">
 								<span aria-hidden="true">&raquo;</span>
 								<span class="sr-only">다음</span>

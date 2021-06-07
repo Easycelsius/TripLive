@@ -22,9 +22,7 @@ pageEncoding="utf-8"%>
                   </div>
                 </div>
                 <p class="footer_about_text">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Vivamus quis vu lputate eros, iaculis consequat nisl. Nunc et
-                  suscipit urna. Integer eleme ntum orci eu vehicula pretium.
+                  현지에 대한 실시간 정보, 출국 전 꼭 참고해야 할, 안전공지사항 및 사건∙사고 유형 등을 제공하는 데이터 서비스를 제공합니다.<br>triplive는 통신판매중개자이며 통신판매의 당사자가 아닙니다. 따라서 상품·거래정보 및 거래에 대하여 책임을 지지 않습니다.
                 </p>
                 <ul class="footer_social_list">
                   <li class="footer_social_item">
@@ -106,17 +104,13 @@ pageEncoding="utf-8"%>
           <!-- Footer Column -->
           <div class="col-lg-3 footer_column">
             <div class="footer_col">
-              <div class="footer_title">tags</div>
+              <div class="footer_title"></div>
               <div class="footer_content footer_tags">
                 <ul class="tags_list clearfix">
-                  <li class="tag_item"><a href="#">design</a></li>
-                  <li class="tag_item"><a href="#">fashion</a></li>
-                  <li class="tag_item"><a href="#">music</a></li>
-                  <li class="tag_item"><a href="#">video</a></li>
-                  <li class="tag_item"><a href="#">party</a></li>
-                  <li class="tag_item"><a href="#">photography</a></li>
-                  <li class="tag_item"><a href="#">adventure</a></li>
-                  <li class="tag_item"><a href="#">travel</a></li>
+                  <li class="tag_item"><a href="#">이 용 약 관</a></li>
+                  <li class="tag_item"><a href="#">개 인 정 보 처 리 방 침</a></li>
+                  <li class="tag_item"><a href="#">취 소 환 불 규 정</a></li>
+                  <li class="tag_item"><a href="#">고 객 센 터</a></li>
                 </ul>
               </div>
             </div>
@@ -125,7 +119,7 @@ pageEncoding="utf-8"%>
           <!-- Footer Column -->
           <div class="col-lg-3 footer_column">
             <div class="footer_col">
-              <div class="footer_title">contact info</div>
+              <div class="footer_title">고객센터</div>
               <div class="footer_content footer_contact">
                 <ul class="contact_info_list">
                   <li class="contact_info_item d-flex flex-row">
@@ -135,7 +129,7 @@ pageEncoding="utf-8"%>
                       </div>
                     </div>
                     <div class="contact_info_text">
-                      4127 Raoul Wallenber 45b-c Gibraltar
+                      경기 성남시 수정구 창업로 54 가동 2층
                     </div>
                   </li>
                   <li class="contact_info_item d-flex flex-row">
@@ -144,7 +138,7 @@ pageEncoding="utf-8"%>
                         <img src="images/phone-call.svg" alt="" />
                       </div>
                     </div>
-                    <div class="contact_info_text">2556-808-8613</div>
+                    <div class="contact_info_text">031-290-3800</div>
                   </li>
                   <li class="contact_info_item d-flex flex-row">
                     <div>
@@ -156,7 +150,7 @@ pageEncoding="utf-8"%>
                       <a
                         href="mailto:contactme@gmail.com?Subject=Hello"
                         target="_top"
-                        >contactme@gmail.com</a
+                        >triplive@gmail.com</a
                       >
                     </div>
                   </li>
@@ -167,7 +161,7 @@ pageEncoding="utf-8"%>
                       </div>
                     </div>
                     <div class="contact_info_text">
-                      <a href="https://colorlib.com">www.colorlib.com</a>
+                      <a href="www.triplive189.com">www.triplive189.com</a>
                     </div>
                   </li>
                 </ul>
@@ -177,7 +171,6 @@ pageEncoding="utf-8"%>
         </div>
       </div>
     </footer>
-    
 		<!-- Copyright -->
 
 		<div class="copyright">
@@ -186,7 +179,7 @@ pageEncoding="utf-8"%>
 					<div class="col-lg-3 order-lg-1 order-2  ">
 						<div class="copyright_content d-flex flex-row align-items-center">
 							<div><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+	<script>document.write(new Date().getFullYear());</script> All rights reserved | This triplive is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="../index.do" target="_blank">home</a>
 	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
 						</div>
 					</div>

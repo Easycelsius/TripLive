@@ -15,6 +15,17 @@
 <link rel="stylesheet" type="text/css" href="../styles/contact_responsive.css">
 <link rel="stylesheet" type="text/css" href="../styles/offers_styles.css">
 <link rel="stylesheet" type="text/css" href="../styles/offers_responsive.css">
+<style type="text/css">
+	.img_wrap {
+		width: 100%;
+		margin-top: 50px;
+	}
+	.img_wrap img {
+		max-width: 100%;
+	}
+
+</style>
+
 </head>
 
 <body>
@@ -44,10 +55,9 @@
 					<!-- Contact Form -->
 					<div class="contact_form_container">
 						<div class="contact_title text-center">글 남기기</div>
-						<form action="posting.do" id="contact_form" class="contact_form text-center" method="POST">
-							<!-- <input type="text" id="contact_form_name" class="contact_form_name input_field" placeholder="ID" required="required" data-error="Name is required.">
-							<input type="text" id="contact_form_email" class="contact_form_email input_field" placeholder="E-mail" required="required" data-error="Email is required."> -->
-							<select name="iso_num" id="country" class="dropdown_item_select search_input" required="required">
+						<form action="posting.do" id="contact_form" class="contact_form text-center" method="POST" enctype="multipart/form-data">
+								<select name="isoNum" id="country" class="dropdown_item_select search_input" required="required">
+								<option value="410">한국</option>
 								<option value="392">일본</option>
 								<option value="156">중국</option>
 								<option value="704">베트남</option>
@@ -59,10 +69,17 @@
 								<option value="826">영국</option>
 								<option value="36">호주</option>
 								<option value="372">아일랜드</option>
-								<option value="0">기타</option>
 							</select>
-							<input name="bd_title" type="text" id="contact_form_subject" class="contact_form_subject input_field" placeholder="제목" required="required" data-error="Subject is required.">
-							<textarea name="bd_content" id="contact_form_message" class="text_field contact_form_message" rows="4" placeholder="내용" required="required" data-error="Please, write us a message."></textarea>
+							<input name="bdTitle" type="text" id="contact_form_subject" class="contact_form_subject input_field" maxlength="25" placeholder="제목" required="required" data-error="제목을 적어주세요">
+							<textarea name="bdContent" id="contact_form_message" class="text_field contact_form_message" rows="4" placeholder="내용" required="required" data-error="내용을 적어주세요"></textarea>
+							<div class="contact_form_subject"></div>
+							<input name='bdImage' type='file' class="search_input" id="input_img">
+							<div>
+								<div class="img_wrap">
+									<img id="img" />
+								</div>
+							</div>
+							
 							<button type="submit" id="form_submit_button" class="form_submit_button button trans_200">작성 완료</button>
 						</form>
 					</div>
@@ -139,13 +156,13 @@
 
 	<!-- Google Map -->
 		
-	<div class="travelix_map">
+	<!-- <div class="travelix_map">
 		<div id="google_map" class="google_map">
 			<div class="map_container">
 				<div id="map"></div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 	<!-- 헤더 -->
 	<%@include file ="../footer.jsp" %>
@@ -159,7 +176,35 @@
 <script src="../plugins/parallax-js-master/parallax.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCIwF204lFZg1y4kPSIhKaHEXMLYxxuMhA"></script>
 <script src="../js/contact_custom.js"></script>
+<script type="text/javascript">
+        
+	var sel_file;
 
+	$(document).ready(function() {
+		$("#input_img").on("change", handleImgFileSelect);
+	}); 
+
+	function handleImgFileSelect(e) {
+		var files = e.target.files;
+		var filesArr = Array.prototype.slice.call(files);
+
+		filesArr.forEach(function(f) {
+			if(!f.type.match("image.*")) {
+				alert("확장자는 이미지 확장자만 가능합니다.");
+				return;
+			}
+
+			sel_file = f;
+
+			var reader = new FileReader();
+			reader.onload = function(e) {
+				$("#img").attr("src", e.target.result);
+			}
+			reader.readAsDataURL(f);
+		});
+	}
+
+</script>
 </body>
 
 </html>
