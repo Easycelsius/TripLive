@@ -13,6 +13,18 @@
 <link href="../plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../styles/offers_styles.css">
 <link rel="stylesheet" type="text/css" href="../styles/offers_responsive.css">
+<script type="text/javascript">
+	$(document).ready(function() {
+		$.ajax({url: "boardList", success: function(result){             
+			var html = "";
+			result.forEach(function(item){
+				html+= "<tr> <td><a href = 'view?idx=" + item.idx + "'>" + item.title + "</a>"
+			})
+		   $("#listArea").append(html)
+		   $('#example').DataTable();
+		 }});
+	} );	
+</script>
 </head>
 
 <body>
@@ -26,9 +38,9 @@
 	<!-- Home -->
 
 	<div class="home">
-		<div class="home_background parallax-window" data-parallax="scroll" data-image-src="../../images/comm_background.jpg"></div>
+		<div class="home_background parallax-window" data-parallax="scroll" data-image-src="../../images/about_background.jpg"></div>
 		<div class="home_content">
-			<div class="home_title">SafetyList</div>
+			<div class="home_title">안전공지</div>
 		</div>
 	</div>
 
@@ -40,210 +52,46 @@
 			<div class="row">
 				<div class="col-lg-1 temp_col"></div>
 				<div class="col-lg-11">
-					
 					<!-- Offers Sorting -->
 					<div class="offers_sorting_container">
 						<ul class="offers_sorting float-right">
-							<!-- <li>
-								<span class="sorting_text">price</span>
-								<i class="fa fa-chevron-down"></i>
-								<ul>
-									<li class="sort_btn" data-isotope-option='{ "sortBy": "original-order" }' data-parent=".price_sorting"><span>show all</span></li>
-									<li class="sort_btn" data-isotope-option='{ "sortBy": "price" }' data-parent=".price_sorting"><span>ascending</span></li>
-								</ul>
-							</li> -->
-							<!-- <li>
-								<span class="sorting_text">지역</span>
-								<i class="fa fa-chevron-down"></i>
-								<ul>
-									<li class="sort_btn" data-isotope-option='{ "sortBy": "original-order" }'><span>전체</span></li>
-									<li class="sort_btn" data-isotope-option='{ "sortBy": "name" }'><span>alphabetical</span></li>
-								</ul>
-							</li> -->
-							
-							<!-- <li>
-								<span class="sorting_text">stars</span>
-								<i class="fa fa-chevron-down"></i>
-								<ul>
-									<li class="filter_btn" data-filter="*"><span>show all</span></li>
-									<li class="sort_btn" data-isotope-option='{ "sortBy": "stars" }'><span>ascending</span></li>
-									<li class="filter_btn" data-filter=".rating_3"><span>3</span></li>
-									<li class="filter_btn" data-filter=".rating_4"><span>4</span></li>
-									<li class="filter_btn" data-filter=".rating_5"><span>5</span></li>
-								</ul>
-							</li> -->
-							<!-- <li class="distance_item">
-								<span class="sorting_text">distance from center</span>
-								<i class="fa fa-chevron-down"></i>
-								<ul>
-									<li class="num_sorting_btn"><span>distance</span></li>
-									<li class="num_sorting_btn"><span>distance</span></li>
-									<li class="num_sorting_btn"><span>distance</span></li>
-								</ul>
-							</li> -->
-							<!-- <li>
-								<span class="sorting_text">조회수</span>
-								<i class="fa fa-chevron-down"></i>
-								<ul>
-									<li class="sort_btn" data-isotope-option='{ "sortBy": "original-order" }' data-parent=".reviews_sorting"><span>기본</span></li>
-									<li class="sort_btn" data-isotope-option='{ "sortBy": "reviews" }' data-parent=".reviews_sorting"><span>오름차순</span></li>
-									<li class="num_sorting_btn"><span>내림차순</span></li>
-								</ul>
-							</li>
-							<li> -->
 								<span class="button btn-success"><a href="write.do">글남기기</a></span>
-								<!-- <span class="button sorting_text"><a href="#">글 남기기</a></span> -->
-							</li>
 						</ul>
 					</div>
-				</div>
-
-				<div class="col-lg-12">
-					<!-- Offers Grid -->
-					<div class="offers_grid">
-						<!-- Offers Item -->
-						<div class="offers_item rating_4">
-							<div class="row">
-								<div class="col-lg-1 temp_col"></div>
-								<!-- <div class="col-lg-3 col-1680-4">
-									<div class="offers_image_container">
-										Image by https://unsplash.com/@kensuarez
-										<div class="offers_image_background" style="background-image:url(../images/offer_1.jpg)"></div>
-										<div class="offer_name"><a href="single_listing.html">grand castle</a></div>
-									</div>
-								</div> -->
-								<div class="col-lg-11">
-									<div class="offers_content">
-										<div class="offers_price">bd_title<span>bd_date</span></div>
-										<!-- <div class="rating_r rating_r_4 offers_rating" data-rating="4">
-											<i></i>
-											<i></i>
-											<i></i>
-											<i></i>
-											<i></i>
-										</div> -->
-										<p class="offers_text">bd_content</p>
-										<div class="button book_button float-right"><a href="board_detail.do">글 보기</a></div>
-										<div class="offers_icons">
-											<ul class="offers_icons_list">
-												<li class="offers_icons_item"><img src="../images/post.png" alt=""></li>
-												<li class="offers_icons_item"><img src="../images/compass.png" alt=""></li>
-												<li class="offers_icons_item"><img src="../images/bicycle.png" alt=""></li>
-												<li class="offers_icons_item"><img src="../images/sailboat.png" alt=""></li>
-											</ul>
-										</div>
-										<div class="offer_reviews">
-											<div class="offer_reviews_content">
-												<div class="offer_reviews_title">국가명 iso_num</div>
-												<div class="offer_reviews_subtitle float-right">2</div>
+						<!-- Offers Grid -->
+						<div class="offers_grid">
+							<!-- Offers Item -->
+							<div class="offers_item rating_4">
+								<div class="row">
+									<div class="col-lg-1 temp_col"></div>
+									<div class="col-lg-11">
+										<div class="offers_content">
+											<div class="offers_price">bd_title<span>bd_date</span></div>
+											<p class="offers_text">bd_content</p>
+											<div class="button book_button float-right"><a href="board_detail.do">글 보기</a></div>
+											<div class="offers_icons">
+												<ul class="offers_icons_list">
+													<li class="offers_icons_item"><img src="../images/post.png" alt=""></li>
+													<li class="offers_icons_item"><img src="../images/compass.png" alt=""></li>
+													<li class="offers_icons_item"><img src="../images/bicycle.png" alt=""></li>
+													<li class="offers_icons_item"><img src="../images/sailboat.png" alt=""></li>
+												</ul>
 											</div>
-											<img src="../img/countryflag/ZA.gif" alt="" class="offer_reviews_rating text-center" >
+											<div class="offer_reviews">
+												<div class="offer_reviews_content">
+													<div class="offer_reviews_title">국가명 iso_num</div>
+													<div class="offer_reviews_subtitle float-right">2</div>
+												</div>
+												<img src="../img/countryflag/ZA.gif" alt="" class="offer_reviews_rating text-center" >
+											</div>
+											<hr>
 										</div>
-										<hr>
 									</div>
 								</div>
 							</div>
-						</div>
-					</div>
+						</div>	
 				</div>
 
-				<div class="col-lg-12">
-					<!-- Offers Grid -->
-					<div class="offers_grid">
-						<!-- Offers Item -->
-						<div class="offers_item rating_4">
-							<div class="row">
-								<div class="col-lg-1 temp_col"></div>
-								<!-- <div class="col-lg-3 col-1680-4">
-									<div class="offers_image_container">
-										Image by https://unsplash.com/@kensuarez
-										<div class="offers_image_background" style="background-image:url(../images/offer_1.jpg)"></div>
-										<div class="offer_name"><a href="single_listing.html">grand castle</a></div>
-									</div>
-								</div> -->
-								<div class="col-lg-11">
-									<div class="offers_content">
-										<div class="offers_price">bd_title<span>bd_date</span></div>
-										<!-- <div class="rating_r rating_r_4 offers_rating" data-rating="4">
-											<i></i>
-											<i></i>
-											<i></i>
-											<i></i>
-											<i></i>
-										</div> -->
-										<p class="offers_text">bd_content</p>
-										<div class="button book_button float-right"><a href="#">글 보기</a></div>
-										<div class="offers_icons">
-											<ul class="offers_icons_list">
-												<li class="offers_icons_item"><img src="../images/post.png" alt=""></li>
-												<li class="offers_icons_item"><img src="../images/compass.png" alt=""></li>
-												<li class="offers_icons_item"><img src="../images/bicycle.png" alt=""></li>
-												<li class="offers_icons_item"><img src="../images/sailboat.png" alt=""></li>
-											</ul>
-										</div>
-										<div class="offer_reviews">
-											<div class="offer_reviews_content">
-												<div class="offer_reviews_title">국가명 iso_num</div>
-												<div class="offer_reviews_subtitle float-right">1</div>
-											</div>
-											<img src="../img/countryflag/JP.gif" alt="" class="offer_reviews_rating text-center" >
-										</div>
-										<hr>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-12">
-					<!-- Offers Grid -->
-					<div class="offers_grid">
-						<!-- Offers Item -->
-						<div class="offers_item rating_4">
-							<div class="row">
-								<div class="col-lg-1 temp_col"></div>
-								<!-- <div class="col-lg-3 col-1680-4">
-									<div class="offers_image_container">
-										Image by https://unsplash.com/@kensuarez
-										<div class="offers_image_background" style="background-image:url(../images/offer_1.jpg)"></div>
-										<div class="offer_name"><a href="single_listing.html">grand castle</a></div>
-									</div>
-								</div> -->
-								<div class="col-lg-11">
-									<div class="offers_content">
-										<div class="offers_price">bd_title<span>bd_date</span></div>
-										<!-- <div class="rating_r rating_r_4 offers_rating" data-rating="4">
-											<i></i>
-											<i></i>
-											<i></i>
-											<i></i>
-											
-										</div> -->
-										<p class="offers_text">bd_content</p>
-										<div class="button book_button float-right"><a href="#">글 보기</a></div>
-										<div class="offers_icons">
-											<ul class="offers_icons_list">
-												<li class="offers_icons_item"><img src="../images/post.png" alt=""></li>
-												<li class="offers_icons_item"><img src="../images/compass.png" alt=""></li>
-												<li class="offers_icons_item"><img src="../images/bicycle.png" alt=""></li>
-												<li class="offers_icons_item"><img src="../images/sailboat.png" alt=""></li>
-											</ul>
-										</div>
-										<div class="offer_reviews">
-											<div class="offer_reviews_content">
-												<div class="offer_reviews_title">국가명 iso_num</div>
-												<div class="offer_reviews_subtitle float-right">3</div>
-											</div>
-											<img src="../img/countryflag/JP.gif" alt="" class="offer_reviews_rating text-center" >
-										</div>
-										<hr>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
 
 				<!-- 페이징 -->	
 				<div class="container">

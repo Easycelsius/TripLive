@@ -162,7 +162,7 @@
 											</li>
 										</ul>
 									</div> -->
-									<button class="button search_button">이동<span></span><span></span><span></span></button>
+									<button class="button search_button">검색<span></span><span></span><span></span></button>
 								</form>
 							</div>
 
