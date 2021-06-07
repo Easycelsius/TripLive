@@ -10,7 +10,7 @@
 <meta name="description" content="Travelix Project">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="../../styles/bootstrap4/bootstrap.min.css">
-<link href="../plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="../../plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../../styles/offers_styles.css">
 <link rel="stylesheet" type="text/css" href="../../styles/offers_responsive.css">
 </head>
@@ -104,35 +104,23 @@
 						<!-- Offers Item -->
 						<div class="offers_item rating_4">
 							<div class="row">
-								<div class="col-lg-1 temp_col"></div>
-								<!-- <div class="col-lg-3 col-1680-4">
-									<div class="offers_image_container">
-										Image by https://unsplash.com/@kensuarez
-										<div class="offers_image_background" style="background-image:url(../images/offer_1.jpg)"></div>
-										<div class="offer_name"><a href="single_listing.html">grand castle</a></div>
-									</div>
-								</div> -->
-					
-								<div class="col-lg-11">
-									<div class="offers_content">
-										<div class="offers_price" style="width: 80%; text-overflow: ellipsis;  white-space: nowrap; overflow: hidden; display: block; padding:6px;">${l.title}</div><span>${l.wrtDt}</span>
-										<!-- <div class="rating_r rating_r_4 offers_rating" data-rating="4">
-											<i></i>
-											<i></i>
-											<i></i>
-											<i></i>
-											<i></i>
-										</div> -->
-										<p class="offers_text">{l.txtOriginCn}</p>
-										<div class="button book_button float-left"><a href=''>전문 보기</a></div>
-										<!-- <div class="offers_icons">
-											<ul class="offers_icons_list">
-												<li class="offers_icons_item"><img src="../images/post.png" alt=""></li>
-												<li class="offers_icons_item"><img src="../images/compass.png" alt=""></li>
-												<li class="offers_icons_item"><img src="../images/bicycle.png" alt=""></li>
-												<li class="offers_icons_item"><img src="../images/sailboat.png" alt=""></li>
-											</ul>
-										</div> -->
+								<div class="col-lg-1 temp_col"></div>	
+									<div class="col-lg-11">
+										<div class='card'>
+											<div class="card-header" id="headingOne">
+											<div class="offers_content mb-0">
+												<button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+												<div class="offers_price" style="width: 80%; text-overflow: ellipsis;  white-space: nowrap; overflow: hidden; display: block; padding:6px;">${l.title}</div>
+												</button>
+											</div>
+										<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+											<div class='card-body'>
+											<p class="offers_text">{l.txtOriginCn}</p>
+											</div>
+										</div>
+									</div>	
+										<span>${l.wrtDt}</span>
+										
 										<div class="offer_reviews">
 											<div class="offer_reviews_content">
 												<div class="offer_reviews_title">${l.countryNm}</div>
@@ -201,4 +189,3 @@
 </body>
 
 </html>
-
