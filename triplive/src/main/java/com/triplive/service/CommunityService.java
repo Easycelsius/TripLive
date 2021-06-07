@@ -19,5 +19,5 @@ public interface CommunityService {
         Optional<Community> getPosting(Community community);
     
         // 글 목록 조회
-        List<Community> getPostingList(Integer pageNum, String keyword);
+        List<Community> getPostingList(Integer pageNum, String isoNum, String keyword);
 }
