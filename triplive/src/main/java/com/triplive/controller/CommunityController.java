@@ -85,7 +85,8 @@ public class CommunityController {
         // File dest = new File(".");
 
         String rootPath = System.getProperty("user.dir");
-        String basePath = rootPath + File.separator + "triplive" 
+        String basePath = rootPath 
+                                    // + File.separator + "triplive" 
                                     + File.separator + "src" 
                                     + File.separator + "main" 
                                     + File.separator + "resources" 
