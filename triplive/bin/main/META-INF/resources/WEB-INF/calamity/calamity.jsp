@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -37,6 +37,7 @@
 	<!-- offer 종료 -->
 
 		<div class="container">
+			${list[0]}
 			<div class="row">
 				<div class="col-lg-1 temp_col"></div>
 				<div class="col-lg-11">
@@ -91,7 +92,7 @@
 								</ul>
 							</li>
 							<li> -->
-								<span class="button btn-success"><a href="write.do">글남기기</a></span>
+								<!-- <span class="button btn-success"><a href="write.do">글남기기</a></span> -->
 								<!-- <span class="button sorting_text"><a href="#">글 남기기</a></span> -->
 							</li>
 						</ul>
@@ -123,19 +124,19 @@
 											<i></i>
 										</div> -->
 										<p class="offers_text">bd_content</p>
-										<div class="button book_button float-right"><a href="board_detail.do">글 보기</a></div>
-										<div class="offers_icons">
+										<div class="button book_button float-left"><a href=''>전문 보기</a></div>
+										<!-- <div class="offers_icons">
 											<ul class="offers_icons_list">
 												<li class="offers_icons_item"><img src="../images/post.png" alt=""></li>
 												<li class="offers_icons_item"><img src="../images/compass.png" alt=""></li>
 												<li class="offers_icons_item"><img src="../images/bicycle.png" alt=""></li>
 												<li class="offers_icons_item"><img src="../images/sailboat.png" alt=""></li>
 											</ul>
-										</div>
+										</div> -->
 										<div class="offer_reviews">
 											<div class="offer_reviews_content">
-												<div class="offer_reviews_title">국가명 iso_num</div>
-												<div class="offer_reviews_subtitle float-right">2</div>
+												<div class="offer_reviews_title">국가명</div>
+												<div class="offer_reviews_subtitle float-right"></div>
 											</div>
 											<img src="../img/countryflag/ZA.gif" alt="" class="offer_reviews_rating text-center" >
 										</div>
@@ -147,106 +148,10 @@
 					</div>
 				</div>
 
-				<div class="col-lg-12">
-					<!-- Offers Grid -->
-					<div class="offers_grid">
-						<!-- Offers Item -->
-						<div class="offers_item rating_4">
-							<div class="row">
-								<div class="col-lg-1 temp_col"></div>
-								<!-- <div class="col-lg-3 col-1680-4">
-									<div class="offers_image_container">
-										Image by https://unsplash.com/@kensuarez
-										<div class="offers_image_background" style="background-image:url(../images/offer_1.jpg)"></div>
-										<div class="offer_name"><a href="single_listing.html">grand castle</a></div>
-									</div>
-								</div> -->
-								<div class="col-lg-11">
-									<div class="offers_content">
-										<div class="offers_price">bd_title<span>bd_date</span></div>
-										<!-- <div class="rating_r rating_r_4 offers_rating" data-rating="4">
-											<i></i>
-											<i></i>
-											<i></i>
-											<i></i>
-											<i></i>
-										</div> -->
-										<p class="offers_text">bd_content</p>
-										<div class="button book_button float-right"><a href="#">글 보기</a></div>
-										<div class="offers_icons">
-											<ul class="offers_icons_list">
-												<li class="offers_icons_item"><img src="../images/post.png" alt=""></li>
-												<li class="offers_icons_item"><img src="../images/compass.png" alt=""></li>
-												<li class="offers_icons_item"><img src="../images/bicycle.png" alt=""></li>
-												<li class="offers_icons_item"><img src="../images/sailboat.png" alt=""></li>
-											</ul>
-										</div>
-										<div class="offer_reviews">
-											<div class="offer_reviews_content">
-												<div class="offer_reviews_title">국가명 iso_num</div>
-												<div class="offer_reviews_subtitle float-right">1</div>
-											</div>
-											<img src="../img/countryflag/JP.gif" alt="" class="offer_reviews_rating text-center" >
-										</div>
-										<hr>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
 
-				<div class="col-lg-12">
-					<!-- Offers Grid -->
-					<div class="offers_grid">
-						<!-- Offers Item -->
-						<div class="offers_item rating_4">
-							<div class="row">
-								<div class="col-lg-1 temp_col"></div>
-								<!-- <div class="col-lg-3 col-1680-4">
-									<div class="offers_image_container">
-										Image by https://unsplash.com/@kensuarez
-										<div class="offers_image_background" style="background-image:url(../images/offer_1.jpg)"></div>
-										<div class="offer_name"><a href="single_listing.html">grand castle</a></div>
-									</div>
-								</div> -->
-								<div class="col-lg-11">
-									<div class="offers_content">
-										<div class="offers_price">bd_title<span>bd_date</span></div>
-										<!-- <div class="rating_r rating_r_4 offers_rating" data-rating="4">
-											<i></i>
-											<i></i>
-											<i></i>
-											<i></i>
-											
-										</div> -->
-										<p class="offers_text">bd_content</p>
-										<div class="button book_button float-right"><a href="#">글 보기</a></div>
-										<div class="offers_icons">
-											<ul class="offers_icons_list">
-												<li class="offers_icons_item"><img src="../images/post.png" alt=""></li>
-												<li class="offers_icons_item"><img src="../images/compass.png" alt=""></li>
-												<li class="offers_icons_item"><img src="../images/bicycle.png" alt=""></li>
-												<li class="offers_icons_item"><img src="../images/sailboat.png" alt=""></li>
-											</ul>
-										</div>
-										<div class="offer_reviews">
-											<div class="offer_reviews_content">
-												<div class="offer_reviews_title">국가명 iso_num</div>
-												<div class="offer_reviews_subtitle float-right">3</div>
-											</div>
-											<img src="../img/countryflag/JP.gif" alt="" class="offer_reviews_rating text-center" >
-										</div>
-										<hr>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
 
 				<!-- 페이징 -->	
-				<div class="container">
+				<!-- <div class="container">
 					<div class="row">
 						<div class="col-lg-5 temp_col"></div>
 						<nav aria-label="Page navigation example" class="col-lg-3">
@@ -269,7 +174,7 @@
 							</ul>
 						</nav>
 					</div>
-				</div>
+				</div> -->
 
 			</div>
 		</div>	
