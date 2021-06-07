@@ -22,30 +22,28 @@
 	$(function() {
 		function timeConverter(UNIX_timestamp){
 			var a = new Date(UNIX_timestamp * 1000);
-			var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-			var year = a.getFullYear();
-			var month = months[a.getMonth()];
-			var date = a.getDate();
-			var hour = a.getHours();
-			var min = a.getMinutes();
-			var sec = a.getSeconds();
-			var time = date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec ;
-			return time;
-		}
+			var b = new Date(a.getTime() + (a.getTimezoneOffset() * 60000));
+			console.log(b.getDate())
+			
+
+			// var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+			// var year = b.getFullYear();
+			// var month = months[b.getMonth()];
+			// var date = b.getDate();
+			// var hour = b.getHours();
+			// var min = b.getMinutes();
+			// var sec = b.getSeconds();
+			// var time = date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec ;
+			// console.log(date)
+
+			return b.getDate() + '일 ' + b.getHours() + '시';
+		}		
 
 		const labels = [
-			'03시',
-			'06시',
-			'09시',
-			'12시',
-			'15시',
-			'18시',
-			'21시',
-			'00시'
 		];
 
 		const data = {
-			labels: labels,
+			labels: [],
 			datasets: [
 				{
 					label: '비 올 확률',
@@ -89,28 +87,28 @@
 			},
 		};
 
-		var CurrentApiURI = 'http://api.openweathermap.org/data/2.5/forecast?q=London&appid=1db47184ebbc18af53fd996be840d270'
+		// var CurrentApiURI = 'http://api.openweathermap.org/data/2.5/forecast?q=Seoul&appid=1db47184ebbc18af53fd996be840d270'
 
-		// 현재 날씨
-		$.ajax({
-            url: CurrentApiURI,
-            dataType: "json",
-            type: "GET",
-            async: "false",
-            success: function(resp) {
-                console.log(resp);
+		// // 현재 날씨
+		// $.ajax({
+        //     url: CurrentApiURI,
+        //     dataType: "json",
+        //     type: "GET",
+        //     async: "false",
+        //     success: function(resp) {
+        //         console.log(resp);
 
-				for (var i = 0; i < 8; i++) {
-					config.data.datasets[1].data.push(parseFloat((resp.list[i].main.temp - 273.15).toFixed(1)))
-					config.data.datasets[0].data.push(resp.list[i].pop * 100)
-				}
+		// 		for (var i = 0; i < 8; i++) {
+		// 			config.data.datasets[1].data.push(parseFloat((resp.list[i].main.temp - 273.15).toFixed(1)))
+		// 			config.data.datasets[0].data.push(resp.list[i].pop * 100)
+		// 		}
 
-				var myChart = new Chart(
-					document.getElementById('myChart'),
-					config
-				);
-            }
-        })
+		// 		var myChart = new Chart(
+		// 			document.getElementById('myChart'),
+		// 			config
+		// 		);
+        //     }
+        // })
 
 		
 
@@ -128,7 +126,22 @@
 				for (var i = 0; i < 8; i++) {
 					config.data.datasets[1].data.push(parseFloat((resp.list[i].main.temp - 273.15).toFixed(1)))
 					config.data.datasets[0].data.push(resp.list[i].pop * 100)
+
+					console.log(resp.list[i].dt)
+					console.log(resp.city.timezone)
+					console.log(resp.list[i].dt + resp.city.timezone)
+					console.log(timeConverter(resp.list[i].dt + resp.city.timezone))
+					
+
+					config.data.labels.push(timeConverter(resp.list[i].dt + resp.city.timezone))
+
+					var icon = '#icon' + i
+					var imgURL = "http://openweathermap.org/img/w/" + resp.list[i].weather[0].icon + ".png"
+					$(icon).attr('src', imgURL)
 				}
+
+				// var imgURL = "http://openweathermap.org/img/w/" + resp.weather[0].icon + ".png";
+ 				// $("html컴포넌트").attr("src", imgURL);
 
 				var myChart = new Chart(
 					document.getElementById('myChart'),
@@ -138,6 +151,17 @@
         })
 	})
 </script>
+
+<style>
+	#iconUl {
+		margin-left: 20px;
+	}
+
+	.icon {
+		margin: 0 43px;
+	}
+</style>
+
 </head>
 <body>
 <div class="super_container">
@@ -249,6 +273,20 @@
 			<%-- 그래프 --%>	
 			<div>
 				<canvas id="myChart"></canvas>
+			</div>
+
+			<%-- 아이콘 --%>
+			<div class="iconDiv">
+				<ul class='row' id="iconUl">
+					<li class="icon"><img id="icon0" src=""/></li>
+					<li class="icon"><img id="icon1" src=""/></li>
+					<li class="icon"><img id="icon2" src=""/></li>
+					<li class="icon"><img id="icon3" src=""/></li>
+					<li class="icon"><img id="icon4" src=""/></li>
+					<li class="icon"><img id="icon5" src=""/></li>
+					<li class="icon"><img id="icon6" src=""/></li>
+					<li class="icon"><img id="icon7" src=""/></li>
+				</ul>
 			</div>
 			
 		</div>		
