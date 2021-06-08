@@ -22,11 +22,36 @@
 
 <script>
 	let map;
+	let lat;
+	let lng;
+
+	// 현재 날씨
+	var CurrentApiURI = 'http://api.openweathermap.org/data/2.5/weather?q=Singapore&appid=1db47184ebbc18af53fd996be840d270'
+	
+	$.ajax({
+		url: CurrentApiURI,
+		dataType: "json",
+		type: "GET",
+		async:false,
+		success: function(resp) {
+			lat = resp.coord.lat
+			lng = resp.coord.lon
+			// console.log("ajax", lat)
+			// console.log("ajax", lat)
+		}
+	})
+
+	// console.log("normal", lat)
+	// console.log("normal", lat)
 
 	function initMap() {
+
+		// console.log("initMap", lat)
+		// console.log("initMap", lat)
+
 		map = new google.maps.Map(document.getElementById("map"), {
-			center: { lat: -34.397, lng: 150.644 },
-			zoom: 10,
+			center: { lat: lat, lng: lng },
+			zoom: 13,
 		});
 	}
 
@@ -93,7 +118,7 @@
 		};
 
 		// 현재 날씨
-		var CurrentApiURI = 'http://api.openweathermap.org/data/2.5/weather?q=Seoul&appid=1db47184ebbc18af53fd996be840d270'
+		var CurrentApiURI = 'http://api.openweathermap.org/data/2.5/weather?q=Singapore&appid=1db47184ebbc18af53fd996be840d270'
 		
 		$.ajax({
             url: CurrentApiURI,
@@ -109,6 +134,13 @@
 				var humidity = resp.main.humidity + '%'
 				var windSpeed = resp.wind.speed + 'm/s'
 				var rain = '-'
+
+				// lat = resp.coord.lat
+				// lng = resp.coord.lon
+
+				console.log(lat)
+				console.log(lat)
+
 				if (resp.rain) {
 					var rain = resp.rain['1h'] + '㎜'
 				}
@@ -127,7 +159,7 @@
         })
 		
 		// 일일 날씨
-		var DayApiURI = 'http://api.openweathermap.org/data/2.5/forecast?q=Seoul&appid=1db47184ebbc18af53fd996be840d270'
+		var DayApiURI = 'http://api.openweathermap.org/data/2.5/forecast?q=Singapore&appid=1db47184ebbc18af53fd996be840d270'
 
 		$.ajax({
             url: DayApiURI,
