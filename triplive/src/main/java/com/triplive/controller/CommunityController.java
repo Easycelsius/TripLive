@@ -85,7 +85,8 @@ public class CommunityController {
         // File dest = new File(".");
 
         String rootPath = System.getProperty("user.dir");
-        String basePath = rootPath + File.separator + "triplive" 
+        String basePath = rootPath 
+                                    // + File.separator + "triplive" 
                                     + File.separator + "src" 
                                     + File.separator + "main" 
                                     + File.separator + "resources" 
@@ -154,11 +155,11 @@ public class CommunityController {
 
     // community page 메인
     @RequestMapping("/commu.do")
-    public String communityBoard(Model model, @RequestParam(value = "page", defaultValue = "1") Integer pageNum, String keyword, Principal principal) {
-        log.info("community.do 요청 : "+pageNum+" 페이지 / "+keyword);
+    public String communityBoard(Model model, @RequestParam(value = "page", defaultValue = "1") Integer pageNum, String isoNum, String keyword, Principal principal) {
+        log.info("community.do 요청 : "+pageNum+" 페이지 / 키워드 : "+keyword+" / 국가 검색 : "+isoNum);
 
-        model.addAttribute("communities", communityService.getPostingList(pageNum, keyword));
-        model.addAttribute("pageList", communityService.getPageList(pageNum, keyword));
+        model.addAttribute("communities", communityService.getPostingList(pageNum, isoNum, keyword));
+        model.addAttribute("pageList", communityService.getPageList(pageNum, isoNum, keyword));
 
         return "community/commu";
     }
