@@ -9,7 +9,7 @@ public interface CalamityService {
 
         // 글 상세 조회
         Optional<GetCountrySafetyList2> getPosting(GetCountrySafetyList2 calamity);
-    
+
         // 글 목록 조회
-        List<GetCountrySafetyList2> getPostingList(Integer Page);
+        List<GetCountrySafetyList2> getPostingList(Integer pageNum, String isoAlp2, String keyword);
 }
