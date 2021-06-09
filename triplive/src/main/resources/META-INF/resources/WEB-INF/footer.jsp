@@ -171,8 +171,6 @@ pageEncoding="utf-8"%>
         </div>
       </div>
     </footer>
-
-
 		<!-- Copyright -->
 
 		<div class="copyright">
