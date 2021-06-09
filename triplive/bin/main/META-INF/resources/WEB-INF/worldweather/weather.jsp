@@ -199,6 +199,11 @@
 	#map {
 		height: 100%;
 	}
+
+	.search_input {
+		border: 2px solid #dadada;
+		width: 47%;
+	}
 </style>
 
 </head>
@@ -219,59 +224,30 @@
 		</div>
 	</div>
 
+	
+
 	<div class="offers">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-11">
+				<div class="col-lg-12">
 					<!-- Offers Sorting -->
 					<div class="offers_sorting_container">
-						<ul class="offers_sorting">
-							<li>
-								<span class="sorting_text">price</span>
-								<i class="fa fa-chevron-down"></i>
-								<ul>
-									<li class="sort_btn" data-isotope-option='{ "sortBy": "original-order" }' data-parent=".price_sorting"><span>show all</span></li>
-									<li class="sort_btn" data-isotope-option='{ "sortBy": "price" }' data-parent=".price_sorting"><span>ascending</span></li>
-								</ul>
-							</li>
-							<li>
-								<span class="sorting_text">location</span>
-								<i class="fa fa-chevron-down"></i>
-								<ul>
-									<li class="sort_btn" data-isotope-option='{ "sortBy": "original-order" }'><span>default</span></li>
-									<li class="sort_btn" data-isotope-option='{ "sortBy": "name" }'><span>alphabetical</span></li>
-								</ul>
-							</li>
-							<li>
-								<span class="sorting_text">stars</span>
-								<i class="fa fa-chevron-down"></i>
-								<ul>
-									<li class="filter_btn" data-filter="*"><span>show all</span></li>
-									<li class="sort_btn" data-isotope-option='{ "sortBy": "stars" }'><span>ascending</span></li>
-									<li class="filter_btn" data-filter=".rating_3"><span>3</span></li>
-									<li class="filter_btn" data-filter=".rating_4"><span>4</span></li>
-									<li class="filter_btn" data-filter=".rating_5"><span>5</span></li>
-								</ul>
-							</li>
-							<li class="distance_item">
-								<span class="sorting_text">distance from center</span>
-								<i class="fa fa-chevron-down"></i>
-								<ul>
-									<li class="num_sorting_btn"><span>distance</span></li>
-									<li class="num_sorting_btn"><span>distance</span></li>
-									<li class="num_sorting_btn"><span>distance</span></li>
-								</ul>
-							</li>
-							<li>
-								<span class="sorting_text">reviews</span>
-								<i class="fa fa-chevron-down"></i>
-								<ul>
-									<li class="num_sorting_btn"><span>review</span></li>
-									<li class="num_sorting_btn"><span>review</span></li>
-									<li class="num_sorting_btn"><span>review</span></li>
-								</ul>
-							</li>
-						</ul>
+						<div style="width:47%; margin: 0px auto;" class="float-right">
+							<select name="iso_alp2" id="country" class="dropdown_item_select search_input">
+								<option value="">전체</option>
+								<option value="TW">대만</option>
+								<option value="MO">마카오</option>
+								<option value="TH">미국</option>
+								<option value="VN">베트남</option>
+								<option value="SG">싱가포르</option>
+								<option value="JP">일본</option>
+								<option value="CN">중국</option>
+								<option value="TH">태국</option>
+								<option value="PH">필리핀</option>
+								<option value="HK">홍콩</option>
+							</select>
+							<input name="keyword" type="text" class="destination search_input" required="required">
+						</div>
 					</div>
 				</div>
 			</div>
@@ -279,6 +255,7 @@
 			<%-- 본문 --%>
 
 			<div class="row" style="margin-top: 50px">
+			${cityList}
 			<%-- 지도 --%>
 				<div class="col-lg-6">
 					<div id="map"></div>
