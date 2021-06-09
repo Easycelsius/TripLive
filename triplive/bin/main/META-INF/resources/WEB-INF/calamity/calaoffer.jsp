@@ -35,8 +35,7 @@
 
 							<div class="search_tabs_container">
 								<div class="search_tabs d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
-									<div class="search_tab active d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="../../images/logo.png" alt=""><span>대륙/국가 검색</span></div>
-									<div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="../../images/milestone_3.png" alt="">직접 검색</div>
+									<div class="search_tab active d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="../../images/logo.png" alt=""><span>긴급 속보 검색</span></div>
 									<!-- <div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="../images/departure.png" alt="">flights</div>
 									<div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="../images/island.png" alt="">trips</div>
 									<div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="../images/cruise.png" alt="">cruises</div>
@@ -49,23 +48,7 @@
 
 							<div class="search_panel active">
 								<form action="#" id="search_form_1" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
-									<div class="search_item">
-										<div>대륙 continent</div>
-										<select name="calcontinent" id="calcontinent" class="dropdown_item_select search_input" required="required">
-											<option>전체</option>
-											<option>동북아시아</option>
-											<option>북미</option>
-											<option>중남미</option>
-											<option>서남아시아</option>
-											<option>동남아시아</option>
-											<option>중동</option>
-											<option>아프리카</option>
-											<option>러시아-중앙아시아</option>
-											<option>유럽</option>
-											<option>오세아니아</option>
-										</select>
-										<!-- <input type="text" class="destination search_input" required="required"> -->
-									</div>
+									
 									<div class="search_item">
 										<div>국가 country</div>
 										<select name="calcountry" id="calcountry" class="dropdown_item_select search_input" required="required">
@@ -84,7 +67,10 @@
 										</select>
 
 									</div>
-
+									<div class="search_item">
+										<div></div>
+										<input type="text" class="destination search_input" required="required" placeholder="검색할 국가를 입력하세요.">
+									</div>
 									<!-- <div class="search_item">
 										<div>adults</div>
 										<select name="adults" id="adults_1" class="dropdown_item_select search_input">
