@@ -1,4 +1,3 @@
-
 <%@ page language="java" contentType="text/html; charset=utf-8"
 pageEncoding="utf-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -14,8 +13,27 @@ pageEncoding="utf-8"%>
 <link href="../../plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../../styles/offers_styles.css">
 <link rel="stylesheet" type="text/css" href="../../styles/offers_responsive.css">
-</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" type="text/javascript"></script>
 
+<script>
+	$(function() {
+		$('.offers_price').click(function(){
+			
+			
+			$(this).next().toggle('slow');
+			$('.offers_price').css('position', 'relative')
+
+		});
+
+	});
+	
+
+</script> 
+
+
+
+
+</head>
 <body>
 
 <div class="super_container">
@@ -99,43 +117,44 @@ pageEncoding="utf-8"%>
 				</div>
 			</div>
 			<c:forEach items="${list}" var="l">
-			<div class="col-lg-12">
-				<!-- Offers Grid -->
-				<div class="offers_grid">
-					<!-- Offers Item -->
-					<div class="offers_item rating_4">
-						<div class="row">
-							<div class="col-lg-1 temp_col"></div>	
+				<div class="col-lg-12">
+					<!-- Offers Grid -->
+					<div class="offers_grid">
+						<!-- Offers Item -->
+						<div class="offers_item rating_4">
+							<div class="row">
+								<div class="col-lg-1 temp_col"></div>
+								<!-- <div class="col-lg-3 col-1680-4">
+									<div class="offers_image_container">
+										Image by https://unsplash.com/@kensuarez
+										<div class="offers_image_background" style="background-image:url(../images/offer_1.jpg)"></div>
+										<div class="offer_name"><a href="single_listing.html">grand castle</a></div>
+									</div>
+								</div> -->
+								
 								<div class="col-lg-11">
-									<div class='card'>
-										<div class="card-header" id="headingOne">
-										<div class="offers_content mb-0">
-											<button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-											<div class="offers_price" style="width: 80%; text-overflow: ellipsis;  white-space: nowrap; overflow: hidden; display: block; padding:6px;">${l.title}</div>
-											</button>
+									<div class="offers_content" >
+										<div id="showall" class="offers_price" style="width: 80%; text-overflow: ellipsis;  white-space: nowrap; overflow: hidden; display: block; padding:6px;">${l.title}</div>
+			
+										<div class="offers_text" id='content' style="width: 80%; text-overflow: ellipsis;  white-space: nowrap; overflow: hidden; display: none;">${l.txtOriginCn}</div>
+			
+										<div class="offer_reviews">
+											<div class="offer_reviews_content">
+												<div class="offer_reviews_title">${l.countryNm}</div>
+												<div class="offer_reviews_subtitle float-right">작성일: ${l.wrtDt}</div>
+											</div>
+											<div class="offer_reviews_content">
+											</div>
+											<img src="../../img/countryflag/${l.isoAlp2}.gif" alt="" class="offer_reviews_rating text-center" >
 										</div>
-									<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-										<div class='card-body'>
-										<p class="offers_text">{l.txtOriginCn}</p>
-										</div>
+										<hr>
 									</div>
-								</div>	
-									<span>${l.wrtDt}</span>
-									
-									<div class="offer_reviews">
-										<div class="offer_reviews_content">
-											<div class="offer_reviews_title">${l.countryNm}</div>
-											<div class="offer_reviews_subtitle float-right"></div>
-										</div>
-										<img src="../../img/countryflag/${l.isoAlp2}.gif" alt="" class="offer_reviews_rating text-center" >
-									</div>
-									<hr>
 								</div>
+								
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
 			</c:forEach>
 
 
