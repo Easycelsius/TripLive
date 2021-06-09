@@ -9,6 +9,8 @@ import com.triplive.service.BdImageServiceImpl;
 import com.triplive.service.CommentServiceImpl;
 import com.triplive.service.CommunityService;
 import com.triplive.service.CommunityServiceImpl;
+import com.triplive.service.SafetyServiceImpl;
+import com.triplive.service.UserServiceImpl;
 import com.triplive.vo.PageRequestDTO;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,7 +39,6 @@ import javax.swing.filechooser.FileSystemView;
 import javax.validation.Valid;
 
 @Controller
-@RequestMapping("")
 @Log4j2
 public class MainController {
 
@@ -49,6 +50,15 @@ public class MainController {
 
     @Autowired
     private BdImageServiceImpl imageService;
+
+    @Autowired
+    private CommentServiceImpl CommentService;
+    
+    @Autowired
+    private SafetyServiceImpl SafetyService;
+
+    @Autowired
+    private UserServiceImpl UserService;
 
     
     // community page 메인

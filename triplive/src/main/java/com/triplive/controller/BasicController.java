@@ -11,7 +11,7 @@ public class BasicController {
     @RequestMapping(value= {"/", "index.do"})
     public String index() {
         log.info("main page 요청");
-        return "index";
+        return "main/index";
     }
 }
 
