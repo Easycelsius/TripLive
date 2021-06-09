@@ -13,19 +13,22 @@ pageEncoding="utf-8"%>
 <link href="../../plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../../styles/offers_styles.css">
 <link rel="stylesheet" type="text/css" href="../../styles/offers_responsive.css">
+<link rel="stylesheet" type="text/css" href="../../styles/elements_styles.css">
+<link rel="stylesheet" type="text/css" href="../../styles/elements_responsive.css">
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" type="text/javascript"></script>
 
 <script>
-	$(function() {
-		$('.offers_price').click(function(){
+	// $(function() {
+	// 	$('.offers_price').click(function(){
 			
 			
-			$(this).next().toggle('slow');
-			$('.offers_price').css('position', 'relative')
+	// 		$(this).next().toggle('slow');
+	// 		$('.offers_price').css('position', 'relative')
 
-		});
+	// 	});
 
-	});
+	// });
 	
 
 </script> 
@@ -116,10 +119,12 @@ pageEncoding="utf-8"%>
 					</ul>
 				</div>
 			</div>
+			
+
 			<c:forEach items="${list}" var="l">
 				<div class="col-lg-12">
 					<!-- Offers Grid -->
-					<div class="offers_grid">
+					<div class="">
 						<!-- Offers Item -->
 						<div class="offers_item rating_4">
 							<div class="row">
@@ -133,10 +138,20 @@ pageEncoding="utf-8"%>
 								</div> -->
 								
 								<div class="col-lg-11">
+									<div class="elements_accordions">
+
+										<div class="accordion_container">
+											<div class="accordion d-flex flex-row align-items-center"><div>${l.title}</div></div>
+											<div class="accordion_panel">
+												<p>${l.txtOriginCn}</p>
+											</div>
+										</div>
+									</div>
+	
 									<div class="offers_content" >
-										<div id="showall" class="offers_price" style="width: 80%; text-overflow: ellipsis;  white-space: nowrap; overflow: hidden; display: block; padding:6px;">${l.title}</div>
+										<div id="showall" class="offers_price" style="width: 80%; text-overflow: ellipsis;  white-space: nowrap; overflow: hidden; display: block; padding:6px;"></div>
 			
-										<div class="offers_text" id='content' style="width: 80%; text-overflow: ellipsis;  white-space: nowrap; overflow: hidden; display: none;">${l.txtOriginCn}</div>
+										<div class="offers_text" id='content' style="width: 80%; text-overflow: ellipsis;  white-space: nowrap; overflow: hidden;"></div>
 			
 										<div class="offer_reviews">
 											<div class="offer_reviews_content">
@@ -209,6 +224,17 @@ pageEncoding="utf-8"%>
 <script src="../../plugins/easing/easing.js"></script>
 <script src="../../plugins/parallax-js-master/parallax.min.js"></script>
 <script src="../../js/offers_custom.js"></script>
+<script src="../../js/elements_custom.js"></script>
+<script src="../../styles/bootstrap4/popper.js"></script>
+<script src="../../styles/bootstrap4/bootstrap.min.js"></script>
+<script src="../../plugins/greensock/TweenMax.min.js"></script>
+<script src="../../plugins/greensock/TimelineMax.min.js"></script>
+<script src="../../plugins/scrollmagic/ScrollMagic.min.js"></script>
+<script src="../../plugins/greensock/animation.gsap.min.js"></script>
+<script src="../../plugins/greensock/ScrollToPlugin.min.js"></script>
+<script src="../../plugins/progressbar/progressbar.min.js"></script>
+<script src="../../plugins/jquery-circle-progress-1.2.2/circle-progress.js"></script>
+<script src="../../plugins/parallax-js-master/parallax.min.js"></script>
 
 </body>
 
