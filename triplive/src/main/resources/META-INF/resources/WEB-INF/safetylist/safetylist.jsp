@@ -1,6 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<%
+	String pageNum = request.getParameter("page");
+	String isoAlp2 = request.getParameter("isoAlp2");
+	String keyword = request.getParameter("keyword");
+%>	
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -13,6 +19,15 @@
 <link href="../plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../styles/offers_styles.css">
 <link rel="stylesheet" type="text/css" href="../styles/offers_responsive.css">
+<script src="../js/jquery-3.2.1.min.js"></script>
+<script>
+	$(function(){
+		$(".button book_button float-left").on("click", function() {
+			alert();
+			//$(".offers_text").toggle();
+		});
+	});
+</script>
 </head>
 
 <body>
@@ -74,10 +89,9 @@
 													</button>
 													</h2>
 												</div>
-											
 												<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
 													<div class="card-body">
-														<p class="offers_text">{l.txtOriginCn}</p>
+														<p class="offers_text">${l.txtOriginCn}</p>
 													</div>
 												</div>
 											</div>
@@ -107,17 +121,18 @@
 						<nav aria-label="Page navigation example" class="col-lg-3">
 							<ul class="pagination pagination-sm">
 							<li class="page-item">
-								<a class="page-link" href="#" aria-label="Previous">
+								<a class="page-link" href="?page=${1}&isoAlp2=${param.isoAlp2}&keyword=${param.keyword}" aria-label="Previous">
 								<span aria-hidden="true">&laquo;</span>
 								<span class="sr-only">이전</span>
 								</a>
 							</li>
-							<c:forEach var="page" items="${pageList}">
+							<c:forEach var="page" items="${pageList}" begin="0" end="9" step="1" >
 								<c:if test="${page ne null}">
-									<li class="page-item"><a class="page-link" href="?page=${page}">${page}</a></li>
+									<li class="page-item"><a class="page-link" href="?page=${page}&isoAlp2=${param.isoAlp2}&keyword=${param.keyword}">${page}</a></li>
 								</c:if>
+								<c:set var="cpage" value="${page+1}"></c:set>
 							</c:forEach>
-								<a class="page-link" href="#" aria-label="Next">
+								<a class="page-link" href="?page=${cpage}&isoAlp2=${param.isoAlp2}&keyword=${param.keyword}" aria-label="Next">
 								<span aria-hidden="true">&raquo;</span>
 								<span class="sr-only">다음</span>
 								</a>
@@ -141,7 +156,6 @@
 
 </div>
 
-<script src="../js/jquery-3.2.1.min.js"></script>
 <script src="../styles/bootstrap4/popper.js"></script>
 <script src="../styles/bootstrap4/bootstrap.min.js"></script>
 <script src="../plugins/Isotope/isotope.pkgd.min.js"></script>

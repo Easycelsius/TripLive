@@ -21,10 +21,10 @@ public class SafetyListController {
     SafetyServiceImpl safetyService;
 
     @RequestMapping("/safetylist.do")
-    public String safetyBoard(Model m, @RequestParam(value = "page", defaultValue = "1") Integer pageNum, String keyword, Principal principal) {
-        log.info("safetylist.do 요청");
-        m.addAttribute("safetylist", safetyService.getSafetyList(pageNum, keyword));
-        m.addAttribute("pageList", safetyService.getPageList(pageNum, keyword));
+    public String safetyBoard(Model m, @RequestParam(value = "page", defaultValue = "1") Integer pageNum, String isoAlp2, String keyword, Principal principal) {
+        log.info("safetylist.do 요청"+isoAlp2);
+        m.addAttribute("safetylist", safetyService.getSafetyList(pageNum, isoAlp2, keyword));
+        m.addAttribute("pageList", safetyService.getPageList(pageNum, isoAlp2, keyword));
         return "safetylist/safetylist";
     }
     
