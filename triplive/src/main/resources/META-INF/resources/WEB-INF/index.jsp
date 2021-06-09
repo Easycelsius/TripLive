@@ -338,7 +338,7 @@ pageEncoding="utf-8"%>
                       justify-content-lg-center justify-content-start
                     "
                   >
-                    <img src="images/diving.	png" alt="" />환율
+                    <img src="images/diving.png" alt="" />환율
                   </div>
                 </div>
               </div>

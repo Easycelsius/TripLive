@@ -129,7 +129,7 @@ pageEncoding="utf-8"%>
                       </div>
                     </div>
                     <div class="contact_info_text">
-                      경기 성남시 수정구 창업로 54 가동 2층
+                      경기 성남시 수정구 창업로 54 가동
                     </div>
                   </li>
                   <li class="contact_info_item d-flex flex-row">
