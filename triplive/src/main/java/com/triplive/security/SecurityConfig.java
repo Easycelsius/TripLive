@@ -42,7 +42,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter
 				.antMatchers("/**").permitAll() // 전부 열어두기
 				// .antMatchers("/calamity/**").permitAll()
 				// .antMatchers("/community/**").permitAll()
-				// .antMatchers("/tripinfo/**").permitAll()
+				// .antMatchers("/safetylist/**").permitAll()
 				// .antMatchers("/user/**").permitAll()
 				// .antMatchers("/worldweather/**").permitAll()
 				.antMatchers("/admin").hasRole("ADMIN")
