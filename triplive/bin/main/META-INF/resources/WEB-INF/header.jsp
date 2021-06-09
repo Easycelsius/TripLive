@@ -112,6 +112,9 @@ pageEncoding="utf-8"%>
                   <li class="main_nav_item">
                     <a href="../worldweather/weather.do">세계날씨</a>
                   </li>
+                  <li class="main_nav_item">
+                    <a href="../manager/manager.do">관광그램</a>
+                  </li>
                 </ul>
               </div>
               <div class="content_search ml-lg-0 ml-auto">
