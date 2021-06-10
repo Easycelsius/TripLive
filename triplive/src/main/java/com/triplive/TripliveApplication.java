@@ -17,7 +17,8 @@ public class TripliveApplication {
 		// 실행전 pip install pymysql 설치 필요
 		log.info("파이썬 스크립트 실행");
 		InterpreterPython interpreter = new InterpreterPython();
-		interpreter.crawlingStart("src/main/java/com/triplive/pythonconnect/getEmbassyList2.py");
+
+		interpreter.pythonFileStart();
 	}
 
 }

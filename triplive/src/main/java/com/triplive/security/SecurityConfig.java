@@ -56,16 +56,20 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter
 				.passwordParameter("password")
 				.permitAll()
 				.and()
-			.rememberMe().key("securitykey")
-				.tokenValiditySeconds(60 * 60 * 24) //24시간
-				.and()
 			.logout() // 로그아웃 관련 설정을 진행
-				.logoutUrl("/logout.do")
+				.logoutUrl("/user/logout.do")
+				.invalidateHttpSession(true) // 로그아웃 후 세션 날리기
+				.clearAuthentication(true)
+                .deleteCookies("JSESSIONID", "remeber-me")
 				.logoutSuccessUrl("/")
-                .deleteCookies("JSESSIONID")
-                .invalidateHttpSession(true) // 로그아웃 후 세션 날리기
                 .permitAll()
-			.and().csrf().disable() // 스프링 시큐리티에서는 기본적으로 csrf와 헤더를 체크하게되어 있는데 위의 설정을 통해 체크없이 진행할수 있도록 설정해줍니다.  
+				.and()
+			.rememberMe()
+				.key("securitykey")
+				.rememberMeCookieName("remember-me")
+				.tokenValiditySeconds(60 * 10) //10분
+				.and()
+			.csrf().disable() // 스프링 시큐리티에서는 기본적으로 csrf와 헤더를 체크하게되어 있는데 위의 설정을 통해 체크없이 진행할수 있도록 설정해줍니다.  
 				.headers().disable();
     }
 

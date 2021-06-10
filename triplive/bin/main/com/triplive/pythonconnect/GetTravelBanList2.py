@@ -1,12 +1,5 @@
-
-
-
-
-# In[2]:
-
-
-# -*- coding:utf-8 -*-
 import pymysql  # 또는 mysql
+import re #re.sub를 위해 필요
 
 # 크롤링
 import requests
@@ -21,6 +14,10 @@ def xmltojson(a):
     json_type = json.dumps(dict_type)
     dict_type2 = json.loads(json_type)
     return dict_type2
+
+def convert(name): #직접 정의한 함수 (카멜 -> 스네이크 표기법)
+    s1 = re.sub('(.)([A-Z][a-z]+)', r'\1_\2', name)
+    return re.sub('([a-z0-9])([A-Z])', r'\1_\2', s1).lower()
 
 # 인증키 입력
 service_key = "VkFpJGnDjh7IRcRPA2NVbhxPLbpNjpNYgpDwwBqLMIzcFuooSit1B6qEFKRCc9WaXnmW5RQD60W3wI6YLOXGOQ%3D%3D"
@@ -40,6 +37,7 @@ print(url+queryParams) # 주소 확인용
 request = json_normalize(xmltojson(request)['response']['body']['items']['item'])
 getTravelBanList = pd.concat([getTravelBanList, pd.DataFrame(request)]) # 제이슨 형태로 변환 후, 'data'만 뽑아서 데이터프레임화
 getTravelBanList.drop_duplicates() # 중복제거
+getTravelBanList.rename(columns={x: convert(x) for x in getTravelBanList.columns}, inplace=True)
 
 # 데이터프레임 출력
 # print(getCountryNoticeList)

@@ -14,18 +14,9 @@ import java.io.IOException;
 public class InterpreterPython {
 
     public void crawlingStart(String filename){
-        // // System.setProperty("python.cahedir.skip", "true");
-        // // System.setProperty("python.import.pymysql", "false");
-        // PythonInterpreter interpreter = new PythonInterpreter();
-        // // interpreter.execfile(filename);
-        // interpreter.exec("import sys");
-        // interpreter.exec("print(sys.version)");
-        // interpreter.exec("print('python execute')");
-        // interpreter.close();
 
         String[] command = new String[2];
         command[0] = "python";
-        //command[1] = "\\workspace\\java-call-python\\src\\main\\resources\\test.py";
         command[1] = filename;
         // command[2] = "10";
         // command[3] = "20";
@@ -41,18 +32,45 @@ public class InterpreterPython {
             PumpStreamHandler pumpStreamHandler = new PumpStreamHandler(outputStream);
             DefaultExecutor executor = new DefaultExecutor();
             executor.setStreamHandler(pumpStreamHandler);
-            log.info(pumpStreamHandler);
 
             int result = executor.execute(commandLine);
             log.info(result);
             
-            // System.out.println("result: " + result);
-            // System.out.println("output: " + outputStream.toString());
+            System.out.println("result: " + result);
+            System.out.println("output: " + outputStream.toString());
+
+            outputStream.close();
+
+
         } catch (Exception e) {
             log.info(e);
         }
-        
-        
-
     }
+
+    public void pythonFileStart(){
+        // 실행할 파이썬 파일 리스트 (DB 입력용)
+		String[] pyFileList = {
+			"CountryAccidentService2" ,
+			"GetCountryAgreementList2", 
+			// "Country", // 국가코드
+			// "GetCountryFlagList2.py", 
+			"GetCountryHistoryList2", 
+			"GetCountryMapList2",
+			"GetCountrySafetyList2",
+			"GetCountrySafetyNewsListNew",
+			"GetEmbassyList2",
+			"GetEntranceVisaList2",
+			"GetLocalContactList2",
+			"GetSptravelWarningList2",
+			"GetTravelAlarmList2",
+			"GetTravelBanList2"
+		};
+
+		for(int i=0; i<pyFileList.length; i++){
+			log.info(pyFileList[i]);
+			// this.crawlingStart("triplive/src/main/java/com/triplive/pythonconnect/"+pyFileList[i]+".py"); // 지섭 경로	
+			this.crawlingStart("src/main/java/com/triplive/pythonconnect/"+pyFileList[i]+".py"); // 기타 경로
+		}
+    }
+
 }

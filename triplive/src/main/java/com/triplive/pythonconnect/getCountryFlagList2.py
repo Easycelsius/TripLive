@@ -1,11 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-
-# In[2]:
-
-
-# -*- coding:utf-8 -*-
 import pymysql  # 또는 mysql
 
 # 크롤링
