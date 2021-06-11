@@ -1,8 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
-pageEncoding="utf-8"%>
-
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
+pageEncoding="utf-8"%> <%@ taglib prefix="c"
+uri="http://java.sun.com/jsp/jstl/core" %> <%@ taglib
+uri="http://www.springframework.org/security/tags" prefix="sec" %>
 
 <!DOCTYPE html>
 <html lang="ko">
@@ -50,7 +49,7 @@ pageEncoding="utf-8"%>
                   </li>
                 </ul>
               </div>
-              
+
               <sec:authorize access="isAuthenticated()">
                 <div class="user_box ml-auto">
                   <div class="user_box_login user_box_link">
@@ -68,7 +67,6 @@ pageEncoding="utf-8"%>
                   </div>
                 </div>
               </sec:authorize>
-              
             </div>
           </div>
         </div>
@@ -105,9 +103,11 @@ pageEncoding="utf-8"%>
                   <li class="main_nav_item">
                     <a href="../community/commu.do">커뮤니티</a>
                   </li>
-                  <li class="main_nav_item"><a href="">여행지정보</a></li>
                   <li class="main_nav_item">
-                    <a href="../calamity/calamity.do">긴급속보</a>
+                    <a href="../safetylist/safetylist.do">안전정보</a>
+                  </li>
+                  <li class="main_nav_item">
+                    <a href="../calamity/calamity.do">해외 코로나 소식</a>
                   </li>
                   <li class="main_nav_item">
                     <a href="../worldweather/weather.do">세계날씨</a>
@@ -197,9 +197,11 @@ pageEncoding="utf-8"%>
             <li class="main_nav_item">
               <a href="../community/commu.do">커뮤니티</a>
             </li>
-            <li class="main_nav_item"><a href="">여행지정보</a></li>
             <li class="main_nav_item">
-              <a href="../calamity/calamity.do">긴급속보</a>
+              <a href="../safetylist/safetylist.do">안전정보</a>
+            </li>
+            <li class="main_nav_item">
+              <a href="../calamity/calamity.do">해외 코로나 소식</a>
             </li>
             <li class="main_nav_item">
               <a href="../worldweather/weather.do">세계날씨</a>
