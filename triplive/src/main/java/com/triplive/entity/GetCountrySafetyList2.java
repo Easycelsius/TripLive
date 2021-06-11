@@ -19,7 +19,7 @@ public class GetCountrySafetyList2 {
     private String countryNm; // 한글 국가명
 
     @Column(length = 50, nullable = true)
-    private String isoAlp2; // 한글 국가명
+    private String countryIsoAlp2; // 한글 국가명
  
     // @ManyToOne
     // @JoinColumn(name="iso_alp2")

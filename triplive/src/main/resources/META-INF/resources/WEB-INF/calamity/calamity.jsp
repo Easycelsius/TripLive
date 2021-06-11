@@ -4,7 +4,7 @@ pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<title>트립라이브 긴급속보</title>
+<title>COVID NEWS</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Travelix Project">
@@ -30,7 +30,7 @@ pageEncoding="utf-8"%>
 <div class="home">
 	<div class="home_background parallax-window" data-parallax="scroll" data-image-src="../../images/calamityimage.jpg"></div>
 	<div class="home_content">
-		<div class="home_title">breaking news</div>
+		<div class="home_title">COVID-19 news</div>
 	</div>
 </div>
 
