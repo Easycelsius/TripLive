@@ -50,20 +50,20 @@ public class InterpreterPython {
     public void pythonFileStart(){
         // 실행할 파이썬 파일 리스트 (DB 입력용)
 		String[] pyFileList = {
-			"CountryAccidentService2" ,
-			"GetCountryAgreementList2", 
+			// "CountryAccidentService2" ,
+			// "GetCountryAgreementList2", 
 			// "Country", // 국가코드
 			// "GetCountryFlagList2.py", 
-			"GetCountryHistoryList2", 
-			"GetCountryMapList2",
-			"GetCountrySafetyList2",
-			"GetCountrySafetyNewsListNew",
-			"GetEmbassyList2",
-			"GetEntranceVisaList2",
-			"GetLocalContactList2",
-			"GetSptravelWarningList2",
-			"GetTravelAlarmList2",
-			"GetTravelBanList2"
+			// "GetCountryHistoryList2", 
+			// "GetCountryMapList2",
+			// "GetCountrySafetyList2",
+			// "GetCountrySafetyNewsListNew",
+			// "GetEmbassyList2",
+			// "GetEntranceVisaList2",
+			// "GetLocalContactList2",
+			// "GetSptravelWarningList2",
+			// "GetTravelAlarmList2",
+			// "GetTravelBanList2"
 		};
 
 		for(int i=0; i<pyFileList.length; i++){

@@ -118,13 +118,13 @@ pageEncoding="utf-8"%>
 										</div>
 										<div class="offer_reviews_content">
 										</div>
-										<img src="../../img/countryflag/${l.isoAlp2}.gif" alt="" class="offer_reviews_rating text-center" >
+										<img src="../../img/countryflag/${l.countryIsoAlp2}.gif" alt="" class="offer_reviews_rating text-center" >
 									</div>
 									<div class="elements_accordions">
 										<div class="accordion_container">
 											<div class="accordion d-flex flex-row align-items-center" style="width: 80%; text-overflow: ellipsis;  white-space: nowrap; overflow: hidden; display: block; padding:6px;"><div>${l.title}</div></div>
 											<div class="accordion_panel">
-												<p>${l.txtOriginCn}</p>
+												${l.htmlOriginCn}
 											</div>
 											<hr>
 										</div>
