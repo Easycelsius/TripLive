@@ -21,12 +21,33 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
 <script>
-	let map;
-	let lat;
-	let lng;
+	function getParameter(name) {
+		name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+		var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+			results = regex.exec(location.search);
+		return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+	}
+
+	var map;
+	var lat;
+	var lng;
+
+	var country = ''
+	var city = 'Seoul'
+
+	if ('' != getParameter('city')) {
+		city = getParameter('city')
+		country = getParameter('country')
+	}
+
+	console.log(country)
+	console.log(city)
 
 	// 현재 날씨
-	var CurrentApiURI = 'http://api.openweathermap.org/data/2.5/weather?q=Singapore&appid=1db47184ebbc18af53fd996be840d270'
+	var CurrentApiURI = 'http://api.openweathermap.org/data/2.5/weather?q='+ city +'&appid=1db47184ebbc18af53fd996be840d270'
+
+	// 일일 날씨
+	var DayApiURI = 'http://api.openweathermap.org/data/2.5/forecast?q='+ city +'&appid=1db47184ebbc18af53fd996be840d270'
 	
 	$.ajax({
 		url: CurrentApiURI,
@@ -55,18 +76,32 @@
 		});
 	}
 
-	$(function() {
-		function timeConverterDay(UNIX_timestamp){
+	function timeConverterDay(UNIX_timestamp){
 			var a = new Date(UNIX_timestamp * 1000);
 			var b = new Date(a.getTime() + (a.getTimezoneOffset() * 60000));
 
 			return b.getDate() + '일 ' + b.getHours() + '시';
 		}	
 
-		function timeConverterCurrent(UNIX_timestamp){
-			var a = new Date(UNIX_timestamp * 1000);
-			var b = new Date(a.getTime() + (a.getTimezoneOffset() * 60000));
-			return  (b.getMonth() + 1) + '월 ' + + b.getDate() + '일 ' + b.getHours() + ':' + b.getMinutes();
+	function timeConverterCurrent(UNIX_timestamp){
+		var a = new Date(UNIX_timestamp * 1000);
+		var b = new Date(a.getTime() + (a.getTimezoneOffset() * 60000));
+		return  (b.getMonth() + 1) + '월 ' + + b.getDate() + '일 ' + b.getHours() + ':' + b.getMinutes();
+	}
+
+	$(function() {
+		if ('' != country) {
+			$("#"+country).attr("selected", "selected");
+		}
+
+		console.log($('#countryy option:selected').val())
+
+		if ('' != $('#country option:selected').val()) {
+			$('#city').val(city)
+		}
+		else {
+			$("#city").attr("placeholder", "국가를 선택하세요.")
+			$("#city").attr("disabled", "disabled")
 		}		
 
 		const labels = [
@@ -116,9 +151,6 @@
 				}
 			},
 		};
-
-		// 현재 날씨
-		var CurrentApiURI = 'http://api.openweathermap.org/data/2.5/weather?q=Singapore&appid=1db47184ebbc18af53fd996be840d270'
 		
 		$.ajax({
             url: CurrentApiURI,
@@ -157,9 +189,6 @@
 				$('#currentIcon').attr('src', imgURL)
             }
         })
-		
-		// 일일 날씨
-		var DayApiURI = 'http://api.openweathermap.org/data/2.5/forecast?q=Singapore&appid=1db47184ebbc18af53fd996be840d270'
 
 		$.ajax({
             url: DayApiURI,
@@ -183,6 +212,60 @@
 				);
             }
         })
+
+		$("#country").change(function() {
+			$("#city").val('')
+
+			if ($(this).val() == '') {
+				$("#city").attr("placeholder", "국가를 선택하세요.")
+				$("#city").attr("disabled", "disabled")
+			}
+			else {
+				$("#city").attr("placeholder", "도시를 입력하세요.")
+				$("#city").removeAttr("disabled")
+			}
+		})
+
+		var cityNameList = $(".cityNameList")
+
+		$("#city").on("propertychange change keyup paste", function(){
+			if ($(this).val() != '') {
+				var param = $('#search').serialize()
+
+				$.ajax({
+					url: "getCityNameList.do",
+					data: param,
+					type: "POST",
+					success: function(resp) {
+						cityNameList.empty()
+						cityNameList.css("border", "2px solid #dadada")
+
+						if (resp.length) {
+							for (var i in resp) {
+								var li = $('<li class="cityName"/>')
+								// var span = $('<span/>')
+								var a = $('<a class="Cname" href="weather.do?country=' + $("#country").val() + '&city=' + resp[i].cityName + '">' + resp[i].cityName + '</a>')
+								// span.append(a)
+								li.append(a)
+								cityNameList.append(li)
+							}
+						}
+						else {
+							var li = $('<li class="cityName"/>')
+							var span = $('<span>검색 결과 없음</span>')
+							li.append(span)
+							cityNameList.append(li)
+						}
+					}
+				})
+			}
+			else {
+				cityNameList.empty()
+				cityNameList.css("border", "none")
+			}
+		});
+
+		$(".")
 	})
 </script>
 
@@ -203,6 +286,31 @@
 	.search_input {
 		border: 2px solid #dadada;
 		width: 47%;
+	}
+
+	.cityNameList {
+		width: 47%;
+		position: absolute;
+		left: 48%;
+		background-color: white;
+		z-index: 1;
+	}
+
+	.cityName {
+		padding: 0 15px;
+		cursor: pointer;
+		color: #929191;
+		font-size: 13px;
+		font-weight: 600;
+		height: 23px;
+		line-height: 23px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+
+	.Cname {
+		color: #929191;
 	}
 </style>
 
@@ -233,20 +341,24 @@
 					<!-- Offers Sorting -->
 					<div class="offers_sorting_container">
 						<div style="width:47%; margin: 0px auto;" class="float-right">
-							<select name="iso_alp2" id="country" class="dropdown_item_select search_input">
-								<option value="">전체</option>
-								<option value="TW">대만</option>
-								<option value="MO">마카오</option>
-								<option value="TH">미국</option>
-								<option value="VN">베트남</option>
-								<option value="SG">싱가포르</option>
-								<option value="JP">일본</option>
-								<option value="CN">중국</option>
-								<option value="TH">태국</option>
-								<option value="PH">필리핀</option>
-								<option value="HK">홍콩</option>
-							</select>
-							<input name="keyword" type="text" class="destination search_input" required="required">
+							<form id="search">
+								<select name="country" id="country" class="dropdown_item_select search_input">
+									<option value="">전체</option>
+									<option value="TW" id="TW">대만</option>
+									<option value="MO" id="MO">마카오</option>
+									<option value="US" id="US">미국</option>
+									<option value="VN" id="VN">베트남</option>
+									<option value="SG" id="SG">싱가포르</option>
+									<option value="JP" id="JP">일본</option>
+									<option value="CN" id="CN">중국</option>
+									<option value="TH" id="TH">태국</option>
+									<option value="PH" id="PH">필리핀</option>
+									<option value="HK" id="HK">홍콩</option>
+								</select>
+								<input id="city" name="input" type="text" class="destination search_input" required="required">
+							</form>
+							<ul class="cityNameList">
+							</ul>
 						</div>
 					</div>
 				</div>
