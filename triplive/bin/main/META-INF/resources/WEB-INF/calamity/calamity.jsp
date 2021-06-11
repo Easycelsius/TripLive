@@ -4,7 +4,7 @@ pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<title>트립라이브 긴급속보</title>
+<title>COVID NEWS</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Travelix Project">
@@ -30,7 +30,7 @@ pageEncoding="utf-8"%>
 <div class="home">
 	<div class="home_background parallax-window" data-parallax="scroll" data-image-src="../../images/calamityimage.jpg"></div>
 	<div class="home_content">
-		<div class="home_title">breaking news</div>
+		<div class="home_title">COVID-19 news</div>
 	</div>
 </div>
 
@@ -118,13 +118,13 @@ pageEncoding="utf-8"%>
 										</div>
 										<div class="offer_reviews_content">
 										</div>
-										<img src="../../img/countryflag/${l.isoAlp2}.gif" alt="" class="offer_reviews_rating text-center" >
+										<img src="../../img/countryflag/${l.countryIsoAlp2}.gif" alt="" class="offer_reviews_rating text-center" >
 									</div>
 									<div class="elements_accordions">
 										<div class="accordion_container">
 											<div class="accordion d-flex flex-row align-items-center" style="width: 80%; text-overflow: ellipsis;  white-space: nowrap; overflow: hidden; display: block; padding:6px;"><div>${l.title}</div></div>
 											<div class="accordion_panel">
-												<p>${l.txtOriginCn}</p>
+												${l.htmlOriginCn}
 											</div>
 											<hr>
 										</div>

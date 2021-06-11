@@ -11,8 +11,8 @@ import com.triplive.entity.GetCountrySafetyList2;
 @Repository("SafetyListRepository")
 public interface SafetyListRepository extends JpaRepository<GetCountrySafetyList2, String> {
     // 특수 검색 기능
-    List<GetCountrySafetyList2> findAllByIsoAlp2(String isoAlp2, Pageable pageable);
-    Long countByIsoAlp2(String isoAlp2);
+    List<GetCountrySafetyList2> findAllByCountryIsoAlp2(String isoAlp2, Pageable pageable);
+    Long countByCountryIsoAlp2(String isoAlp2);
 
     // 키워드 검색 기능
     List<GetCountrySafetyList2> findAllByTxtOriginCnContainingOrTitleContaining(String keyword1, String keyword2, Pageable pageable);
