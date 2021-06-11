@@ -7,16 +7,16 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-import com.triplive.entity.GetCountrySafetyList2;
+import com.triplive.entity.GetCountrySafetyNewsListNew;
 @Repository("CalamityRepository")
-public interface CalamityRepository extends JpaRepository<GetCountrySafetyList2, String> {
+public interface CalamityRepository extends JpaRepository<GetCountrySafetyNewsListNew, String> {
     
     // // 특수 검색 기능
-     List<GetCountrySafetyList2> findAllByIsoAlp2(String isoAlp2, Pageable pageable);
-     Long countByIsoAlp2(String isoAlp2);
+     List<GetCountrySafetyNewsListNew> findAllByCountryIsoAlp2(String isoAlp2, Pageable pageable);
+     Long countByCountryIsoAlp2(String isoAlp2);
 
     // // 키워드 검색 기능
-    List<GetCountrySafetyList2> findAllByTitleContainingOrCountryNmContaining(String keyword1, String keyword2, Pageable pageable);
+    List<GetCountrySafetyNewsListNew> findAllByTitleContainingOrCountryNmContaining(String keyword1, String keyword2, Pageable pageable);
     Long countByTitleContainingOrCountryNmContaining(String keyword1, String keyword2);
 
     
