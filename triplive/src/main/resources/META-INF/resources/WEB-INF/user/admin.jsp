@@ -54,6 +54,32 @@ pageEncoding="utf-8"%>
     <link rel="stylesheet" type="text/css" href="../../styles/elements_styles.css">
     <link rel="stylesheet" type="text/css" href="../../styles/elements_responsive.css">
 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="keywords" content="bootstrap, bootstrap admin template, admin theme, admin dashboard, dashboard template, admin template, responsive" />
+    <meta name="author" content="Codedthemes" />
+    <!-- Favicon icon -->
+    <link rel="icon" href="./../resources/assets/images/favicon.ico" type="image/x-icon">
+    <!-- Google font-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+    <!-- waves.css -->
+    <link rel="stylesheet" href="./../resources/assets/pages/waves/css/waves.min.css" type="text/css" media="all">
+    <!-- Required Fremwork -->
+    <link rel="stylesheet" type="text/css" href="./../resources/assets/css/bootstrap/css/bootstrap.min.css">
+    <!-- themify-icons line icon -->
+    <link rel="stylesheet" type="text/css" href="./../resources/assets/icon/themify-icons/themify-icons.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" type="text/css" href="./../resources/assets/icon/font-awesome/css/font-awesome.min.css">
+    <!-- ico font -->
+    <link rel="stylesheet" type="text/css" href="./../resources/assets/icon/icofont/css/icofont.css">
+    <!-- morris chart -->
+    <link rel="stylesheet" type="text/css" href="./../resources/assets/css/morris.js/css/morris.css">
+    <!-- Style.css -->
+    <link rel="stylesheet" type="text/css" href="./../resources/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="./../resources/assets/css/jquery.mCustomScrollbar.css">
+
     
 </head>
 
@@ -72,10 +98,10 @@ pageEncoding="utf-8"%>
 <div class="home">
 	<div class="home_background parallax-window" data-parallax="scroll" data-image-src="../../images/calamityimage.jpg"></div>
 	<div class="home_content">
-		<div class="home_title">breaking news</div>
+		<div class="home_title">admin</div>
 	</div>
 </div>
-
+    <!-- Pre-loader start -->
     <div class="theme-loader">
         <div class="loader-track">
             <div class="preloader-wrapper">
@@ -133,38 +159,14 @@ pageEncoding="utf-8"%>
         <div class="pcoded-overlay-box"></div>
         <div class="pcoded-container navbar-wrapper">
             
+            <!-- 헤더  -->
 
             <div class="pcoded-main-container">
                 <div class="pcoded-wrapper">
                 
-                    
+                 <!-- 사이드바  -->
                     
                     <div class="pcoded-content">
-                        <!-- Page-header start -->
-                        <div class="page-header">
-                            <div class="page-block">
-                                <div class="row align-items-center">
-                                    <div class="col-md-8">
-                                        <div class="page-header-title">
-                                            <h5 class="m-b-10">Morris Chart</h5>
-                                            <p class="m-b-0">Lorem Ipsum is simply dummy text of the printing</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <ul class="breadcrumb">
-                                            <li class="breadcrumb-item">
-                                                <a href="index.html"> <i class="fa fa-home"></i> </a>
-                                            </li>
-                                            <li class="breadcrumb-item"><a href="#!">Chart</a>
-                                            </li>
-                                            <li class="breadcrumb-item"><a href="#!">Morris Chart</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Page-header end -->
                         <div class="pcoded-inner-content">
                             <!-- Main-body start -->
                             <div class="main-body">
@@ -172,7 +174,7 @@ pageEncoding="utf-8"%>
                                     <div class="page-body">
                                         <div class="row">
                                             <!-- SITE VISIT CHART start -->
-                                            <div class="col-md-12 col-lg-6">
+                                            <!-- <div class="col-md-12 col-lg-6">
                                                 <div class="card">
                                                     <div class="card-header">
                                                         <h5>Site Visit Chart</h5>
@@ -182,17 +184,17 @@ pageEncoding="utf-8"%>
                                                         <div id="morris-site-visit"></div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div> -->
                                             <!-- SITE VISIT CHART Ends -->
                                             <!-- Bar Chart start -->
-                                            <div class="col-md-12 col-lg-6">
+                                            <div class="col-lg-12">
                                                 <div class="card">
                                                     <div class="card-header">
-                                                        <h5>Bar Chart</h5>
-                                                        <span>lorem ipsum dolor sit amet, consectetur adipisicing elit</span>
+                                                        <h5>월별 신규 회원 수</h5>
+                                                        <span>월별 신규로 가입한 회원 수를 파악할 수 있습니다</span>
                                                     </div>
                                                     <div class="card-block">
-                                                        <div id="morris-bar-chart"></div>
+                                                        <div id="line-example"></div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -201,8 +203,8 @@ pageEncoding="utf-8"%>
                                             <div class="col-lg-12">
                                                 <div class="card">
                                                     <div class="card-header">
-                                                        <h5>Extra Area Chart</h5>
-                                                        <span>lorem ipsum dolor sit amet, consectetur adipisicing elit</span>
+                                                        <h5>월별 컨택 건수</h5>
+                                                        <span>월별로 생성한 컨택과 성사된 컨택이 나타납니다</span>
                                                     </div>
                                                     <div class="card-block">
                                                         <div id="morris-extra-area"></div>
@@ -211,7 +213,7 @@ pageEncoding="utf-8"%>
                                             </div>
                                             <!-- EXTRA AREA CHART Ends -->
                                             <!-- Area Chart start -->
-                                            <div class="col-lg-12">
+                                            <!-- <div class="col-lg-12">
                                                 <div class="card">
                                                     <div class="card-header">
                                                         <h5>Area Chart</h5>
@@ -221,23 +223,23 @@ pageEncoding="utf-8"%>
                                                         <div id="area-example"></div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div> -->
                                             <!-- Area Chart Ends -->
                                             <!-- LINE CHART start -->
-                                            <div class="col-md-12 col-lg-6">
+                                            <div class="col-md-12 col-lg-12">
                                                 <div class="card">
                                                     <div class="card-header">
-                                                        <h5>Line Chart</h5>
-                                                        <span>lorem ipsum dolor sit amet, consectetur adipisicing elit</span>
+                                                        <h5>컨택 생성 유저 순위</h5>
+                                                        <span>유저별 컨택 생성 순위입니다</span>
                                                     </div>
                                                     <div class="card-block">
-                                                        <div id="line-example"></div>
+                                                        <div id="morris-bar-chart"></div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <!-- LINE CHART Ends -->
                                             <!-- Donut chart start -->
-                                            <div class="col-md-12 col-lg-6">
+                                            <!-- <div class="col-md-12 col-lg-6">
                                                 <div class="card">
                                                     <div class="card-header">
                                                         <h5>Donut Chart</h5>
@@ -247,7 +249,7 @@ pageEncoding="utf-8"%>
                                                         <div id="donut-example"></div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div> -->
                                             <!-- Donut chart Ends -->
                                         </div>
                                     </div>
@@ -263,6 +265,52 @@ pageEncoding="utf-8"%>
         </div>
     </div>
 
+
+
+    <!-- Warning Section Starts -->
+    <!-- Older IE warning message -->
+    <!--[if lt IE 10]>
+<div class="ie-warning">
+    <h1>Warning!!</h1>
+    <p>You are using an outdated version of Internet Explorer, please upgrade <br/>to any of the following web browsers to access this website.</p>
+    <div class="iew-container">
+        <ul class="iew-download">
+            <li>
+                <a href="http://www.google.com/chrome/">
+                    <img src="assets/images/browser/chrome.png" alt="Chrome">
+                    <div>Chrome</div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.mozilla.org/en-US/firefox/new/">
+                    <img src="assets/images/browser/firefox.png" alt="Firefox">
+                    <div>Firefox</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.opera.com">
+                    <img src="assets/images/browser/opera.png" alt="Opera">
+                    <div>Opera</div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.apple.com/safari/">
+                    <img src="assets/images/browser/safari.png" alt="Safari">
+                    <div>Safari</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                    <img src="assets/images/browser/ie.png" alt="">
+                    <div>IE (9 & above)</div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <p>Sorry for the inconvenience!</p>
+</div>
+<![endif]-->
+    <!-- Warning Section Ends -->
     
 
     <!-- Warning Section Starts -->
@@ -310,13 +358,6 @@ pageEncoding="utf-8"%>
 <![endif]-->
     <!-- Warning Section Ends -->
 
-    
-
-
-
-
-
-
     <script src="../../js/jquery-3.2.1.min.js"></script>
     <script src="../../styles/bootstrap4/popper.js"></script>
     <script src="../../styles/bootstrap4/bootstrap.min.js"></script>
@@ -354,6 +395,31 @@ pageEncoding="utf-8"%>
     <script src="../assets/js/vertical/vertical-layout.min.js "></script>
 
     <script type="text/javascript" src="../assets/js/script.js "></script>
+    
+
+    <!-- Warning Section Ends -->
+    <!-- Required Jquery -->
+    <script type="text/javascript" src="./../resources/assets/js/jquery/jquery.min.js "></script>
+    <script type="text/javascript" src="./../resources/assets/js/jquery-ui/jquery-ui.min.js "></script>
+    <script type="text/javascript" src="./../resources/assets/js/popper.js/popper.min.js"></script>
+    <script type="text/javascript" src="./../resources/assets/js/bootstrap/js/bootstrap.min.js "></script>
+    <!-- waves js -->
+    <script src="./../resources/assets/pages/waves/js/waves.min.js"></script>
+    <!-- jquery slimscroll js -->
+    <script type="text/javascript" src="./../resources/assets/js/jquery-slimscroll/jquery.slimscroll.js"></script>
+    <!-- Morris Chart js -->
+    <script src="./../resources/assets/js/raphael/raphael.min.js"></script>
+    <script src="./../resources/assets/js/morris.js/morris.js"></script>
+    <!-- Custom js -->
+    <!-- <script src="./../resources/assets/pages/chart/morris/morris-custom-chart.js"></script> -->
+    <script src="./../resources/assets/js/pcoded.min.js"></script>
+    <script src="./../resources/assets/js/vertical/vertical-layout.min.js"></script>
+    <script src="./../resources/assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="./../resources/assets/js/script.js"></script>
+
+
+    
+
 </body>
 
 </html>
