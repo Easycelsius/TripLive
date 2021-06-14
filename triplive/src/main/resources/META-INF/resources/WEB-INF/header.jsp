@@ -62,8 +62,11 @@ uri="http://www.springframework.org/security/tags" prefix="sec" %>
                   <div class="user_box_login user_box_link">
                     <a href="../user/login_resist_form.do">로그인</a>
                   </div>
-                  <div class="user_box_register user_box_link">
+                  <div class="user_box_login user_box_link">
                     <a href="../user/login_resist_form.do">회원가입</a>
+                  </div>
+                  <div class="user_box_register user_box_link">
+                    <a href="../user/admin.do">관리자</a>
                   </div>
                 </div>
               </sec:authorize>
