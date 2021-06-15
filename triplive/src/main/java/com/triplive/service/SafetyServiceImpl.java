@@ -54,7 +54,7 @@ public class SafetyServiceImpl implements SafetyService{
 
                 if(!"".equals(isoAlp2) && isoAlp2 != null){
                         log.info("특수 검색 진행 : 국가");
-                        return safetyDAO.findAllByIsoAlp2(isoAlp2, pageable);
+                        return safetyDAO.findAllByCountryIsoAlp2(isoAlp2, pageable);
                 } else if(!"".equals(keyword) && keyword != null){
                         log.info("특수 검색 진행 : 키워드");
                         return safetyDAO.findAllByTxtOriginCnContainingOrTitleContaining(keyword, keyword, pageable);
@@ -70,7 +70,7 @@ public class SafetyServiceImpl implements SafetyService{
         @Transactional
         public Long getSafetyListCount(String isoAlp2, String keyword) {
                 if(!"".equals(isoAlp2) && isoAlp2 != null){
-                        return safetyDAO.countByIsoAlp2(isoAlp2);
+                        return safetyDAO.countByCountryIsoAlp2(isoAlp2);
                 }
 
                 if(!"".equals(keyword) && keyword != null){
