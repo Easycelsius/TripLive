@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 pageEncoding="utf-8"%>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="ko">
   <head>
@@ -281,9 +281,8 @@ pageEncoding="utf-8"%>
                       justify-content-lg-center justify-content-start
                     "
                   >
-                    <img src="../images/suitcase.png" alt="" /><span
-                      >안전공지</span
-                    >
+                  <img src="../images/suitcase.png" alt="" /><span>
+                    <a href="#section_title1"> 안전공지</a></span>
                   </div>
                   <div
                     class="
@@ -678,134 +677,51 @@ pageEncoding="utf-8"%>
             </div>
           </div>
           <div class="row intro_items">
-            <!-- Intro Item -->
-
-            <div class="col-lg-4 intro_col">
-              <div class="intro_item">
-                <div class="intro_item_overlay"></div>
-                <!-- Image by https://unsplash.com/@dnevozhai -->
-                <div
-                  class="intro_item_background"
-                  style="
-                    background-image: url(../img/background/destinations-18.jpg);
-                  "
-                ></div>
-                <div
-                  class="
-                    intro_item_content
-                    d-flex
-                    flex-column
-                    align-items-center
-                    justify-content-center
-                  "
-                >
-                  <div class="intro_date">2021년 03월 23일</div>
-                  <div class="button intro_button">
-                    <div class="button_bcg"></div>
-                    <a href="#"
-                      >자세히 보기<span></span><span></span><span></span
-                    ></a>
-                  </div>
-                  <div class="intro_center text-center">
-                    <h1>일본</h1>
-                    <div class="intro_price">
-                      일본의 긴급사태선언 관련 안전 공지(1.8.)
-                    </div>
-                    <div class="rating rating_4">
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Intro Item -->
-
-            <div class="col-lg-4 intro_col">
-              <div class="intro_item">
-                <div class="intro_item_overlay"></div>
-                <!-- Image by https://unsplash.com/@hellolightbulb -->
-                <div
-                  class="intro_item_background"
-                  style="
-                    background-image: url(../img/background/The_Golden_Gate_Bridge.jpg);
-                  "
-                ></div>
-                <div
-                  class="
-                    intro_item_content
-                    d-flex
-                    flex-column
-                    align-items-center
-                    justify-content-center
-                  "
-                >
-                  <div class="intro_date">2021년 01월 30일</div>
-                  <div class="button intro_button">
-                    <div class="button_bcg"></div>
-                    <a href="#"
-                      >자세히 보기<span></span><span></span><span></span
-                    ></a>
-                  </div>
-                  <div class="intro_center text-center">
-                    <h1>독일</h1>
-                    <div class="intro_price">
-                      코로나19 관련 독일 공항 이용 안내(마스크 착용 의무)
-                    </div>
-                    <div class="rating rating_4">
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star"></i>
+              <!-- Intro Item -->
+                <c:forEach items="${safetylist}" var="l" varStatus="status">
+                <c:if test="${ status.index le 2 }">            
+                  <div class="col-lg-4 intro_col">
+                    <div class="intro_item">
+                      <div class="intro_item_overlay"></div>
+                      <!-- Image by https://unsplash.com/@dnevozhai -->
+                      <div
+                        class="intro_item_background"
+                        style="
+                          background-image: url(../img/background/destinations-18.jpg);
+                        "
+                      ></div>
+                      <div
+                        class="
+                          intro_item_content
+                          d-flex
+                          flex-column
+                          align-items-center
+                          justify-content-center
+                        "
+                      >
+                        <div class="intro_date">${l.wrtDt}</div>
+                        <div class="button intro_button">
+                          <div class="button_bcg"></div>
+                          <a href="#"
+                            >자세히 보기<span></span><span></span><span></span
+                          ></a>
+                        </div>
+                        <div class="intro_center text-center">
+                          <h1>${l.countryNm}</h1>
+                          <div class="intro_price">
+                              ${l.title}
+                          </div>
+                          <div class="rating rating_4">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Intro Item -->
-
-            <div class="col-lg-4 intro_col">
-              <div class="intro_item">
-                <div class="intro_item_overlay"></div>
-                <!-- Image by https://unsplash.com/@willianjusten -->
-                <div
-                  class="intro_item_background"
-                  style="
-                    background-image: url(../img/background/destinations-8.jpg);
-                  "
-                ></div>
-                <div
-                  class="
-                    intro_item_content
-                    d-flex
-                    flex-column
-                    align-items-center
-                    justify-content-center
-                  "
-                >
-                  <div class="intro_date">2020년 08월 19일</div>
-                  <div class="button intro_button">
-                    <div class="button_bcg"></div>
-                    <a href="#"
-                      >자세히 보기<span></span><span></span><span></span
-                    ></a>
-                  </div>
-                  <div class="intro_center text-center">
-                    <h1>중국</h1>
-                    <div class="intro_price">
-                      중국 간쑤성 브루셀라병 관련 안전 공지
-                    </div>
-                    <div class="rating rating_4">
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+                </c:if>
+                </c:forEach>
           </div>
         </div>
       </div>
@@ -823,87 +739,27 @@ pageEncoding="utf-8"%>
           <div class="row">
             <div class="col">
               <!-- CTA Slider -->
-
               <div class="cta_slider_container">
-                <div class="owl-carousel owl-theme cta_slider">
+                <div class="owl-carousel owl-theme cta_slider">                  
+                  <c:forEach items="${safetylist}" var="l" begin="0" end="2">
                   <!-- CTA Slider Item -->
                   <div class="owl-item cta_item text-center">
                     <div class="cta_title">국가∙지역별 사건사고 유형</div>
                     <div class="rating_r rating_r_4">
-                      <i></i>
-                      <i></i>
-                      <i></i>
-                      <i></i>
-                      <div></div>
-                    </div>
-                    <p class="cta_text">
-                      ㅇ 그리스 치안은 비교적 안전한 편에 속하나, 관광객을
-                      노리는 다양한 형태의 소매치기, 도난 사건 등으로 피해를
-                      입는 경우가 많이 발생하고 있음<br />
-
-                      ㅇ 최근 아크로폴리스 및 아레이오파고스 언덕, 필로파푸스
-                      언덕 등에서 가방을 발 밑에 두고 아크로폴리스를 배경으로
-                      사진을 찍다가 가방을 통째로 도난 당하는 사건이 급증하고
-                      있음. 짐을 내려놓는 등의 행동은 도난의 위험이 매우 높음...
-                    </p>
-                    <div class="button cta_button">
-                      <div class="button_bcg"></div>
-                      <a href="#"
-                        >바로가기<span></span><span></span><span></span
-                      ></a>
+                      <p class="cta_text">
+                        ${l.title},${l.txtOriginCn}
+                      </p>
+                      <div class="button cta_button">
+                        <div class="button_bcg"></div>
+                        <a href="#">바로가기<span></span>
+                        </a>
+                      </div>
                     </div>
                   </div>
-
-                  <!-- CTA Slider Item -->
-                  <div class="owl-item cta_item text-center">
-                    <div class="cta_title">국가∙지역별 사건사고 유형</div>
-                    <div class="rating_r rating_r_4">
-                      <i></i>
-                      <i></i>
-                      <i></i>
-                      <i></i>
-                      <div></div>
-                    </div>
-                    <p class="cta_text">
-                      [치안상황] ㅇ 동유럽과 북아프리카 지역에서 온 유랑자들이
-                      짝을 이루어 관광객들에게 접근하여 소매치기를(절도) 하거나,
-                      식당(호텔)과 기차역 주변 등에서 가방을 훔치는 유형의
-                      경범죄 발생
-                    </p>
-                    <div class="button cta_button">
-                      <div class="button_bcg"></div>
-                      <a href="#"
-                        >바로가기<span></span><span></span><span></span
-                      ></a>
-                    </div>
-                  </div>
-
-                  <!-- CTA Slider Item -->
-
-                  <div class="owl-item cta_item text-center">
-                    <div class="cta_title">국가∙지역별 사건사고 유형</div>
-                    <div class="rating_r rating_r_4">
-                      <i></i>
-                      <i></i>
-                      <i></i>
-                      <i></i>
-                      <div></div>
-                    </div>
-                    <p class="cta_text">
-                      [내전, 테러(피랍) 사건 등 동향] ㅇ 2019.12월 시행된 대선
-                      결선투표에서 우마로 시소코 엠발로 후보 당선 결과 발표후
-                      상대 후보인 기니비사우 카보베르데 독립아프리카당(PAIGC)
-                      당수가 대법원에 이의를 제기한 상황에서 취임식을 일방
-                      강행(2020.2.27.)함.
-                    </p>
-                    <div class="button cta_button">
-                      <div class="button_bcg"></div>
-                      <a href="#"
-                        >바로가기<span></span><span></span><span></span
-                      ></a>
-                    </div>
-                  </div>
+                  </c:forEach>                              
                 </div>
+              </div>
+            </div>
 
                 <!-- CTA Slider Nav - Prev -->
                 <div class="cta_slider_nav cta_slider_prev">
@@ -985,12 +841,11 @@ pageEncoding="utf-8"%>
       </div>
 
       <!-- Offers -->
-
       <div class="offers">
         <div class="container">
           <div class="row">
             <div class="col text-center">
-              <h2 class="section_title">국가별 재외공관 정보</h2>
+              <h2 class="section_title" id="section_title1">국가별 재외공관 정보</h2>
             </div>
           </div>
           <div class="row offers_items">
@@ -1022,25 +877,9 @@ pageEncoding="utf-8"%>
                         1-7-32 <br />Minamiazabu Minato-ku, Tokyo, Japan,
                       </p>
                       <div class="offers_icons">
-                        <ul class="offers_icons_list">
-                          <li class="offers_icons_item">
-                            <img src="../images/post.png" alt="" />
-                          </li>
-                          <li class="offers_icons_item">
-                            <img src="../images/compass.png" alt="" />
-                          </li>
-                          <li class="offers_icons_item">
-                            <img src="../images/bicycle.png" alt="" />
-                          </li>
-                          <li class="offers_icons_item">
-                            <img src="../images/sailboat.png" alt="" />
-                          </li>
-                        </ul>
                       </div>
                       <div class="offers_link">
-                        <a href="http://overseas.mofa.go.kr/jp-ko/index.do"
-                          >홈페이지 바로가기</a
-                        >
+                        <img src="img/QRimage/QRCodeImg.jpg" width="150px" height="100px">
                       </div>
                     </div>
                   </div>
@@ -1076,20 +915,6 @@ pageEncoding="utf-8"%>
                         DongfangdongLu Chaoyang District, Beijing, China 100600
                       </p>
                       <div class="offers_icons">
-                        <ul class="offers_icons_list">
-                          <li class="offers_icons_item">
-                            <img src="../images/post.png" alt="" />
-                          </li>
-                          <li class="offers_icons_item">
-                            <img src="../images/compass.png" alt="" />
-                          </li>
-                          <li class="offers_icons_item">
-                            <img src="../images/bicycle.png" alt="" />
-                          </li>
-                          <li class="offers_icons_item">
-                            <img src="../images/sailboat.png" alt="" />
-                          </li>
-                        </ul>
                       </div>
                       <div class="offers_link">
                         <a href="http://overseas.mofa.go.kr/cn-ko/index.do"
@@ -1132,20 +957,6 @@ pageEncoding="utf-8"%>
                         U.S.A.,
                       </p>
                       <div class="offers_icons">
-                        <ul class="offers_icons_list">
-                          <li class="offers_icons_item">
-                            <img src="../images/post.png" alt="" />
-                          </li>
-                          <li class="offers_icons_item">
-                            <img src="../images/compass.png" alt="" />
-                          </li>
-                          <li class="offers_icons_item">
-                            <img src="../images/bicycle.png" alt="" />
-                          </li>
-                          <li class="offers_icons_item">
-                            <img src="../images/sailboat.png" alt="" />
-                          </li>
-                        </ul>
                       </div>
                       <div class="offers_link">
                         <a href="http://overseas.mofa.go.kr/us-ko/index.do"
@@ -1188,20 +999,6 @@ pageEncoding="utf-8"%>
                         10310, Thailand,
                       </p>
                       <div class="offers_icons">
-                        <ul class="offers_icons_list">
-                          <li class="offers_icons_item">
-                            <img src="../images/post.png" alt="" />
-                          </li>
-                          <li class="offers_icons_item">
-                            <img src="../images/compass.png" alt="" />
-                          </li>
-                          <li class="offers_icons_item">
-                            <img src="../images/bicycle.png" alt="" />
-                          </li>
-                          <li class="offers_icons_item">
-                            <img src="../images/sailboat.png" alt="" />
-                          </li>
-                        </ul>
                       </div>
                       <div class="offers_link">
                         <a href="http://overseas.mofa.go.kr/th-ko/index.do"

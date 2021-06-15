@@ -21,7 +21,7 @@ public interface SafetyListRepository extends JpaRepository<GetCountrySafetyList
 
     /* 
         insert -> save(엔티티 객체)
-        select -> findById(키 타입), getOne(키 타입), countBy()
+        select -> findById컬럼명(키 타입), getOne(키 타입), countBy(),findAllBy칼럼명()
         update -> save(엔티티 타입)
         delete -> deleteById(키 타입), delete(엔티티 객체)
     */
