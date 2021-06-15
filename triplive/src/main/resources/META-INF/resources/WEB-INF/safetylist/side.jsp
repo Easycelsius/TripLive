@@ -4,15 +4,15 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<title>트립라이브 안전공지</title>
+<title>TRIPLIVE SAFETYNOTICE OFFER</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Travelix Project">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="../../styles/bootstrap4/bootstrap.min.css">
-<link href="../../plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="../../styles/offers_styles.css">
-<link rel="stylesheet" type="text/css" href="../../styles/offers_responsive.css">
+<link rel="stylesheet" type="text/css" href="../styles/bootstrap4/bootstrap.min.css">
+<link href="../plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../styles/offers_styles.css">
+<link rel="stylesheet" type="text/css" href="../styles/offers_responsive.css">
 </head>
 
 <body>
@@ -35,7 +35,8 @@
 
 							<div class="search_tabs_container">
 								<div class="search_tabs d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
-									<div class="search_tab active d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="../../images/logo.png" alt=""><span>긴급 속보 검색</span></div>
+									<div class="search_tab active d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="../../images/departure.png" alt=""><span>국가별 검색</span></div>
+									<div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="../../images/milestone_1.png" alt="">단어 검색</div>
 									<!-- <div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="../images/departure.png" alt="">flights</div>
 									<div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="../images/island.png" alt="">trips</div>
 									<div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="../images/cruise.png" alt="">cruises</div>
@@ -47,30 +48,34 @@
 							<!-- 지역 검색 -->
 
 							<div class="search_panel active">
-								<form action="#" id="search_form_1" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
-									
+								<form action="/safetylist/safetylist.do?isoNum=" id="search_form_1" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
 									<div class="search_item">
-										<div>국가 country</div>
-										<select name="calcountry" id="calcountry" class="dropdown_item_select search_input" required="required">
-											<option>전체</option>
-											<option>일본</option>
-											<option>중국</option>
-											<option>베트남</option>
-											<option>미국</option>
-											<option>태국</option>
-											<option>필리핀</option>
-											<option>싱가포르</option>
-											<option>프랑스</option>
-											<option>영국</option>
-											<option>호주</option>
-											<option>아일랜드</option>
+										<div>국가</div>
+										<select name="isoNum" id="country" class="dropdown_item_select search_input">
+											<option value="">전체</option>
+											<option value="410">한국</option>
+											<option value="392">일본</option>
+											<option value="156">중국</option>
+											<option value="704">베트남</option>
+											<option value="840">미국</option>
+											<option value="764">태국</option>
+											<option value="608">필리핀</option>
+											<option value="702">싱가포르</option>
+											<option value="250">프랑스</option>
+											<option value="826">영국</option>
+											<option value="36">호주</option>
+											<option value="372">아일랜드</option>
 										</select>
-
+										<!-- <input type="text" class="destination search_input" required="required"> -->
+									</div>
+									<!-- <div class="search_item">
+										<div>작성일 이전</div>
+										<input type="text" class="check_in search_input" placeholder="YYYY-MM-DD">
 									</div>
 									<div class="search_item">
-										<div></div>
-										<input type="text" class="destination search_input" required="required" placeholder="검색할 국가를 입력하세요.">
-									</div>
+										<div>작성일 이후</div>
+										<input type="text" class="check_out search_input" placeholder="YYYY-MM-DD">
+									</div> -->
 									<!-- <div class="search_item">
 										<div>adults</div>
 										<select name="adults" id="adults_1" class="dropdown_item_select search_input">
@@ -158,7 +163,7 @@
 											</li>
 										</ul>
 									</div> -->
-									<button class="button search_button">검색<span></span><span></span><span></span></button>
+									<button class="button search_button">이동<span></span><span></span><span></span></button>
 								</form>
 							</div>
 
@@ -166,10 +171,10 @@
 							<!-- 단어 검색 -->
 
 							<div class="search_panel">
-								<form action="#" id="search_form_2" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
+								<form action="/safetylist/safetylist.do?keyword=" id="search_form_2" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
 									<div class="search_item">
-										<div></div>
-										<input type="text" class="destination search_input" required="required" placeholder="검색할 국가를 입력하세요.">
+										<div>검색어 입력</div>
+										<input name="keyword" type="text" class="destination search_input" required="required">
 									</div>
 									<!-- <div class="search_item">
 										<div>check in</div>

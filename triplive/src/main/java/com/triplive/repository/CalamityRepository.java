@@ -12,8 +12,8 @@ import com.triplive.entity.GetCountrySafetyNewsListNew;
 public interface CalamityRepository extends JpaRepository<GetCountrySafetyNewsListNew, String> {
     
     // // 특수 검색 기능
-     List<GetCountrySafetyNewsListNew> findAllByCountryIsoAlp2(String isoAlp2, Pageable pageable);
-     Long countByCountryIsoAlp2(String isoAlp2);
+     List<GetCountrySafetyNewsListNew> findAllByIsoNum(String isoNum, Pageable pageable);
+     Long countByCountryisoNum(String isoNum);
 
     // // 키워드 검색 기능
     List<GetCountrySafetyNewsListNew> findAllByTitleContainingOrCountryNmContaining(String keyword1, String keyword2, Pageable pageable);
