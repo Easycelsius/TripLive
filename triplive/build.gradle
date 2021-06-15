@@ -40,6 +40,7 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.security:spring-security-test'
 	implementation 'org.springframework.security:spring-security-taglibs'
+	implementation group: 'net.nurigo', name: 'javaSDK', version: '2.2'
 }
 
 test {
