@@ -22,8 +22,7 @@ public class WorldWeatherServiceImpl implements WorldWeatherService {
     @Override
     public List<WorldCity> getCityNameList(String country, String input) {
         log.info("City 목록 조회");
+        // country(=IsoAlp2)와 일치하고 input(=CityName)으로 시작하는 도시 목록 검색
         return worldWeatherDAO.findByIsoAlp2AndCityNameStartsWith(country, input);
     }
-
-    
 }

@@ -13,14 +13,12 @@
 <link href="../plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../styles/offers_styles.css">
 <link rel="stylesheet" type="text/css" href="../styles/offers_responsive.css">
-
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" type="text/javascript"></script>
-
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
 <script>
+	// URL 정보를 가져와 파라미터를 파싱하는 함수 (정규표현식 이용)
 	function getParameter(name) {
 		name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
 		var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
@@ -28,27 +26,26 @@
 		return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 	}
 
-	var map;
-	var lat;
-	var lng;
+	var map;	// 구글 지도
+	var lat;	// 위도
+	var lng;	// 경도
 
-	var country = ''
-	var city = 'Seoul'
+	var country = ''	// 국가
+	var city = 'Seoul'	// 도시
 
+	// url 파라미터에 city 키가 있으면 국가, 도시 정보 저장
 	if ('' != getParameter('city')) {
 		city = getParameter('city')
 		country = getParameter('country')
 	}
 
-	console.log(country)
-	console.log(city)
-
-	// 현재 날씨
+	// 현재 날씨를 불러오기 위한 api
 	var CurrentApiURI = 'http://api.openweathermap.org/data/2.5/weather?q='+ city +'&appid=1db47184ebbc18af53fd996be840d270'
 
-	// 일일 날씨
+	// 일일 날씨를 불러오기 위한 api
 	var DayApiURI = 'http://api.openweathermap.org/data/2.5/forecast?q='+ city +'&appid=1db47184ebbc18af53fd996be840d270'
 	
+	// 검색한 도시의 위도, 경도 데이터를 가져오는 ajax
 	$.ajax({
 		url: CurrentApiURI,
 		dataType: "json",
@@ -57,25 +54,18 @@
 		success: function(resp) {
 			lat = resp.coord.lat
 			lng = resp.coord.lon
-			// console.log("ajax", lat)
-			// console.log("ajax", lat)
 		}
 	})
 
-	// console.log("normal", lat)
-	// console.log("normal", lat)
-
+	// 구글 지도 생성
 	function initMap() {
-
-		// console.log("initMap", lat)
-		// console.log("initMap", lat)
-
 		map = new google.maps.Map(document.getElementById("map"), {
 			center: { lat: lat, lng: lng },
 			zoom: 13,
 		});
 	}
 
+	// 각 도시의 timezone을 계산하여 현지 시각을 가져오는 함수 (일, 시)
 	function timeConverterDay(UNIX_timestamp){
 			var a = new Date(UNIX_timestamp * 1000);
 			var b = new Date(a.getTime() + (a.getTimezoneOffset() * 60000));
@@ -83,6 +73,7 @@
 			return b.getDate() + '일 ' + b.getHours() + '시';
 		}	
 
+	// 각 도시의 timezone을 계산하여 현지 시각을 가져오는 함수 (월, 일, 시, 분)
 	function timeConverterCurrent(UNIX_timestamp){
 		var a = new Date(UNIX_timestamp * 1000);
 		var b = new Date(a.getTime() + (a.getTimezoneOffset() * 60000));
@@ -90,23 +81,26 @@
 	}
 
 	$(function() {
+		// url 파라미터에 국가 정보가 있으면 해당 국가로 selectbox 선택
 		if ('' != country) {
 			$("#"+country).attr("selected", "selected");
 		}
 
-		console.log($('#countryy option:selected').val())
-
+		// url 파라미터에 도시 정보가 있으면 input에 해당 도시 이름 입력
 		if ('' != $('#country option:selected').val()) {
 			$('#city').val(city)
 		}
+		// 없으면 국가를 먼저 선택하도록 설정
 		else {
 			$("#city").attr("placeholder", "국가를 선택하세요.")
 			$("#city").attr("disabled", "disabled")
 		}		
 
+		// 차트 라벨
 		const labels = [
 		];
 
+		// 차트 데이터
 		const data = {
 			labels: [],
 			datasets: [
@@ -136,6 +130,7 @@
 			]
 		};
 
+		// 차트 설정
 		const config = {
 			type: 'bar',
 			data: data,
@@ -152,13 +147,13 @@
 			},
 		};
 		
+		// 현재 날씨를 불러오는 ajax
 		$.ajax({
             url: CurrentApiURI,
             dataType: "json",
             type: "GET",
             async: "false",
             success: function(resp) {
-                console.log(resp);
 				var city = resp.name + ', ' + resp.sys.country
 				var update = timeConverterCurrent(resp.dt + resp.timezone) + ' 갱신'
 				var temp = parseFloat((resp.main.temp - 273.15).toFixed(1)) + '℃ '
@@ -167,16 +162,12 @@
 				var windSpeed = resp.wind.speed + 'm/s'
 				var rain = '-'
 
-				// lat = resp.coord.lat
-				// lng = resp.coord.lon
-
-				console.log(lat)
-				console.log(lat)
-
+				// 강수량 정보가 있으면 저장
 				if (resp.rain) {
 					var rain = resp.rain['1h'] + '㎜'
 				}
-				console.log(rain)
+
+				// 날씨 이미지 저장
 				var imgURL = "http://openweathermap.org/img/w/" + resp.weather[0].icon + ".png"
 
 				$('#currentUpdate').text(update)
@@ -190,12 +181,14 @@
             }
         })
 
+		// 일일 날씨를 불러오는 ajax
 		$.ajax({
             url: DayApiURI,
             dataType: "json",
             type: "GET",
             async: "false",
             success: function(resp) {
+				// 차트 데이터에 날씨 정보 저장
 				for (var i = 0; i < 8; i++) {
 					config.data.datasets[1].data.push(parseFloat((resp.list[i].main.temp - 273.15).toFixed(1)))
 					config.data.datasets[0].data.push(resp.list[i].pop * 100)	
@@ -206,6 +199,7 @@
 					$(icon).attr('src', imgURL)
 				}
 
+				// 차트 생성
 				var myChart = new Chart(
 					document.getElementById('myChart'),
 					config
@@ -213,6 +207,7 @@
             }
         })
 
+		// 국가를 선택했을 때 도시 input 설정
 		$("#country").change(function() {
 			$("#city").val('')
 
@@ -226,8 +221,10 @@
 			}
 		})
 
+		// 도시 이름 리스트
 		var cityNameList = $(".cityNameList")
 
+		// 도시 이름을 입력하면 동시에 도시 목록 불러오기
 		$("#city").on("propertychange change keyup paste", function(){
 			if ($(this).val() != '') {
 				var param = $('#search').serialize()
@@ -243,9 +240,7 @@
 						if (resp.length) {
 							for (var i in resp) {
 								var li = $('<li class="cityName"/>')
-								// var span = $('<span/>')
 								var a = $('<a class="Cname" href="weather.do?country=' + $("#country").val() + '&city=' + resp[i].cityName + '">' + resp[i].cityName + '</a>')
-								// span.append(a)
 								li.append(a)
 								cityNameList.append(li)
 							}
@@ -264,8 +259,6 @@
 				cityNameList.css("border", "none")
 			}
 		});
-
-		$(".")
 	})
 </script>
 
