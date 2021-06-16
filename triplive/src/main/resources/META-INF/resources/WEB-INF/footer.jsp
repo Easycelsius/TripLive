@@ -3,49 +3,73 @@ pageEncoding="utf-8"%>
 
 <!DOCTYPE html>
 <html lang="ko">
-  <script>
-    <!-- Channel Plugin Scripts -->
-      (function() {
-        var w = window;
-        if (w.ChannelIO) {
-          return (window.console.error || window.console.log || function(){})('ChannelIO script included twice.');
-        }
-        var ch = function() {
-          ch.c(arguments);
-        };
-        ch.q = [];
-        ch.c = function(args) {
-          ch.q.push(args);
-        };
-        w.ChannelIO = ch;
-        function l() {
-          if (w.ChannelIOInitialized) {
-            return;
+  <script src="http://maps.googleapis.com/maps/api/js?v=3.3&sensor=false"></script>
+  <script type="text/javascript">
+    var map, watchId;
+    function startWatchPosition() {
+      watchId = navigator.geolocation.watchPosition(
+        function (position) {
+          //일정한 시간단위로 함수를 주기적으로 부름
+          var coords = position.coords;
+          var mapCenter = new google.maps.LatLng(
+            coords.latitude,
+            coords.longitude
+          );
+          if (!map) {
+            map = new google.maps.Map(document.getElementById("map"), {
+              center: mapCenter,
+              mapTypeId: google.maps.MapTypeId.ROADMAP,
+              zoom: 15,
+            });
           }
-          w.ChannelIOInitialized = true;
-          var s = document.createElement('script');
-          s.type = 'text/javascript';
-          s.async = true;
-          s.src = 'https://cdn.channel.io/plugin/ch-plugin-web.js';
-          s.charset = 'UTF-8';
-          var x = document.getElementsByTagName('script')[0];
-          x.parentNode.insertBefore(s, x);
+          var time = new Date();
+          time.setTime(position.timestamp);
+          var title =
+            time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds(); //이름
+
+          var marker = new google.maps.Marker({
+            //찍히는 좌표
+            position: mapCenter,
+            title: title,
+            map: map,
+          });
+          map.setCenter(mapCenter);
+        },
+        onPositionError,
+        {
+          enableHighAccuracy: true,
         }
-        if (document.readyState === 'complete') {
-          l();
-        } else if (window.attachEvent) {
-          window.attachEvent('onload', l);
-        } else {
-          window.addEventListener('DOMContentLoaded', l, false);
-          window.addEventListener('load', l, false);
-        }
-      })();
-      ChannelIO('boot', {
-        "pluginKey": "53441b8b-78ba-4a10-a8a3-aca7fdb71a98"
-      });
-    <!-- End Channel Plugin -->
+      );
+      var buttons = document.getElementsByTagName("button");
+      buttons[0].disabled = true;
+      buttons[1].disabled = false;
+    }
+
+    function stopWatchPosition() {
+      navigator.geolocation.clearWatch(watchId);
+      var buttons = document.getElementsByTagName("button");
+      (buttons[0].disabled = false), (buttons[1].disabled = true);
+      alert("위치 정보 수집 종료");
+    }
+
+    function onPositionError(error) {
+      alert("위치정보수집에러:" + error.message);
+    }
+
+    navigator.geolocation.getCurrentPosition(onSuccess, onError, {
+      maximumAge: 30000,
+      timeout: 0,
+    });
+    function onError(error) {
+      if (error === error.TIMEOUT) {
+        alert("시간이 초과되었습니다..");
+      } else {
+        alert("기타 에러 발생");
+      }
+    }
   </script>
-  <body>
+
+  <body onload="startWatchPosition()">
     <footer class="footer">
       <div class="container">
         <div class="row">
@@ -64,7 +88,10 @@ pageEncoding="utf-8"%>
                   </div>
                 </div>
                 <p class="footer_about_text">
-                  현지에 대한 실시간 정보, 출국 전 꼭 참고해야 할, 안전공지사항 및 사건∙사고 유형 등을 제공하는 데이터 서비스를 제공합니다.<br>triplive는 통신판매중개자이며 통신판매의 당사자가 아닙니다. 따라서 상품·거래정보 및 거래에 대하여 책임을 지지 않습니다.
+                  현지에 대한 실시간 정보, 출국 전 꼭 참고해야 할, 안전공지사항
+                  및 사건∙사고 유형 등을 제공하는 데이터 서비스를 제공합니다.<br />triplive는
+                  통신판매중개자이며 통신판매의 당사자가 아닙니다. 따라서
+                  상품·거래정보 및 거래에 대하여 책임을 지지 않습니다.
                 </p>
                 <ul class="footer_social_list">
                   <li class="footer_social_item">
@@ -150,7 +177,9 @@ pageEncoding="utf-8"%>
               <div class="footer_content footer_tags">
                 <ul class="tags_list clearfix">
                   <li class="tag_item"><a href="#">이 용 약 관</a></li>
-                  <li class="tag_item"><a href="#">개 인 정 보 처 리 방 침</a></li>
+                  <li class="tag_item">
+                    <a href="#">개 인 정 보 처 리 방 침</a>
+                  </li>
                   <li class="tag_item"><a href="#">취 소 환 불 규 정</a></li>
                   <li class="tag_item"><a href="#">고 객 센 터</a></li>
                 </ul>
@@ -194,6 +223,7 @@ pageEncoding="utf-8"%>
                         target="_top"
                         >triplive@gmail.com</a
                       >
+                      <div></div>
                     </div>
                   </li>
                   <li class="contact_info_item d-flex flex-row">
@@ -206,6 +236,8 @@ pageEncoding="utf-8"%>
                       <a href="www.triplive189.com">www.triplive189.com</a>
                     </div>
                   </li>
+
+                  <div id="map" style="width: 200px; height: 200px">현위치</div>
                 </ul>
               </div>
             </div>
@@ -213,42 +245,61 @@ pageEncoding="utf-8"%>
         </div>
       </div>
     </footer>
-		<!-- Copyright -->
+    <!-- Copyright -->
 
-		<div class="copyright">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-3 order-lg-1 order-2  ">
-						<div class="copyright_content d-flex flex-row align-items-center">
-							<div><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-	<script>document.write(new Date().getFullYear());</script> All rights reserved | This triplive is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="../index.do" target="_blank">home</a>
-	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
-						</div>
-					</div>
-					<div class="col-lg-9 order-lg-2 order-1">
-						<div class="footer_nav_container d-flex flex-row align-items-center justify-content-lg-end">
-							<div class="footer_nav">
-								<ul class="footer_nav_list">
-									<li class="main_nav_item"><a href="../index.do">홈</a></li>
-									<li class="main_nav_item"><a href="../community/commu.do">커뮤니티</a></li>
-									<li class="main_nav_item"><a href="">여행지정보</a></li>
-									<li class="main_nav_item"><a href="../calamity/calamity.do">긴급속보</a></li>
-									<li class="main_nav_item"><a href="../worldweather/weather.do">세계날씨</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+    <div class="copyright">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 order-lg-1 order-2">
+            <div class="copyright_content d-flex flex-row align-items-center">
+              <div>
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                <script>
+                  document.write(new Date().getFullYear());
+                </script>
+                All rights reserved | This triplive is made with
+                <i class="fa fa-heart-o" aria-hidden="true"></i> by
+                <a href="../index.do" target="_blank">home</a>
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-9 order-lg-2 order-1">
+            <div
+              class="
+                footer_nav_container
+                d-flex
+                flex-row
+                align-items-center
+                justify-content-lg-end
+              "
+            >
+              <div class="footer_nav">
+                <ul class="footer_nav_list">
+                  <li class="main_nav_item"><a href="../index.do">홈</a></li>
+                  <li class="main_nav_item">
+                    <a href="../community/commu.do">커뮤니티</a>
+                  </li>
+                  <li class="main_nav_item"><a href="">여행지정보</a></li>
+                  <li class="main_nav_item">
+                    <a href="../calamity/calamity.do">긴급속보</a>
+                  </li>
+                  <li class="main_nav_item">
+                    <a href="../worldweather/weather.do">세계날씨</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<script src="../js/jquery-3.2.1.min.js"></script>
-<script src="../styles/bootstrap4/popper.js"></script>
-<script src="../styles/bootstrap4/bootstrap.min.js"></script>
-<script src="../plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
-<script src="../plugins/easing/easing.js"></script>
-<script src="../js/custom.js"></script>
-
-
-</body>
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../styles/bootstrap4/popper.js"></script>
+    <script src="../styles/bootstrap4/bootstrap.min.js"></script>
+    <script src="../plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+    <script src="../plugins/easing/easing.js"></script>
+    <script src="../js/custom.js"></script>
+  </body>
 </html>

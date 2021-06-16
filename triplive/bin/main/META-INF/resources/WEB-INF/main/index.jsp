@@ -62,7 +62,19 @@ pageEncoding="utf-8"%>
           },
         });
       });
+
     </script>
+
+    <script>
+          // $(function () {
+          //   abc2 = $(".ct_text p").text()+"</br>"
+          //   abc3 = abc2.substring(1, 100)
+          //   abc4 = abc3 + "..." 
+          //   $(".ct_text").remove()
+          //   abc6 = $(".cta_title").append('<p>'+abc4+'</p>')
+          // });
+    </script>
+    
   </head>
 
   <body>
@@ -96,9 +108,6 @@ pageEncoding="utf-8"%>
                   <h1>travelAlarm</h1>
                   <div class="button home_slider_button">
                     <div class="button_bcg"></div>
-                    <a href="#"
-                      >바로가기<span></span><span></span><span></span
-                    ></a>
                   </div>
                 </div>
               </div>
@@ -702,7 +711,7 @@ pageEncoding="utf-8"%>
                         <div class="intro_date">${l.wrtDt}</div>
                         <div class="button intro_button">
                           <div class="button_bcg"></div>
-                          <a href="#"
+                          <a href="safetylist/safetylist.do"
                             >자세히 보기<span></span><span></span><span></span
                           ></a>
                         </div>
@@ -745,9 +754,11 @@ pageEncoding="utf-8"%>
                   <!-- CTA Slider Item -->
                   <div class="owl-item cta_item text-center">
                     <div class="cta_title">국가∙지역별 사건사고 유형</div>
-                    <div class="rating_r rating_r_4">
-                      <p class="cta_text">
-                        ${l.title},${l.txtOriginCn}
+                    <div class="rating_r rating_r_4 ct_text" id="ct_text">
+                      <p class="cta_text" style="overflow: hidden;
+                      text-overflow: ellipsis;
+                      white-space: nowrap;">
+                        <div>${l.txtOriginCn}</div>
                       </p>
                       <div class="button cta_button">
                         <div class="button_bcg"></div>
@@ -1182,7 +1193,7 @@ pageEncoding="utf-8"%>
                       <div class="test_content_container">
                         <div class="test_content">
                           <div class="test_item_info">
-                            <div class="test_name">carla smith</div>
+                            <div class="test_name">중국</div>
                             <div class="test_date">May 24, 2017</div>
                           </div>
                           <div class="test_quote_title">
@@ -1209,7 +1220,7 @@ pageEncoding="utf-8"%>
                       <div class="test_content_container">
                         <div class="test_content">
                           <div class="test_item_info">
-                            <div class="test_name">carla smith</div>
+                            <div class="test_name">베트남</div>
                             <div class="test_date">May 24, 2017</div>
                           </div>
                           <div class="test_quote_title">
@@ -1236,7 +1247,7 @@ pageEncoding="utf-8"%>
                       <div class="test_content_container">
                         <div class="test_content">
                           <div class="test_item_info">
-                            <div class="test_name">carla smith</div>
+                            <div class="test_name">태국</div>
                             <div class="test_date">May 24, 2017</div>
                           </div>
                           <div class="test_quote_title">

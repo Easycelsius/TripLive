@@ -4,6 +4,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.beans.factory.annotation.Autowired;
+
+import com.triplive.service.BasicService;
 import com.triplive.service.SafetyServiceImpl;
 import org.springframework.ui.Model;
 
@@ -21,6 +23,7 @@ public class BasicController {
         log.info("main page 요청");
         m.addAttribute("safetylist", safetyService.getSafetyList(pageNum, isoAlp2, keyword));
         m.addAttribute("countrylist", safetyService.getSafetyList(pageNum, isoAlp2, keyword));
+        
         return "main/index";
     }
 }
