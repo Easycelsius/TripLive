@@ -6,6 +6,7 @@ import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import com.triplive.entity.GetCountrySafetyList2;
+import com.triplive.repository.CountryRepository;
 import com.triplive.repository.SafetyListRepository;
 import org.springframework.stereotype.Service;
 import lombok.extern.log4j.Log4j2;
@@ -22,6 +23,9 @@ public class SafetyServiceImpl implements SafetyService{
 
         @Autowired
 	private SafetyListRepository safetyDAO;
+
+        @Autowired
+	private CountryRepository countryDAO;
 
         // 글 상세 조회
         public Optional<GetCountrySafetyList2> getSafetyDetail(GetCountrySafetyList2 safety){
@@ -43,7 +47,7 @@ public class SafetyServiceImpl implements SafetyService{
         private static final int PAGE_POST_COUNT = 10;       // 한 페이지에 존재하는 게시글 수
         
         @Transactional
-        public List<GetCountrySafetyList2> getSafetyList(Integer pageNum, Long isoNum, String keyword) {
+        public List<GetCountrySafetyList2> getSafetyList(Integer pageNum, String isoNum, String keyword) {
                 // Page<Community> page = communityDAO.findAll(PageRequest.of(pageNum-1, PAGE_POST_COUNT, Sort.by(Sort.Direction.ASC, "date")));
                 // List<Community> communities = page.getContent();
                 log.info("커뮤티니 페이징 처리");
@@ -52,9 +56,10 @@ public class SafetyServiceImpl implements SafetyService{
                 Sort sort1 = Sort.by("sftyNoticeId").descending();
                 Pageable pageable = PageRequest.of(pageNum-1, PAGE_POST_COUNT, sort1);
 
-                if(!"".equals(isoNum) && isoNum != null){
+                if(!"".equals(isoNum) && isoNum != null){ 
                         log.info("특수 검색 진행 : 국가");
-                        return safetyDAO.findAllByCountryIsoNum(isoNum, pageable);
+                        String isoAlp2 = countryDAO.findById(Long.parseLong(isoNum)).get().getIsoAlp2();
+                        return safetyDAO.findAllByCountryIsoAlp2(isoAlp2, pageable);
                 } else if(!"".equals(keyword) && keyword != null){
                         log.info("특수 검색 진행 : 키워드");
                         return safetyDAO.findAllByTxtOriginCnContainingOrTitleContaining(keyword, keyword, pageable);
@@ -68,9 +73,10 @@ public class SafetyServiceImpl implements SafetyService{
         }
 
         @Transactional
-        public Long getSafetyListCount(Long isoNum, String keyword) {
+        public Long getSafetyListCount(String isoNum, String keyword) {
                 if(!"".equals(isoNum) && isoNum != null){
-                        return safetyDAO.countByCountryIsoNum(isoNum);
+                        String isoAlp2 = countryDAO.findById(Long.parseLong(isoNum)).get().getIsoAlp2();
+                        return safetyDAO.countByCountryIsoAlp2(isoAlp2);
                 }
 
                 if(!"".equals(keyword) && keyword != null){
@@ -81,11 +87,11 @@ public class SafetyServiceImpl implements SafetyService{
         }
 
         @Transactional
-        public Integer[] getPageList(Integer curPageNum, Long isoNum, String keyword) {
+        public Integer[] getPageList(Integer curPageNum, String isoNum, String keyword) {
                 Integer[] pageList = new Integer[BLOCK_PAGE_NUM_COUNT];
 
                 // 총 게시글 갯수
-                Double postsTotalCount = Double.valueOf(this.getSafetyListCount(isoNum,keyword));
+                Double postsTotalCount = Double.valueOf(this.getSafetyListCount(isoNum, keyword));
 
                 // 총 게시글 기준으로 계산한 마지막 페이지 번호 계산 (올림으로 계산)
                 Integer totalLastPageNum = (int)(Math.ceil((postsTotalCount/PAGE_POST_COUNT)));
