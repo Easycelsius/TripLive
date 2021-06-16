@@ -43,7 +43,7 @@ public class CalamityServiceImpl implements CalamityService{
         }
         
         @Transactional
-        public List<GetCountrySafetyNewsListNew> getPostingList(Integer pageNum, String isoNum, String keyword) {
+        public List<GetCountrySafetyNewsListNew> getPostingList(Integer pageNum, Long isoNum, String keyword) {
                 log.info("긴급속보 페이징 처리");
                 log.info(isoNum + "/" + keyword);
                 
@@ -66,7 +66,7 @@ public class CalamityServiceImpl implements CalamityService{
         }
 
         @Transactional
-        public Long getCalamityCount(String isoNum, String keyword) {
+        public Long getCalamityCount(Long isoNum, String keyword) {
 
                 if(!"".equals(isoNum) && isoNum != null){
                         return calamityDAO.countByCountryIsoNum(isoNum);
@@ -80,7 +80,7 @@ public class CalamityServiceImpl implements CalamityService{
         }
 
         @Transactional
-        public Integer[] getPageList(Integer curPageNum, String isoNum, String keyword) {
+        public Integer[] getPageList(Integer curPageNum, Long isoNum, String keyword) {
                 Integer[] pageList = new Integer[BLOCK_PAGE_NUM_COUNT];
 
                 // 총 게시글 갯수
@@ -102,6 +102,8 @@ public class CalamityServiceImpl implements CalamityService{
 
                 return pageList;
         }
+
+
 
         
 }

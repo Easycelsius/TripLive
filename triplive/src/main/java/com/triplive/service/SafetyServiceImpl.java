@@ -43,7 +43,7 @@ public class SafetyServiceImpl implements SafetyService{
         private static final int PAGE_POST_COUNT = 10;       // 한 페이지에 존재하는 게시글 수
         
         @Transactional
-        public List<GetCountrySafetyList2> getSafetyList(Integer pageNum, String isoNum, String keyword) {
+        public List<GetCountrySafetyList2> getSafetyList(Integer pageNum, Long isoNum, String keyword) {
                 // Page<Community> page = communityDAO.findAll(PageRequest.of(pageNum-1, PAGE_POST_COUNT, Sort.by(Sort.Direction.ASC, "date")));
                 // List<Community> communities = page.getContent();
                 log.info("커뮤티니 페이징 처리");
@@ -68,7 +68,7 @@ public class SafetyServiceImpl implements SafetyService{
         }
 
         @Transactional
-        public Long getSafetyListCount(String isoNum, String keyword) {
+        public Long getSafetyListCount(Long isoNum, String keyword) {
                 if(!"".equals(isoNum) && isoNum != null){
                         return safetyDAO.countByCountryIsoNum(isoNum);
                 }
@@ -81,7 +81,7 @@ public class SafetyServiceImpl implements SafetyService{
         }
 
         @Transactional
-        public Integer[] getPageList(Integer curPageNum, String isoNum, String keyword) {
+        public Integer[] getPageList(Integer curPageNum, Long isoNum, String keyword) {
                 Integer[] pageList = new Integer[BLOCK_PAGE_NUM_COUNT];
 
                 // 총 게시글 갯수

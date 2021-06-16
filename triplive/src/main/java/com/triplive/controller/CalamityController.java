@@ -21,7 +21,7 @@ public class CalamityController {
     CalamityServiceImpl calamityService;
     
     @RequestMapping("/calamity.do")
-    public String calamityMain(Model m, @RequestParam(value = "page", defaultValue = "1") Integer pageNum, String isoNum, String keyword, Principal principal){
+    public String calamityMain(Model m, @RequestParam(value = "page", defaultValue = "1") Integer pageNum, Long isoNum, String keyword, Principal principal){
         log.info("calamityMain 요청");
         m.addAttribute("list", calamityService.getPostingList(pageNum, isoNum, keyword) );
         m.addAttribute("pageList", calamityService.getPageList(pageNum, isoNum, keyword));

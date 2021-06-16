@@ -10,5 +10,5 @@ public interface SafetyService {
         Optional<GetCountrySafetyList2> getSafetyDetail(GetCountrySafetyList2 safety);
 
         // 글 목록 조회
-        List<GetCountrySafetyList2> getSafetyList(Integer pageNum, String isoNum, String keyword);    
+        List<GetCountrySafetyList2> getSafetyList(Integer pageNum, Long isoNum, String keyword);    
 }
