@@ -58,7 +58,6 @@
 					<div class="single_listing">
 						
 						<!-- Hotel Info -->
-
 						<div class="hotel_info">
 
 							<!-- Title -->
@@ -79,6 +78,11 @@
 
 							<div class="hotel_image">
 								<img src="../uploaded/${community.get().bdNo}/0.jpg" alt="첨부이미지" onerror="this.style.display='none'">
+								<c:if test="${bdImage[0].location ne null}">
+									<div><p></p>
+										<h4 class="text-center">인공지능을 활용한 사진 분석 결과 해당 이미지의 위치는 ${bdImage[0].location}입니다.</h4></div>
+								</c:if>
+								
 								<!-- <div class="hotel_review_container d-flex flex-column align-items-center justify-content-center">
 									<div class="hotel_review">
 										<div class="hotel_review_content">
@@ -202,7 +206,8 @@
 							<!-- Hotel Info Text -->
 
 							<div class="hotel_info_text">
-								<p>${community.get().bdContent}</p>
+								<h3 class="text-dark font-weight-bold">내용</h3>
+								<p style="word-break:break-all">${community.get().bdContent}</p>
 							</div>
 
 							<!-- Hotel Info Tags -->
