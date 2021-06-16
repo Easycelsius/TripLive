@@ -67,8 +67,14 @@ public class UserServiceImpl implements UserService, UserDetailsService {
         return null;
     }
 
+    // 유저수 조회
     public Long getUserCount() {
         return userDAO.count();
+    }
+
+    // 유저 전체 조회
+    public List<User> getUserListAll(){
+        return userDAO.findAll();
     }
 
     // Spring Security
