@@ -52,8 +52,8 @@ public class InterpreterPython {
 		String[] pyFileList = {
 			// "CountryAccidentService2" ,
 			// "GetCountryAgreementList2", 
-			// "Country", // 국가코드
-			// "GetCountryFlagList2.py", 
+			// // "Country", // 국가코드
+			// // "GetCountryFlagList2.py", 
 			// "GetCountryHistoryList2", 
 			// "GetCountryMapList2",
 			// "GetCountrySafetyList2",
