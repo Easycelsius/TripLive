@@ -5,7 +5,7 @@ pageEncoding="utf-8"%>
 <html lang="ko">
 
 <head>
-    <title>끼니끼리 관리자페이지</title>
+    <title>트립라이브 관리자페이지</title>
     <!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 10]>
@@ -79,11 +79,43 @@ pageEncoding="utf-8"%>
     <!-- Style.css -->
     <link rel="stylesheet" type="text/css" href="./../resources/assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="./../resources/assets/css/jquery.mCustomScrollbar.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {'packages':['bar']});
+        google.charts.setOnLoadCallback(drawChart);
 
+        function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['', '명 또는 갯수'],
+            ['트립라이브 유저수', ${countUser}],
+            ['여행금지 국가수', ${countBanList}],
+            ['국외 사건 사고수', ${countCountryAccident}],
+            ['국외 안전 정보 건수', ${countSafetyList}],
+            ['해외 경고 수', ${countTavelAlarm}]
+        ]);
+
+        var options = {
+            chart: {
+            title: '트립라이브 통계치',
+            subtitle: '사이트 정보 요약',
+            },
+            bars: 'horizontal' // Required for Material Bar Charts.
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('barchart_material'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+        window.addEventListener('resize',drawChart, false);
+        }
+
+    $(()=>{
+        window.addEventListener('resize',drawChart, false);
+    })
+        
+    </script>
     
 </head>
 
-<%-- <%@include file ="header.jsp" %> --%>
 
 <body>
 
@@ -190,17 +222,20 @@ pageEncoding="utf-8"%>
                                             <div class="col-lg-12">
                                                 <div class="card">
                                                     <div class="card-header">
-                                                        <h5>월별 신규 회원 수</h5>
-                                                        <span>월별 신규로 가입한 회원 수를 파악할 수 있습니다</span>
+                                                        <h5>통계수치</h5>
+                                                        
+                                                        
+                                                        <span>크롤링 데이터 수를 알려드립니다.</span>
                                                     </div>
-                                                    <div class="card-block">
-                                                        <div id="line-example"></div>
+                                                    <div class="card-block col-lg-10">
+                                                        <div id="barchart_material" style="width: 100%; height: 500px;"></div>
+                                                        <!-- <div id="line-example"></div> -->
                                                     </div>
                                                 </div>
                                             </div>
                                             <!-- Bar Chart Ends -->
                                             <!-- EXTRA AREA CHART start -->
-                                            <div class="col-lg-12">
+                                            <!-- <div class="col-lg-12">
                                                 <div class="card">
                                                     <div class="card-header">
                                                         <h5>월별 컨택 건수</h5>
@@ -210,7 +245,7 @@ pageEncoding="utf-8"%>
                                                         <div id="morris-extra-area"></div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div> -->
                                             <!-- EXTRA AREA CHART Ends -->
                                             <!-- Area Chart start -->
                                             <!-- <div class="col-lg-12">
@@ -226,7 +261,7 @@ pageEncoding="utf-8"%>
                                             </div> -->
                                             <!-- Area Chart Ends -->
                                             <!-- LINE CHART start -->
-                                            <div class="col-md-12 col-lg-12">
+                                            <!-- <div class="col-md-12 col-lg-12">
                                                 <div class="card">
                                                     <div class="card-header">
                                                         <h5>컨택 생성 유저 순위</h5>
@@ -236,7 +271,7 @@ pageEncoding="utf-8"%>
                                                         <div id="morris-bar-chart"></div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div> -->
                                             <!-- LINE CHART Ends -->
                                             <!-- Donut chart start -->
                                             <!-- <div class="col-md-12 col-lg-6">
@@ -251,6 +286,36 @@ pageEncoding="utf-8"%>
                                                 </div>
                                             </div> -->
                                             <!-- Donut chart Ends -->
+                                            <div class="col-md-12 col-lg-12">
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <h5>메세지 보내기</h5>
+                                                        <form class="mt-2">
+                                                            <select name="isoNum" id="country" class="dropdown_item_select search_input border mt-2">
+                                                                <option value="">전체</option>
+                                                                <option value="410">한국</option>
+                                                                <option value="392">일본</option>
+                                                                <option value="156">중국</option>
+                                                                <option value="704">베트남</option>
+                                                                <option value="840">미국</option>
+                                                                <option value="764">태국</option>
+                                                                <option value="608">필리핀</option>
+                                                                <option value="702">싱가포르</option>
+                                                                <option value="250">프랑스</option>
+                                                                <option value="826">영국</option>
+                                                                <option value="36">호주</option>
+                                                                <option value="372">아일랜드</option>
+                                                            </select>
+                                                            <textarea id="tx" name="contents" class="col-md-12 col-lg-12 mt-2" style="height: 100px;" placeholder="고객님들께 보낼 메세지를 입력해주세요" maxlength="40" required></textarea>
+                                                            <button type="button" id="msg_btn" class="btn btn-grey col-lg-12 mt-1">보내기</button>
+                                                        </form>
+                                                        
+                                                    </div>
+                                                    <div class="card-block">
+                                                        <div id="morris-bar-chart"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -416,6 +481,205 @@ pageEncoding="utf-8"%>
     <script src="./../resources/assets/js/vertical/vertical-layout.min.js"></script>
     <script src="./../resources/assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script type="text/javascript" src="./../resources/assets/js/script.js"></script>
+    <script>
+    //     "use strict";
+    //     setTimeout(function(){
+    //     $(document).ready(function() {
+     
+    //         lineChart();
+    //         areaChart();
+    //         donutChart();
+     
+    //         $(window).on('resize',function() {
+    //             window.lineChart.redraw();
+    //             window.areaChart.redraw();
+    //             window.donutChart.redraw();
+    //         });
+            
+    //     });
+     
+    //     <%--
+    //         // let numberOfMember = ${fn:replace(numberOfMember,"=",":")};
+    //         // let numberOfContact = ${fn:replace(numberOfContact,"=",":")};
+    //         // let numberOfSuccessContact = ${fn:replace(numberOfSuccessContact,"=",":")};
+    //         // let makingContactUser = ${fn:replace(fn:replace(fn:replace(makingContactUser,"=",":"),"NAME:","NAME:'"),"}","'}")};
+    //         // let reservation = ${fn:replace(reservation,"=",":")};
+    //     --%>
+
+    //     let pip = [];
+        
+    //     /*Line chart*/
+    //     function lineChart() {
+    //         window.lineChart = Morris.Line({
+    //             element: 'line-example',
+    //            data: numberOfMember,
+    //            xkey: 'YEARMONTH',
+    //            redraw: true,
+    //            ykeys: ['COUNTMEMBER'],
+    //            hideHover: 'auto',
+    //            labels: ['멤버수'],
+    //             lineColors: ['#B4C1D7'],
+    //             parseTime : false
+    //         });
+    //     }
+     
+    //     /*Area chart*/
+    //     function areaChart() {
+    //         window.areaChart = Morris.Area({
+    //             element: 'area-example',
+    //             data: [
+    //                 { y: '2006', a: 100, b: 90 },
+    //                 { y: '2007', a: 75, b: 65 },
+    //                 { y: '2008', a: 50, b: 40 },
+    //                 { y: '2009', a: 75, b: 65 },
+    //                 { y: '2010', a: 50, b: 40 },
+    //                 { y: '2011', a: 75, b: 65 },
+    //                 { y: '2012', a: 100, b: 90 }
+    //             ],
+    //             xkey: 'y',
+    //             resize: true,
+    //             redraw: true,
+    //             ykeys: ['a', 'b'],
+    //             labels: ['Series A', 'Series B'],
+    //             lineColors: ['#93EBDD', '#64DDBB']
+    //         });
+    //     }
+     
+    //     /*Donut chart*/
+    //     function donutChart() {
+    //         window.areaChart = Morris.Donut({
+    //             element: 'donut-example',
+    //             redraw: true,
+    //             data: [
+    //                 { label: "Download Sales", value: 2 },
+    //                 { label: "In-Store Sales", value: 50 },
+    //                 { label: "Mail-Order Sales", value: 20 }
+    //             ],
+    //             colors: ['#5FBEAA', '#34495E', '#FF9F55']
+    //         });
+    //     }
+        
+    //     let i;
+    //     let j;
+    //     for(j = 0; j<numberOfContact.length; j++){
+    //        for(i = 0; i<numberOfSuccessContact.length; i++){
+    //           if(numberOfContact[j].YEARMONTH == numberOfSuccessContact[i].YEARMONTH){
+    //              numberOfContact[j].SUCCESSCONTACT = numberOfSuccessContact[i].COUNTSUCCESSCONTACT;
+    //              break;
+    //           } else {
+    //              numberOfContact[j].SUCCESSCONTACT = 0;
+    //           }
+    //        }      
+    //     }
+        
+    //     // Morris bar chart
+    //     Morris.Bar({
+    //         element: 'morris-bar-chart',
+    //         data: makingContactUser,
+    //         xkey: 'NAME',
+    //         ykeys: ['COUNTCONTACT'],
+    //         labels: ['컨택생성수'],
+    //         barColors: ['#5FBEAA'],
+    //         hideHover: 'auto',
+    //         gridLineColor: '#eef0f2',
+    //         resize: true
+    //     });
+    //     // Extra chart
+    //     Morris.Area({
+    //         element: 'morris-extra-area',
+    //         data: numberOfContact,
+    //         lineColors: ['#fb9678', '#7E81CB'],
+    //         xkey: 'YEARMONTH',
+    //         ykeys: ['COUNTREGICONTACT', 'SUCCESSCONTACT'],
+    //         labels: ['전체 컨택수 ', '성사된 컨택'],
+    //         pointSize: 0,
+    //         lineWidth: 0,
+    //         resize: true,
+    //         fillOpacity: 0.8,
+    //         behaveLikeLine: true,
+    //         gridLineColor: '#5FBEAA',
+    //         hideHover: 'auto',
+    //         parseTime: false  
+    //     });
+     
+    //     /*Site visit Chart*/
+     
+    //     Morris.Area({
+    //         element: 'morris-site-visit',
+    //         data: [{
+    //             period: '2010',
+    //             SiteA: 0,
+    //             SiteB: 0,
+     
+    //         }, {
+    //             period: '2011',
+    //             SiteA: 130,
+    //             SiteB: 100,
+     
+    //         }, {
+    //             period: '2012',
+    //             SiteA: 80,
+    //             SiteB: 60,
+     
+    //         }, {
+    //             period: '2013',
+    //             SiteA: 70,
+    //             SiteB: 200,
+     
+    //         }, {
+    //             period: '2014',
+    //             SiteA: 180,
+    //             SiteB: 150,
+     
+    //         }, {
+    //             period: '2015',
+    //             SiteA: 105,
+    //             SiteB: 90,
+     
+    //         }, {
+    //             period: '2016',
+    //             SiteA: 250,
+    //             SiteB: 150,
+     
+    //         }],
+    //         xkey: 'period',
+    //         ykeys: ['SiteA', 'SiteB'],
+    //         labels: ['Site A', 'Site B'],
+    //         pointSize: 0,
+    //         fillOpacity: 0.4,
+    //         pointStrokeColors: ['#b4becb', '#01c0c8'],
+    //         behaveLikeLine: true,
+    //         gridLineColor: '#e0e0e0',
+    //         lineWidth: 0,
+    //         smooth: false,
+    //         hideHover: 'auto',
+    //         lineColors: ['#b4becb', '#01c0c8'],
+    //         resize: true
+     
+    //     });
+    //     },350);
+
+        
+        
+    // }) 
+
+    // 메세지 ajax
+    $("#msg_btn").click(()=>{
+
+            $.ajax({
+                type :'post',
+                data : ({"contents" : $("#tx").val(), "isoNum" : $("#country").val()}),
+                url : '../sendSMS.do',
+                success : function(){
+                    $("#tx").val("");
+                }   	
+            })
+
+        })
+
+        
+
+    </script>
 
 
     

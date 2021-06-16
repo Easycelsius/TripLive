@@ -5,6 +5,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.triplive.entity.Country;
 import com.triplive.entity.User;
+import com.triplive.service.AdminStatisticService;
 import com.triplive.service.UserService;
 import com.triplive.service.UserServiceImpl;
 
@@ -12,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,6 +28,9 @@ public class UserController {
 
     @Autowired
 	private UserServiceImpl userService;
+
+    @Autowired
+    private AdminStatisticService statisticService;
 
     @RequestMapping("/register.do")
     public String register(User user, Long isoNum){
@@ -86,10 +91,27 @@ public class UserController {
 		return !userService.checkId(id) ? "true" : "false"; // DB에 없으면 해당 메일 사용 가능
 	}
 
+    // 관리자 페이지 - 통계
+    @RequestMapping("/admin.do")
+    public String admin(Model m){
+        log.info("관리자 페이지 접속");
+
+        m.addAttribute("countUser", userService.getUserCount());
+        m.addAttribute("countBanList", statisticService.countBanList());
+        m.addAttribute("countCountryAccident", statisticService.countCountryAccident());
+        m.addAttribute("countSafetyList", statisticService.countSafetyList());
+        m.addAttribute("countTavelAlarm", statisticService.countTavelAlarm());
+
+        return "user/admin";
+        
+    }
+
     // 일반적인 페이지 이동
     @RequestMapping("/{step}.do")
     public String insertBoard(@PathVariable String step, HttpServletRequest request) {
         log.info(step + " 요청");
         return "user/"+step;
     }
+
+    
 }

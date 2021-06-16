@@ -52,8 +52,8 @@ public class InterpreterPython {
 		String[] pyFileList = {
 			// "CountryAccidentService2" ,
 			// "GetCountryAgreementList2", 
-			// "Country", // 국가코드
-			// "GetCountryFlagList2.py", 
+			// // "Country", // 국가코드
+			// // "GetCountryFlagList2.py", 
 			// "GetCountryHistoryList2", 
 			// "GetCountryMapList2",
 			// "GetCountrySafetyList2",
@@ -68,9 +68,51 @@ public class InterpreterPython {
 
 		for(int i=0; i<pyFileList.length; i++){
 			log.info(pyFileList[i]);
-			// this.crawlingStart("triplive/src/main/java/com/triplive/pythonconnect/"+pyFileList[i]+".py"); // 지섭 경로	
-			this.crawlingStart("src/main/java/com/triplive/pythonconnect/"+pyFileList[i]+".py"); // 기타 경로
+			this.crawlingStart("triplive/src/main/java/com/triplive/pythonconnect/"+pyFileList[i]+".py"); // 지섭 경로	
+			// this.crawlingStart("src/main/java/com/triplive/pythonconnect/"+pyFileList[i]+".py"); // 기타 경로
 		}
+    }
+
+    // AI 분류
+    public String classify(String bdNo){
+
+        String[] command = new String[4];
+        command[0] = "python";
+        command[1] = "triplive/src/main/java/com/triplive/pythonconnect/CNN_model.py";
+        command[2] = bdNo;
+        command[3] = "0.jpg";
+
+        String msg = "";
+
+        try {
+            CommandLine commandLine = CommandLine.parse(command[0]);
+            log.info(commandLine);
+            for (int i = 1, n = command.length; i < n; i++) {
+                commandLine.addArgument(command[i]);
+            }
+
+            ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+            PumpStreamHandler pumpStreamHandler = new PumpStreamHandler(outputStream);
+            DefaultExecutor executor = new DefaultExecutor();
+            executor.setStreamHandler(pumpStreamHandler);
+
+            int result = executor.execute(commandLine);
+            log.info(result);
+            
+            System.out.println("result: " + result);
+            
+            msg = outputStream.toString();
+
+            System.out.println("output: " + msg);
+
+            outputStream.close();
+
+        } catch (Exception e) {
+            log.info(e);
+        }
+
+        return msg;
+
     }
 
 }

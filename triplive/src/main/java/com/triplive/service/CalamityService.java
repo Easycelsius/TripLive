@@ -11,5 +11,5 @@ public interface CalamityService {
         Optional<GetCountrySafetyNewsListNew> getPosting(GetCountrySafetyNewsListNew calamity);
 
         // 글 목록 조회
-        List<GetCountrySafetyNewsListNew> getPostingList(Integer pageNum, String isoAlp2, String keyword);
+        List<GetCountrySafetyNewsListNew> getPostingList(Integer pageNum, Long isoNum, String keyword);
 }

@@ -5,6 +5,8 @@
 ### Java ###
 # Compiled class file
 *.class
+*.h5
+
 
 # Log file
 *.log

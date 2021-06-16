@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -28,7 +30,11 @@ public class GetCountrySafetyNewsListNew {//국가별_최신안전소식(코로�
     // Column으로 사용하지 않는 필드의 경우 @Transient 어노테이션을 적용
     @Column(length = 50*3, nullable = true)
     private String continentEngNm; // 영문대륙명
-
+    
+    @ManyToOne
+    @JoinColumn(name="iso_num")
+    private Country country; // 국가
+    
     @Column(length = 50*3, nullable = true)
     private String continentNm; // 한글대륙명
 

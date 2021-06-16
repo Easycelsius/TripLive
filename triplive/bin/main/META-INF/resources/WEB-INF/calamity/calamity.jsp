@@ -45,58 +45,7 @@ pageEncoding="utf-8"%>
 				
 				<!-- Offers Sorting -->
 				<div class="offers_sorting_container">
-					<ul class="offers_sorting float-right">
-						<!-- <li>
-							<span class="sorting_text">price</span>
-							<i class="fa fa-chevron-down"></i>
-							<ul>
-								<li class="sort_btn" data-isotope-option='{ "sortBy": "original-order" }' data-parent=".price_sorting"><span>show all</span></li>
-								<li class="sort_btn" data-isotope-option='{ "sortBy": "price" }' data-parent=".price_sorting"><span>ascending</span></li>
-							</ul>
-						</li> -->
-						<!-- <li>
-							<span class="sorting_text">지역</span>
-							<i class="fa fa-chevron-down"></i>
-							<ul>
-								<li class="sort_btn" data-isotope-option='{ "sortBy": "original-order" }'><span>전체</span></li>
-								<li class="sort_btn" data-isotope-option='{ "sortBy": "name" }'><span>alphabetical</span></li>
-							</ul>
-						</li> -->
-						
-						<!-- <li>
-							<span class="sorting_text">stars</span>
-							<i class="fa fa-chevron-down"></i>
-							<ul>
-								<li class="filter_btn" data-filter="*"><span>show all</span></li>
-								<li class="sort_btn" data-isotope-option='{ "sortBy": "stars" }'><span>ascending</span></li>
-								<li class="filter_btn" data-filter=".rating_3"><span>3</span></li>
-								<li class="filter_btn" data-filter=".rating_4"><span>4</span></li>
-								<li class="filter_btn" data-filter=".rating_5"><span>5</span></li>
-							</ul>
-						</li> -->
-						<!-- <li class="distance_item">
-							<span class="sorting_text">distance from center</span>
-							<i class="fa fa-chevron-down"></i>
-							<ul>
-								<li class="num_sorting_btn"><span>distance</span></li>
-								<li class="num_sorting_btn"><span>distance</span></li>
-								<li class="num_sorting_btn"><span>distance</span></li>
-							</ul>
-						</li> -->
-						<!-- <li>
-							<span class="sorting_text">조회수</span>
-							<i class="fa fa-chevron-down"></i>
-							<ul>
-								<li class="sort_btn" data-isotope-option='{ "sortBy": "original-order" }' data-parent=".reviews_sorting"><span>기본</span></li>
-								<li class="sort_btn" data-isotope-option='{ "sortBy": "reviews" }' data-parent=".reviews_sorting"><span>오름차순</span></li>
-								<li class="num_sorting_btn"><span>내림차순</span></li>
-							</ul>
-						</li>
-						<li> -->
-							<!-- <span class="button btn-success"><a href="write.do">글남기기</a></span> -->
-							<!-- <span class="button sorting_text"><a href="#">글 남기기</a></span> -->
-						</li>
-					</ul>
+					<h1>코로나 관련 해외 소식입니다. </h1>
 				</div>
 			</div>
 			

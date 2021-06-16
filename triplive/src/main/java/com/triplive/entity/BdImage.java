@@ -34,4 +34,7 @@ public class BdImage {
 
     private long fileSize;
 
+    @Column(length = 100*3, nullable = true)
+    private String location;
+
 }

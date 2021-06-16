@@ -9,8 +9,11 @@ public interface BdImageService {
      void saveImage(BdImage bdImage);
 
      // 조회
-     BdImage getImage(BdImage bdImage);
+     List<BdImage> getImage(BdImage bdImage);
  
      // 글 목록 조회
      List<BdImage> getImageList(BdImage bdImage);
+
+     // bdNo로 조회하기
+
 }
