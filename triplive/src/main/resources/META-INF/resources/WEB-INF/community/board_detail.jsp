@@ -78,7 +78,7 @@
 
 							<div class="hotel_image">
 								<img src="../uploaded/${community.get().bdNo}/0.jpg" alt="첨부이미지" onerror="this.style.display='none'">
-								<c:if test="${bdImage[0].location ne null}">
+								<c:if test="${bdImage[0].location ne null && bdImage[0].location != ''}">
 									<div><p></p>
 										<h4 class="text-center">인공지능을 활용한 사진 분석 결과 해당 이미지의 위치는 ${bdImage[0].location}입니다.</h4></div>
 								</c:if>
