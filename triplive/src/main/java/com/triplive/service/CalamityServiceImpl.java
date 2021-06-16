@@ -43,16 +43,16 @@ public class CalamityServiceImpl implements CalamityService{
         }
         
         @Transactional
-        public List<GetCountrySafetyNewsListNew> getPostingList(Integer pageNum, String isoAlp2, String keyword) {
+        public List<GetCountrySafetyNewsListNew> getPostingList(Integer pageNum, Long isoNum, String keyword) {
                 log.info("긴급속보 페이징 처리");
-                log.info(isoAlp2 + "/" + keyword);
+                log.info(isoNum + "/" + keyword);
                 
                 Sort sort1 = Sort.by("wrtDt").descending();
                 Pageable pageable = PageRequest.of(pageNum-1, PAGE_POST_COUNT, sort1);
                 
-                if(!"".equals(isoAlp2) && isoAlp2 != null){
+                if(!"".equals(isoNum) && isoNum != null){
                         log.info("특수 검색 진행 : 국가");
-                        return calamityDAO.findAllByCountryIsoAlp2(isoAlp2, pageable);
+                        return calamityDAO.findAllByCountryIsoNum(isoNum, pageable);
                 } else if(!"".equals(keyword) && keyword != null){
                         log.info("특수 검색 진행 : 키워드");
                         return calamityDAO.findAllByTitleContainingOrCountryNmContaining(keyword, keyword, pageable);
@@ -66,10 +66,10 @@ public class CalamityServiceImpl implements CalamityService{
         }
 
         @Transactional
-        public Long getCalamityCount(String isoAlp2, String keyword) {
+        public Long getCalamityCount(Long isoNum, String keyword) {
 
-                if(!"".equals(isoAlp2) && isoAlp2 != null){
-                        return calamityDAO.countByCountryIsoAlp2(isoAlp2);
+                if(!"".equals(isoNum) && isoNum != null){
+                        return calamityDAO.countByCountryIsoNum(isoNum);
                 }
 
                 if(!"".equals(keyword) && keyword != null){
@@ -80,11 +80,11 @@ public class CalamityServiceImpl implements CalamityService{
         }
 
         @Transactional
-        public Integer[] getPageList(Integer curPageNum, String isoAlp2, String keyword) {
+        public Integer[] getPageList(Integer curPageNum, Long isoNum, String keyword) {
                 Integer[] pageList = new Integer[BLOCK_PAGE_NUM_COUNT];
 
                 // 총 게시글 갯수
-                Double postsTotalCount = Double.valueOf(this.getCalamityCount(isoAlp2, keyword));
+                Double postsTotalCount = Double.valueOf(this.getCalamityCount(isoNum, keyword));
 
                 // 총 게시글 기준으로 계산한 마지막 페이지 번호 계산 (올림으로 계산)
                 Integer totalLastPageNum = (int)(Math.ceil((postsTotalCount/PAGE_POST_COUNT)));
@@ -102,6 +102,8 @@ public class CalamityServiceImpl implements CalamityService{
 
                 return pageList;
         }
+
+
 
         
 }

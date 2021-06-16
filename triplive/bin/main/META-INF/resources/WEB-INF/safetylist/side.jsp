@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<title>트립라이브 커뮤니티</title>
+<title>TRIPLIVE SAFETYNOTICE OFFER</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Travelix Project">
@@ -48,23 +48,23 @@
 							<!-- 지역 검색 -->
 
 							<div class="search_panel active">
-								<form action="/safetylist/safetylist.do?isoAlp2=" id="search_form_1" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
+								<form action="/safetylist/safetylist.do?isoNum=" id="search_form_1" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
 									<div class="search_item">
 										<div>국가</div>
-										<select name="isoAlp2" id="country" class="dropdown_item_select search_input">
+										<select name="isoNum" id="country" class="dropdown_item_select search_input">
 											<option value="">전체</option>
-											<option value="KR">한국</option>
-											<option value="JP">일본</option>
-											<option value="CN">중국</option>
-											<option value="VN">베트남</option>
-											<option value="US">미국</option>
-											<option value="TH">태국</option>
-											<option value="PH">필리핀</option>
-											<option value="SG">싱가포르</option>
-											<option value="FR">프랑스</option>
-											<option value="GB">영국</option>
-											<option value="AU">호주</option>
-											<option value="VG">아일랜드</option>
+											<option value="410">한국</option>
+											<option value="392">일본</option>
+											<option value="156">중국</option>
+											<option value="704">베트남</option>
+											<option value="840">미국</option>
+											<option value="764">태국</option>
+											<option value="608">필리핀</option>
+											<option value="702">싱가포르</option>
+											<option value="250">프랑스</option>
+											<option value="826">영국</option>
+											<option value="36">호주</option>
+											<option value="372">아일랜드</option>
 										</select>
 										<!-- <input type="text" class="destination search_input" required="required"> -->
 									</div>
@@ -163,7 +163,7 @@
 											</li>
 										</ul>
 									</div> -->
-									<button class="button search_button">검색<span></span><span></span><span></span></button>
+									<button class="button search_button">이동<span></span><span></span><span></span></button>
 								</form>
 							</div>
 

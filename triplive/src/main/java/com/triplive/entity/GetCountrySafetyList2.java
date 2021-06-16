@@ -30,7 +30,11 @@ public class GetCountrySafetyList2 {
 
     @Column(length = 50, nullable = true)
     private String continentEngNm; // 영문대륙명
-
+    
+    @ManyToOne
+    @JoinColumn(name="iso_num")
+    private Country country; // 국가
+    
     @Column(length = 50, nullable = true)
     private String continentNm; // 한글대륙명
 
