@@ -7,6 +7,7 @@ import javax.transaction.Transactional;
 
 import com.triplive.entity.GetCountrySafetyNewsListNew;
 import com.triplive.repository.CalamityRepository;
+import com.triplive.repository.CountryRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -26,7 +27,8 @@ public class CalamityServiceImpl implements CalamityService{
         
         @Autowired
 	private CalamityRepository calamityDAO;
-
+        @Autowired
+	private CountryRepository countryDAO;
         
         
         
@@ -43,7 +45,7 @@ public class CalamityServiceImpl implements CalamityService{
         }
         
         @Transactional
-        public List<GetCountrySafetyNewsListNew> getPostingList(Integer pageNum, Long isoNum, String keyword) {
+        public List<GetCountrySafetyNewsListNew> getPostingList(Integer pageNum, String isoNum, String keyword) {
                 log.info("긴급속보 페이징 처리");
                 log.info(isoNum + "/" + keyword);
                 
@@ -52,9 +54,13 @@ public class CalamityServiceImpl implements CalamityService{
                 
                 if(!"".equals(isoNum) && isoNum != null){
                         log.info("특수 검색 진행 : 국가");
-                        return calamityDAO.findAllByCountryIsoNum(isoNum, pageable);
+                        String isoAlp2 = countryDAO.findById(Long.parseLong(isoNum)).get().getIsoAlp2();
+
+                        return calamityDAO.findAllByCountryIsoAlp2(isoAlp2, pageable);
                 } else if(!"".equals(keyword) && keyword != null){
                         log.info("특수 검색 진행 : 키워드");
+                                                String isoAlp2 = countryDAO.findById(Long.parseLong(isoNum)).get().getIsoAlp2();
+
                         return calamityDAO.findAllByTitleContainingOrCountryNmContaining(keyword, keyword, pageable);
                 } else {
                         log.info("일반 검색 진행");
@@ -66,10 +72,12 @@ public class CalamityServiceImpl implements CalamityService{
         }
 
         @Transactional
-        public Long getCalamityCount(Long isoNum, String keyword) {
+        public Long getCalamityCount(String isoNum, String keyword) {
 
                 if(!"".equals(isoNum) && isoNum != null){
-                        return calamityDAO.countByCountryIsoNum(isoNum);
+                        String isoAlp2 = countryDAO.findById(Long.parseLong(isoNum)).get().getIsoAlp2();
+
+                        return calamityDAO.countByCountryIsoAlp2(isoAlp2);
                 }
 
                 if(!"".equals(keyword) && keyword != null){
@@ -80,7 +88,7 @@ public class CalamityServiceImpl implements CalamityService{
         }
 
         @Transactional
-        public Integer[] getPageList(Integer curPageNum, Long isoNum, String keyword) {
+        public Integer[] getPageList(Integer curPageNum, String isoNum, String keyword) {
                 Integer[] pageList = new Integer[BLOCK_PAGE_NUM_COUNT];
 
                 // 총 게시글 갯수
