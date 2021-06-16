@@ -5,6 +5,7 @@ import com.triplive.entity.Comment;
 import com.triplive.entity.Community;
 import com.triplive.entity.Country;
 import com.triplive.entity.User;
+import com.triplive.pythonconnect.InterpreterPython;
 import com.triplive.service.BdImageServiceImpl;
 import com.triplive.service.CommentServiceImpl;
 import com.triplive.service.CommunityService;
@@ -73,8 +74,6 @@ public class CommunityController {
         
         // service 단으로 전달
         communityService.savePosting(community);
-        
-        log.info("posting.do 요청");
 
         // ----- 사진 처리 -----
         log.info(files);
@@ -86,7 +85,7 @@ public class CommunityController {
 
         String rootPath = System.getProperty("user.dir");
         String basePath = rootPath 
-                                    // + File.separator + "triplive" 
+                                    + File.separator + "triplive" 
                                     + File.separator + "src" 
                                     + File.separator + "main" 
                                     + File.separator + "resources" 
@@ -145,9 +144,21 @@ public class CommunityController {
             File dest = new File(filePath);
             files.get(i).transferTo(dest); // 서버 내 저장
 
+            // ------------------ AI 분류 ---------------
+            InterpreterPython interpreter = new InterpreterPython();
+
+            log.info("AI 위치 분류 실행");
+            String locationResult = interpreter.classify(String.valueOf(community.getBdNo())); //String 결과값
+
+            // bdImage 전달
+            bdImage.setLocation(locationResult);
+
             // DB 내 저장
             imageService.saveImage(bdImage);
+            
         }
+        
+        log.info("posting.do 요청");
 
 
         return "redirect:commu.do";
@@ -217,7 +228,11 @@ public class CommunityController {
 
         Optional<Community> result = communityService.getPosting(community);
 
+        BdImage bdImage = new BdImage();
+        bdImage.setCommunity(result.get());
+
         model.addAttribute("community", result);
+        model.addAttribute("bdImage", imageService.getImage(bdImage));
 
         result.get().setCount(result.get().getCount()+1);
         communityService.savePosting(result.get()); // 조회수

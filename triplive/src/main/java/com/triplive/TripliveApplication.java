@@ -18,6 +18,7 @@ public class TripliveApplication {
 		log.info("파이썬 스크립트 실행");
 		InterpreterPython interpreter = new InterpreterPython();
 
+		log.info("파이썬 크롤링 실행");
 		interpreter.pythonFileStart();
 	}
 

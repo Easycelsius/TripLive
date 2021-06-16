@@ -26,8 +26,8 @@ public class BdImageServiceImpl implements BdImageService {
      }
 
      @Override
-     public BdImage getImage(BdImage bdImage) {
-          return bdImageDAO.getById(bdImage.getImgNo());
+     public List<BdImage> getImage(BdImage bdImage) {
+          return bdImageDAO.getByCommunityBdNo(bdImage.getCommunity().getBdNo());
      }
 
      @Override
