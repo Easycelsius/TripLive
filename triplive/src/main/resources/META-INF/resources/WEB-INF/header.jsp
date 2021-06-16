@@ -14,8 +14,8 @@ uri="http://www.springframework.org/security/tags" prefix="sec" %>
         <div class="container">
           <div class="row">
             <div class="col d-flex flex-row">
-              <div class="phone">+82 031 728 7001</div>
-              <div class="social">
+              <!-- <div class="phone">+82 031 728 7001</div> -->
+              <!-- <div class="social">
                 <ul class="social_list">
                   <li class="social_list_item">
                     <a href="#"
@@ -48,7 +48,7 @@ uri="http://www.springframework.org/security/tags" prefix="sec" %>
                     ></a>
                   </li>
                 </ul>
-              </div>
+              </div> -->
 
               <sec:authorize access="isAuthenticated()">
                 <div class="user_box ml-auto">

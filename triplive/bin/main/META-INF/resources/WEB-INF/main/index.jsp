@@ -72,7 +72,7 @@ pageEncoding="utf-8"%>
           //   abc4 = abc3 + "..." 
           //   $(".ct_text").remove()
           //   abc6 = $(".cta_title").append('<p>'+abc4+'</p>')
-          // });
+          // });   
     </script>
     
   </head>
@@ -95,7 +95,7 @@ pageEncoding="utf-8"%>
               <!-- Image by https://unsplash.com/@anikindimitry -->
               <div
                 class="home_slider_background"
-                style="background-image: url(../images/ben-selway.jpg)"
+                style="background-image: url(../images/main3.jpg)"
               ></div>
 
               <div class="home_slider_content text-center">
@@ -104,8 +104,8 @@ pageEncoding="utf-8"%>
                   data-animation-in="flipInX"
                   data-animation-out="animate-out fadeOut"
                 >
-                  <h1>Yours</h1>
-                  <h1>travelAlarm</h1>
+                  <h1>안전걱정없이</h1>
+                  <h1>여행을 떠나요</h1>
                   <div class="button home_slider_button">
                     <div class="button_bcg"></div>
                   </div>
@@ -118,7 +118,7 @@ pageEncoding="utf-8"%>
               <!-- Image by https://unsplash.com/photos/Gg93cEspT_8 -->
               <div
                 class="home_slider_background"
-                style="background-image: url(../images/stefano.jpg)"
+                style="background-image: url(../images/main2.png)"
               ></div>
 
               <div class="home_slider_content text-center">
@@ -127,13 +127,10 @@ pageEncoding="utf-8"%>
                   data-animation-in="flipInX"
                   data-animation-out="animate-out fadeOut"
                 >
-                  <h1>COUNTRY</h1>
-                  <h1>historyas</h1>
+                  <h1>여행은</h1>
+                  <h1>Triplive처럼</h1>
                   <div class="button home_slider_button">
                     <div class="button_bcg"></div>
-                    <a href="#"
-                      >바로가기<span></span><span></span><span></span
-                    ></a>
                   </div>
                 </div>
               </div>
@@ -143,7 +140,7 @@ pageEncoding="utf-8"%>
             <div class="owl-item home_slider_item">
               <div
                 class="home_slider_background"
-                style="background-image: url(../images/alice-davies.jpg)"
+                style="background-image: url(../images/main1.jpg)"
               ></div>
 
               <div class="home_slider_content text-center">
@@ -152,13 +149,10 @@ pageEncoding="utf-8"%>
                   data-animation-in="flipInX"
                   data-animation-out="animate-out fadeOut"
                 >
-                  <h1>TRIPLIVE</h1>
-                  <h1>the world</h1>
+                  <h1>내일의 여행을</h1>
+                  <h1>준비하는 우리에게</h1>
                   <div class="button home_slider_button">
                     <div class="button_bcg"></div>
-                    <a href="#"
-                      >바로가기<span></span><span></span><span></span
-                    ></a>
                   </div>
                 </div>
               </div>
@@ -262,13 +256,13 @@ pageEncoding="utf-8"%>
 
       <!-- Search -->
 
-      <div class="search">
-        <!-- Search Contents -->
+  <!--  <div class="search">
+        <! Search Contents >
 
         <div class="container fill_height">
           <div class="row fill_height">
             <div class="col fill_height">
-              <!-- Search Tabs -->
+              <! Search Tabs >
 
               <div class="search_tabs_container">
                 <div
@@ -351,9 +345,9 @@ pageEncoding="utf-8"%>
                 </div>
               </div>
 
-              <!-- Search Panel -->
+              <! Search Panel -->
 
-              <div class="search_panel active">
+            <!--     <div class="search_panel active">
                 <form
                   action="#"
                   id="search_form_1"
@@ -373,7 +367,7 @@ pageEncoding="utf-8"%>
                       required="required"
                     />
                   </div>
-                  <!-- <div class="search_item">
+                <div class="search_item">
 								<div>check in</div>
 								<input type="text" class="check_in search_input" placeholder="YYYY-MM-DD">
 							</div>
@@ -396,16 +390,16 @@ pageEncoding="utf-8"%>
 									<option>02</option>
 									<option>03</option>
 								</select>
-							</div> -->
+							</div>
                   <button class="button search_button">
                     검색<span></span><span></span><span></span>
                   </button>
                 </form>
-              </div>
+              </div> -->
 
               <!-- Search Panel -->
 
-              <div class="search_panel">
+        <!--      <div class="search_panel">
                 <form
                   action="#"
                   id="search_form_2"
@@ -425,7 +419,7 @@ pageEncoding="utf-8"%>
                       required="required"
                     />
                   </div>
-                  <!-- <div class="search_item">
+                  <div class="search_item">
 								<div>check in</div>
 								<input type="text" class="check_in search_input" placeholder="YYYY-MM-DD">
 							</div>
@@ -448,16 +442,16 @@ pageEncoding="utf-8"%>
 									<option>02</option>
 									<option>03</option>
 								</select>
-							</div> -->
+							</div>
                   <button class="button search_button">
                     검색<span></span><span></span><span></span>
                   </button>
                 </form>
-              </div>
+              </div>-->
 
               <!-- Search Panel -->
 
-              <div class="search_panel">
+    <!--      <div class="search_panel">
                 <form
                   action="#"
                   id="search_form_3"
@@ -477,7 +471,7 @@ pageEncoding="utf-8"%>
                       required="required"
                     />
                   </div>
-                  <!-- <div class="search_item">
+                <div class="search_item">
 								<div>check in</div>
 								<input type="text" class="check_in search_input" placeholder="YYYY-MM-DD">
 							</div>
@@ -500,16 +494,16 @@ pageEncoding="utf-8"%>
 									<option>02</option>
 									<option>03</option>
 								</select>
-							</div> -->
+							</div> 
                   <button class="button search_button">
                     검색<span></span><span></span><span></span>
                   </button>
                 </form>
-              </div>
+              </div> -->
 
               <!-- Search Panel -->
 
-              <div class="search_panel">
+      <!--        <div class="search_panel">
                 <form
                   action="#"
                   id="search_form_4"
@@ -529,7 +523,7 @@ pageEncoding="utf-8"%>
                       required="required"
                     />
                   </div>
-                  <!-- <div class="search_item">
+                  <div class="search_item">
 								<div>check in</div>
 								<input type="text" class="check_in search_input" placeholder="YYYY-MM-DD">
 							</div>
@@ -552,16 +546,16 @@ pageEncoding="utf-8"%>
 									<option>02</option>
 									<option>03</option>
 								</select>
-							</div> -->
+							</div> 
                   <button class="button search_button">
                     검색<span></span><span></span><span></span>
                   </button>
                 </form>
-              </div>
+              </div> -->
 
               <!-- Search Panel -->
 
-              <div class="search_panel">
+            <!--    <div class="search_panel">
                 <form
                   action="#"
                   id="search_form_5"
@@ -581,7 +575,7 @@ pageEncoding="utf-8"%>
                       required="required"
                     />
                   </div>
-                  <!-- <div class="search_item">
+                <div class="search_item">
 								<div>check in</div>
 								<input type="text" class="check_in search_input" placeholder="YYYY-MM-DD">
 							</div>
@@ -604,16 +598,16 @@ pageEncoding="utf-8"%>
 									<option>02</option>
 									<option>03</option>
 								</select>
-							</div> -->
+							</div>
                   <button class="button search_button">
                     검색<span></span><span></span><span></span>
                   </button>
                 </form>
-              </div>
+              </div> -->
 
               <!-- Search Panel -->
 
-              <div class="search_panel">
+      <!--      <div class="search_panel">
                 <form
                   action="#"
                   id="search_form_6"
@@ -633,7 +627,7 @@ pageEncoding="utf-8"%>
                       required="required"
                     />
                   </div>
-                  <!-- <div class="search_item">
+                  <div class="search_item">
 								<div>check in</div>
 								<input type="text" class="check_in search_input" placeholder="YYYY-MM-DD">
 							</div>
@@ -656,16 +650,16 @@ pageEncoding="utf-8"%>
 									<option>02</option>
 									<option>03</option>
 								</select>
-							</div> -->
+							</div> 
                   <button class="button search_button">
                     검색<span></span><span></span><span></span>
                   </button>
                 </form>
-              </div>
+              </div> 
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
       <!-- Intro -->
 
@@ -751,7 +745,7 @@ pageEncoding="utf-8"%>
               <div class="cta_slider_container">
                 <div class="owl-carousel owl-theme cta_slider">                  
                   <c:forEach items="${safetylist}" var="l" begin="0" end="2">
-                  <!-- CTA Slider Item -->
+
                   <div class="owl-item cta_item text-center">
                     <div class="cta_title">국가∙지역별 사건사고 유형</div>
                     <div class="rating_r rating_r_4 ct_text" id="ct_text">
@@ -890,7 +884,7 @@ pageEncoding="utf-8"%>
                       <div class="offers_icons">
                       </div>
                       <div class="offers_link">
-                        <img src="img/QRimage/QRCodeImg.jpg" width="150px" height="100px">
+                        <img src="img/QRimage/QRCodeImgjp.jpg" width="150px" height="100px">
                       </div>
                     </div>
                   </div>
@@ -928,9 +922,7 @@ pageEncoding="utf-8"%>
                       <div class="offers_icons">
                       </div>
                       <div class="offers_link">
-                        <a href="http://overseas.mofa.go.kr/cn-ko/index.do"
-                          >홈페이지 바로가기</a
-                        >
+                        <img src="img/QRimage/QRCodeImgcn.gif" width="150px" height="100px">
                       </div>
                     </div>
                   </div>
@@ -970,9 +962,7 @@ pageEncoding="utf-8"%>
                       <div class="offers_icons">
                       </div>
                       <div class="offers_link">
-                        <a href="http://overseas.mofa.go.kr/us-ko/index.do"
-                          >홈페이지 바로가기</a
-                        >
+                        <img src="img/QRimage/QRCodeImgus.gif" width="150px" height="100px">
                       </div>
                     </div>
                   </div>
@@ -1012,9 +1002,7 @@ pageEncoding="utf-8"%>
                       <div class="offers_icons">
                       </div>
                       <div class="offers_link">
-                        <a href="http://overseas.mofa.go.kr/th-ko/index.do"
-                          >홈페이지 바로가기</a
-                        >
+                        <img src="img/QRimage/QRCodeImgth.gif" width="150px" height="100px">
                       </div>
                     </div>
                   </div>
@@ -1185,23 +1173,29 @@ pageEncoding="utf-8"%>
                   <div class="owl-item">
                     <div class="test_item">
                       <div class="test_image">
-                        <img src="../images/test_2.jpg" alt="" />
+                        <img
+                          src="../img/background/CN1.JPG"
+                          alt="https://unsplash.com/@tschax"
+                        />
                       </div>
                       <div class="test_icon">
-                        <img src="../images/island_t.png" alt="" />
+                        <img src="../img/countryflag/CN_1.gif" alt="" />
                       </div>
                       <div class="test_content_container">
                         <div class="test_content">
                           <div class="test_item_info">
                             <div class="test_name">중국</div>
-                            <div class="test_date">May 24, 2017</div>
+                            <div class="test_date">2020년 10월 15일</div>
                           </div>
                           <div class="test_quote_title">
-                            " Best holliday ever "
+                            한국→중국 동방항공 운항 임시 중단 및 취소 안내
                           </div>
                           <p class="test_quote_text">
-                            Nullam eu convallis tortor. Suspendisse potenti. In
-                            faucibus massa arcu, vitae cursus mi hendrerit nec.
+                            ○ 10.10(토) 중국 상하이 시정부는 인천→상해(MU5042) 운항을 10.12(월)부터 
+                            일주일 간 잠정 중단하고,&nbsp;인천→상해(강소성)무석(MU2990) 운항을 
+                            취소한다고 발표하였습니다.○ 상기 관련, 동방항공 편으로 중국 상해 또는 
+                            무석을 방문 계획 중인 국민께서는 참고하여 주시기 바랍니다.&nbsp;○ 도움이 
+                            필요하시거나 긴급 상황 발생 시 아래 긴급 연락처로 연락해 주시기 바랍니다.
                           </p>
                         </div>
                       </div>
@@ -1212,23 +1206,22 @@ pageEncoding="utf-8"%>
                   <div class="owl-item">
                     <div class="test_item">
                       <div class="test_image">
-                        <img src="../images/test_1.jpg" alt="" />
+                        <img src="../img/background/VN1.jpg" alt="" />
                       </div>
                       <div class="test_icon">
-                        <img src="../images/backpack.png" alt="" />
+                        <img src="../img/countryflag/VN1.gif" alt="" />
                       </div>
                       <div class="test_content_container">
                         <div class="test_content">
                           <div class="test_item_info">
                             <div class="test_name">베트남</div>
-                            <div class="test_date">May 24, 2017</div>
+                            <div class="test_date">2020년 2월 28일</div>
                           </div>
                           <div class="test_quote_title">
-                            " Best holliday ever "
+                            베트남 15일 무사증 입국 임시중단
                           </div>
                           <p class="test_quote_text">
-                            Nullam eu convallis tortor. Suspendisse potenti. In
-                            faucibus massa arcu, vitae cursus mi hendrerit nec.
+                            ○ 베트남은 한국을 포함한 코로나19 확산국가에 대해 15일간 체류 무사증제도를 2.29(토)부터 임시 중단키로 결정하였습니다.○ 베트남 방문을 희망하는 우리 국민께서는 주한 베트남 대사관에서 비자를 미리 발급 받으시기 바랍니다.○ 베트남 입국과 관련된 보다 자세한 사항은 주베트남대한민국대사관 홈페이지(링크)를 확인하여 주시기 바랍니다.☞ 주베트남대한민국대사관&nbsp; &nbsp;- 대표번호(근무시간 중) : +84-24-3771-0404 / +84-24-3831-5111&nbsp; &nbsp;- 긴급연락처(긴급상황 발생 시, 24시간) : +84-90-402-6126☞ 영사콜센터(서울, 24시간) : +82-2-3210-0404﻿&nbsp;﻿&nbsp;
                           </p>
                         </div>
                       </div>
@@ -1239,30 +1232,134 @@ pageEncoding="utf-8"%>
                   <div class="owl-item">
                     <div class="test_item">
                       <div class="test_image">
-                        <img src="../images/test_3.jpg" alt="" />
+                        <img src="../img/background/TH1.jpg" alt="" />
                       </div>
                       <div class="test_icon">
-                        <img src="../images/kayak.png" alt="" />
+                        <img src="../img/countryflag/TH1.gif" alt="" />
                       </div>
                       <div class="test_content_container">
                         <div class="test_content">
                           <div class="test_item_info">
                             <div class="test_name">태국</div>
-                            <div class="test_date">May 24, 2017</div>
+                            <div class="test_date">2020년 3월 11일</div>
                           </div>
                           <div class="test_quote_title">
-                            " Best holliday ever "
+                            태국 입국ㆍ체류시 유의사항
                           </div>
                           <p class="test_quote_text">
-                            Nullam eu convallis tortor. Suspendisse potenti. In
-                            faucibus massa arcu, vitae cursus mi hendrerit nec.
+                            ○ 3.10.(화) 08:00 기준 태국 보건부 지정 코로나19 위험감염지역 (한국, 중국(홍콩, 마카오 포함), 이란, 이탈리아)에서 태국으로 입국하는 경우 항공권 발권, 입국 심사 등에 적용되는 절차를 안내드리오니, 태국으로 입국하시는 우리 국민들께서는 각별히 유의하시기 바랍니다.&nbsp; [입국 심사 절차]▪ 탑승권 발권- 건강확인서(48시간 이내 코로나 음성 확인, 지난 14일간 질병이 없었다는 확인)를 지참하고 태국내에서 최소 10만불이 보상될 수 있다는 건강보험서류를 제출하는 사람만 비행기 탑승 가능(적용기간: 2020.3.10.-2020.06.09.)▪ (입국 심사)- 입국한 승객 대상 발열 증상 확인 등 건강 상태 확인 및 보건부 질의서(자택‧숙박시설 주소, 전화번호 등 기입) 작성※ 특히, 검역질문서 및 입국카드상 기재하는 연락처 및 주소는 반드시 상시 연락 가능한 정보를 정확하게 기재 필요(입국 거부 등 불 이익 발생 가능)▪ (유증상(발열, 콧물 등) 시)- 병원으로 이송, 음성 판정시 14일간 자가 격리 강력 권고 후 퇴원▪ (무증상시)- 입국후 자택 및 숙박시설에서 최소 14일간 자가 격리 강력 권고(3.6.)
                           </p>
                         </div>
                       </div>
                     </div>
                   </div>
+
+                
+                <!-- Testimonial Item -->
+                <div class="owl-item">
+                  <div class="test_item">
+                    <div class="test_image">
+                      <img src="../images/test_1.jpg" alt="" />
+                    </div>
+                    <div class="test_icon">
+                      <img src="../img/countryflag/SG1.gif" alt="" />
+                    </div>
+                    <div class="test_content_container">
+                      <div class="test_content">
+                        <div class="test_item_info">
+                          <div class="test_name">싱가포르</div>
+                          <div class="test_date">2020년 3월 4일</div>
+                        </div>
+                        <div class="test_quote_title">
+                          싱가포르 정부, 14일 이내 한국 등 방문이력 방문객 입국 및 경유 불허
+                        </div>
+                        <p class="test_quote_text">
+                          ○ 2020.03.04.(수) 23:59부터 최근 14일 이내 우리나라, 이탈리아(북부), 이란을 방문한 모든 여행객들은 싱가포르에 입국 및 경유가 불허됩니다.○ 부가적인 사항은 차후 대사관 안전여행공지 게시판에 공지할 예정이니 참고하시기 바랍니다.※ 싱가포르 시민·영주권자, 장기 체류 비자 소지자의 경우 14일 자가 격리 명령(Stay-Home Notice, SHN) 조치※ 취업 비자(work pass) 및 동반 비자(Dependant`s Pass, DP), 장기체류 비자(Long-Term Visit Pass, LTVP) 등 소지자는 고용주를 통해 싱가포르행 항공기 탑승 전 사전 입국 승인
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
+                <!-- Testimonial Item -->
+                <div class="owl-item">
+                  <div class="test_item">
+                    <div class="test_image">
+                      <img src="../images/test_1.jpg" alt="" />
+                    </div>
+                    <div class="test_icon">
+                      <img src="../img/countryflag/FR1.gif" alt="" />
+                    </div>
+                    <div class="test_content_container">
+                      <div class="test_content">
+                        <div class="test_item_info">
+                          <div class="test_name">프랑스</div>
+                          <div class="test_date">2021년 03월 12일</div>
+                        </div>
+                        <div class="test_quote_title">
+                          프랑스, 출입국 조치 완화 공지
+                        </div>
+                        <p class="test_quote_text">
+                          ○프랑스 외교부에 따르면 3.12(금)부터 우리나라 및 6개국(호주, 이스라엘, 일본, 뉴질랜드, 영국, 싱가포르) 에서 출발하는 우리 국민들에 대해 프랑스 입국제한조치가 완화됩니다.○&nbsp;이에, 우리나라 및 상기 6개 국에서 출발하는 우리 국민은 그간 적용된 불가피한 필수적 사유가 아니더라도 3.12 부터는 프랑스 입출국이 가능합니다.&nbsp;○&nbsp;다만, 입국시 72시간 이내 시행된 PCR 음성확인서가 필요하며 입국후 7일간 자가격리를 준수해야 합니다. 각지역별로 통금조치 또는 주말이동제한조치가 이루어지고 있어 외출시 반드시 관련내용을 확인하여 주시기 바랍니다.○&nbsp;한편 프랑스 정부에 따르면 프랑스내 일일확진자수가 평균 2만명을 넘고 있어, 프랑스 방문시 코로나에 감염되지 않도록 각별히 유의해 주시기 바랍니다.☞ 주프랑스 대한민국 대사관&nbsp; &nbsp;- 대표번호(근무시간 중) : +33-1-4753-0101 / +33-6-8095-9347&nbsp; &nbsp;- 긴급연락처(사건사고 등 긴급상황 발생 시, 24시간) : +33-6-8028-5396☞ 영사콜센터(서울, 24시간) : +82-2-3210-0404
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Testimonial Item -->
+                <div class="owl-item">
+                  <div class="test_item">
+                    <div class="test_image">
+                      <img src="../img/test_1.jpg" alt="" />
+                    </div>
+                    <div class="test_icon">
+                      <img src="../img/countryflag/GB1.gif" alt="" />
+                    </div>
+                    <div class="test_content_container">
+                      <div class="test_content">
+                        <div class="test_item_info">
+                          <div class="test_name">영국</div>
+                          <div class="test_date">2021년 01월 16일</div>
+                        </div>
+                        <div class="test_quote_title">
+                          영국 입국 시 자가격리 면제 제도 중단 안내
+                        </div>
+                        <p class="test_quote_text">
+                          ○영국 정부는 2021.01.15.(금) 총리 브리핑을 통해 코로나19 변이바이러스의 세계적 확산에 따라 2021.1.18.(월) 04:00부터 기존 코로나19 저위험국가 입국자 대상 자가격리 면제제도(Travel Corridors)를 중단하고 대한민국을 포함한 모든 해외입국자를 대상으로 10일간 자가격리 의무를 부여할 예정입니다.○&nbsp;같은 일시부터 영국 입국 시 코로나19 음성확인서 제출 의무화(Passenger Locator Form도 별도로 제출 필요)도 함께 시행되오니 영국에 입국할 계획이 있으신 우리 국민께서는 각별히 유념하여 주시기 바랍니다.&nbsp;○&nbsp;영국 내 자가격리와 관련된 보다 자세한 내용은 아래의 영국정부 홈페이지를 참고해 주시기 바랍니다.&nbsp; &nbsp;※ Coronavirus (COVID-19): how to self-isolate when you travel to England&nbsp;○ 기타 도움이 필요하시거나 긴급 상황 발생 시 아래 연락처로 연락해 주시기 바랍니다.☞ 주영국대한민국대사관&nbsp; &nbsp;- 대표번호(근무시간 중) :&nbsp;+44-20-7227-5500&nbsp; &nbsp;- 긴급연락처(사건사고 등 긴급상황 발생 시, 24시간) :&nbsp;+44-78-7650-6895☞ 영사콜센터(서울, 24시간) : +82-2-3210-0404
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Testimonial Item -->
+                <div class="owl-item">
+                  <div class="test_item">
+                    <div class="test_image">
+                      <img src="../images/test_1.jpg" alt="" />
+                    </div>
+                    <div class="test_icon">
+                      <img src="../img/countryflag/AU1.gif" alt="" />
+                    </div>
+                    <div class="test_content_container">
+                      <div class="test_content">
+                        <div class="test_item_info">
+                          <div class="test_name">호주</div>
+                          <div class="test_date">May 24, 2017</div>
+                        </div>
+                        <div class="test_quote_title">
+                          " Best holliday ever "
+                        </div>
+                        <p class="test_quote_text">
+                          Nullam eu convallis tortor. Suspendisse potenti. In
+                          faucibus massa arcu, vitae cursus mi hendrerit nec.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </div>
                 <!-- Testimonials Slider Nav - Prev -->
                 <div class="test_slider_nav test_slider_prev">
                   <svg

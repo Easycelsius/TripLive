@@ -41,7 +41,7 @@ pageEncoding="utf-8"%>
         }
       );
       var buttons = document.getElementsByTagName("button");
-      buttons[0].disabled = true;
+      buttons[0].disabled = false;
       buttons[1].disabled = false;
     }
 
@@ -67,6 +67,9 @@ pageEncoding="utf-8"%>
         alert("기타 에러 발생");
       }
     }
+    $(document).ready(function () {
+      $(".dismissButton").click();
+    });
   </script>
 
   <body onload="startWatchPosition()">
@@ -93,7 +96,7 @@ pageEncoding="utf-8"%>
                   통신판매중개자이며 통신판매의 당사자가 아닙니다. 따라서
                   상품·거래정보 및 거래에 대하여 책임을 지지 않습니다.
                 </p>
-                <ul class="footer_social_list">
+                <!--<ul class="footer_social_list">
                   <li class="footer_social_item">
                     <a href="#"><i class="fa fa-pinterest"></i></a>
                   </li>
@@ -109,7 +112,7 @@ pageEncoding="utf-8"%>
                   <li class="footer_social_item">
                     <a href="#"><i class="fa fa-behance"></i></a>
                   </li>
-                </ul>
+                </ul> -->
               </div>
             </div>
           </div>
