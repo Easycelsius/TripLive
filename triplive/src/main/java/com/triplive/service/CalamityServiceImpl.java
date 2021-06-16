@@ -52,7 +52,7 @@ public class CalamityServiceImpl implements CalamityService{
                 
                 if(!"".equals(isoNum) && isoNum != null){
                         log.info("특수 검색 진행 : 국가");
-                        return calamityDAO.findAllByIsoNum(isoNum, pageable);
+                        return calamityDAO.findAllByCountryIsoNum(isoNum, pageable);
                 } else if(!"".equals(keyword) && keyword != null){
                         log.info("특수 검색 진행 : 키워드");
                         return calamityDAO.findAllByTitleContainingOrCountryNmContaining(keyword, keyword, pageable);
@@ -69,7 +69,7 @@ public class CalamityServiceImpl implements CalamityService{
         public Long getCalamityCount(String isoNum, String keyword) {
 
                 if(!"".equals(isoNum) && isoNum != null){
-                        return calamityDAO.countByCountryisoNum(isoNum);
+                        return calamityDAO.countByCountryIsoNum(isoNum);
                 }
 
                 if(!"".equals(keyword) && keyword != null){
