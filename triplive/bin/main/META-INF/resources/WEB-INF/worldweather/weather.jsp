@@ -206,7 +206,7 @@ pageEncoding="utf-8"%>
             $("#currentFeelTemp").text(feelTemp);
             $("#currentHumidity").text(humidity);
             $("#currentWindSpeed").text(windSpeed);
-            $("#currentRain").text(비);
+            $("#currentRain").text(rain);
             $("#currentIcon").attr("src", imgURL);
           },
         });
@@ -491,5 +491,14 @@ pageEncoding="utf-8"%>
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbF_v_BwkfrA_VOdxySPYycBwMd2WkVag&callback=initMap&libraries=&v=weekly"
       async
     ></script>
+    <script>
+
+      $("body").keydown(function (key) {
+        if (event.keyCode == 13) {
+                event.preventDefault()
+            }
+      });
+    </script>
+    
   </body>
 </html>
