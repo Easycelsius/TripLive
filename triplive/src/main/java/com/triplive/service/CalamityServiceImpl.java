@@ -59,7 +59,6 @@ public class CalamityServiceImpl implements CalamityService{
                         return calamityDAO.findAllByCountryIsoAlp2(isoAlp2, pageable);
                 } else if(!"".equals(keyword) && keyword != null){
                         log.info("특수 검색 진행 : 키워드");
-                                                String isoAlp2 = countryDAO.findById(Long.parseLong(isoNum)).get().getIsoAlp2();
 
                         return calamityDAO.findAllByTitleContainingOrCountryNmContaining(keyword, keyword, pageable);
                 } else {
@@ -76,7 +75,6 @@ public class CalamityServiceImpl implements CalamityService{
 
                 if(!"".equals(isoNum) && isoNum != null){
                         String isoAlp2 = countryDAO.findById(Long.parseLong(isoNum)).get().getIsoAlp2();
-
                         return calamityDAO.countByCountryIsoAlp2(isoAlp2);
                 }
 
