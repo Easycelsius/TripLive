@@ -267,13 +267,11 @@ pageEncoding="utf-8"%>
 
       <!-- Search -->
 
-  <!--  <div class="search">
-        <! Search Contents >
+      <div class="search">
 
-        <div class="container fill_height">
+        <!-- <div class="container fill_height"> -->
           <div class="row fill_height">
             <div class="col fill_height">
-              <! Search Tabs >
 
               <div class="search_tabs_container">
                 <div
@@ -295,8 +293,10 @@ pageEncoding="utf-8"%>
                       justify-content-lg-center justify-content-start
                     "
                   >
-                  <img src="../images/suitcase.png" alt="" /><span>
-                    <a href="#section_title1"> 안전공지</a></span>
+                  <a href="#s1" class="scroll">
+                    <img src="../images/suitcase.png" alt="" /><span
+                      >안전공지</span>
+                  </a>
                   </div>
                   <div
                     class="
@@ -307,7 +307,9 @@ pageEncoding="utf-8"%>
                       justify-content-lg-center justify-content-start
                     "
                   >
+                  <a href="#s2" class="scroll">
                     <img src="../images/cruise.png" alt="" />사건사고 유형
+                  </a>
                   </div>
                   <div
                     class="
@@ -318,7 +320,9 @@ pageEncoding="utf-8"%>
                       justify-content-lg-center justify-content-start
                     "
                   >
+                  <a href="#s3" class="scroll">
                     <img src="../images/bus.png" alt="" />재외공관 정보
+                  </a>
                   </div>
                   <div
                     class="
@@ -329,7 +333,9 @@ pageEncoding="utf-8"%>
                       justify-content-lg-center justify-content-start
                     "
                   >
+                  <a href="#s4" class="scroll">
                     <img src="../images/departure.png" alt="" />최신 코로나19 소식
+                  </a>
                   </div>
                   <div
                     class="
@@ -340,7 +346,9 @@ pageEncoding="utf-8"%>
                       justify-content-lg-center justify-content-start
                     "
                   >
+                  <a href="#s5" class="scroll">
                     <img src="../images/island.png" alt="" />입국허가요건
+                  </a>
                   </div>
                   <div
                     class="
@@ -351,326 +359,18 @@ pageEncoding="utf-8"%>
                       justify-content-lg-center justify-content-start
                     "
                   >
+                  <a href="#s6" class="scroll">
                     <img src="../images/diving.png" alt="" />환율
+                  </a>
                   </div>
                 </div>
               </div>
 
-              <! Search Panel -->
-
-            <!--     <div class="search_panel active">
-                <form
-                  action="#"
-                  id="search_form_1"
-                  class="
-                    search_panel_content
-                    d-flex
-                    flex-lg-row flex-column
-                    align-items-lg-center align-items-start
-                    justify-content-lg-center justify-content-start
-                  "
-                >
-                  <div class="search_item">
-                    <div>찾으시는 환율 국가를 검색하세요</div>
-                    <input
-                      type="text"
-                      class="destination search_input"
-                      required="required"
-                    />
-                  </div>
-                <div class="search_item">
-								<div>check in</div>
-								<input type="text" class="check_in search_input" placeholder="YYYY-MM-DD">
-							</div>
-							<div class="search_item">
-								<div>check out</div>
-								<input type="text" class="check_out search_input" placeholder="YYYY-MM-DD">
-							</div>
-							<div class="search_item">
-								<div>adults</div>
-								<select name="adults" id="adults_1" class="dropdown_item_select search_input">
-									<option>01</option>
-									<option>02</option>
-									<option>03</option>
-								</select>
-							</div>
-							<div class="search_item">
-								<div>children</div>
-								<select name="children" id="children_1" class="dropdown_item_select search_input">
-									<option>0</option>
-									<option>02</option>
-									<option>03</option>
-								</select>
-							</div>
-                  <button class="button search_button">
-                    검색<span></span><span></span><span></span>
-                  </button>
-                </form>
-              </div> -->
-
-              <!-- Search Panel -->
-
-        <!--      <div class="search_panel">
-                <form
-                  action="#"
-                  id="search_form_2"
-                  class="
-                    search_panel_content
-                    d-flex
-                    flex-lg-row flex-column
-                    align-items-lg-center align-items-start
-                    justify-content-lg-center justify-content-start
-                  "
-                >
-                  <div class="search_item">
-                    <div>찾으시는 외교부를 검색하세요</div>
-                    <input
-                      type="text"
-                      class="destination search_input"
-                      required="required"
-                    />
-                  </div>
-                  <div class="search_item">
-								<div>check in</div>
-								<input type="text" class="check_in search_input" placeholder="YYYY-MM-DD">
-							</div>
-							<div class="search_item">
-								<div>check out</div>
-								<input type="text" class="check_out search_input" placeholder="YYYY-MM-DD">
-							</div>
-							<div class="search_item">
-								<div>adults</div>
-								<select name="adults" id="adults_2" class="dropdown_item_select search_input">
-									<option>01</option>
-									<option>02</option>
-									<option>03</option>
-								</select>
-							</div>
-							<div class="search_item">
-								<div>children</div>
-								<select name="children" id="children_2" class="dropdown_item_select search_input">
-									<option>0</option>
-									<option>02</option>
-									<option>03</option>
-								</select>
-							</div>
-                  <button class="button search_button">
-                    검색<span></span><span></span><span></span>
-                  </button>
-                </form>
-              </div>-->
-
-              <!-- Search Panel -->
-
-    <!--      <div class="search_panel">
-                <form
-                  action="#"
-                  id="search_form_3"
-                  class="
-                    search_panel_content
-                    d-flex
-                    flex-lg-row flex-column
-                    align-items-lg-center align-items-start
-                    justify-content-lg-center justify-content-start
-                  "
-                >
-                  <div class="search_item">
-                    <div>찾으시는 국가 정보를 검색하세요</div>
-                    <input
-                      type="text"
-                      class="destination search_input"
-                      required="required"
-                    />
-                  </div>
-                <div class="search_item">
-								<div>check in</div>
-								<input type="text" class="check_in search_input" placeholder="YYYY-MM-DD">
-							</div>
-							<div class="search_item">
-								<div>check out</div>
-								<input type="text" class="check_out search_input" placeholder="YYYY-MM-DD">
-							</div>
-							<div class="search_item">
-								<div>adults</div>
-								<select name="adults" id="adults_3" class="dropdown_item_select search_input">
-									<option>01</option>
-									<option>02</option>
-									<option>03</option>
-								</select>
-							</div>
-							<div class="search_item">
-								<div>children</div>
-								<select name="children" id="children_3" class="dropdown_item_select search_input">
-									<option>0</option>
-									<option>02</option>
-									<option>03</option>
-								</select>
-							</div> 
-                  <button class="button search_button">
-                    검색<span></span><span></span><span></span>
-                  </button>
-                </form>
-              </div> -->
-
-              <!-- Search Panel -->
-
-      <!--        <div class="search_panel">
-                <form
-                  action="#"
-                  id="search_form_4"
-                  class="
-                    search_panel_content
-                    d-flex
-                    flex-lg-row flex-column
-                    align-items-lg-center align-items-start
-                    justify-content-lg-center justify-content-start
-                  "
-                >
-                  <div class="search_item">
-                    <div>찾으시는 날씨 국가를 검색하세요</div>
-                    <input
-                      type="text"
-                      class="destination search_input"
-                      required="required"
-                    />
-                  </div>
-                  <div class="search_item">
-								<div>check in</div>
-								<input type="text" class="check_in search_input" placeholder="YYYY-MM-DD">
-							</div>
-							<div class="search_item">
-								<div>check out</div>
-								<input type="text" class="check_out search_input" placeholder="YYYY-MM-DD">
-							</div>
-							<div class="search_item">
-								<div>adults</div>
-								<select name="adults" id="adults_4" class="dropdown_item_select search_input">
-									<option>01</option>
-									<option>02</option>
-									<option>03</option>
-								</select>
-							</div>
-							<div class="search_item">
-								<div>children</div>
-								<select name="children" id="children_4" class="dropdown_item_select search_input">
-									<option>0</option>
-									<option>02</option>
-									<option>03</option>
-								</select>
-							</div> 
-                  <button class="button search_button">
-                    검색<span></span><span></span><span></span>
-                  </button>
-                </form>
-              </div> -->
-
-              <!-- Search Panel -->
-
-            <!--    <div class="search_panel">
-                <form
-                  action="#"
-                  id="search_form_5"
-                  class="
-                    search_panel_content
-                    d-flex
-                    flex-lg-row flex-column
-                    align-items-lg-center align-items-start
-                    justify-content-lg-center justify-content-start
-                  "
-                >
-                  <div class="search_item">
-                    <div>찾으시는 재난 및 긴급 국가를 검색하세요</div>
-                    <input
-                      type="text"
-                      class="destination search_input"
-                      required="required"
-                    />
-                  </div>
-                <div class="search_item">
-								<div>check in</div>
-								<input type="text" class="check_in search_input" placeholder="YYYY-MM-DD">
-							</div>
-							<div class="search_item">
-								<div>check out</div>
-								<input type="text" class="check_out search_input" placeholder="YYYY-MM-DD">
-							</div>
-							<div class="search_item">
-								<div>adults</div>
-								<select name="adults" id="adults_5" class="dropdown_item_select search_input">
-									<option>01</option>
-									<option>02</option>
-									<option>03</option>
-								</select>
-							</div>
-							<div class="search_item">
-								<div>children</div>
-								<select name="children" id="children_5" class="dropdown_item_select search_input">
-									<option>0</option>
-									<option>02</option>
-									<option>03</option>
-								</select>
-							</div>
-                  <button class="button search_button">
-                    검색<span></span><span></span><span></span>
-                  </button>
-                </form>
-              </div> -->
-
-              <!-- Search Panel -->
-
-      <!--      <div class="search_panel">
-                <form
-                  action="#"
-                  id="search_form_6"
-                  class="
-                    search_panel_content
-                    d-flex
-                    flex-lg-row flex-column
-                    align-items-lg-center align-items-start
-                    justify-content-lg-center justify-content-start
-                  "
-                >
-                  <div class="search_item">
-                    <div>찾으시는 여행지 정보를 검색하세요</div>
-                    <input
-                      type="text"
-                      class="destination search_input"
-                      required="required"
-                    />
-                  </div>
-                  <div class="search_item">
-								<div>check in</div>
-								<input type="text" class="check_in search_input" placeholder="YYYY-MM-DD">
-							</div>
-							<div class="search_item">
-								<div>check out</div>
-								<input type="text" class="check_out search_input" placeholder="YYYY-MM-DD">
-							</div>
-							<div class="search_item">
-								<div>adults</div>
-								<select name="adults" id="adults_6" class="dropdown_item_select search_input">
-									<option>01</option>
-									<option>02</option>
-									<option>03</option>
-								</select>
-							</div>
-							<div class="search_item">
-								<div>children</div>
-								<select name="children" id="children_6" class="dropdown_item_select search_input">
-									<option>0</option>
-									<option>02</option>
-									<option>03</option>
-								</select>
-							</div> 
-                  <button class="button search_button">
-                    검색<span></span><span></span><span></span>
-                  </button>
-                </form>
-              </div> 
+              
             </div>
           </div>
         </div>
-      </div> -->
+      <!-- </div> -->
 
       <!-- Intro -->
 
@@ -683,14 +383,14 @@ pageEncoding="utf-8"%>
           </div>
           <div class="row">
             <div class="col-lg-10 offset-lg-1">
-              <div class="intro_text text-center">
+              <div class="intro_text text-center" id="s1">
                 <p>
                   각 공관에서 실시간 업데이트 되는 국가별 최신 안전공지를 제공
                 </p>
               </div>
             </div>
           </div>
-          <div class="row intro_items">
+          <div class="row intro_items" id="s2">
               <!-- Intro Item -->
                 <c:forEach items="${safetylist}" var="l" varStatus="status">
                 <c:if test="${ status.index le 2 }">            
@@ -862,7 +562,7 @@ pageEncoding="utf-8"%>
         <div class="container">
           <div class="row">
             <div class="col text-center">
-              <h2 class="section_title" id="section_title1">국가별 재외공관 정보</h2>
+              <h2 class="section_title" id="s3">국가별 재외공관 정보</h2>
             </div>
           </div>
           <div class="row offers_items">
@@ -877,7 +577,7 @@ pageEncoding="utf-8"%>
                         class="offers_image_background"
                         style="background-image: url(../img/background/JP.jpg)"
                       ></div>
-                      <!-- <div class="offer_name"><a href="#">grand castle</a></div> -->
+                      <!-- <div class="offer_name">grand castle</a></div> -->
                     </div>
                   </div>
                   <div class="col-lg-6">
@@ -915,7 +615,7 @@ pageEncoding="utf-8"%>
                         class="offers_image_background"
                         style="background-image: url(../img/background/CN.png)"
                       ></div>
-                      <!-- <div class="offer_name"><a href="#">turkey hills</a></div> -->
+                      <!-- <div class="offer_name">turkey hills</a></div> -->
                     </div>
                   </div>
                   <div class="col-lg-6">
@@ -1032,7 +732,7 @@ pageEncoding="utf-8"%>
         <div class="container">
           <div class="row">
             <div class="col text-center">
-              <h2 class="section_title">국가·지역별 최신 코로나19 소식</h2>
+              <h2 class="section_title" id="s4">국가·지역별 최신 코로나19 소식</h2>
             </div>
           </div>
           <div class="row">
@@ -1340,11 +1040,11 @@ pageEncoding="utf-8"%>
         </div>
       </div>
 
-      <div class="trending">
+      <div class="trending" id="s5">
         <div class="container">
           <div class="row">
             <div class="col text-center">
-              <h2 class="section_title">국가·지역별 입국허가요건</h2>
+              <h2 class="section_title" >국가·지역별 입국허가요건</h2>
             </div>
           </div>
           <div class="row trending_container">
@@ -1355,7 +1055,7 @@ pageEncoding="utf-8"%>
                   <img src="../img/countryflag/IE.gif" />
                 </div>
                 <div class="trending_content">
-                  <div class="trending_title"><a href="#">아일랜드</a></div>
+                  <div class="trending_title">아일랜드</a></div>
                   <div class="trending_price">체류기간 : 90일</div>
                   <div class="trending_location">Ireland</div>
                 </div>
@@ -1372,7 +1072,7 @@ pageEncoding="utf-8"%>
                   />
                 </div>
                 <div class="trending_content">
-                  <div class="trending_title"><a href="#">미국</a></div>
+                  <div class="trending_title">미국</a></div>
                   <div class="trending_price">체류기간 : 90일</div>
                   <div class="trending_location">
                     전자여행허가(ESTA) 사전 신청 필요
@@ -1391,7 +1091,7 @@ pageEncoding="utf-8"%>
                   />
                 </div>
                 <div class="trending_content">
-                  <div class="trending_title"><a href="#">러시아</a></div>
+                  <div class="trending_title">러시아</a></div>
                   <div class="trending_price">
                     1회 최대 연속 체류 60일, 180일 중 누적 90일
                   </div>
@@ -1410,7 +1110,7 @@ pageEncoding="utf-8"%>
                   />
                 </div>
                 <div class="trending_content">
-                  <div class="trending_title"><a href="#">타이완</a></div>
+                  <div class="trending_title">타이완</a></div>
                   <div class="trending_price">체류기간 : 90일</div>
                   <div class="trending_location">
                     여권 유효기간 6개월 이상 필수
@@ -1429,7 +1129,7 @@ pageEncoding="utf-8"%>
                   />
                 </div>
                 <div class="trending_content">
-                  <div class="trending_title"><a href="#">베트남</a></div>
+                  <div class="trending_title">베트남</a></div>
                   <div class="trending_price">
                     체류기간 : 15일 (2020.2.29.0시 부터 잠정중단)
                   </div>
@@ -1448,7 +1148,7 @@ pageEncoding="utf-8"%>
                   />
                 </div>
                 <div class="trending_content">
-                  <div class="trending_title"><a href="#">일본</a></div>
+                  <div class="trending_title">일본</a></div>
                   <div class="trending_price">체류기간 : 90일</div>
                   <div class="trending_location">Japan</div>
                 </div>
@@ -1465,7 +1165,7 @@ pageEncoding="utf-8"%>
                   />
                 </div>
                 <div class="trending_content">
-                  <div class="trending_title"><a href="#">홍콩</a></div>
+                  <div class="trending_title">홍콩</a></div>
                   <div class="trending_price">체류기간 : 90일</div>
                   <div class="trending_location">Hongkong</div>
                 </div>
@@ -1482,7 +1182,7 @@ pageEncoding="utf-8"%>
                   />
                 </div>
                 <div class="trending_content">
-                  <div class="trending_title"><a href="#">필리핀</a></div>
+                  <div class="trending_title">필리핀</a></div>
                   <div class="trending_price">체류기간 : 30일</div>
                   <div class="trending_location">Philippines</div>
                 </div>
@@ -1494,7 +1194,7 @@ pageEncoding="utf-8"%>
 
       <!-- Milestones -->
 
-      <div class="milestones">
+      <div class="milestones" id="s6">
         <div class="container">
           <div class="row">
             <!-- Milestone -->
@@ -1562,6 +1262,14 @@ pageEncoding="utf-8"%>
     <script src="../plugins/parallax-js-master/parallax.min.js"></script>
     <script src="../js/custom.js"></script>
     <script src="../js/about_custom.js"></script>
+    <script>
+
+    $(".scroll").click(function(event){            
+          event.preventDefault();
+          $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
+    });
+
+    </script>
     
   </body>
 </html>
