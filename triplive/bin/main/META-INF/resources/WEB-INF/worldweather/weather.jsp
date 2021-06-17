@@ -85,6 +85,7 @@ pageEncoding="utf-8"%>
         success: function (resp) {
           lat = resp.coord.lat;
           lng = resp.coord.lon;
+          console.log(lat, lng)
         },
       });
 
@@ -482,8 +483,7 @@ pageEncoding="utf-8"%>
         </div>
       </div>
 
-      <!-- Footer -->
-      <%@include file ="../footer.jsp" %>
+      
     </div>
 
     <script src="../js/jquery-3.2.1.min.js"></script>
