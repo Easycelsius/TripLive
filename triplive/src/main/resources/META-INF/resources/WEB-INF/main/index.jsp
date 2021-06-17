@@ -1377,23 +1377,22 @@ pageEncoding="utf-8"%>
                   <div class="owl-item">
                     <div class="test_item">
                       <div class="test_image">
-                        <img src="../images/test_2.jpg" alt="" />
+                        <img src="../img/background/au.jpg" alt="" />
                       </div>
                       <div class="test_icon">
-                        <img src="../images/island_t.png" alt="" />
+                        <img src="../img/countryflag/SG1.gif" alt="" />
                       </div>
                       <div class="test_content_container">
                         <div class="test_content">
                           <div class="test_item_info">
-                            <div class="test_name">carla smith</div>
-                            <div class="test_date">May 24, 2017</div>
+                            <div class="test_name">싱가포르</div>
+                            <div class="test_date">2020년 3월 4일</div>
                           </div>
                           <div class="test_quote_title">
-                            " Best holliday ever "
+                            싱가포르 정부, 14일 이내 한국 등 방문이력 방문객 입국 및 경유 불허
                           </div>
                           <p class="test_quote_text">
-                            Nullam eu convallis tortor. Suspendisse potenti. In
-                            faucibus massa arcu, vitae cursus mi hendrerit nec.
+                            싱가포르 정부, 14일 이내 한국 등 방문이력 방문객 입국 및 경유 불허&nbsp;○ 2020.03.04.(수) 23:59부터 최근 14일 이내 우리나라, 이탈리아(북부), 이란을 방문한 모든 여행객들은 싱가포르에 입국 및 경유가 불허됩니다.○ 부가적인 사항은 차후 대사관 안전여행공지 게시판에 공지할 예정이니 참고하시기 바랍니다.※ 싱가포르 시민·영주권자, 장기 체류 비자 소지자의 경우 14일 자가 격리 명령(Stay-Home Notice, SHN) 조치※ 취업 비자(work pass) 및 동반 비자(Dependant`s Pass, DP), 장기체류 비자(Long-Term Visit Pass, LTVP) 등 소지자는 고용주를 통해 싱가포르행 항공기 탑승 전 사전 입국 승인
                           </p>
                         </div>
                       </div>
@@ -1404,23 +1403,22 @@ pageEncoding="utf-8"%>
                   <div class="owl-item">
                     <div class="test_item">
                       <div class="test_image">
-                        <img src="../images/test_1.jpg" alt="" />
+                        <img src="../img/background/th1.jpg" alt="" />
                       </div>
                       <div class="test_icon">
-                        <img src="../images/backpack.png" alt="" />
+                        <img src="../img/countryflag/CN1.gif" alt="" />
                       </div>
                       <div class="test_content_container">
                         <div class="test_content">
                           <div class="test_item_info">
-                            <div class="test_name">carla smith</div>
-                            <div class="test_date">May 24, 2017</div>
+                            <div class="test_name">중국</div>
+                            <div class="test_date">2020년 2월 27일</div>
                           </div>
                           <div class="test_quote_title">
-                            " Best holliday ever "
+                            중국 내 코로나-19 관련 안전유의
                           </div>
                           <p class="test_quote_text">
-                            Nullam eu convallis tortor. Suspendisse potenti. In
-                            faucibus massa arcu, vitae cursus mi hendrerit nec.
+                            중국 내 코로나-19 관련 안전유의&nbsp;○ 현재 중국에서는 코로나19 확산을 방지하기 위해 각 성ㆍ시별로 공항 등에서 방역 통제 조치가 시행되고 있으며, 이에 따라 자가격리ㆍ관찰 등 입국 절차도 강화되고 있습니다.○ 이러한 조치들이 충분한 사전공지 없이 시행되는 경우도 있는 만큼, 중국 방문을 계획하고 계신 우리 국민들께서는 특별히 유의하여 주시기 바랍니다.○ 중국 내 체류ㆍ방문하는 우리 국민들께서는 개인위생수칙을 준수하고 공공장소 방문을 자제하시되, 부득이 공공장소 방문 및 대중교통 등 이용시에는 반드시 마스크를 착용하시기 바라며, 가금류나 야생동물, 호흡기 유증상자와의 접촉을 삼가주시기 바랍니다.○ 아울러, 중국 내 우리 국민 감염ㆍ격리 사례 발생시 적절한 의료서비스를 제공 받을 수 있도록 필요한 영사조력을 제공하고 있으므로 관련 사례 발생 시 관할 재외공관 또는 영사콜센터(+82-2-3210-0404)로 연락주시기 바랍니다.
                           </p>
                         </div>
                       </div>
@@ -1431,23 +1429,22 @@ pageEncoding="utf-8"%>
                   <div class="owl-item">
                     <div class="test_item">
                       <div class="test_image">
-                        <img src="../images/test_3.jpg" alt="" />
+                        <img src="../img/background/VN1.jpg" alt="" />
                       </div>
                       <div class="test_icon">
-                        <img src="../images/kayak.png" alt="" />
+                        <img src="../img/countryflag/VN1.gif" alt="" />
                       </div>
                       <div class="test_content_container">
                         <div class="test_content">
                           <div class="test_item_info">
-                            <div class="test_name">carla smith</div>
-                            <div class="test_date">May 24, 2017</div>
+                            <div class="test_name">베트남</div>
+                            <div class="test_date">2020년 2월 28일</div>
                           </div>
                           <div class="test_quote_title">
-                            " Best holliday ever "
+                            베트남 15일 무사증 입국 임시중단
                           </div>
                           <p class="test_quote_text">
-                            Nullam eu convallis tortor. Suspendisse potenti. In
-                            faucibus massa arcu, vitae cursus mi hendrerit nec.
+                            베트남 15일 무사증 입국 임시중단&nbsp;○ 베트남은 한국을 포함한 코로나19 확산국가에 대해 15일간 체류 무사증제도를 2.29(토)부터 임시 중단키로 결정하였습니다.○ 베트남 방문을 희망하는 우리 국민께서는 주한 베트남 대사관에서 비자를 미리 발급 받으시기 바랍니다.○ 베트남 입국과 관련된 보다 자세한 사항은 주베트남대한민국대사관 홈페이지(링크)를 확인하여 주시기 바랍니다.
                           </p>
                         </div>
                       </div>
