@@ -41,6 +41,7 @@ pageEncoding="utf-8"%>
     <link rel="stylesheet" type="text/css" href="../assets/css/jquery.mCustomScrollbar.css">
     <!-- Style.css -->
     <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    
 
 
     <meta charset="utf-8">
@@ -79,6 +80,13 @@ pageEncoding="utf-8"%>
     <!-- Style.css -->
     <link rel="stylesheet" type="text/css" href="./../resources/assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="./../resources/assets/css/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" type="text/css" href="./../styles/korean.css" />
+
+        <style>
+            body{
+                font-family: NanumBarunGothic;
+            }
+        </style>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
         google.charts.load('current', {'packages':['bar']});

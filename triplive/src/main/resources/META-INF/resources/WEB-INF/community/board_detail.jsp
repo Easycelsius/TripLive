@@ -25,8 +25,13 @@
 <link rel="stylesheet" type="text/css" href="../styles/single_listing_responsive.css">
 <link rel="stylesheet" type="text/css" href="../styles/offers_styles.css">
 <link rel="stylesheet" type="text/css" href="../styles/offers_responsive.css">
-
+<link rel="stylesheet" type="text/css" href="../styles/korean.css" />
 </head>
+<style>
+	body{
+		font-family: NanumBarunGothic;
+	}
+</style>
 
 <body>
 
@@ -73,6 +78,7 @@
 									</div>
 								</div>
 							</div>
+							<hr>
 
 							<!-- Listing Image -->
 
@@ -93,6 +99,7 @@
 									</div>
 								</div> -->
 							</div>
+							
 
 							<!-- Hotel Gallery -->
 							<%-- 추후 사진 여러개 첨부하면 슬라이드로 넘겨주는 방식을 고려해볼 것
@@ -204,6 +211,7 @@
 							</div>
 							--%>
 							<!-- Hotel Info Text -->
+							<hr>
 
 							<div class="hotel_info_text">
 								<h3 class="text-dark font-weight-bold">내용</h3>
@@ -279,10 +287,13 @@
 						</div>
 						--%>
 
+						<hr>
+
 						<!-- 댓글목록 -->
 						<div class="reviews">
 							<div class="reviews_container">
 								<div class="reviews_title">댓글</div>
+								<hr>
 								<!-- Review -->
 								<div class="review">
 									<div class="row" id="comment_list">

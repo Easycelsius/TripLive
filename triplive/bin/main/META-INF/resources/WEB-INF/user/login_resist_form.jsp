@@ -7,16 +7,17 @@ pageEncoding="utf-8"%>
         <link rel="stylesheet" href="../styles/style.css">
         <link rel="stylesheet" type="text/css" href="../styles/offers_styles.css">
         <link rel="stylesheet" type="text/css" href="../styles/offers_responsive.css">
+        <link rel="stylesheet" type="text/css" href="./../styles/korean.css" />
         <script type="text/javascript" src="../js/jquery-3.2.1.min.js "></script>
     </head>
-    <body>
+    <body class="korean_BarunGothic">
         <div class="wrap">
             <div class="form-wrap">
                 <div class="button-wrap">
                     <div id="btn"></div>
                     <!-- <a href="login_resist_form.do"><button type="button" class="togglebtn" onclick="login()">LOG IN</button></a> -->
-                    <button type="button" class="togglebtn" onclick="login()">로그인</button>
-                    <button type="button" class="togglebtn" onclick="register()">회원가입</button>
+                    <button type="button" class="togglebtn korean_BarunGothic" onclick="login()">로그인</button>
+                    <button type="button" class="togglebtn korean_BarunGothic" onclick="register()">회원가입</button>
                 </div>
                 <!-- <div class="social-icons">
                     <img src="../img/fb.png" alt="facebook">

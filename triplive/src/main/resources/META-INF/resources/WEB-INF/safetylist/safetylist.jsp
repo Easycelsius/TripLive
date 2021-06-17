@@ -21,7 +21,13 @@
 <link rel="stylesheet" type="text/css" href="../../styles/offers_responsive.css">
 <link rel="stylesheet" type="text/css" href="../../styles/elements_responsive.css">
 <link rel="stylesheet" type="text/css" href="../../styles/elements_styles.css">
+<link rel="stylesheet" type="text/css" href="../styles/korean.css" />
 
+<style>
+	body{
+		font-family: NanumBarunGothic;
+	}
+</style>
 
 </head>
 

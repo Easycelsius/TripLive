@@ -25,6 +25,13 @@
         <link href="../plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <link rel="stylesheet" type="text/css" href="../styles/offers_styles.css">
         <link rel="stylesheet" type="text/css" href="../styles/offers_responsive.css">
+        <link rel="stylesheet" type="text/css" href="../styles/korean.css" />
+
+        <style>
+            body{
+                font-family: NanumBarunGothic;
+            }
+        </style>
 
         <%-- pop업창 --%>
         <%-- <script>

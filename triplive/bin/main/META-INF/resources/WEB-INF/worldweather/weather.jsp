@@ -25,6 +25,14 @@ pageEncoding="utf-8"%>
       type="text/css"
       href="../styles/offers_responsive.css"
     />
+    <link rel="stylesheet" type="text/css" href="../styles/korean.css" />
+    <style>
+      body{
+        font-family: NanumBarunGothic;
+      }
+
+    </style>
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script
       src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
@@ -346,7 +354,7 @@ pageEncoding="utf-8"%>
       }
     </style>
   </head>
-  <body>
+  <body class="korean_BarunGothic">
     <div class="super_container">
       <!-- 헤더 -->
       <%@include file ="../header.jsp" %>

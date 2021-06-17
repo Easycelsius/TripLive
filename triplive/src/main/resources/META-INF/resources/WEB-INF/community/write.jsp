@@ -15,7 +15,13 @@
 <link rel="stylesheet" type="text/css" href="../styles/contact_responsive.css">
 <link rel="stylesheet" type="text/css" href="../styles/offers_styles.css">
 <link rel="stylesheet" type="text/css" href="../styles/offers_responsive.css">
+<link rel="stylesheet" type="text/css" href="../styles/korean.css" />
+</head>
+
 <style type="text/css">
+	body{
+		font-family: NanumBarunGothic;
+	}
 	.img_wrap {
 		width: 100%;
 		margin-top: 50px;

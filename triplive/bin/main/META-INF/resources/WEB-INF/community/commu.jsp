@@ -21,8 +21,13 @@
 <link href="../plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../styles/offers_styles.css">
 <link rel="stylesheet" type="text/css" href="../styles/offers_responsive.css">
+<link rel="stylesheet" type="text/css" href="../styles/korean.css" />
 </head>
-
+<style>
+	body{
+		font-family: NanumBarunGothic;
+	}
+</style>
 <body>
 
 <div class="super_container">
@@ -126,7 +131,7 @@
 									
 									<div class="col-lg-11">
 										<div class="offers_content" >
-											<div class="offers_price" style="width: 80%; text-overflow: ellipsis;  white-space: nowrap; overflow: hidden; display: block; padding-top:4px;">${community.bdTitle}<span>${community.date}</span></div>
+											<div class="offers_price" style="width: 80%; text-overflow: ellipsis;  white-space: nowrap; overflow: hidden; display: block; padding-top:6px;">${community.bdTitle}<span>${community.date}</span></div>
 											<!-- <div class="rating_r rating_r_4 offers_rating" data-rating="4">
 												<i></i>
 												<i></i>
