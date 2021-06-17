@@ -14,41 +14,7 @@ uri="http://www.springframework.org/security/tags" prefix="sec" %>
         <div class="container">
           <div class="row">
             <div class="col d-flex flex-row">
-              <!-- <div class="phone">+82 031 728 7001</div> -->
-              <!-- <div class="social">
-                <ul class="social_list">
-                  <li class="social_list_item">
-                    <a href="#"
-                      ><i class="fa fa-pinterest" aria-hidden="true"></i
-                    ></a>
-                  </li>
-                  <li class="social_list_item">
-                    <a href="#"
-                      ><i class="fa fa-facebook" aria-hidden="true"></i
-                    ></a>
-                  </li>
-                  <li class="social_list_item">
-                    <a href="#"
-                      ><i class="fa fa-twitter" aria-hidden="true"></i
-                    ></a>
-                  </li>
-                  <li class="social_list_item">
-                    <a href="#"
-                      ><i class="fa fa-dribbble" aria-hidden="true"></i
-                    ></a>
-                  </li>
-                  <li class="social_list_item">
-                    <a href="#"
-                      ><i class="fa fa-behance" aria-hidden="true"></i
-                    ></a>
-                  </li>
-                  <li class="social_list_item">
-                    <a href="#"
-                      ><i class="fa fa-linkedin" aria-hidden="true"></i
-                    ></a>
-                  </li>
-                </ul>
-              </div> -->
+              <div class="phone">+82 031 728 7001</div>
 
               <sec:authorize access="isAuthenticated()">
                 <div class="user_box ml-auto">
@@ -57,16 +23,18 @@ uri="http://www.springframework.org/security/tags" prefix="sec" %>
                   </div>
                 </div>
               </sec:authorize>
+              <sec:authorize access="hasRole('ROLE_ADMIN')">
+                <div class="user_box_register user_box_link">
+                  <a href="../user/admin.do">관리자</a>
+                </div>
+              </sec:authorize>
               <sec:authorize access="!isAuthenticated()">
                 <div class="user_box ml-auto">
                   <div class="user_box_login user_box_link">
                     <a href="../user/login_resist_form.do">로그인</a>
                   </div>
-                  <div class="user_box_login user_box_link">
-                    <a href="../user/login_resist_form.do">회원가입</a>
-                  </div>
                   <div class="user_box_register user_box_link">
-                    <a href="../user/admin.do">관리자</a>
+                    <a href="../user/login_resist_form.do">회원가입</a>
                   </div>
                 </div>
               </sec:authorize>
@@ -115,9 +83,9 @@ uri="http://www.springframework.org/security/tags" prefix="sec" %>
                   <li class="main_nav_item">
                     <a href="../worldweather/weather.do">세계날씨</a>
                   </li>
-                  <li class="main_nav_item">
+                  <!-- <li class="main_nav_item">
                     <a href="../manager/manager.do">관광그램</a>
-                  </li>
+                  </li> -->
                 </ul>
               </div>
               <div class="content_search ml-lg-0 ml-auto">
