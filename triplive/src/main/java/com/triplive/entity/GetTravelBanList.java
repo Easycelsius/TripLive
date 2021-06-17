@@ -11,12 +11,12 @@ import lombok.*;
 
 public class GetTravelBanList {
     // Column으로 사용하지 않는 필드의 경우 @Transient 어노테이션을 적용
-    @Id // Primary Key에 해당하는 특정 필드를 id로 지정
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // ID값 자동으로 지정
-    private Long banNo;
+    
+    // private Long banNo;
    
-    @Column(length = 50, nullable = true)
-    private String id; // 고유값
+    @Id // Primary Key에 해당하는 특정 필드를 id로 지정
+    // @GeneratedValue(strategy = GenerationType.IDENTITY) // ID값 자동으로 지정
+    private Long id; // 고유값
 
     @Column(length = 50, nullable = true)
     private String countryName; // 국가명
@@ -27,7 +27,6 @@ public class GetTravelBanList {
     @Column(length = 1000, nullable = true)
     private String imgUrl2; // 여행위험지도경로
 
-    
     @Column(length = 10*3, nullable = true)
     private String isoCode; // iso국가코드
 

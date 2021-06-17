@@ -231,8 +231,8 @@ pageEncoding="utf-8"%>
 								<ul class="footer_nav_list">
 									<li class="main_nav_item"><a href="../index.do">홈</a></li>
 									<li class="main_nav_item"><a href="../community/commu.do">커뮤니티</a></li>
-									<li class="main_nav_item"><a href="">여행지정보</a></li>
-									<li class="main_nav_item"><a href="../calamity/calamity.do">긴급속보</a></li>
+									<li class="main_nav_item"><a href="../safetylist/safetylist.do">안전정보</a></li>
+									<li class="main_nav_item"><a href="../calamity/calamity.do">해외 코로나 소식</a></li>
 									<li class="main_nav_item"><a href="../worldweather/weather.do">세계날씨</a></li>
 								</ul>
 							</div>

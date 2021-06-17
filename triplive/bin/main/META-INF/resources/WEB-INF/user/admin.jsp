@@ -79,11 +79,43 @@ pageEncoding="utf-8"%>
     <!-- Style.css -->
     <link rel="stylesheet" type="text/css" href="./../resources/assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="./../resources/assets/css/jquery.mCustomScrollbar.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {'packages':['bar']});
+        google.charts.setOnLoadCallback(drawChart);
 
+        function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['', '명 또는 갯수'],
+            ['트립라이브 유저수', ${countUser}],
+            ['여행금지 국가수', ${countBanList}],
+            ['국외 사건 사고수', ${countCountryAccident}],
+            ['국외 안전 정보 건수', ${countSafetyList}],
+            ['해외 경고 수', ${countTavelAlarm}]
+        ]);
+
+        var options = {
+            chart: {
+            title: '트립라이브 통계치',
+            subtitle: '사이트 정보 요약',
+            },
+            bars: 'horizontal' // Required for Material Bar Charts.
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('barchart_material'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+        window.addEventListener('resize',drawChart, false);
+        }
+
+    $(()=>{
+        window.addEventListener('resize',drawChart, false);
+    })
+        
+    </script>
     
 </head>
 
-<%-- <%@include file ="header.jsp" %> --%>
 
 <body>
 
@@ -191,10 +223,13 @@ pageEncoding="utf-8"%>
                                                 <div class="card">
                                                     <div class="card-header">
                                                         <h5>통계수치</h5>
+                                                        
+                                                        
                                                         <span>크롤링 데이터 수를 알려드립니다.</span>
                                                     </div>
-                                                    <div class="card-block">
-                                                        <div id="line-example"></div>
+                                                    <div class="card-block col-lg-10">
+                                                        <div id="barchart_material" style="width: 100%; height: 500px;"></div>
+                                                        <!-- <div id="line-example"></div> -->
                                                     </div>
                                                 </div>
                                             </div>
