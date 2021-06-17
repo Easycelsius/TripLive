@@ -1,0 +1,46 @@
+@font-face
+{
+	font-family: 'NanumBrush';
+	src: url('../fonts/NanumBrush.ttf')  format('opentype');
+}
+
+@font-face
+{
+	font-family: 'NanumPen';
+	src: url('../fonts/NanumPen.ttf')  format('opentype');
+}
+
+@font-face
+{
+	font-family: 'NanumBarunGothic';
+	src: url('../fonts/NANUMBARUNGOTHIC.ttf')  format('opentype');
+}
+
+@font-face
+{
+	font-family: 'NanumBarunGothicLight';
+	src: url('../fonts/NANUMBARUNGOTHICULTRALIGHT.ttf')  format('opentype');
+}
+
+
+
+.korean_brush
+{
+	font-family: NanumBrush;
+    font-size: 1.2em;
+}
+
+.korean_pen
+{
+	font-family: NanumPen;
+}
+
+.korean_BarunGothic
+{
+	font-family: NanumBarunGothic;
+}
+
+.korean_BarunGothic_light
+{
+    font-family: NanumBarunGothicLight;
+}

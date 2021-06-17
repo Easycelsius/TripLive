@@ -7,8 +7,16 @@ uri="http://www.springframework.org/security/tags" prefix="sec" %>
 <html lang="ko">
   <head>
     <link rel="stylesheet" type="text/css" href="styles/responsive.css" />
+    <link rel="stylesheet" type="text/css" href="styles/korean.css" />
+    <style>
+      #logo_img{
+        position: relative;
+        width : 10em;
+        top: 0.2em;
+      }
+    </style>
   </head>
-  <body>
+  <body class="korean_BarunGothic_light">
     <header class="header">
       <div class="top_bar">
         <div class="container">
@@ -61,9 +69,9 @@ uri="http://www.springframework.org/security/tags" prefix="sec" %>
               <div class="logo_container">
                 <div class="logo">
                   <a href="../index.do"
-                    ><img
+                    ><img id="logo_img"
                       src="../logo/triplive_logo_white_r.png"
-                      width="200px"
+                      
                       alt="트립라이브 로고"
                   /></a>
                 </div>

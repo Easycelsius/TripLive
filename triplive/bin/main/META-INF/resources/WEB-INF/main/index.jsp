@@ -38,6 +38,21 @@ pageEncoding="utf-8"%>
     <link rel="stylesheet" type="text/css" href="../styles/responsive.css" />
     <link rel="stylesheet" type="text/css" href="../styles/about_styles.css" />
     <link rel="stylesheet" type="text/css" href="../styles/about_responsive.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/korean.css" />
+    <style>
+      .cta_title{
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      body {
+        font-family: NanumBarunGothic;
+      }
+
+      h1 {
+        font-family: NanumBrush;
+      }
+    </style>
 
     <script
       src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
@@ -46,6 +61,7 @@ pageEncoding="utf-8"%>
 
     <script>
       $(function () {
+        // 환율
         var apiURI =
           "https://earthquake.kr:23490/query/AUDKRW,BRLKRW,CADKRW,CHFKRW,CNYKRW,EURKRW,GBPKRW,HKDKRW,INRKRW,JPYKRW,MXNKRW,RUBKRW,THBKRW,TWDKRW,USDKRW,VNDKRW";
 
@@ -61,18 +77,15 @@ pageEncoding="utf-8"%>
             $("#VN").attr("data-end-value", (resp.VNDKRW[0]*100).toFixed(4)*10000);
           },
         });
+
+
+        // 토글
+        $( '.cta_title' ).click( function() {
+          $(this).parent().find('div.ct_text').toggle("slow")
+        });
+
       });
-
-    </script>
-
-    <script>
-          // $(function () {
-          //   abc2 = $(".ct_text p").text()+"</br>"
-          //   abc3 = abc2.substring(1, 100)
-          //   abc4 = abc3 + "..." 
-          //   $(".ct_text").remove()
-          //   abc6 = $(".cta_title").append('<p>'+abc4+'</p>')
-          // });   
+      
     </script>
     
   </head>
@@ -95,7 +108,7 @@ pageEncoding="utf-8"%>
               <!-- Image by https://unsplash.com/@anikindimitry -->
               <div
                 class="home_slider_background"
-                style="background-image: url(../images/main3.jpg)"
+                style="background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../images/main3.jpg)"
               ></div>
 
               <div class="home_slider_content text-center">
@@ -104,8 +117,7 @@ pageEncoding="utf-8"%>
                   data-animation-in="flipInX"
                   data-animation-out="animate-out fadeOut"
                 >
-                  <h1>안전걱정없이</h1>
-                  <h1>여행을 떠나요</h1>
+                  <h1>안전걱정없이 <br> 여행을 떠나요</h1>
                   <div class="button home_slider_button">
                     <div class="button_bcg"></div>
                   </div>
@@ -118,7 +130,7 @@ pageEncoding="utf-8"%>
               <!-- Image by https://unsplash.com/photos/Gg93cEspT_8 -->
               <div
                 class="home_slider_background"
-                style="background-image: url(../images/main2.png)"
+                style="background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url(../images/main2.png)"
               ></div>
 
               <div class="home_slider_content text-center">
@@ -128,7 +140,7 @@ pageEncoding="utf-8"%>
                   data-animation-out="animate-out fadeOut"
                 >
                   <h1>여행은</h1>
-                  <h1>Triplive처럼</h1>
+                  <h1 class="korean_brush">Triplive</h1>
                   <div class="button home_slider_button">
                     <div class="button_bcg"></div>
                   </div>
@@ -140,7 +152,7 @@ pageEncoding="utf-8"%>
             <div class="owl-item home_slider_item">
               <div
                 class="home_slider_background"
-                style="background-image: url(../images/main1.jpg)"
+                style="background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../images/main1.jpg)"
               ></div>
 
               <div class="home_slider_content text-center">
@@ -149,8 +161,7 @@ pageEncoding="utf-8"%>
                   data-animation-in="flipInX"
                   data-animation-out="animate-out fadeOut"
                 >
-                  <h1>내일의 여행을</h1>
-                  <h1>준비하는 우리에게</h1>
+                  <h1>내일의 여행을 <br> 준비하는 우리에게</h1>
                   <div class="button home_slider_button">
                     <div class="button_bcg"></div>
                   </div>
@@ -160,7 +171,7 @@ pageEncoding="utf-8"%>
           </div>
 
           <!-- Home Slider Nav - Prev -->
-          <div class="home_slider_nav home_slider_prev">
+          <div class="home_slider_nav home_slider_prev timer">
             <svg
               version="1.1"
               id="Layer_2"
@@ -747,18 +758,19 @@ pageEncoding="utf-8"%>
                   <c:forEach items="${safetylist}" var="l" begin="0" end="2">
 
                   <div class="owl-item cta_item text-center">
-                    <div class="cta_title">국가∙지역별 사건사고 유형</div>
-                    <div class="rating_r rating_r_4 ct_text" id="ct_text">
-                      <p class="cta_text" style="overflow: hidden;
-                      text-overflow: ellipsis;
-                      white-space: nowrap;">
-                        <div>${l.txtOriginCn}</div>
-                      </p>
+                    <div class="cta_title">${l.title} <br> ${l.wrtDt}</div>
+                    <div class="rating_r rating_r_4">
+                      <br>
+                      <br>
+                      <!-- <p class="cta_text"> -->
+                        <div class="ct_text" style="display:none;">${l.txtOriginCn}</div>
+                      <!-- </p> -->
+                      <c:if test="${l.fileDownloadUrl != ''}">
                       <div class="button cta_button">
                         <div class="button_bcg"></div>
-                        <a href="#">바로가기<span></span>
-                        </a>
+                        <a href="${l.fileDownloadUrl}">자료 다운로드</a>
                       </div>
+                    </c:if>
                     </div>
                   </div>
                   </c:forEach>                              
@@ -1550,5 +1562,6 @@ pageEncoding="utf-8"%>
     <script src="../plugins/parallax-js-master/parallax.min.js"></script>
     <script src="../js/custom.js"></script>
     <script src="../js/about_custom.js"></script>
+    
   </body>
 </html>
