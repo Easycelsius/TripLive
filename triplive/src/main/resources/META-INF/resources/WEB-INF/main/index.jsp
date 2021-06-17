@@ -117,7 +117,7 @@ pageEncoding="utf-8"%>
                   data-animation-in="flipInX"
                   data-animation-out="animate-out fadeOut"
                 >
-                  <h1>안전걱정없이 <br> 여행을 떠나요</h1>
+                  <h1>안전하게 <br> 여행을 떠나요</h1>
                   <div class="button home_slider_button">
                     <div class="button_bcg"></div>
                   </div>

@@ -97,7 +97,7 @@ uri="http://www.springframework.org/security/tags" prefix="sec" %>
                 </ul>
               </div>
               <div class="content_search ml-lg-0 ml-auto">
-                <svg
+                <!-- <svg
                   version="1.1"
                   id="Layer_1"
                   xmlns="http://www.w3.org/2000/svg"
@@ -136,7 +136,7 @@ uri="http://www.springframework.org/security/tags" prefix="sec" %>
                       </g>
                     </g>
                   </g>
-                </svg>
+                </svg> -->
               </div>
 
               <form id="search_form" class="search_form bez_1">
