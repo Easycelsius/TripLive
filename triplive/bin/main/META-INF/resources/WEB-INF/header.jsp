@@ -14,46 +14,7 @@ uri="http://www.springframework.org/security/tags" prefix="sec" %>
         <div class="container">
           <div class="row">
             <div class="col d-flex flex-row">
-<<<<<<< HEAD
-              <!-- <div class="phone">+82 031 728 7001</div> -->
-              <!-- <div class="social">
-                <ul class="social_list">
-                  <li class="social_list_item">
-                    <a href="#"
-                      ><i class="fa fa-pinterest" aria-hidden="true"></i
-                    ></a>
-                  </li>
-                  <li class="social_list_item">
-                    <a href="#"
-                      ><i class="fa fa-facebook" aria-hidden="true"></i
-                    ></a>
-                  </li>
-                  <li class="social_list_item">
-                    <a href="#"
-                      ><i class="fa fa-twitter" aria-hidden="true"></i
-                    ></a>
-                  </li>
-                  <li class="social_list_item">
-                    <a href="#"
-                      ><i class="fa fa-dribbble" aria-hidden="true"></i
-                    ></a>
-                  </li>
-                  <li class="social_list_item">
-                    <a href="#"
-                      ><i class="fa fa-behance" aria-hidden="true"></i
-                    ></a>
-                  </li>
-                  <li class="social_list_item">
-                    <a href="#"
-                      ><i class="fa fa-linkedin" aria-hidden="true"></i
-                    ></a>
-                  </li>
-                </ul>
-              </div> -->
-=======
               <div class="phone">+82 031 728 7001</div>
-              
->>>>>>> triplive/main
 
               <sec:authorize access="isAuthenticated()">
                 <div class="user_box ml-auto">
@@ -63,9 +24,9 @@ uri="http://www.springframework.org/security/tags" prefix="sec" %>
                 </div>
               </sec:authorize>
               <sec:authorize access="hasRole('ROLE_ADMIN')">
-                  <div class="user_box_register user_box_link">
-                    <a href="../user/admin.do">관리자</a>
-                  </div>
+                <div class="user_box_register user_box_link">
+                  <a href="../user/admin.do">관리자</a>
+                </div>
               </sec:authorize>
               <sec:authorize access="!isAuthenticated()">
                 <div class="user_box ml-auto">
