@@ -15,7 +15,6 @@ uri="http://www.springframework.org/security/tags" prefix="sec" %>
           <div class="row">
             <div class="col d-flex flex-row">
               <div class="phone">+82 031 728 7001</div>
-              
 
               <sec:authorize access="isAuthenticated()">
                 <div class="user_box ml-auto">
@@ -25,9 +24,9 @@ uri="http://www.springframework.org/security/tags" prefix="sec" %>
                 </div>
               </sec:authorize>
               <sec:authorize access="hasRole('ROLE_ADMIN')">
-                  <div class="user_box_register user_box_link">
-                    <a href="../user/admin.do">관리자</a>
-                  </div>
+                <div class="user_box_register user_box_link">
+                  <a href="../user/admin.do">관리자</a>
+                </div>
               </sec:authorize>
               <sec:authorize access="!isAuthenticated()">
                 <div class="user_box ml-auto">

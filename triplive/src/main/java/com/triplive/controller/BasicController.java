@@ -10,6 +10,13 @@ import org.json.simple.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.triplive.service.BasicService;
+import com.triplive.service.SafetyServiceImpl;
+import org.springframework.ui.Model;
+
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import lombok.extern.log4j.Log4j2;
@@ -19,13 +26,18 @@ import net.nurigo.java_sdk.exceptions.CoolsmsException;
 @Controller
 @Log4j2
 public class BasicController {
+    @Autowired
+    SafetyServiceImpl safetyService;
 
     @Autowired
     UserServiceImpl userService;
 
     @RequestMapping(value= {"/", "index.do"})
-    public String index() {
+    public String index(Model m, @RequestParam(value = "page", defaultValue = "1") Integer pageNum, String isoAlp2, String keyword ) {
         log.info("main page 요청");
+        m.addAttribute("safetylist", safetyService.getSafetyList(pageNum, isoAlp2, keyword));
+        m.addAttribute("countrylist", safetyService.getSafetyList(pageNum, isoAlp2, keyword));
+        
         return "main/index";
     }
 

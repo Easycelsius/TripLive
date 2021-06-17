@@ -12,7 +12,7 @@ import lombok.extern.log4j.Log4j2;
 @EnableScheduling
 @Log4j2
 public class TripliveApplication {
-	public static void main(String[] args) {
+	public static void main(String[] args) {   
 		SpringApplication.run(TripliveApplication.class, args);
 		log.info("스프링부트 실행 완료");
 
