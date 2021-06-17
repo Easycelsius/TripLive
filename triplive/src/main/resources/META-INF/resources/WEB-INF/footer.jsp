@@ -3,6 +3,7 @@ pageEncoding="utf-8"%>
 
 <!DOCTYPE html>
 <html lang="ko">
+  <link rel="stylesheet" type="text/css" href="../styles/korean.css" />
   <script src="http://maps.googleapis.com/maps/api/js?v=3.3&sensor=false"></script>
   <script type="text/javascript">
     var map, watchId;
@@ -41,8 +42,8 @@ pageEncoding="utf-8"%>
         }
       );
       var buttons = document.getElementsByTagName("button");
-      buttons[0].disabled = false;
-      buttons[1].disabled = false;
+      // buttons[0].disabled = false;
+      // buttons[1].disabled = false;
     }
 
     function stopWatchPosition() {
@@ -82,7 +83,7 @@ pageEncoding="utf-8"%>
               <div class="footer_content footer_about">
                 <div class="logo_container footer_logo">
                   <div class="logo">
-                    <a href="#"
+                    <a href="index.do"
                       ><img
                         src="../logo/triplive_logo_white_r.png"
                         width="200px"
@@ -90,7 +91,7 @@ pageEncoding="utf-8"%>
                     /></a>
                   </div>
                 </div>
-                <p class="footer_about_text">
+                <p class="footer_about_text korean_BarunGothic_light">
                   현지에 대한 실시간 정보, 출국 전 꼭 참고해야 할, 안전공지사항
                   및 사건∙사고 유형 등을 제공하는 데이터 서비스를 제공합니다.<br />triplive는
                   통신판매중개자이며 통신판매의 당사자가 아닙니다. 따라서
@@ -132,7 +133,7 @@ pageEncoding="utf-8"%>
                   </div>
                   <div class="footer_blog_content">
                     <div class="footer_blog_title">
-                      <a href="">Libya/리비아</a>
+                      Libya/리비아
                     </div>
                     <div class="footer_blog_date">2014.8.4 ~ 2021.7.31</div>
                   </div>
@@ -148,7 +149,7 @@ pageEncoding="utf-8"%>
                   </div>
                   <div class="footer_blog_content">
                     <div class="footer_blog_title">
-                      <a href="">Somalia/소말리아</a>
+                      Somalia/소말리아
                     </div>
                     <div class="footer_blog_date">2007.8.7 ~ 2021.7.31</div>
                   </div>
@@ -164,7 +165,7 @@ pageEncoding="utf-8"%>
                   </div>
                   <div class="footer_blog_content">
                     <div class="footer_blog_title">
-                      <a href="">Afghanistan/아프가니스탄</a>
+                      Afghanistan/아프가니스탄
                     </div>
                     <div class="footer_blog_date">2007.8.7 ~ 2021.7.31</div>
                   </div>
@@ -174,20 +175,23 @@ pageEncoding="utf-8"%>
           </div>
 
           <!-- Footer Column -->
-          <div class="col-lg-3 footer_column">
+          <!-- <div class="col-lg-3 footer_column">
             <div class="footer_col">
               <div class="footer_title"></div>
               <div class="footer_content footer_tags">
                 <ul class="tags_list clearfix">
-                  <li class="tag_item"><a href="#">이 용 약 관</a></li>
-                  <li class="tag_item">
-                    <a href="#">개 인 정 보 처 리 방 침</a>
+                  <li class="">이 용 약 관</li>
+                  <li class="">
+                    개 인 정 보 처 리 방 침
                   </li>
-                  <li class="tag_item"><a href="#">취 소 환 불 규 정</a></li>
-                  <li class="tag_item"><a href="#">고 객 센 터</a></li>
+                  <li class="">취 소 환 불 규 정</li>
+                  <li class="">고 객 센 터</li>
                 </ul>
               </div>
             </div>
+          </div> -->
+          <div class="col-lg-3 footer_column">
+            <div id="map" style="width: 200px; height: 200px">현위치</div>
           </div>
 
           <!-- Footer Column -->
@@ -240,8 +244,9 @@ pageEncoding="utf-8"%>
                     </div>
                   </li>
 
-                  <div id="map" style="width: 200px; height: 200px">현위치</div>
+                  
                 </ul>
+                
               </div>
             </div>
           </div>
@@ -288,61 +293,6 @@ pageEncoding="utf-8"%>
                   </li>
                   <li class="main_nav_item">
                     <a href="../calamity/calamity.do">해외 코로나 소식</a>
-                  </li>
-                  <li class="main_nav_item">
-                    <a href="../worldweather/weather.do">세계날씨</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <script src="../js/jquery-3.2.1.min.js"></script>
-    <script src="../styles/bootstrap4/popper.js"></script>
-    <script src="../styles/bootstrap4/bootstrap.min.js"></script>
-    <script src="../plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
-    <script src="../plugins/easing/easing.js"></script>
-    <script src="../js/custom.js"></script>
-
-    <div class="copyright">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-3 order-lg-1 order-2">
-            <div class="copyright_content d-flex flex-row align-items-center">
-              <div>
-                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                <script>
-                  document.write(new Date().getFullYear());
-                </script>
-                All rights reserved | This triplive is made with
-                <i class="fa fa-heart-o" aria-hidden="true"></i> by
-                <a href="../index.do" target="_blank">home</a>
-                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-9 order-lg-2 order-1">
-            <div
-              class="
-                footer_nav_container
-                d-flex
-                flex-row
-                align-items-center
-                justify-content-lg-end
-              "
-            >
-              <div class="footer_nav">
-                <ul class="footer_nav_list">
-                  <li class="main_nav_item"><a href="../index.do">홈</a></li>
-                  <li class="main_nav_item">
-                    <a href="../community/commu.do">커뮤니티</a>
-                  </li>
-                  <li class="main_nav_item"><a href="">여행지정보</a></li>
-                  <li class="main_nav_item">
-                    <a href="../calamity/calamity.do">긴급속보</a>
                   </li>
                   <li class="main_nav_item">
                     <a href="../worldweather/weather.do">세계날씨</a>
