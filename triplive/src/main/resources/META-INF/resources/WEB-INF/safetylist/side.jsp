@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<title>TRIPLIVE SAFETYNOTICE OFFER</title>
+<title>트립라이브 안전 공지 사이드바</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Travelix Project">

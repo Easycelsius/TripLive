@@ -4,7 +4,7 @@ pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<title>COVID NEWS</title>
+<title>트립라이브 코로나 뉴스</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Travelix Project">

@@ -3,7 +3,7 @@ pageEncoding="utf-8"%>
 
 <html>
     <head>
-        <title>트립라이브</title>
+        <title>트립라이브 회원정보</title>
         <link rel="stylesheet" href="../styles/style.css">
         <link rel="stylesheet" type="text/css" href="../styles/offers_styles.css">
         <link rel="stylesheet" type="text/css" href="../styles/offers_responsive.css">

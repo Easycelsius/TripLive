@@ -4,7 +4,7 @@ pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    <title>TripLive</title>
+    <title>당신을 위한 현지 정보, 트립라이브</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="description" content="Travelix Project" />
