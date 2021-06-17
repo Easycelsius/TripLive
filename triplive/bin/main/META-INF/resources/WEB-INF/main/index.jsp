@@ -396,12 +396,13 @@ pageEncoding="utf-8"%>
                 <c:if test="${ status.index le 2 }">            
                   <div class="col-lg-4 intro_col">
                     <div class="intro_item">
-                      <div class="intro_item_overlay"></div>
+                      <div class="intro_item_overlay" style="border-radius: 30px;"></div>
                       <!-- Image by https://unsplash.com/@dnevozhai -->
                       <div
                         class="intro_item_background"
                         style="
                           background-image: url(../img/background/destinations-18.jpg);
+                          border-radius: 30px;
                         "
                       ></div>
                       <div
@@ -453,11 +454,11 @@ pageEncoding="utf-8"%>
           <div class="row">
             <div class="col">
               <!-- CTA Slider -->
-              <div class="cta_slider_container">
+              <div class="cta_slider_container" >
                 <div class="owl-carousel owl-theme cta_slider">                  
                   <c:forEach items="${safetylist}" var="l" begin="0" end="2">
 
-                  <div class="owl-item cta_item text-center">
+                  <div class="owl-item cta_item text-center" style="border-radius: 30px;">
                     <div class="cta_title">${l.title} <br> ${l.wrtDt}</div>
                     <div class="rating_r rating_r_4">
                       <br>
@@ -575,7 +576,8 @@ pageEncoding="utf-8"%>
                       <!-- Image by https://unsplash.com/@kensuarez -->
                       <div
                         class="offers_image_background"
-                        style="background-image: url(../img/background/JP.jpg)"
+                        style="background-image: url(../img/background/JP.jpg);
+                        border-radius: 30px;"
                       ></div>
                       <!-- <div class="offer_name">grand castle</a></div> -->
                     </div>
@@ -596,7 +598,7 @@ pageEncoding="utf-8"%>
                       <div class="offers_icons">
                       </div>
                       <div class="offers_link">
-                        <img src="img/QRimage/QRCodeImgjp.jpg" width="150px" height="100px">
+                        <img src="img/QRimage/QRCodeImgjp.jpg" width="150px" height="100px" style="border-radius: 30px;">
                       </div>
                     </div>
                   </div>
@@ -613,7 +615,7 @@ pageEncoding="utf-8"%>
                       <!-- Image by Egzon Bytyqi -->
                       <div
                         class="offers_image_background"
-                        style="background-image: url(../img/background/CN.png)"
+                        style="background-image: url(../img/background/CN.png); border-radius: 30px;"
                       ></div>
                       <!-- <div class="offer_name">turkey hills</a></div> -->
                     </div>
@@ -634,7 +636,7 @@ pageEncoding="utf-8"%>
                       <div class="offers_icons">
                       </div>
                       <div class="offers_link">
-                        <img src="img/QRimage/QRCodeImgcn.gif" width="150px" height="100px">
+                        <img src="img/QRimage/QRCodeImgcn.gif" width="150px" height="100px" style="border-radius: 30px;">
                       </div>
                     </div>
                   </div>
@@ -652,7 +654,7 @@ pageEncoding="utf-8"%>
                       <div
                         class="offers_image_background"
                         style="
-                          background-image: url(../img/background/Mount_Rushmore.jpg);
+                          background-image: url(../img/background/Mount_Rushmore.jpg); border-radius: 30px;
                         "
                       ></div>
                     </div>
@@ -674,7 +676,7 @@ pageEncoding="utf-8"%>
                       <div class="offers_icons">
                       </div>
                       <div class="offers_link">
-                        <img src="img/QRimage/QRCodeImgus.gif" width="150px" height="100px">
+                        <img src="img/QRimage/QRCodeImgus.gif" width="150px" height="100px" style="border-radius: 30px;">
                       </div>
                     </div>
                   </div>
@@ -692,7 +694,7 @@ pageEncoding="utf-8"%>
                       <div
                         class="offers_image_background"
                         style="
-                          background-image: url(../img/background/destinations-19.jpg);
+                          background-image: url(../img/background/destinations-19.jpg); border-radius: 30px;
                         "
                       ></div>
                     </div>
@@ -714,7 +716,7 @@ pageEncoding="utf-8"%>
                       <div class="offers_icons">
                       </div>
                       <div class="offers_link">
-                        <img src="img/QRimage/QRCodeImgth.gif" width="150px" height="100px">
+                        <img src="img/QRimage/QRCodeImgth.gif" width="150px" height="100px" style="border-radius: 30px;">
                       </div>
                     </div>
                   </div>
