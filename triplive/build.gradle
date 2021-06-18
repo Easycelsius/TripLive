@@ -46,3 +46,9 @@ dependencies {
 test {
 	useJUnitPlatform()
 }
+
+bootWar {
+    archiveBaseName = '-'
+    archiveFileName = '-.war'
+    archiveVersion = "0.0.0"
+}
