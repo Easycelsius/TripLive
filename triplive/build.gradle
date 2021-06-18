@@ -49,6 +49,6 @@ test {
 
 bootWar {
     archiveBaseName = '-'
-    archiveFileName = '-.war'
-    archiveVersion = "0.0.0"
+    archiveFileName = 'TripLive.war'
+    archiveVersion = "1.0.0"
 }
