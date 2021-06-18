@@ -46,3 +46,9 @@ dependencies {
 test {
 	useJUnitPlatform()
 }
+
+bootWar {
+    archiveBaseName = '-'
+    archiveFileName = 'TripLive.war'
+    archiveVersion = "1.0.0"
+}
