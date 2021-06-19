@@ -8,16 +8,14 @@ import com.triplive.entity.User;
 import com.triplive.pythonconnect.InterpreterPython;
 import com.triplive.service.BdImageServiceImpl;
 import com.triplive.service.CommentServiceImpl;
-import com.triplive.service.CommunityService;
 import com.triplive.service.CommunityServiceImpl;
-import com.triplive.vo.PageRequestDTO;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.ObjectUtils;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -28,13 +26,9 @@ import lombok.extern.log4j.Log4j2;
 import java.io.File;
 import java.io.IOException;
 import java.security.Principal;
-import java.util.Base64;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
-import java.util.Base64.Encoder;
-
-import javax.swing.filechooser.FileSystemView;
 import javax.validation.Valid;
 
 @Controller
@@ -85,7 +79,7 @@ public class CommunityController {
 
         String rootPath = System.getProperty("user.dir");
         String basePath = rootPath 
-                                    + File.separator + "triplive" 
+                                    // + File.separator + "triplive" 
                                     + File.separator + "src" 
                                     + File.separator + "main" 
                                     + File.separator + "resources" 

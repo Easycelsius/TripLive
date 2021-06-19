@@ -50,26 +50,26 @@ public class InterpreterPython {
     public void pythonFileStart(){
         // 실행할 파이썬 파일 리스트 (DB 입력용)
 		String[] pyFileList = {
-			// "CountryAccidentService2" ,
-			// "GetCountryAgreementList2", 
-			// // "Country", // 국가코드
-			// // "GetCountryFlagList2.py", 
-			// "GetCountryHistoryList2", 
-			// "GetCountryMapList2",
-			// "GetCountrySafetyList2",
-			// "GetCountrySafetyNewsListNew",
-			// "GetEmbassyList2",
-			// "GetEntranceVisaList2",
-			// "GetLocalContactList2",
-			// "GetSptravelWarningList2",
-			// "GetTravelAlarmList2",
-			// "GetTravelBanList2"
+			"CountryAccidentService2" ,
+			"GetCountryAgreementList2", 
+			// "Country", // 국가코드
+			// "GetCountryFlagList2.py", 
+			"GetCountryHistoryList2", 
+			"GetCountryMapList2",
+			"GetCountrySafetyList2",
+			"GetCountrySafetyNewsListNew",
+			"GetEmbassyList2",
+			"GetEntranceVisaList2",
+			"GetLocalContactList2",
+			"GetSptravelWarningList2",
+			"GetTravelAlarmList2",
+			"GetTravelBanList2"
 		};
 
 		for(int i=0; i<pyFileList.length; i++){
 			log.info(pyFileList[i]);
-			this.crawlingStart("triplive/src/main/java/com/triplive/pythonconnect/"+pyFileList[i]+".py"); // 지섭 경로	
-			// this.crawlingStart("src/main/java/com/triplive/pythonconnect/"+pyFileList[i]+".py"); // 기타 경로
+			// this.crawlingStart("triplive/src/main/java/com/triplive/pythonconnect/"+pyFileList[i]+".py"); // 지섭 경로	
+			this.crawlingStart("src/main/java/com/triplive/pythonconnect/"+pyFileList[i]+".py"); // 기타 경로
 		}
     }
 
@@ -78,7 +78,7 @@ public class InterpreterPython {
 
         String[] command = new String[4];
         command[0] = "python";
-        command[1] = "triplive/src/main/java/com/triplive/pythonconnect/CNN_model.py";
+        command[1] = "src/main/java/com/triplive/pythonconnect/CNN_model.py";
         command[2] = bdNo;
         command[3] = "0.jpg";
 
