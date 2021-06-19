@@ -49,6 +49,9 @@ test {
 
 bootWar {
     archiveBaseName = '-'
-    archiveFileName = 'TripLive.war'
+    archiveFileName = 'TripLive_external.war'
     archiveVersion = "1.0.0"
 }
+
+bootWar.enabled = false
+war.enabled = true

@@ -38,8 +38,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter
 		// 앞에 선언한 것이 먼저 적용됨
         http
 			.authorizeRequests()
-				.antMatchers("/community/write.do").hasRole("MEMBER") // 글 남기기 페이지는 로그인 요청
-				.antMatchers("/community/write.do").hasRole("ADMIN") // 글 남기기 페이지는 로그인 요청
+				.antMatchers("/community/write.do").access("hasRole('MEMBER') or hasRole('ADMIN')") // 글 남기기 페이지는 로그인 요청
 				.antMatchers("/user/admin.do").hasRole("ADMIN")
 				.antMatchers("/**").permitAll() // 전부 열어두기
 				// .antMatchers("/calamity/**").permitAll()

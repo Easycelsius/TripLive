@@ -4,7 +4,8 @@ pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html lang="ko">
   <link rel="stylesheet" type="text/css" href="../styles/korean.css" />
-  <script src="http://maps.googleapis.com/maps/api/js?v=3.3&sensor=false"></script>
+  <!-- <script src="http://maps.googleapis.com/maps/api/js?v=3.3&sensor=false"></script> -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbF_v_BwkfrA_VOdxySPYycBwMd2WkVag&v=3.3&sensor=false"></script>
   <script type="text/javascript">
     var map, watchId;
     function startWatchPosition() {

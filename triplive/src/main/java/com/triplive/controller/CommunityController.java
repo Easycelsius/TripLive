@@ -83,8 +83,7 @@ public class CommunityController {
                                     + File.separator + "src" 
                                     + File.separator + "main" 
                                     + File.separator + "resources" 
-                                    + File.separator + "META-INF" 
-                                    + File.separator + "resources" 
+                                    + File.separator + "static" 
                                     + File.separator + "uploaded";
         
         // 파일 업로드(여러개) 처리 부분

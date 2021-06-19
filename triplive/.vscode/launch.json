@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch ServletInitializer",
+            "request": "launch",
+            "mainClass": "com.triplive.ServletInitializer",
+            "projectName": "triplive"
+        },
+        {
+            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"
