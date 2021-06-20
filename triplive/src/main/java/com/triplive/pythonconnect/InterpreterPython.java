@@ -8,6 +8,7 @@ import org.apache.commons.exec.PumpStreamHandler;
 import lombok.extern.log4j.Log4j2;
 
 import java.io.ByteArrayOutputStream;
+import java.io.File;
 import java.io.IOException;
 
 @Log4j2
@@ -16,7 +17,7 @@ public class InterpreterPython {
     public void crawlingStart(String filename){
 
         String[] command = new String[2];
-        command[0] = "python";
+        command[0] = "python3";
         command[1] = filename;
         // command[2] = "10";
         // command[3] = "20";
@@ -66,10 +67,14 @@ public class InterpreterPython {
 			"GetTravelBanList2"
 		};
 
+        File file = new File(".");
+
 		for(int i=0; i<pyFileList.length; i++){
 			log.info(pyFileList[i]);
 			// this.crawlingStart("triplive/src/main/java/com/triplive/pythonconnect/"+pyFileList[i]+".py"); // 지섭 경로	
-			this.crawlingStart("src/main/java/com/triplive/pythonconnect/"+pyFileList[i]+".py"); // 기타 경로
+			// this.crawlingStart("src/main/java/com/triplive/pythonconnect/"+pyFileList[i]+".py"); // 기타 경로
+            this.crawlingStart("./webapps/ROOT/WEB-INF/classes/com/triplive/pythonconnect/"+pyFileList[i]+".py");
+            log.info(file.getAbsolutePath());
 		}
     }
 
@@ -77,8 +82,9 @@ public class InterpreterPython {
     public String classify(String bdNo){
 
         String[] command = new String[4];
-        command[0] = "python";
-        command[1] = "src/main/java/com/triplive/pythonconnect/CNN_model.py";
+        command[0] = "python3";
+        // command[1] = "src/main/java/com/triplive/pythonconnect/CNN_model.py";
+        command[1] = "./webapps/ROOT/WEB-INF/classes/com/triplive/pythonconnect/CNN_model.py"; // lunux
         command[2] = bdNo;
         command[3] = "0.jpg";
 

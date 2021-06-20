@@ -74,7 +74,8 @@ pageEncoding="utf-8"%>
     });
   </script>
 
-  <body onload="startWatchPosition()">
+  <!-- <body onload="startWatchPosition()"> -->
+  <body>
     <footer class="footer">
       <div class="container">
         <div class="row">

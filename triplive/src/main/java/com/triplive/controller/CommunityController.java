@@ -78,11 +78,20 @@ public class CommunityController {
         // File dest = new File(".");
 
         String rootPath = System.getProperty("user.dir");
+        // String basePath = rootPath 
+        //                             // + File.separator + "triplive" 
+        //                             + File.separator + "src" 
+        //                             + File.separator + "main" 
+        //                             + File.separator + "resources" 
+        //                             + File.separator + "static" 
+        //                             + File.separator + "uploaded";
+
+        // 배포용 주소
         String basePath = rootPath 
-                                    // + File.separator + "triplive" 
-                                    + File.separator + "src" 
-                                    + File.separator + "main" 
-                                    + File.separator + "resources" 
+                                    + File.separator + "webapps"
+                                    + File.separator + "ROOT"
+                                    + File.separator + "WEB-INF" 
+                                    + File.separator + "classes" 
                                     + File.separator + "static" 
                                     + File.separator + "uploaded";
         
