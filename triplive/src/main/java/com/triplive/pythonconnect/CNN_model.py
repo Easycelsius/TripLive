@@ -26,12 +26,18 @@ def predict_image(model, images):
 
     return result
 
+# print(os.path.join(os.path.realpath('.'), 'src', 'main', 'resources', 'static', 'uploaded' , sys.argv[1], sys.argv[2]))
+
 # ./webapps/ROOT/WEB-INF/classes/com/triplive/pythonconnect/CNN_model.py
 # model = load_model(os.path.join(os.path.realpath('.'), 'triplive', 'src', 'main', 'java', 'com', 'triplive', 'pythonconnect' , 'trainedModelForLandMark.h5'))
 model = load_model(os.path.join(os.path.realpath('.'), 'webapps', 'ROOT', 'WEB-INF', 'classes', 'com', 'triplive', 'pythonconnect' , 'trainedModelForLandMark.h5'))
+# model = load_model(os.path.join(os.path.realpath('.'), 'src', 'main', 'java', 'com', 'triplive', 'pythonconnect', 'trainedModelForLandMark.h5'))
 
 # img = cv2.imread(os.path.join(os.path.realpath('.'), 'triplive', 'src', 'main', 'resources', 'META-INF', 'resources', 'uploaded' , sys.argv[1], sys.argv[2]))
 img = cv2.imread(os.path.join(os.path.realpath('.'), 'webapps', 'ROOT', 'WEB-INF', 'classes', 'static', 'uploaded' , sys.argv[1], sys.argv[2]))
+# img = cv2.imread(os.path.join(os.path.realpath('.'), 'src', 'main', 'resources', 'static', 'uploaded' , sys.argv[1], sys.argv[2]))
+
+
 # print(img)
 # img = cv2.imread("1.jpg")
 img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
