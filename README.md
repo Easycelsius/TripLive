@@ -64,8 +64,9 @@ SIAT FINAL PROJECT / TRIPLIVE / SPRINGBOOT
 
 ## **벤치마킹**
 
-- 외교부 홈페이지
-- 
+- 외교부 해외안전여행 페이지
+- 여행 정보 센터
+- 미주 한인 커뮤니티
 
 ​                                
 
